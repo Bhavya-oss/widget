@@ -1,0 +1,73 @@
+version: '3'
+
+services:
+
+  mysql:
+    container_name: mysql
+    image: mysql:8.0
+    restart: always    
+    command: mysqld --authentication_policy=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_ROOT_PASSWORD: ckrootpass
+    volumes:
+      - ./mysql-db:/var/lib/mysql
+
+  strapi:
+    container_name: strapi
+    image: strapi/strapi
+    environment:    
+      - NODE_ENV=production    
+    ports:
+      - 1337:1337
+    volumes:
+      - ./strapi-app:/srv/app
+
+
+  ghost:
+    container_name: ghost  
+    image: ghost:5.8-alpine
+    restart: always
+    environment:
+      NODE_ENV: production
+      database__client: mysql
+      database__connection__host: mysql
+      database__connection__database: ckblog                    
+      database__connection__user: root
+      database__connection__password: ckrootpass
+    ports:
+      - 8080:2368
+    volumes:
+      - ./ghost-app:/var/lib/ghost/content
+    depends_on:
+      - mysql
+
+  hugo:
+    container_name: hugo  
+    image: klakegg/hugo:0.101.0
+    restart: always
+    #network_mode: bridge    
+    command: server
+    ports:
+      - "1313:1313"
+    volumes:
+      - "./hugo-src:/src"
+
+  nginx:
+    container_name: nginx
+    image: nginx
+    restart: always
+    build:
+      ./nginx
+
+    ports:
+      - 80:80
+    depends_on:
+      - hugo
+      - ghost
+      - strapi
+
+volumes:
+  mysql-db:
+  strapi-app:
+  ghost-app:
+  hugo-src:

@@ -1,0 +1,30 @@
+{
+  "name": "Biggworks-website",
+  "version": "1.0.0",
+  "description": "Biggworks website",
+  "main": "index.js",
+  "scripts": {
+    "hugo": "hugo server -D --disableFastRender -p 8900",
+    "build": "hugo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/Biggworks/website/cm-web-frontend.git"
+  },
+  "author": "Suhas Ranganath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/Biggworks/website/cm-web-frontend/issues"
+  },
+  "homepage": "https://gitlab.com/Biggworks/website/cm-web-frontend#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.1",
+    "moment": "^2.29.2",
+    "plyr": "^3.6.8",
+    "swipebox": "^1.4.6"
+  },
+  "devDependencies": {
+    "@iconify/icons-uil": "^1.1.1",
+    "hugo-extended": "^0.92.2"
+  }
+}
