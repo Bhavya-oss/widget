@@ -1,0 +1,11 @@
+  BaseURL = "https://Biggworks.in"
+  languageCode = "en-us"
+  title = "Biggworks"
+  relativeURLS = true
+
+
+
+
+[caches]
+  [caches.getjson]
+    maxAge = "30s"

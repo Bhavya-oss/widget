@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "logo": {
+      "link": "https://res.cloudinary.com/biggworks/image/upload/c_scale,w_150/v1662643433/logo.png",
+      "link2x": "https://res.cloudinary.com/biggworks/image/upload/c_scale,w_150/v1662643433/logo.png",
+      "link_white": "https://res.cloudinary.com/biggworks/image/upload/c_scale,w_150/v1662643433/logo.png",
+      "alt": "Biggworks Logo"
+    },
+    "navlinks": {
+      "blog": {
+        "link": "/blog",
+        "text": "Blog",
+  
+      "blog-post": {
+        "link": "/blog-post",
+        "text": "Blog-post"
+      }
+    },
+      "about": {
+        "link": "/about",
+        "text": "About"
+      },
+      "careers": {
+        "link": "/careers",
+        "text": "Careers"
+      },
+      "services": {
+        "link": "/services",
+        "text": "Services"
+      },
+      "work": {
+        "link": "/work",
+        "text": "Work"   
+    },
+      "contact":
+      {
+        "link":"/contact",
+        "text":"Contact"
+      }
+   
+      }
+    }   
+
+  }
