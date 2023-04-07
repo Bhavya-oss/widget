@@ -1,274 +1,423 @@
-{{ define "main" }}
-{{ $resource := getJSON "http://bw-strapi:1337/services" }}
+{{ define "main" }} {{ $resource := getJSON "http://bw-strapi:1337/services" }}
+
+<!-- {{ printf "My data: %s"  $resource}} -->
+
 <body>
   <div class="content-wrapper">
     <header class="wrapper bg-gray">
       {{ partial "nav.html" . }}
       <!-- /.navbar -->
     </header>
-    <!-- /header -->
-    <section class="wrapper bg-soft-primary">
-        <div class="container pt-10 pb-19 pt-md-14 pb-md-20 text-center">
-            <div class="row">
-                <div class="col-md-8 col-lg-7 col-xl-6 col-xxl-5 mx-auto mb-11">
-                    <h1 class="display-1 mb-3">{{ $resource.title}}</h1>
-                        <p class="lead px-xl-10 px-xxl-10">{{ $resource.content}}</p>
-                </div>
-                <!-- /column -->
+
+    <section class="wrapper bg-white">
+      <div
+        class="d-flex align-items-center bg-overlay-400 service_background_image"
+      >
+        <div
+          class="container pt-1 pb-12 pb-xl-18 pb-16 pt-md-14 pb-md-20 pt-xl-1"
+        >
+          <div class="row mb-10">
+            <div class="col-xl-10 col-lg-12">
+              <h2
+                class="fs-16 fw-normal ls-3x text-uppercase mb-5 mt-17 mt-md-10 mb-md-4 mt-xl-10 mt-lg-10 pt-xl-14 mb-xl-5 mb-lg-5 col-xl-3 service-text service-text-large-screen"
+              >
+                {{$resource.section_one.title}}
+              </h2>
+
+              <h3
+                class="display-4 mb-4 mb-lg-5 mb-xl-5 pe-xl-25 pe-lg-25 pe-md-0 service-text service-text-large-screen"
+              >
+                {{$resource.section_one.subtitle}}
+              </h3>
+              <p
+                class="fs-lg text-left mb-7 col-xl-7 col-lg-7 pe-xl-16 pe-lg-16 pe-md-0 service-text service-text-large-screen"
+              >
+                {{$resource.section_one.description}}
+              </p>
+              <div
+                class="service-text service-text-large-screen"
+                data-group="page-title-buttons service-text"
+                data-delay="600"
+              >
+                <span
+                  ><a class="btn btn-primary rounded-0 mx-1"
+                    >{{$resource.section_one.btn_talk_to_us}}</a
+                  ></span
+                >
+              </div>
             </div>
-            <!-- /.row -->
+          </div>
         </div>
-        <!-- /.container -->
+      </div>
     </section>
-    <!-- /section -->
-    <section class="wrapper bg-light angled upper-end">
-        <div class="container pb-14 pb-md-16">
-            <div class="row mb-8">
-                <div class="col-12 mt-n20">
-                    <figure class="rounded"><img src="https://res.cloudinary.com/biggworks/image/upload/v1666246865/about5_qizkln.jpg" srcset="https://res.cloudinary.com/biggworks/image/upload/v1666246866/about5_2x_uvpaq1.jpg" alt="" /></figure>
-                    <div class="row">
-                        <div class="col-xl-10 mx-auto">
-                            <div class="card image-wrapper bg-full bg-image bg-overlay bg-overlay-400 text-white mt-n5 mt-lg-0 mt-lg-n50p mb-lg-n50p border-radius-lg-top" data-image-src="https://res.cloudinary.com/biggworks/image/upload/v1666246881/bs3_uzrqky.jpg">
-                                <div class="card-body p-9 p-xl-10">
-                                    <div class="row align-items-center counter-wrapper gy-4 text-center">
-                                        <div class="col-6 col-lg-3">
-                                            <h3 class="counter counter-lg text-white">7518</h3>
-                                            <p>Completed Projects</p>
-                                        </div>
-                                        <!--/column -->
-                                        <div class="col-6 col-lg-3">
-                                            <h3 class="counter counter-lg text-white">3472</h3>
-                                            <p>Satisfied Customers</p>
-                                        </div>
-                                        <!--/column -->
-                                        <div class="col-6 col-lg-3">
-                                            <h3 class="counter counter-lg text-white">2184</h3>
-                                            <p>Expert Employees</p>
-                                        </div>
-                                        <!--/column -->
-                                        <div class="col-6 col-lg-3">
-                                            <h3 class="counter counter-lg text-white">4523</h3>
-                                            <p>Awards Won</p>
-                                        </div>
-                                        <!--/column -->
-                                    </div>
-                                    <!--/.row -->
-                                </div>
-                                <!--/.card-body -->
-                            </div>
-                            <!--/.card -->
-                        </div>
-                        <!-- /column -->
-                    </div>
-                    <!-- /.row -->
-                </div>
-                <!-- /column -->
-            </div>
-            <!-- /.row -->
-            <div class="row gx-lg-8 gy-8 mt-5 mt-md-12 mt-lg-0 mb-15 align-items-center">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="row gx-md-5 gy-5">
-                        <div class="col-md-4 offset-md-2 align-self-end">
-                            <figure class="rounded"><img src="https://res.cloudinary.com/biggworks/image/upload/v1666246894/g1_kbhinp.jpg" srcset="https://res.cloudinary.com/biggworks/image/upload/v1666246895/g1_2x_bchl0v.jpg" alt=""></figure>
-                        </div>
-                        <!--/column -->
-                        <div class="col-md-6 align-self-end">
-                            <figure class="rounded"><img src="https://res.cloudinary.com/biggworks/image/upload/v1666246895/g2_ycvbwh.jpg" srcset="https://res.cloudinary.com/biggworks/image/upload/v1666246895/g2_2x_zgxrd6.jpg" alt=""></figure>
-                        </div>
-                        <!--/column -->
-                        <div class="col-md-6 offset-md-1">
-                            <figure class="rounded"><img src="https://res.cloudinary.com/biggworks/image/upload/v1666246895/g3_2x_hozq5j.jpg" srcset="https://res.cloudinary.com/biggworks/image/upload/v1666246895/g3_2x_hozq5j.jpg" alt=""></figure>
-                        </div>
-                        <!--/column -->
-                        <div class="col-md-4 align-self-start">
-                            <figure class="rounded"><img src="https://res.cloudinary.com/biggworks/image/upload/v1666246895/g4_f99kd7.jpg" srcset="https://res.cloudinary.com/biggworks/image/upload/v1666246896/g4_2x_cd3ezv.jpg" alt=""></figure>
-                        </div>
-                        <!--/column -->
-                    </div>
-                    <!--/.row -->
-                </div>
-                <!--/column -->
-                <div class="col-lg-6">
-                    <h2 class="display-4 mb-3">What We Do?</h2>
-                    <p class="lead fs-lg mb-8 pe-xxl-2">The full service we are offering is <span class="underline">specifically</span> designed to meet your business needs and projects.</p>
-                    <div class="row gx-xl-10 gy-6">
-                        {{ range $elem_index, $elem_val := $resource.What_we_do_fields }}
-                        <div class="col-md-6 col-lg-12 col-xl-6">
-                            <div class="d-flex flex-row">
-                                <div>
-                                    <div class="icon btn btn-circle btn-lg btn-soft-primary disabled me-5"> <i class="{{ $elem_val.icon }}"></i> </div>
-                                </div>
-                                <div>
-                                    <h4 class="mb-1">{{ $elem_val.title }}</h4>
-                                    <p class="mb-0">{{ $elem_val.description }}</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        {{ end }}    
-                    </div>
-                    <!--/.row -->
-                </div>
-                <!--/column -->
-            </div>
-            <!--/.row -->
-            <h2 class="display-4 mb-3">How We Do It?</h2>
-            <p class="lead fs-lg mb-8">We make your spending <span class="underline">stress-free</span> for you to have the perfect control.</p>
-            
-            <div class="row gx-lg-8 gx-xl-12 gy-6 process-wrapper line">
-                {{ range $elem_index, $elem_val := $resource.We_do_it_fields }}
-                <div class="col-md-6 col-lg-3"> <span class="icon btn btn-circle btn-lg btn-soft-primary disabled mb-4"><span class="number">{{ $elem_val.id }}</span></span>
-                    <h4 class="mb-1">{{ $elem_val.title }}</h4>
-                    <p>{{ $elem_val.description }}</p>
-                </div>
-                {{ end }}
-                <!--/column -->
-            </div>
-            <!--/.row -->
+
+    <section class="wrapper bg-white">
+      <div class="container py-14 pt-4 pt-md-4 pb-md-13 pb-8">
+        <h2 class="fs-15 text-uppercase"></h2>
+        <div
+          class="carousel owl-carousel clients"
+          data-margin="30"
+          data-loop="true"
+          data-dots="false"
+          data-autoplay="true"
+          data-autoplay-timeout="1500"
+          data-responsive='{"0":{"items": "2"}, "768":{"items": "4"}, "992":{"items": "5"}, "1200":{"items": "6"}, "1400":{"items": "7"}}'
+        >
+          <div class="item px-5">
+            <img src="{{$resource.section_two.android}}" alt="" />
+          </div>
+          <div class="item px-5">
+            <img src="{{$resource.section_two.python}}" alt="" />
+          </div>
+          <div class="item px-5">
+            <img src="{{$resource.section_two.react}}" alt="" />
+          </div>
+          <div class="item px-5">
+            <img src="{{$resource.section_two.ios}}" alt="" />
+          </div>
+          <div class="item px-8">
+            <img src="{{$resource.section_two.api}}" alt="" />
+          </div>
+          <div class="item px-5">
+            <img src="{{$resource.section_two.aws}}" alt="" />
+          </div>
+          <div class="item px-5">
+            <img src="{{$resource.section_two.java}}" alt="" />
+          </div>
         </div>
-        <!-- /.container -->
+      </div>
     </section>
-    <!-- /section -->
-    <section class="wrapper image-wrapper bg-image bg-overlay" data-image-src="https://res.cloudinary.com/biggworks/image/upload/v1666246879/bg1_mnewpn.jpg">
-        <div class="container py-18 light-gallery-wrapper text-center">
-            <div class="row">
-                <div class="col-lg-10 col-xl-10 col-xxl-8 mx-auto">
-                    <a href="https://vimeo.com/374265101" class="btn btn-circle btn-white btn-play ripple mx-auto mb-5 lightbox"><i class="icn-caret-right"></i></a>
-                    <h2 class="display-4 px-lg-10 px-xl-13 px-xxl-10 mb-10 text-white">Find out everything you need to know about creating a business process model.</h2>
-                </div>
-                <!--/column -->
-            </div>
-            <!--/.row -->
+
+    <section class="wrapper">
+      <div class="container text-center">
+        <h2
+          class="fs-16 fw-normal ls-3x mb-4 mb-xl-8 mb-md-6 text-uppercase text-muted"
+        >
+        {{$resource.section_three.heading}}
+        </h2>
+        <p class="lh-lg text-left mb-14 mb-xl-14 mb-lg-14 px-xl-15 mb-md-12">
+        {{$resource.section_three.paragraph1}}
+          
+        </p>
+
+        <div class="row">
+          <div class="col-0 col-xl-2 col-lg-2 col-md-2"></div>
+          <!-- <div class="col-12 col-xl-8 col-lg-8 col-md-4"> -->
+          <img
+            class="col-12 col-xl-8 col-lg-8 col-md-8"
+        src={{$resource.section_three.image}}
+            alt=""
+          />
+          <!-- </div> -->
+          <div class="col-md-1"></div>
         </div>
-        <!-- /.container -->
+        <p class="lh-lg text-left mb-12 pt-12 px-xl-15 pt-12">
+            {{$resource.section_three.paragraph2}}
+        </p>
+      </div>
     </section>
-    <!-- /section -->
-    <section class="wrapper bg-light angled upper-end">
-        <div class="container py-14 py-md-16">
-            <div class="row gx-lg-8 gx-xl-12 gy-6 mb-10 mb-md-18">
-                <div class="col-lg-4">
-                    <h2 class="display-4 mt-lg-18 mb-3">Our Pricing</h2>
-                    <p class="lead fs-lg">We offer <span class="underline">great prices</span>, premium and quality products for your business.</p>
-                    <p>Enjoy a <a href="#" class="hover">free 30-day trial</a> and experience the full service. No credit card required!</p>
-                    <a href="#" class="btn btn-primary rounded-pill mt-2">See All Prices</a>
-                </div>
-                <!--/column -->
-                <div class="col-lg-7 offset-lg-1 pricing-wrapper">
-                    <div class="pricing-switcher-wrapper switcher justify-content-start justify-content-lg-end">
-                        <p class="mb-0 pe-3">Monthly</p>
-                        <div class="pricing-switchers">
-                            <div class="pricing-switcher pricing-switcher-active"></div>
-                            <div class="pricing-switcher"></div>
-                            <div class="switcher-button bg-primary"></div>
-                        </div>
-                        <p class="mb-0 ps-3">Yearly <span class="text-red">(Save 30%)</span></p>
-                    </div>
-                    <div class="row gy-6 position-relative mt-5">
-                        <div class="shape bg-dot primary rellax w-16 h-18" data-rellax-speed="1" style="bottom: -0.5rem; right: -1.6rem;"></div>
-                        <div class="shape rounded-circle bg-line red rellax w-18 h-18" data-rellax-speed="1" style="top: -1rem; left: -2rem;"></div>
-                        <div class="col-md-6">
-                            <div class="pricing card">
-                                <div class="card-body pb-12">
-                                    <div class="prices text-dark">
-                                        <div class="price price-show"><span class="price-currency">$</span><span class="price-value">19</span> <span class="price-duration">month</span></div>
-                                        <div class="price price-hide price-hidden"><span class="price-currency">$</span><span class="price-value">199</span> <span class="price-duration">year</span></div>
-                                    </div>
-                                    <!--/.prices -->
-                                    <h4 class="card-title mt-2">Premium Plan</h4>
-                                    <ul class="icon-list bullet-bg bullet-soft-primary mt-8 mb-9">
-                                        <li><i class="uil uil-check"></i><span><strong>5</strong> Projects </span></li>
-                                        <li><i class="uil uil-check"></i><span><strong>100K</strong> API Access </span></li>
-                                        <li><i class="uil uil-check"></i><span><strong>200MB</strong> Storage </span></li>
-                                        <li><i class="uil uil-check"></i><span> Weekly <strong>Reports</strong></span></li>
-                                        <li><i class="uil uil-times bullet-soft-red"></i><span> 7/24 <strong>Support</strong></span></li>
-                                    </ul>
-                                    <a href="#" class="btn btn-primary rounded-pill">Choose Plan</a>
-                                </div>
-                                <!--/.card-body -->
-                            </div>
-                            <!--/.pricing -->
-                        </div>
-                        <!--/column -->
-                        <div class="col-md-6 popular">
-                            <div class="pricing card">
-                                <div class="card-body pb-12">
-                                    <div class="prices text-dark">
-                                        <div class="price price-show"><span class="price-currency">$</span><span class="price-value">49</span> <span class="price-duration">month</span></div>
-                                        <div class="price price-hide price-hidden"><span class="price-currency">$</span><span class="price-value">499</span> <span class="price-duration">year</span></div>
-                                    </div>
-                                    <!--/.prices -->
-                                    <h4 class="card-title mt-2">Corporate Plan</h4>
-                                    <ul class="icon-list bullet-bg bullet-soft-primary mt-8 mb-9">
-                                        <li><i class="uil uil-check"></i><span><strong>20</strong> Projects </span></li>
-                                        <li><i class="uil uil-check"></i><span><strong>300K</strong> API Access </span></li>
-                                        <li><i class="uil uil-check"></i><span><strong>500MB</strong> Storage </span></li>
-                                        <li><i class="uil uil-check"></i><span> Weekly <strong>Reports</strong></span></li>
-                                        <li><i class="uil uil-check"></i><span> 7/24 <strong>Support</strong></span></li>
-                                    </ul>
-                                    <a href="#" class="btn btn-primary rounded-pill">Choose Plan</a>
-                                </div>
-                                <!--/.card-body -->
-                            </div>
-                            <!--/.pricing -->
-                        </div>
-                        <!--/column -->
-                    </div>
-                    <!--/.row -->
-                </div>
-                <!--/column -->
-            </div>
-            <!--/.row -->
-            <div class="row gy-10 gx-lg-8 gx-xl-12 align-items-center">
-                <div class="col-lg-7 position-relative">
-                    <div class="shape bg-dot primary rellax w-18 h-18" data-rellax-speed="1" style="top: 0; left: -1.4rem; z-index: 0;"></div>
-                    <div class="row gx-md-5 gy-5">
-                        <div class="col-md-6">
-                            <figure class="rounded mt-md-10 position-relative"><img src="https://res.cloudinary.com/biggworks/image/upload/v1666246895/g5_zqj3zd.jpg" srcset="https://res.cloudinary.com/biggworks/image/upload/v1666246896/g5_2x_jglyvm.jpg" alt=""></figure>
-                        </div>
-                        <!--/column -->
-                        <div class="col-md-6">
-                            <div class="row gx-md-5 gy-5">
-                                <div class="col-md-12 order-md-2">
-                                    <figure class="rounded"><img src="https://res.cloudinary.com/biggworks/image/upload/v1666246895/g6_owceeo.jpg" srcset="https://res.cloudinary.com/biggworks/image/upload/v1666246896/g6_2x_yjwnri.jpg" alt=""></figure>
-                                </div>
-                                <!--/column -->
-                                <div class="col-md-10">
-                                    <div class="card bg-pale-primary text-center">
-                                        <div class="card-body py-11 counter-wrapper">
-                                            <h3 class="counter text-nowrap">5000+</h3>
-                                            <p class="mb-0">Satisfied Customers</p>
-                                        </div>
-                                        <!--/.card-body -->
-                                    </div>
-                                    <!--/.card -->
-                                </div>
-                                <!--/column -->
-                            </div>
-                            <!--/.row -->
-                        </div>
-                        <!--/column -->
-                    </div>
-                    <!--/.row -->
-                </div>
-                <!--/column -->
-                <div class="col-lg-5">
-                    <h2 class="display-4 mb-3">Let’s Talk</h2>
-                    <p class="lead fs-lg">Let's make something great together. We are <span class="underline">trusted by</span> over 5000+ clients. Join them by using our services and grow your business.</p>
-                    <p>{{ $resource.Lets_talk_content}}</p>
-                    <a href="#" class="btn btn-primary rounded-pill mt-2">Join Us</a>
-                </div>
-                <!--/column -->
-            </div>
-            <!--/.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-    <!-- /section -->
-</div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <section class="wrapper">
+      <div class="container">
+        <div class="row g-0 gy-8 gy-md mb-14">
+          <div class="col-xl-1 col-lg-1"></div>
+          <div class="col-md-5 col-lg-4 col-xl-4">
+            <div class="about-image card">
+              <div class="card-body">
+                <h4 class="mb-xl-8 mb-lg-8">{{$resource.section_four.card1.heading}}</h4>
+                <p class="mb-2">
+                    {{$resource.section_four.card1.paragraph}}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-md-2"></div>
+
+          <div class="col-md-5 col-lg-4 col-xl-4">
+            <div class="about-image card">
+              <div class="card-body">
+                <h4 class="mb-xl-8 mb-lg-8">{{$resource.section_four.card2.heading}}</h4>
+                <p class="mb-2">
+                    {{$resource.section_four.card2.paragraph}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrapper bg-linear-gradient">
+      <div class="container text-left">
+        <h3 class="display-4 mb-4 pt-10">{{$resource.section_five.heading}}</h3>
+        <p class="lh-lg pb-0 pe-xl-23 pb-8">
+            {{$resource.section_five.paragraph}}
+        </p>
+      </div>
+      <!-- <div class="mb-xl-6 mb-lg-6"></div> -->
+    </section>
+    <section class="wrapper">
+      <div class="container text-center">
+        <h2 class="fs-16 fw-normal ls-3x mb-5 pt-6 text-uppercase text-muted">
+            {{$resource.section_six.title}}
+        </h2>
+        <h3 class="display-4 mb-4">
+            {{$resource.section_six.subtitle}}
+        </h3>
+        <p class="lead fs-lg text-left mb-10 px-xl-15 px-xl-18">
+            {{$resource.section_six.description}}
+        </p>
+      </div>
+    </section>
+    
+    <section class="wrapper bg-linear-gradient">
+      <div class="container">
+        <h3 class="display-4 mb-2 pt-10">{{$resource.section_seven.heading1}}</h3>
+        <p class="lh-lg pe-xl-23">
+            {{$resource.section_seven.paragraph1}}
+        </p>
+        <h3 class="display-4 mb-2 pt-2">{{$resource.section_seven.heading2}}</h3>
+        <p class="lh-lg pb-10 pe-xl-23">
+            {{$resource.section_seven.paragraph2}}
+        </p>
+      </div>
+    </section>
+
+    <section class="wrapper">
+      <div class="container">
+        <h3 class="display-4 pt-xl-8 mb-xl-14 text-center pt-md-8 pt-6">
+            {{$resource.section_eight.title}}
+        </h3>
+        <div class="row g-0 gy-8 gy-md mb-4 mb-md-10 mb-xl-15 mb-lg-16">
+          <div class="col-xl-1"></div>
+          <div class="col-md-5 col-lg-4 col-xl-4">
+            <div class="about-image card">
+              <div class="card-body">
+                <h4 class="mb-xl-10 mb-lg-10 mb-md-4">{{$resource.section_eight.card1.title}}</h4>
+                <p>
+                    {{$resource.section_eight.card1.description}}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-2 col-md-2"></div>
+
+          <div class="col-md-5 col-lg-4 col-xl-4">
+            <div class="about-image card">
+              <div class="card-body">
+                <h4 class="mb-xl-10 mb-lg-10 mb-md-6">{{$resource.section_eight.card2.title}}</h4>
+                <p>
+                    {{$resource.section_eight.card2.description}}
+                 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-0 gy-8 mb-4 mb-md-14">
+          <div class="col-xl-1"></div>
+          <div class="col-md-5 col-lg-4">
+            <div class="about-image card">
+              <div class="card-body">
+                <h4 class="mb-xl-10 mb-lg-10 mb-md-4">
+                    {{$resource.section_eight.card3.title}}
+                </h4>
+                <p>
+                    {{$resource.section_eight.card3.description}}
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 col-xl-2"></div>
+          <div class="col-md-5 col-lg-4">
+            <div class="about-image card">
+              <div class="card-body">
+                <h4 class="mb-xl-10 mb-lg-10 mb-md-6">{{$resource.section_eight.card4.title}}</h4>
+                <p>
+                    {{$resource.section_eight.card4.description}}
+                 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrapper bg-linear-gradient">
+      <div class="container pt-10 pb-10">
+        <div class="row">
+          <div class="col-xl-7 col-lg-7 col-md-7"></div>
+          <div class="col-xl-5 col-lg-5 col-md-5">
+            <p class="lead fs-lg mb-4">
+                {{$resource.section_nine.content}}
+            </p>
+            <h6>{{$resource.section_nine.author}}</h6>
+            <p>{{$resource.section_nine.position}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="wrapper">
+      <div class="container text-center pt-10 pt-10">
+        <h3 class="display-4 mb-5">End to end product development</h3>
+        <p class="lead fs-lg px-xl-18 mb-10 px-lg-18">
+          Ever y stage of the product requires a unique set of exper ts to
+          collaborate closely and build a user- centric product that resolves
+          specific business challenges.
+        </p>
+        <div class="grid">
+          <div class="row my-2 offset-xl-1 offset-md-0 offset-1">
+            <div
+              class="item col-md-5 col-xl-3 col-lg-3 mb-xl-12 col-4 mb-lg-12 mb-md-12 mb-10"
+            >
+              <div class="card career-card-technology">
+                <div class="card-body">
+                  <div class="text-center">
+                    <img
+                      class="mb-xl-8 pt-xl-4 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
+                      src="https://res.cloudinary.com/biggworks/image/upload/v1675766859/ui_ux_design_y4j1lu.png"
+                      alt=""
+                    />
+                    <p class="lead">View Career Path</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-1 col-lg-1 col-md-1"></div>
+            <div
+              class="item col-md-5 col-xl-3 col-lg-3 mb-xl-12 col-4 mb-lg-12 mb-md-12 mb-10"
+            >
+              <div class="card career-card-technology">
+                <div class="card-body">
+                  <div class="text-center">
+                    <img
+                      class="mb-xl-8 pt-xl-4 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
+                      src="https://res.cloudinary.com/biggworks/image/upload/v1675766847/cloud_a_nd_dev_mciovf.png"
+                      alt=""
+                    />
+                    <p class="lead">View Career Path</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-1 col-lg-1 col-md-1"></div>
+
+            <div
+              class="item col-md-5 col-xl-3 col-lg-3 mb-xl-12 col-4 mb-lg-12 mb-md-12 mb-10"
+            >
+              <div class="card career-card-technology">
+                <div class="card-body">
+                  <div class="text-center">
+                    <img
+                      class="mb-xl-8 pt-xl-4 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
+                      src="https://res.cloudinary.com/biggworks/image/upload/v1675766816/data_eng_x8dtxe.png"
+                      alt=""
+                    />
+                    <p class="lead">View Career Path</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+
+            <div
+              class="item col-md-5 col-xl-3 col-lg-3 col-4 mb-xl-4 mb-lg-12 mb-md-4 mb-10"
+            >
+              <div class="card career-card-technology">
+                <div class="card-body">
+                  <div class="text-center">
+                    <img
+                      class="mb-xl-8 pt-xl-4 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
+                      src="https://res.cloudinary.com/biggworks/image/upload/v1675766803/back_end_avvzij.png"
+                      alt=""
+                    />
+                    <p class="lead">View Career Path</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-1 col-lg-1 col-md-1"></div>
+            <div
+              class="item col-md-5 col-xl-3 col-lg-3 col-4 mb-xl-4 mb-lg-12 mb-md-4 mb-10"
+            >
+              <div class="card career-card-technology">
+                <div class="card-body">
+                  <div class="text-center">
+                    <img
+                      class="mb-xl-8 pt-xl-4 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
+                      src="https://res.cloudinary.com/biggworks/image/upload/v1675766786/machine_lear_cthsru.png"
+                      alt=""
+                    />
+                    <p class="lead">View Career Path</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-1 col-lg-1 col-md-1"></div>
+
+            <div
+              class="item col-md-5 col-xl-3 col-lg-3 col-4 mb-xl-4 mb-lg-12 mb-md-4 mb-10"
+            >
+              <div class="card career-card-technology">
+                <div class="card-body">
+                  <div class="text-center">
+                    <img
+                      class="mb-xl-8 pt-xl-4 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
+                      src="https://res.cloudinary.com/biggworks/image/upload/v1675766775/quality_qi6hbl.png"
+                      alt=""
+                    />
+                    <p class="lead">View Career Path</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="wrapper bg-linear-gradient">
+      <div class="container pt-xl-12 pt-lg-12 pt-md-12 pt-10 pb-6">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-md-6">
+            <h2
+              class="fs-16 fw-normal ls-3x text-uppercase text-left mb-xl-6 mb-lg-6 mb-md-6 mb-4"
+            >
+              take the next step
+            </h2>
+            <h4 class="mb-xl-12 mb-lg-12 mb-md-12 mb-6">
+              Ready to build your next bigg idea?
+            </h4>
+          </div>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-1"></div>
+          <div class="col-xl-4 col-lg-4 col-md">
+            <div
+              class="d-flex justify-content-center"
+              data-group="page-title-buttons"
+              data-delay="600"
+            >
+              <span
+                ><a class="btn btn-primary rounded-0 mx-1">Talk to Us</a></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous"
+  ></script>
 
   {{ partial "footer.html" . }} {{ partial "page-progress.html" . }}
 </body>
