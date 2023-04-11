@@ -4,7 +4,7 @@
   "description": "Biggworks website",
   "main": "index.js",
   "scripts": {
-    "hugo": "hugo server -D --disableFastRender -p 8900",
+    "hugo": "hugo server -D --bind=0.0.0.0 --disableFastRender -p 8900",
     "build": "hugo"
   },
   "repository": {
