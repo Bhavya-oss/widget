@@ -1,5 +1,6 @@
-{{ define "main" }} {{ $nav := .Site.Data.nav.nav }} {{ $resource := getJSON
-"http://bw-strapi:1337/index" }}
+{{ define "main" }} {{ $nav := .Site.Data.nav.nav }} 
+
+{{ $resource := getJSON "http://bw-strapi:1337/index" }}
 <link
   rel="shortcut icon"
   href="https://res.cloudinary.com/biggworks/image/upload/v1666248096/favicon_xsthfp.ico"
@@ -28,11 +29,11 @@
               <h2
                 class="fs-16 fw-normal ls-3x text-uppercase mb-5 mt-md-10 pt-xl-10"
               >
-                {{$resource.section_first.title}}
+                {{$resource.section_one.title}}
               </h2>
-              <h1 class="display-1 mb-4">{{$resource.section_first.subtitle}}</h1>
+              <h1 class="display-1 mb-4">{{$resource.section_one.subtitle}}</h1>
               <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7">
-                {{$resource.section_first.description}}
+                {{$resource.section_one.description}}
               </p>
               <div
                 class="d-flex justify-content-center"
@@ -41,7 +42,9 @@
               >
                 <span
                   ><a class="btn btn-primary rounded-0 mx-1"
-                    >{{$resource.section_first.btn_talk_to_us}}</a
+                    >
+                    {{$resource.section_one.btn_talk_to_us}}
+                    </a
                   ></span
                 >
               </div>
@@ -50,7 +53,7 @@
         </div>
       </div>
     </section>
-
+<!-- 
     <section class="wrapper bg-white">
       <div class="container py-8 pt-4 pt-md-4">
         <h2 class="fs-15 text-uppercase"></h2>
@@ -462,7 +465,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </div>
   <!-- /.content-wrapper -->
 
