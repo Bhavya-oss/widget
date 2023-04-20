@@ -25,6 +25,8 @@ services:
       - "1337:1337"
     depends_on:
       - strapi-db
+    volumes:
+      - ./strapi-app:/srv/app   
 
   hugo:
     container_name: bw-hugo
@@ -53,6 +55,6 @@ services:
   #     - strapi
 
 volumes:
-  #strapi-app:
+  strapi-app:
   #ghost-app:
   hugo:
