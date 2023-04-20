@@ -5,24 +5,168 @@
   <div class="content-wrapper contact-page">
     <header class="wrapper">
       {{ partial "nav.html" . }}
-      <!-- /.navbar -->
     </header>
-    <!-- /header -->
-    <section class="wrapper bg-soft-primary">
+
+    <section class="wrapper">
+        <div class="container pt-10 pb-10 text-center">
+            <div class="row">
+                <!-- <div class="col-sm-10 col-md-8 col-lg-6 col-xl-6 col-xxl-5 mx-auto"> -->
+                <h2 class="fs-16 fw-normal text-uppercase text-muted pt-md-14 pt-lg-14 pt-xl-14 pt-12 mb-5">{{$resource.section_one.title}}</h2>
+                <h3 class="display-4 mb-4">{{$resource.section_one.subtitle}}</h3>
+                <p class="fs-lg px-lg-7 px-xl-7 px-xxl-6 pb-md-2">{{$resource.section_one.description}}</p>
+                <!-- </div> -->
+            </div>
+        </div>
+    </section>
+    <section class="wrapper bg-linear-gradient">
+        <div class="container bp-20">
+            <h4 class="pt-12 text-center mb-8">{{$resource.section_two.title}}</h4>
+            <div class="row offset-2">
+                <div class="col-9">
+                    <form class="contact-form" method="post" id="formContact" onsubmit="saveContactInfo()">
+                        <div class="messages"></div>
+                        <div class="controls">
+                            <div class="row gx-4">
+                                <div class="col-md-6">
+                                    <div class="form-label-group mb-4">
+                                        <input id="form_name" type="text" name="name" class="form-control"
+                                            placeholder="Jane" required="required"
+                                            data-error="First Name is required.">
+                                        <label for="form_name">{{$resource.section_two.fname}}</label>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-label-group mb-4">
+                                        <input id="form_lastname" type="text" name="surname" class="form-control"
+                                            placeholder="Doe" required="required"
+                                            data-error="Last Name is required.">
+                                        <label for="form_lastname">{{$resource.section_two.lastname}}</label>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-label-group mb-4">
+                                        <input id="form_email" type="email" name="email" class="form-control"
+                                            placeholder="jane.doe@example.com" required="required"
+                                            data-error="Valid email is required.">
+                                        <label for="form_email">{{$resource.section_two.email}}</label>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-label-group mb-4">
+                                        <input id="form_phone" type="tel" name="phone" class="form-control"
+                                            placeholder="Your phone number">
+                                        <label for="form_phone">{{$resource.section_two.phone}}</label>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-label-group mb-4">
+                                        <textarea id="form_message" name="message" class="form-control"
+                                            placeholder="Your message" rows="5" required="required"
+                                            data-error="Message is required."></textarea>
+                                        <label for="form_message">{{$resource.section_two.message}}</label>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 pb-10">
+                                    <input type="submit" class="btn btn-primary  rounded-0 btn-send mb-3"
+                                        value="Send message">
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    </section>
+    <section>
+        <div class="container">
+            <h4 class="px-7 px-lg-15 px-xl-15 px-md-10 mb-6 pt-10">{{$resource.section_three.office_locations}}</h4>
+
+
+            <div class="row gx-md-1 offset-1 gx-2 gy-8 mb-10 mb-md-10">
+                <div class="col-md-3 col-lg-3 col-xl-3 col-12">
+                    <div class="col-lg-2 col-xs-4 col-6 col-sm-4 mb-8 pl-10 col-md-4"><img
+                            src="{{$resource.section_three.location1.image}}" />
+                    </div>
+                    <h4 class="text-left mb-5">{{$resource.section_three.location1.location}}</h4>
+                    <p class="mb-0 lh-sm">
+                        {{$resource.section_three.location1.address}}
+                </div>
+                <div class="col-xl-1 col-lg-1 col-md-1"></div>
+                <div class="col-md-3 col-lg-3 col-xl-3 col-12">
+                    <div class="col-lg-2 col-xs-4 col-6 col-sm-4 mb-8 pl-10 col-md-4"><img
+                            src="{{$resource.section_three.location2.image}}" />
+                    </div>
+                    <h4 class="text-left mb-5">{{$resource.section_three.location2.location}}</h4>
+                    <p class="mb-0 lh-sm">
+                        {{$resource.section_three.location2.address}}
+                        
+                    </p>
+                </div>
+
+                <div class="col-xl-1 col-md-1"></div>
+                <div class="col-md-3 col-lg-3 col-12">
+                    <div class="col-lg-2 col-xs-4 col-6 col-sm-4 mb-8 pl-10 col-md-4"><img
+                            src="{{$resource.section_three.location3.image}}" />
+                    </div>
+                    <h4 class="text-left mb-5">{{$resource.section_three.location3.location}}</h4>
+                    <p class="mb-0 lh-sm">
+                        {{$resource.section_three.location3.address}}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+<section>
+    <h4 class="ps-6 ps-lg-22 pt-md-0 ps-xl-23_5">{{$resource.section_four.title}}</h4>
+    <div class="row">
+        <p class="col-12 col-lg-7 ps-lg-24 px-10">{{$resource.section_four.description}}</p>
+        <h4 class="ps-10 ps-lg-19 pb-8 ps-lg-24">{{$resource.section_four.phone_number}}</h4>
+    </div>
+
+</section>
+<section class="wrapper bg-linear-gradient">
+    <div class="container">
+        <div class="row mt-4 pt-8 text-center">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-3 col-6 mb-8 col-md-4 ps-lg-18_5 pe-lg-20_5">
+                <!-- <a href="{{$resource.section_five.facebook_link}}" target="_blank"> -->
+                <img
+                    src="{{$resource.section_five.facebook_image}}" />
+                </a>
+            </div>
+            <div class="col-lg-3 col-6 col-xs-4 mb-8 mobile-text-center col-md-4 pe-lg-15 ps-lg-15">
+                <!-- <a href="{{$resource.section_five.instagram_link}}" target="_blank"> -->
+                <img
+                    src="{{$resource.section_five.instagram_image}}" />
+                </a>
+            </div>
+            <div class="col-lg-3 col-6 mb-8 col-md-4 pe-lg-15 ps-lg-15">
+                <!-- <a href="{{$resource.section_five.linkedin_link}}" target="_blank"> -->
+                <img
+                    src="{{$resource.section_five.lonkedin_image}}" target="_blank"/>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+    <!-- <section class="wrapper bg-soft-primary">
         <div class="container pt-10 pb-10 pt-md-14 text-center">
             <div class="row">
                 <div class="col-sm-10 col-md-8 col-lg-6 col-xl-6 col-xxl-5 mx-auto">
                     <h1 class="display-1 mb-3">{{ $resource.title}}</h1>
                     <p class="lead px-lg-7 px-xl-7 px-xxl-6">{{ $resource.content}}</p>
-                    <!-- /nav -->
                 </div>
-                <!-- /column -->
             </div>
-            <!-- /.row -->
         </div>
-        <!-- /.container -->
     </section>
-    <!-- /section -->
     <section class="wrapper bg-light angled upper-end">
         <div class="container py-14 pb-md-16">
             <div class="row gy-10 gx-lg-8 gx-xl-12 mb-16 align-items-center">
@@ -32,30 +176,22 @@
                         <div class="col-md-6">
                             <figure class="rounded mt-md-10 position-relative"><img src="https://res.cloudinary.com/biggworks/image/upload/v1666246895/g5_zqj3zd.jpg" srcset="https://res.cloudinary.com/biggworks/image/upload/v1666246896/g5_2x_jglyvm.jpg" alt=""></figure>
                         </div>
-                        <!--/column -->
                         <div class="col-md-6">
                             <div class="row gx-md-5 gy-5">
                                 <div class="col-md-12 order-md-2">
                                     <figure class="rounded"><img src="https://res.cloudinary.com/biggworks/image/upload/v1666246895/g6_owceeo.jpg" srcset="https://res.cloudinary.com/biggworks/image/upload/v1666246896/g6_2x_yjwnri.jpg" alt=""></figure>
                                 </div>
-                                <!--/column -->
                                 <div class="col-md-10">
                                     <div class="card bg-pale-primary text-center counter-wrapper">
                                         <div class="card-body py-11">
                                             <h3 class="counter text-nowrap">100+</h3>
                                             <p class="mb-0">Satisfied Customers</p>
                                         </div>
-                                        <!--/.card-body -->
                                     </div>
-                                    <!--/.card -->
                                 </div>
-                                <!--/column -->
                             </div>
-                            <!--/.row -->
                         </div>
-                        <!--/column -->
                     </div>
-                    <!--/.row -->
                 </div>
                 <div class="col-lg-7">
                     <h2 class="display-4 mb-8">Let's make something great together.</h2>
@@ -70,7 +206,6 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
-                                <!-- /column -->
                                 <div class="col-md-6">
                                     <div class="form-label-group mb-4">
                                         <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Doe" required="required" data-error="Last Name is required.">
@@ -78,7 +213,6 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
-                                <!-- /column -->
                                 <div class="col-md-6">
                                     <div class="form-label-group mb-4">
                                         <input id="form_email" type="email" name="email" class="form-control" placeholder="jane.doe@example.com" required="required" data-error="Valid email is required.">
@@ -86,7 +220,6 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
-                                <!-- /column -->
                                 <div class="col-md-6">
                                     <div class="form-label-group mb-4">
                                         <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Your phone number">
@@ -94,7 +227,6 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
-                                <!-- /column -->
                                 <div class="col-12">
                                     <div class="form-label-group mb-4">
                                         <textarea id="form_message" name="message" class="form-control" placeholder="Your message" rows="5" required="required" data-error="Message is required."></textarea>
@@ -102,26 +234,18 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
-                                <!-- /column -->
                                 <div class="col-12 text-center">
                                     <input type="submit" class="btn btn-primary rounded-pill btn-send mb-3" value="Send message">
                                     <p class="text-muted"><strong>*</strong> These fields are required.</p>
                                 </div>
-                                <!-- /column -->
                             </div>
-                            <!-- /.row -->
                         </div>
-                        <!-- /.controls -->
                     </form>
                 </div>
             </div>
-            <!--/.row -->
         </div>
-        <!-- /.container -->
-    </section>
-    <!-- /section -->
+    </section> -->
 </div>
-<!-- /.content-wrapper -->
 
 <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
 <script>

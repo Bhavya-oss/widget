@@ -8,7 +8,7 @@
     </header>
     <!-- /header -->
 
-    <section class="wrapper bg-soft-primary">
+    <!-- <section class="wrapper bg-soft-primary">
 			<div class="container pt-10 pb-19 pt-md-14 pb-md-22 text-center">
 				<div class="row">
 					<div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
@@ -16,11 +16,8 @@
                         <p class="lead px-xl-10 px-xxl-10">{{ $resource.content}}</p>
 						</div>
 				</div>
-				<!-- /.row -->
 			</div>
-			<!-- /.container -->
 		</section>
-		<!-- /section -->
 		<section class="wrapper bg-light wrapper-border">
 			<div class="container pb-14 pb-md-16">
 				<div class="row">
@@ -34,7 +31,6 @@
 										<div class="col-md-9 text-justify">
 											<p>{{ $resource.About_the_project_content}}</p>
 										</div>
-										<!--/column -->
 										<div class="col-md-2 ms-auto">
 											<ul class="list-unstyled">
 												<li>
@@ -48,50 +44,34 @@
 											</ul>
 											<a href="#" class="more hover">See Project</a>
 										</div>
-										<!--/column -->
 									</div>
-									<!--/.row -->
 								</div>
-								<!-- /column -->
 							</div>
-							<!--/.row -->
 							<div class="row mt-5 gx-md-6 gy-6 light-gallery-wrapper">
 								<div class="item col-md-6">
 									<figure class="rounded"><img src="https://res.cloudinary.com/biggworks/image/upload/v1666246899/pp2_qpawt3.jpg" alt="" /></figure>
 								</div>
-								<!--/column -->
 								<div class="item col-md-6">
 									<figure class="rounded"><img src="https://res.cloudinary.com/biggworks/image/upload/v1666246899/pp3_mdxt0d.jpg" alt="" /></figure>
 								</div>
-								<!--/column -->
 								<div class="item col-md-6">
 									<figure class="rounded"><img src="https://res.cloudinary.com/biggworks/image/upload/v1666246900/pp4_bzf4g8.jpg" alt="" /></figure>
 								</div>
-								<!--/column -->
 								<div class="item col-md-6">
 									<figure class="rounded"><img src="https://res.cloudinary.com/biggworks/image/upload/v1666246899/pp5_vz8esm.jpg" alt="" /></figure>
 								</div>
-								<!--/column -->
 							</div>
-							<!-- /.row -->
 							<div class="row mt-8 mt-md-12">
 								<div class="col-md-10 offset-md-1 text-justify">
 									<h2 class="mb-4">About Work</h2>
 									<p>{{ $resource.About_work_content}}</p>
 								</div>
-								<!-- /column -->
 							</div>
-							<!-- /.row -->
 						</article>
-						<!-- /.project -->
 					</div>
-					<!-- /column -->
 				</div>
-				<!-- /.row -->
 			</div>
-			<!-- /.container -->
 		</section>
-		<!-- /section -->
 		<section class="wrapper bg-light">
 			<div class="container py-10">
 				<div class="row gx-md-6 gy-3 gy-md-0">
@@ -99,7 +79,6 @@
 						<a href="" class="btn btn-soft-ash rounded-pill btn-icon btn-icon-start mb-0 me-1"><i class="uil uil-arrow-left"></i> Prev Post</a>
 						<a href="" class="btn btn-soft-ash rounded-pill btn-icon btn-icon-end mb-0">Next Post <i class="uil uil-arrow-right"></i></a>
 					</div>
-					<!--/column -->
 					<aside class="col-md-4 sidebar text-center text-md-end">
 						<div class="dropdown share-dropdown btn-group">
 							<button class="btn btn-red rounded-pill btn-icon btn-icon-start dropdown-toggle mb-0 me-0" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -109,25 +88,559 @@
 								<a class="dropdown-item" href="#"><i class="uil uil-facebook-f"></i>Facebook</a>
 								<a class="dropdown-item" href="#"><i class="uil uil-linkedin"></i>Linkedin</a>
 							</div>
-							<!--/.dropdown-menu -->
 						</div>
-						<!--/.share-dropdown -->
 					</aside>
-					<!-- /column .sidebar -->
 				</div>
-				<!--/.row -->
 			</div>
-			<!-- /.container -->
+		</section> -->
+		<section class="wrapper bg-light">
+			<div class="d-flex align-items-center">
+				<div class="container-fluid pt-17 pt-md-17 text-center">
+					<div class="row">
+						<div class="col-md-10 col-lg-10 col-xl-10 col-xxl-8 mx-auto" data-group="page-title">
+							<h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5">
+								{{$resource.section_one.title}}
+							</h2>
+							<h3 class="display-4 mb-4">{{$resource.section_one.sub_title}}
+							</h3>
+							<p class="lead fs-lg mb-10">
+								{{$resource.section_one.description}}
+
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
-		<!-- /section -->
+		<section class="wrapper bg-light">
+			<div class="container-fluid pt-9 pt-md-11 pb-14 pb-md-16">
+				<div class="projects-overflow mt-md-10 mb-10 mb-lg-15">
+					<div class="col-xl-10 mx-auto">
+						<div class="grid grid-view projects-tiles show-more" data-showstart="17" data-showafter="17">
+							
+							<div class="project light-gallery-wrapper">
+								<div class="row g-6 isotope">
+									<div class="project item">
+										<div class="row">
+											<figure class="col-lg-8 col-xl-8 rounded"> 
+												<img class="col-12 col-md-12" src={{$resource.section_second.smart_lights.image}}
+												alt="" /></figure>
+											<div class="project-details d-flex justify-content-center flex-column" 
+											style="right: 12%; bottom: 22%;">
+												<div  class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
+													<div class="card-body">
+														<div class="post-header">
+															<h4 class="mb-3">{{$resource.section_second.smart_lights.title}}</h4>
+														</div>
+														<div class="post-content">
+															<p>{{$resource.section_second.smart_lights.description}}</p>
+															<a href="/projects/biggworks-project-smart-lights/"
+																class="more hover link-primary">{{$resource.section_second.smart_lights.see_project}}</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+									</div>
+									
+								</div>
+								
+							</div>
+							<div class="project light-gallery-wrapper">
+								<div class="row g-6 isotope">
+									<div class="project item">
+										<div class="row">
+											<figure class="col-lg-7 offset-lg-5 col-xl-8 col-md-12 offset-xl-4 rounded"> <img class="col-12 col-md-12"
+													src="{{$resource.section_second.dryskin_monitoring.image}}"
+													alt="" /></figure>
+											<div class="project-details d-flex justify-content-center flex-column ms-lg-n150 ms-xl-0"
+												style="left: 12%; bottom: 22%;">
+												<div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
+													<div class="card-body">
+														<div class="post-header"Measurement>
+															<h4 class="mb-3">{{$resource.section_second.dryskin_monitoring.title}}</h4>
+														</div>
+														<div class="post-content">
+															<p>{{$resource.section_second.dryskin_monitoring.description}}</p>
+															<a href="/projects/biggworks-project-dry-skin-index-measurement/"
+																class="more hover link-primary">{{$resource.section_second.dryskin_monitoring.see_project}}</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>	
+									
+								</div>
+							</div>
+							<div class="project light-gallery-wrapper">
+								<div class="row g-6 isotope">
+									<div class="project item">
+										<div class="row">
+											<figure class="col-lg-8 col-xl-8 rounded"> 
+												<img class="col-12 col-md-12" src="{{$resource.section_second.automatic_batch.image}}" alt="" /></figure>
+											<div class="project-details d-flex justify-content-center flex-column" 
+											style="right: 12%; bottom: 22%;">
+												<div  class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
+													<div class="card-body">
+														<div class="post-header">
+															<h4 class="mb-3">{{$resource.section_second.automatic_batch.title}}</h4>
+														</div>
+														<div class="post-content">
+															<p>{{$resource.section_second.automatic_batch.description}}</p>
+															<a href="/projects/biggworks-project-automatic-batch-controller/"
+																class="more hover link-primary">{{$resource.section_second.automatic_batch.see_project}}</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							<div class="project light-gallery-wrapper">
+								<div class="row g-6 isotope">
+									<div class="project item">
+										<div class="row">
+											<figure class="col-lg-7 offset-lg-5 col-xl-8 col-md-12 offset-xl-4 rounded"> <img class="col-12 col-md-12"
+													src="{{$resource.section_second.core_body_temp.image}}"
+													alt="" /></figure>
+											<div class="project-details d-flex justify-content-center flex-column ms-lg-n150 ms-xl-0"
+												style="left: 12%; bottom: 18%;">
+												<div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
+													<div class="card-body">
+														<div class="post-header">
+															<h4 class="mb-3">{{$resource.section_second.core_body_temp.title}}</h4>
+														</div>
+				
+														<div class="post-content">
+															<p>{{$resource.section_second.core_body_temp.description}}</p>
+															<a href="/projects/biggworks-project-core-temp-body-sensor/" class="more hover link-primary">{{$resource.section_second.core_body_temp.see_project}}</a>
+														</div>
+				
+													</div>
+													
+												</div>
+												
+				
+											</div>
+				
+										</div>
+				
+									</div>
+									
+								</div>
+							</div>
+							<div class="project light-gallery-wrapper">
+								<div class="row g-6 isotope">
+									<div class="project item">
+										<div class="row">
+											<figure class="col-lg-8 col-xl-8 rounded"> 
+												<img class="col-12 col-md-12" src={{$resource.section_second.asset_tracking.image}} alt="" /></figure>
+											<div class="project-details d-flex justify-content-center flex-column" 
+											style="right: 12%; bottom: 22%;">
+												<div  class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
+													<div class="card-body">
+														<div class="post-header">
+															<h4 class="mb-3">{{$resource.section_second.asset_tracking.title}}</h4>
+														</div>
+														<div class="post-content">
+															<p>{{$resource.section_second.asset_tracking.description}}</p>
+															<a href="/projects/biggworks-project-asset-tracking-solution/"
+																class="more hover link-primary">{{$resource.section_second.asset_tracking.see_project}}</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+									</div>
+									
+								</div>
+								
+							</div>
+							 <div class="project light-gallery-wrapper">
+								<div class="row g-6 isotope">
+									<div class="project item">
+										<div class="row">
+											<figure class="col-lg-7 offset-lg-5 col-xl-8 col-md-12 offset-xl-4 rounded"> <img class="col-12 col-md-12" 
+												src={{$resource.section_second.geofence_alert.image}} alt="" /></figure>
+											<div class="project-details d-flex justify-content-center flex-column" style="left: 12%; bottom: 22%;">
+												<div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
+													<div class="card-body">
+														<div class="post-header">
+															<h4 class="mb-3">{{$resource.section_second.geofence_alert.title}}</h4>
+														</div>
+														<div class="post-content">
+															<p>{{$resource.section_second.geofence_alert.description}}
+															</p>
+															<a href="/projects/biggworks-project-geofence-alert-system/"
+																class="more hover link-primary">{{$resource.section_second.geofence_alert.see_project}}</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							<div class="project light-gallery-wrapper">
+								<div class="row g-6 isotope">
+									<div class="project item">
+										<div class="row">
+											<figure class="col-lg-8 col-xl-8 rounded"> <img 
+													class="col-12 col-md-12"
+													src="{{$resource.section_second.longrange_bluetooth.image}}"
+													alt="" /></figure>
+											<div class="project-details d-flex justify-content-center flex-column"
+												style="right: 12%; bottom: 22%;">
+												<div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
+													<div class="card-body">
+														<div class="post-header">
+															<h4 class="mb-3">{{$resource.section_second.longrange_bluetooth.title}}</h4>
+														</div>
+				
+														<div class="post-content">
+															<p>{{$resource.section_second.longrange_bluetooth.description}}</p>
+															<a href="/projects/biggworks-project-bluetooth-audio-device/"
+																class="more hover link-primary">{{$resource.section_second.longrange_bluetooth.see_project}}</a>
+														</div>
+				
+													</div>
+				
+													
+				
+												</div>
+				
+											</div>
+				
+										</div>
+				
+									</div>
+									
+								</div>
+							</div>
+							<div class="project light-gallery-wrapper">
+								<div class="row g-6 isotope">
+									<div class="project item">
+										<div class="row">
+											<figure class="col-lg-7 offset-lg-5 col-xl-8 col-md-12 offset-xl-4 rounded"> <img class="col-12 col-md-12" 
+												src="{{$resource.section_second.aerodynamic_performance.image}}" alt="" /></figure>
+											<div class="project-details d-flex justify-content-center flex-column" style="left: 12%; bottom: 18%;">
+												<div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
+													<div class="card-body">
+														<div class="post-header">
+															<h4 class="mb-3">{{$resource.section_second.aerodynamic_performance.title}}</h4>
+														</div>
+														<div class="post-content">
+															<p>{{$resource.section_second.aerodynamic_performance.description}}
+															</p>
+															<a href="/projects/biggworks-project-aerodynamic-performance-measurement/"
+																class="more hover link-primary">{{$resource.section_second.aerodynamic_performance.see_project}}</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							<div class="project light-gallery-wrapper">
+								<div class="row g-6 isotope">
+									<div class="project item">
+										<div class="row">
+											<figure class="col-lg-8 col-xl-8 rounded"> 
+												<img class="col-12 col-md-12" src="{{$resource.section_second.subcentimeter_accurate.image}}" alt="" /></figure>
+											<div class="project-details d-flex justify-content-center flex-column" 
+											style="right: 12%; bottom: 20%">
+												<div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
+													<div class="card-body">
+														<div class="post-header">
+															<h4 class="mb-3">{{$resource.section_second.subcentimeter_accurate.title}}</h4>
+														</div>
+														<div class="post-content">
+															<p>{{$resource.section_second.subcentimeter_accurate.description}}</p>
+															<a href="/projects/biggworks-project-cm-accurate-positioning-system/"
+																class="more hover link-primary">{{$resource.section_second.subcentimeter_accurate.see_project}}</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							<div class="project light-gallery-wrapper">
+								<div class="row g-6 isotope">
+									<div class="project item">
+										<div class="row">
+											<figure class="col-lg-7 offset-lg-5 col-xl-8 col-md-12 offset-xl-4 rounded"> <img class="col-12 col-md-12" 
+												src="{{$resource.section_second.depth_temp.image}}" alt="" /></figure>
+											<div class="project-details d-flex justify-content-center flex-column" style="left: 12%; bottom: 22%;">
+												<div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
+													<div class="card-body">
+														<div class="post-header">
+															<h4 class="mb-3">{{$resource.section_second.depth_temp.title}}</h4>
+														</div>
+														<div class="post-content">
+															<p>{{$resource.section_second.depth_temp.description}}
+															</p>
+															<a href="/projects/biggworks-project-depth-and-temperature-monitoring/"
+																class="more hover link-primary">{{$resource.section_second.depth_temp.see_project}}</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+							<div class="project light-gallery-wrapper">
+								<div class="row g-6 isotope">
+									<div class="project item">
+										<div class="row">
+											<figure class="col-lg-8 col-xl-8 rounded"> <img class="col-12 col-md-12"
+													src="{{$resource.section_second.biometric_authentication.image}}"
+													alt="" /></figure>
+											<div class="project-details d-flex justify-content-center flex-column"
+												style="right:12%; bottom: 22%;">
+												<div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
+													<div class="card-body">
+														<div class="post-header">
+															<h4 class="mb-3">{{$resource.section_second.biometric_authentication.title}}</h4>
+														</div>
+				
+														<div class="post-content">
+															<p>{{$resource.section_second.biometric_authentication.description}}</p>
+															<a href="/projects/biggworks-project-biometric-authentication-device/"
+																class="more hover link-primary">{{$resource.section_second.biometric_authentication.see_project}}</a>
+														</div>
+				
+													</div>
+				
+												</div>
+				
+											</div>
+				
+										</div>
+				
+									</div>
+									
+								</div>
+							</div>
+							<div class="project light-gallery-wrapper">
+								<div class="row g-6 isotope">
+									<div class="project item">
+										<div class="row">
+											<figure class="col-lg-7 offset-lg-5 col-xl-8 col-md-12 offset-xl-4 rounded"> <img class="col-12 col-md-12" 
+												src="{{$resource.section_second.ecg_mobile_application.image}}" alt="" /></figure>
+											<div class="project-details d-flex justify-content-center flex-column" style="left: 12%; bottom: 22%;">
+												<div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
+													<div class="card-body">
+														<div class="post-header">
+															<h4 class="mb-3">{{$resource.section_second.ecg_mobile_application.title}}</h4>
+														</div>
+														<div class="post-content">
+															<p>{{$resource.section_second.ecg_mobile_application.description}}
+															</p>
+															<a href="/projects/biggworks-project-ecg-mobile-application/"
+																class="more hover link-primary">{{$resource.section_second.ecg_mobile_application.see_project}}</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							<div class="project light-gallery-wrapper">
+								<div class="row g-6 isotope">
+									<div class="project item">
+										<div class="row">
+											<figure class="col-lg-8 col-xl-8 rounded"> <img class="col-12 col-md-12"
+													src="{{$resource.section_second.gearin_gearout.image}}"
+													alt="" /></figure>
+											<div class="project-details d-flex justify-content-center flex-column"
+												style="right:12%; bottom: 22%;">
+												<div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
+													<div class="card-body">
+														<div class="post-header">
+															<h4 class="mb-3">{{$resource.section_second.gearin_gearout.title}}</h4>
+														</div>
+				
+														<div class="post-content">
+															<p>{{$resource.section_second.gearin_gearout.description}}</p>
+															<a href="/projects/biggworks-project-gear-in-gear-out-beacons/"
+																class="more hover link-primary">{{$resource.section_second.gearin_gearout.see_project}}</a>
+														</div>
+				
+													</div>
+				
+												</div>
+				
+											</div>
+				
+										</div>
+				
+									</div>
+									
+								</div>
+							</div>
+							<div class="project light-gallery-wrapper">
+								<div class="row g-6 isotope">
+									<div class="project item">
+										<div class="row">
+											<figure class="col-lg-7 offset-lg-5 col-xl-8 col-md-12 offset-xl-4 rounded"> <img class="col-12 col-md-12" 
+												src="{{$resource.section_second.energy_assettracking.image}}" alt="" /></figure>
+											<div class="project-details d-flex justify-content-center flex-column" style="left: 12%; bottom: 22%;">
+												<div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
+													<div class="card-body">
+														<div class="post-header">
+															<h4 class="mb-3">{{$resource.section_second.energy_assettracking.title}}</h4>
+														</div>
+														<div class="post-content">
+															<p>{{$resource.section_second.energy_assettracking.description}}
+															</p>
+															<a href="/projects/biggworks-project-energy-asset-tracking-beacon/"
+																class="more hover link-primary">{{$resource.section_second.energy_assettracking.see_project}}</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							<div class="project light-gallery-wrapper">
+								<div class="row g-6 isotope">
+									<div class="project item">
+										<div class="row">
+											<figure class="col-lg-8 col-xl-8 rounded"> <img class="col-12 col-md-12"
+													src="{{$resource.section_second.race_timing.image}}"
+													alt="" /></figure>
+											<div class="project-details d-flex justify-content-center flex-column"
+												style="right:12%; bottom: 22%;">
+												<div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
+													<div class="card-body">
+														<div class="post-header">
+															<h4 class="mb-3">{{$resource.section_second.race_timing.title}}</h4>
+														</div>
+				
+														<div class="post-content">
+															<p>{{$resource.section_second.race_timing.description}}</p>
+															<a href="/projects/biggworks-project-race-timing-system/"
+																class="more hover link-primary">{{$resource.section_second.race_timing.see_project}}</a>
+														</div>
+				
+													</div>
+				
+												</div>
+				
+											</div>
+				
+										</div>
+				
+									</div>
+									
+								</div>
+							</div>
+
+						
+							<div class="project light-gallery-wrapper">
+								<div class="row g-6 isotope">
+									<div class="project item">
+										<div class="row">
+											<figure class="col-lg-7 offset-lg-5 col-xl-8 col-md-12 offset-xl-4 rounded"> <img class="col-12 col-md-12"
+													src="{{$resource.section_second.underwater_communcations.image}}"
+													alt="" /></figure>
+											<div class="project-details d-flex justify-content-center flex-column ms-lg-n150 ms-xl-0"
+												style="left: 12%; bottom: 20%;">
+												<div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
+													<div class="card-body">
+														<div class="post-header">
+															<h4 class="mb-3">{{$resource.section_second.underwater_communcations.title}}</h4>
+														</div>
+				
+														<div class="post-content">
+															<p>{{$resource.section_second.underwater_communcations.description}}</p>
+															<a href="/projects/biggworks-project-underwater-communication-system/"
+																class="more hover link-primary">{{$resource.section_second.underwater_communcations.see_project}}</a>
+														</div>
+				
+													</div>
+				
+												</div>
+				
+											</div>
+				
+										</div>
+				
+									</div>	
+									
+								</div>
+							</div>
+							<div class="project light-gallery-wrapper">
+								<div class="row g-6 isotope">
+									<div class="project item">
+										<div class="row">
+											<figure class="col-lg-8 col-xl-8 rounded"> <img class="col-12 col-md-12"
+													src="{{$resource.section_second.lignlight_device.image}}"
+													alt="" /></figure>
+											<div class="project-details d-flex justify-content-center flex-column"
+												style="right:12%; bottom: 20%;">
+												<div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
+													<div class="card-body">
+														<div class="post-header">
+															<h4 class="mb-3">{{$resource.section_second.lignlight_device.title}}</h4>
+														</div>
+				
+														<div class="post-content">
+															<p>{{$resource.section_second.lignlight_device.description}}</p>
+															<a href="/projects/biggworks-project-lignlight-device/"
+																class="more hover link-primary">{{$resource.section_second.lignlight_device.see_project}}</a>
+														</div>
+				
+													</div>
+				
+												</div>
+				
+											</div>
+				
+										</div>
+				
+									</div>
+									
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</section>
 	</div>
-	<!-- /.content-wrapper -->
 	
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
 	
   </div>
-  <!-- /.content-wrapper -->
   {{ partial "footer.html" . }} {{ partial "page-progress.html" . }} 
  
 </body>

@@ -1,0 +1,218 @@
+{{ define "main" }} {{ $resource := getJSON "http://bw-strapi:1337/biggworks-project-smart-lights" }}
+
+<!-- {{ printf "My data: %s"  $resource}} -->
+
+<body>
+  <div class="content-wrapper">
+    <header class="wrapper bg-gray">
+      {{ partial "nav.html" . }}
+    </header>
+
+    <section class="wrapper bg-linear-gradient">
+        <div class="d-flex align-items-center bg-overlay-400">
+            <div class="container-fluid pt-15 pb-13 pt-md-14 pb-md-17 pb-xl-22 pb-6 text-center">
+                <div class="row mb-10">
+                    <div class="col-md-10 col-lg-10 col-xl-10 col-xxl-8 mx-auto mb-xl-13 mb-lg-13 mb-md-13 mb-8"
+                        data-group="page-title">
+                        <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5 mt-8">
+                            {{$resource.section_one.title}}                        </h2>
+                        <h3 class="display-4 mb-6 mb-lg-10 mb-xl-10 mb-md-7 lh-sm">
+                            {{$resource.section_one.subtitle}} 
+                        </h3>
+                        <div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
+                            <span><a class="btn btn-primary btn-lg rounded-0 mx-1">{{$resource.section_one.btn_talk_to_us}}</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="wrapper bg-light">
+        <div class="container pb-14 pb-md-4">
+            <div class="row">
+                <div class="col-12">
+                    <article class="mt-n21">
+                        <div class="col-1"></div>
+                        <figure class="mb-0"><img
+                                class="project1-image mt-xl-18 mt-lg-18 mt-20 mt-md-19 col-lg-10 col-md-10 col-10 center-main-image img-fluid"
+                                src="{{$resource.section_two.image}}"
+                                alt="" /></figure>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="wrapper">
+        <div class="container px-0 px-xl-14 px-lg-14 px-md-0">
+           <p class="pt-lg-20_5 pt-md-8 pt-md-15 pt-0 px-5 text-justify">{{$resource.section_three.description}}
+        </p>
+        <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-0 mt-2 px-8">{{$resource.section_three.client}}</h4>
+            <ul
+                class="unordered-list bullet-primary text-justify paragraph_justify px-xl-8 px-3">
+                <li class="ms-4 pe-4">{{$resource.section_three.client1}}</li>
+                <li class="ms-4 pe-4">{{$resource.section_three.client2}}
+                    
+
+                    </li>
+                <li class="ms-4 pe-4">{{$resource.section_three.client3}}
+                    
+                    
+                    </li>
+                <li class="ms-4 pe-4">{{$resource.section_three.client4}}
+                    
+                    
+                   
+                    </li>
+
+            </ul>
+            <div class="row g-0">
+                <div class="col-1 col-lg-3 col-md-2 col-xl-3"></div>
+                <div class="col-lg-9 col-md-9 col-xl-9 col-10 pt-8">
+
+                    <img class="mobile-robust-tracking col-12 col-xl-8 col-lg-8 img-fluid"
+                        src="{{$resource.section_three.image}}"
+                        alt="" />
+                </div>
+            </div>
+           
+
+        </div>
+    </section>
+
+    <section>
+        <div class="container  px-3 px-xl-14 px-lg-14 px-md-0">
+            <h4 class="mb-4 mt-8">{{$resource.section_four.title}}</h4>
+            <h4 class="col-lg-8 col-md-8 col-sm-2 mb-7 mt-6 fw-semibold">{{$resource.section_three.heading}}</h4>
+            <div class="row mb-6 mt-4">
+
+                <div class="col-lg-2 col-xs-4 col-6 col-sm-4 mb-8 pl-10 mobile-text-center col-md-4"><img
+                        src="{{$resource.section_four.image1}}" />
+                </div>
+                <div class="col-lg-2 col-xs-4  col-6 col-sm-4 mb-8 col-md-4"><img
+                        src="{{$resource.section_four.image2}}" />
+                </div>
+                <div class="col-lg-2 col-6 col-xs-4 mb-8 mobile-text-center col-md-4"><img
+                        src="{{$resource.section_four.image3}}" />
+                </div>
+                <div class="col-lg-2 col-6 mb-8 col-md-4"><img
+                        src="{{$resource.section_four.image4}}" />
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+    <section class="wrapper">
+        <div class="container  px-3 px-xl-14 px-lg-14 px-md-0">
+            <div class="col-12">
+                <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-0 mt-2">{{$resource.section_five.title}}</h4>
+
+                <ul class="unordered-list bullet-primary mb-4 paragraph_justify">
+                    <li class="ms-4 pe-4">{{$resource.section_five.point1}}
+                    <li class="ms-4 pe-4">{{$resource.section_five.point2}}
+                    </li>
+
+
+
+
+                </ul>
+
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <section>
+        <div class="container  px-3 px-xl-14 px-lg-14 px-md-0">
+
+            <div class="row gx-0">
+                <div class="col-md-6 col-lg-8 text-justify">
+                    <h4 class="mb-md-2 mt-xl-8 mt-lg-8 mt-4">{{$resource.section_six.title}}</h4>
+
+                    <p class="paragraph_justify mb-8 pt-3">{{$resource.section_six.description}}</p>
+                </div>
+
+                <div class="col-md-1 col-xl-1"></div>
+                <div class="col-md-5 col-lg-3 col-12 col-xl-3 col-4 pt-2 pt-md-12">
+                    <img class="mb-4 img-fluid text-center ps-xl-13 ps-md-13 ps-lg-13 ps-10_5"
+                        src="{{$resource.section_six.image}}"
+                        alt="" />
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+    <section class="wrapper bg-linear-gradient">
+        <div class="container  px-3 px-xl-14 px-lg-14 px-md-0">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h3 class="display-6 mt-8 mt-lg-12 mt-xl-12 mt-md-12 mt- mb-6">{{$resource.section_seven.heading1}}</h3>
+                    <p class="mb-8 paragraph_justify">{{$resource.section_seven.description1}}</p>
+                    <button type="button" class="btn btn-primary btn-lg rounded-0">{{$resource.section_seven.btn_talk_to_us}}</button>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-lg-5 col-12 col-md-5">
+                    <h4 class="mb-4 mt-12 paragraph_justify">{{$resource.section_seven.heading2}}</h4>
+                    <p class="mb-4">{{$resource.section_seven.description2}}</p>
+                    <h4 class="mb-4">{{$resource.section_seven.heading3}}</h4>
+                    <p class="mb-4">{{$resource.section_seven.description3}}</p>
+                    <h4 class="mb-4">{{$resource.section_seven.heading4}}</h4>
+                    <p class="mb-8 mb-xl-12 mb-lg-12 mb-md-12">{{$resource.section_seven.description4}}</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+
+        <div class="container py-10  px-3 px-xl-14 px-lg-14 px-md-0">
+            <div class="row gx-md-6 gy-3 gy-md-0">
+                <div class="col-md-6 col-xl-8 align-self-center text-center text-md-start navigation">
+                    <!-- <button type="button" class="btn btn-outline-primary rounded-pill mt-8 mb-8">{{$resource.section_seven.image}}</button> -->
+                    <a href="/biggworks-project-dry-skin-index-measurement/">
+                        <button type="button" class="btn btn-outline-primary rounded-pill mt-8 mb-8">{{$resource.section_seven.next_project}}</button>
+                    </a>
+                </div>
+                <aside class="col-md-3 col-xl-4 sidebar text-center text-md-end">
+
+                    <button type="button" class="btn btn-primary btn-lg rounded-pill mt-8 mb-8 ms-20">{{$resource.section_seven.btn_share}}</button>
+
+
+
+                </aside>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+</div>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+  integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+  crossorigin="anonymous"
+></script>
+
+{{ partial "footer.html" . }} {{ partial "page-progress.html" . }}
+</body>
+{{ end }}

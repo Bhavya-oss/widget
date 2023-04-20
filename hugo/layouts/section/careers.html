@@ -1,427 +1,805 @@
 {{ define "main" }}
 {{ $resource := getJSON "http://bw-strapi:1337/careers" }}
+<!-- {{ printf "My data: %s"  $resource}} -->
+
 <body>
-  <div class="content-wrapper">
-    <header class="wrapper bg-gray">
-      {{ partial "nav.html" . }}
-      <!-- /.navbar -->
-    </header>
-    <!-- /header -->
-	<section class="wrapper bg-soft-primary">
-		<div class="container pt-10 pt-md-14 text-center">
-			<div class="row">
-				<div class="col-lg-8 mx-auto">
-					<h1 class="display-1 mb-3">{{ $resource.title}}</h1>
-					<p class="lead px-lg-7 px-xl-7 px-xxl-6">{{ $resource.content}}</p>
-					<!-- /nav -->
+	<div class="content-wrapper">
+		<header class="wrapper bg-gray">
+			{{ partial "nav.html" . }}
+			<!-- /.navbar -->
+		</header>
+		<!-- /header -->
+		<section class="wrapper bg-linear-gradient">
+			<div class="container">
+				<div class="row mb-10">
+					<h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5 mt-16 text-left">
+						{{$resource.section_one.title}}
+					</h2>
+					<h3 class="display-4 mb-4 ">
+						{{$resource.section_one.subtitle}}
+					</h3>
+					<p class="lead fs-lg text-left mb-7 col-xl-7 col-lg-7 col-md-10">
+						{{$resource.section_one.description}}
+
+					</p>
+					<!-- <p class="lead fs-lg mb-10">
+					Looking for internships?
+				</p> -->
 				</div>
-				<!-- /column -->
+
 			</div>
-			<!-- /.row -->
-		</div>
-		<!-- /.container -->
-	</section>
-	<!-- /section -->
-	<section class="wrapper bg-light wrapper-border">
-		<div class="container py-14 py-md-16">
-			<h2 class="display-4 mb-3 text-center">Open Positions</h2>
-			<div class="card my-4">
-				<div class="card-body">
+		</section>
+
+		<section class="wrapper">
+			<div class="container text-center">
+
+				<h3 class="display-4 mb-5">
+					{{$resource.section_two.title}}
+
+					
+				</h3>
+				<p class="lead fs-lg text-left mb-7 px-xl-20">
+					{{$resource.section_two.description}}
+
+				</p>
+			</div>
+
+
+		</section>
+
+
+		<section class="wrapper bg-light">
+			<div class="container pb-2">
+				<div class="grid">
 					<div class="row">
-						<div class="col-sm-2">
-
-							<a href="#myModal" data-bs-toggle="modal">
-								Software Engineer (Golang) | Hybrid
-							</a>
-						</div>
-						<div class="col-sm-2">
-							<span> Pune</span>
-						</div>
-						<div class="col-sm-2">
-							<span> Backend Developer</span>
-							<p> 1+ years Experience</p>
-						</div>
-						<div class="col-sm-4">
-							<span class="badge bg-soft-ash text-dark rounded-pill">MySQL</span>
-							<span class="badge bg-soft-ash text-dark rounded-pill">MongoDB</span>
-							<span class="badge bg-soft-ash text-dark rounded-pill">PostgreSQL</span>
-							<span class="badge bg-soft-ash text-dark rounded-pill "> Elasticsearch </span>
-						</div>
-
-						<div class="col-sm-2">
-							<a href="#myModal" class="btn btn-primary rounded-pill me-1 mb-2 mb-md-0"
-								data-bs-toggle="modal">Apply Now</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="card my-4">
-				<div class="card-body">
-					<div class="row">
-						<div class="col-sm-2">
-
-							<a href="#myModal" data-bs-toggle="modal">
-								Software Engineer (Golang) | Hybrid
-							</a>
-						</div>
-						<div class="col-sm-2">
-							<span> Pune</span>
-						</div>
-						<div class="col-sm-2">
-							<span> Backend Developer</span>
-							<p> 1+ years Experience</p>
-						</div>
-						<div class="col-sm-4">
-							<span class="badge bg-soft-ash text-dark rounded-pill">MySQL</span>
-							<span class="badge bg-soft-ash text-dark rounded-pill">MongoDB</span>
-							<span class="badge bg-soft-ash text-dark rounded-pill">PostgreSQL</span>
-							<span class="badge bg-soft-ash text-dark rounded-pill "> Elasticsearch </span>
-						</div>
-
-						<div class="col-sm-2">
-							<a href="#myModal" class="btn btn-primary rounded-pill me-1 mb-2 mb-md-0"
-								data-bs-toggle="modal">Apply Now</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-</div>
-<!--   Modal    -->
-<div id="myModal" class="modal fade" tabindex="-1">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title">Software Engineer (Golang) | Hybrid (Pune)
-					<br class="d-none d-md-block" /> Pune, Maharashtra, IndiaGolang & Kubernetes-Full time
-				</h5>
-				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-			</div>
-			<div class="modal-body">
-				<section id="tabs" class="wrapper pt-0 pb-md-4">
-					<div class="row">
-						<div class="col-lg-15">
-							<ul class="nav nav-tabs ">
-								<li class="nav-item"> <a class="nav-link active me-22" data-bs-toggle="tab"
-										href="#tab-1"><span>Overview</span></a> </li>
-								<li class="nav-item"> <a class="nav-link" data-bs-toggle="tab"
-										href="#tab-2"><span>Application</span></a> </li>
-							</ul>
-							<div class="tab-content">
-								<div class="tab-pane fade show active" id="tab-1">
-
-									<div>
-										<h5> Description</h5>
-										<p> At Velotio, we are embracing a remote-friendly work culture
-											where everyone has the flexibility to either work remotely or
-											from our office in Pune.</p>
-										<p>Join us and work from wherever you feel most productive!</p>
-									</div>
-									<div>
-										<h5>About Velotio:</h5>
-										<p>
-											Velotio Technologies is a product engineering company working
-											with innovative startups and enterprises.
-											We are a certified Great Place to Work® and recognized as one of
-											the best companies to work for in India.
-											We have provided full-stack product development for 110+
-											startups across the globe building products in the cloud-native,
-											data engineering, B2B SaaS, IoT & Machine Learning space. Our
-											team of 325+ elite software engineers solves hard technical
-											problems while transforming customer ideas into successful
-											products.
-										</p>
-									</div>
-									<div>
-										<h5>Team:</h5>
-										<p>Cloud-Native Products</p>
-										<h5>Requirements</h5>
-										<p>
-											-> You will be working with cloud-native technologies such as
-											Docker, Kubernetes, Micro-services, Prometheus,
-											Service Mesh, Distributed Tracing, Serverless & AWS/GCP.
-										</p>
-										<p>
-											-> Design, code, and maintain Kubernetes add-ons, Custom
-											Controllers, Operators, CRDs, runtime tooling,
-											and integrations to enhance Kubernetes capabilities.
-										</p>
-										<p>
-											-> Develop products in the cloud-native ecosystem. Or architect
-											and develop tools to
-											help adoption of cloud native technology.
-										</p>
-										<p>
-											-> Key technologies this role will employ: Go (Golang),
-											Kubernetes, AWS / GCP, GKE/EKS/Openshift, Prometheus,
-											Prow, Operator SDK, Helm, Terraform, Vault, SQL/NoSQL Databases.
-										</p>
-										<p>
-											-> You are an experienced and mature engineer who wants to build
-											incredible products while shaping the architecture,
-											tools, and processes for the team.
-										</p>
-										<p>
-											-> Mentor team members and review their work.
-										</p>
-									</div>
-									<div>
-										<h5>You will enjoy this role if you...</h5>
-										<p>
-											-> Love Golang, Kubernetes, cloud platforms, and systems software.
-										</p>
-										<p>
-											-> Work collaboratively as part of a close-knit team of geeks,
-											architects and leads.
-										</p>
-									</div>
-									<div>
-										<h5>Desired Skills & Experience</h5>
-										<p>
-											-> 1+ years of experience in Software Development with Golang, Python or
-											Scala.
-											Minimum 1+ years of experience working with production quality Golang
-											codebase.
-										</p>
-										<p>
-											-> Experience with Go programming language, paradigms, constructs, and
-											patterns.
-											roficient with Kubernetes concepts such as Pods, Services, Deployments,
-											Statefulsets, volume claims, Helm Charts etc.
-										</p>
-										<p>
-											-> Proficient in algorithms and data structures
-										</p>
-										<p>
-											-> Proficiency with one or more SQL and NoSQL databases such as MySQL,
-											PostgreSQL,
-											Elasticsearch or MongoDB.
-										</p>
-										<p>
-											-> Experience with queuing and caching services like Redis, Memcache,
-											RabbitMQ.
-											Understanding of micro-services architecture.
-										</p>
-										<p> -> Understanding of micro-services architecture. </p>
-										<p>
-											-> Ability to operationalize code with proper tracing, metrics, error
-											logging, monitoring and alerts.
-										</p>
-										<p>
-											-> Experience with agile methodologies, software development lifecycles,
-											& design patterns.
-										</p>
-										<p>
-											-> You're willing to learn various new technologies and concepts.
-											The “cloud-native” field of software is evolving fast and you'll need to
-											quickly
-											learn new technologies as required.
-										</p>
-										<p>
-											-><strong> Communication:</strong> You like discussing a plan upfront,
-											welcome collaboration, and are an excellent
-											verbal and written communicator.
-										</p>
-										<p>
-											-> Bachelor's degree in Computer Science or equivalent experience.
-										</p>
-									</div>
-									<div>
-										<h5>Bonus points if you...</h5>
-										<p>
-											-> Expert level proficiency in Go, and a clear understanding of
-											concurrency patterns, WebSockets, gRPC.
-										</p>
-										<p>
-											-> Have CKA Professional certifications.
-										</p>
-										<p>
-											-> Have experience with Kubernetes API extension points and
-											Kubernetes network plugins (e.g. CRDs, Open Service Broker, Controllers,
-											Istio, Calico, Flannel).
-										</p>
-										<p>
-											-> Have expertise running and automating Kubernetes environments in
-											one or more cloud providers, preferably as part of a large-scale,
-											enterprise-class product related to storage, networking and/or
-											virtualization.
-										</p>
-										<p>
-											-> Have experience contributing to open source projects.
-										</p>
-									</div>
-
-									<div>
-
-										<h5>Benefits</h5>
-										<h5> Our Culture:</h5>
-										<p>
-											-> We have an autonomous and empowered
-											work culture encouraging individuals to take ownership and grow quickly.
-										</p>
-										<p>
-											-> Flat hierarchy with fast decision making and a startup-oriented “get
-											things done” culture.
-										</p>
-										<p>
-											-> A strong, fun, and positive environment with regular celebrations of
-											our success.
-											We pride ourselves in creating an inclusive, diverse, and authentic
-											environment.
-										</p>
-										<p>
-											We want to hire smart, curious and ambitious folks so please reach out
-											even
-											if you do not have all of the requisite experience.
-											We are looking for engineers with the potential to grow!
-										</p>
-										<p>
-											<strong> Note: Currently, all interviews and onboarding processes
-												at Velotio are being carried out remotely through virtual
-												meetings.</strong>
-										</p>
+						<div class="item col-md-6 col-xl-4 mb-10">
+							<div class="card">
+								<div class="card-body career-card">
+									<div class="text-center">
+										<img class="text-center mb-8"
+											src="{{$resource.section_three.card1.image}}"
+											alt="" />
 
 									</div>
-									<a href="#tab-2" class="btn btn-primary rounded-pill" data-bs-toggle="tab">Apply
-										for this Job</a>
+									<h4>{{$resource.section_three.card1.title}}</h4>
+									<p>{{$resource.section_three.card1.description}}
+									</p>
+
 								</div>
-								<!-- Tab1 -->
-								
-								<div class="tab-pane fade" id="tab-2">
-									<div  id="application">
-									<form class="text-start mb-3 needs-validated"  >
-										
-										<div class="messages"></div>
-										<div class="controls">
-											<div class="row">
 
-												<div class="form-label-group mb-4">
-													<h6 class="mb-3">Name</h6>
-													<div class="form-label-group mb-4">
-														<input id="form-name" type="text" class="form-control"
-															name="name" placeholder="Name" required="required"
-															data-error="Valid Name is required."
-															style="width: 75%;">
-														<label for="textInputExample">Name *</label>
+							</div>
+						</div>
+						<div class="item col-md-6 col-xl-4 mb-10">
+							<div class="card">
+								<div class="card-body career-card">
+									<div class="text-center">
+										<img class="text-center mb-12"
+											src="{{$resource.section_three.card1.image}}"
+											alt="" />
 
-														<div class="help-block with-errors"></div>
+									</div>
+									<h4>{{$resource.section_three.card2.title}}</h4>
+									<p>{{$resource.section_three.card2.description}}
+									</p>
+
+								</div>
+
+							</div>
+						</div>
+						<div class="item col-md-6 col-xl-4 mb-10">
+							<div class="card">
+								<div class="card-body career-card">
+									<div class="text-center">
+										<img class="text-center mb-6"
+											src="{{$resource.section_three.card3.image}}"
+											alt="" />
+
+									</div>
+									<h4 class="pt-2">{{$resource.section_three.card3.title}}</h4>
+									<p>{{$resource.section_three.card3.description}}</p>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<section class="wrapper bg-light wrapper-border">
+			<div class="container py-0 py-md-0 py-xl-4">
+				<div class="container text-center">
+
+					<h3 class="display-4 mb-5">
+						{{$resource.section_four.title}}
+					</h3>
+					<p class="lead fs-lg text-left mb-12">
+						{{$resource.section_four.description}}
+					</p>
+				</div>
+
+				<div class="card my-4 mb-6">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-sm-2 col-xl-6 col-lg-6 col-md-5">
+								<h6>{{$resource.section_four.card1.role}}</h6>
+								<p class="lead"><u>{{$resource.section_four.card1.requirement}}</u></p>
+								<h6 class="text-muted">{{$resource.section_four.card1.status}}</h6>
+							</div>
+							<div class="col-xl-4 col-lg-4"> </div>
+							<!-- <div class="col-sm-2 col-xl-4 col-lg-4 col-md-4">
+								<h6 class="pe-8"> EUR up to 11 700 Before Tax
+									(Business Contract)</h6>
+								<p>EU , Poland</p>
+							</div> -->
+
+
+							<div class="col-sm-2 col-xl-2 col-lg-2 col-md-3">
+								<a href="#myModal1" class="btn btn-primary rounded-0 me-1 mb-2 mb-md-0"
+									data-bs-toggle="modal">{{$resource.section_four.card1.btn_apply}}</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card my-4 mb-6">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-sm-2 col-xl-6 col-lg-6 col-md-5">
+								<h6>{{$resource.section_four.card2.role}}</h6>
+								<p class="lead"><u>{{$resource.section_four.card2.requirement}}</u></p>
+								<h6 class="text-muted">{{$resource.section_four.card2.status}}</h6>
+							</div>
+							<div class="col-xl-4 col-lg-4"> </div>
+
+							<!-- <div class="col-sm-2 col-xl-4 col-lg-4 col-md-4">
+								<h6 class="pe-8"> EUR 3 530 - 5 510 Before Tax
+									(Business Contract)</h6>
+								<p>EU , Poland</p>
+							</div> -->
+
+
+							<div class="col-sm-2 col-xl-2 col-lg-2 col-md-3">
+								<a href="#myModal2" class="btn btn-primary rounded-0 me-1 mb-2 mb-md-0"
+									data-bs-toggle="modal">{{$resource.section_four.card2.btn_apply}}</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card my-4 mb-6">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-sm-2 col-xl-6 col-lg-6 col-md-5">
+								<h6>{{$resource.section_four.card3.role}}</h6>
+								<p class="lead"><u>{{$resource.section_four.card3.requirement}}</u></p>
+								<h6 class="text-muted">{{$resource.section_four.card3.status}}</h6>
+							</div>
+							<div class="col-xl-4 col-lg-4"> </div>
+
+							<!-- <div class="col-sm-2 col-xl-4 col-lg-4 col-md-4">
+								<h6 class="pe-8">EUR 3 530 - 5 510 Before Tax
+									(Business Contract)</h6>
+								<p>EU , Poland</p>
+							</div> -->
+
+
+							<div class="col-sm-2 col-xl-2 col-lg-2 col-md-3">
+								<a href="#myModal3" class="btn btn-primary rounded-0 me-1 mb-2 mb-md-0"
+									data-bs-toggle="modal">{{$resource.section_four.card3.btn_apply}}</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="card my-4 mb-6">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-sm-2 col-xl-6 col-lg-6 col-md-5">
+								<h6>UX Writer</h6>
+								<p class="lead"><u>Product Design</u></p>
+								<h6 class="text-muted">Ongoing</h6>
+							</div>
+
+							<div class="col-sm-2 col-xl-4 col-lg-4 col-md-4">
+								<h6 class="pe-8">EUR 3 530 - 5 510 Before Tax(Business Contract)</h6>
+								<p>EU , Poland</p>
+							</div>
+
+
+							<div class="col-sm-2 col-xl-2 col-lg-2 col-md-3">
+								<a href="#myModal" class="btn btn-primary rounded-0 me-1 mb-2 mb-md-0"
+									data-bs-toggle="modal">Apply Now</a>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<div id="myModal1" class="modal fade" tabindex="-1">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">{{$resource.section_four.modal1.title}}
+								</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+							</div>
+							<div class="modal-body">
+								<section id="tabs" class="wrapper pt-0 pb-md-4">
+									<div class="row">
+										<div class="col-lg-15">
+											<ul class="nav nav-tabs ">
+												<li class="nav-item"> <a class="nav-link active me-22"
+														data-bs-toggle="tab" href="#tab-1"><span>{{$resource.section_four.modal1.tab1}}</span></a>
+												</li>
+												<li class="nav-item"> <a class="nav-link" data-bs-toggle="tab"
+														href="#tab-2"><span>{{$resource.section_four.modal1.tab2}}</span></a> </li>
+											</ul>
+											<div class="tab-content">
+												<div class="tab-pane fade show active" id="tab-1">
+
+
+													<div>
+
+														<h5>{{$resource.section_four.modal1.responsibilities.title}}</h5>
+														<p>
+															{{$resource.section_four.modal1.responsibilities.resp1}}
+														</p>
+														<p>
+															{{$resource.section_four.modal1.responsibilities.resp2}}
+														</p>
+														<p>
+															{{$resource.section_four.modal1.responsibilities.resp3}}
+														</p>
+														<p>
+															{{$resource.section_four.modal1.responsibilities.resp4}}
+														</p>
+														<p>
+															{{$resource.section_four.modal1.responsibilities.resp5}}
+														</p>
+														<p>
+															{{$resource.section_four.modal1.responsibilities.resp6}}
+														</p>
+													</div>
+													<div>
+														<!-- <h5>Team:</h5>
+														<p>Cloud-Native Products</p> -->
+														<h5>{{$resource.section_four.modal1.requirements.title}}</h5>
+														<p>
+															{{$resource.section_four.modal1.requirements.requ1}}
+														</p>
+														<p>
+															-{{$resource.section_four.modal1.requirements.requ2}}
+														</p>
+														<p>
+															{{$resource.section_four.modal1.requirements.requ3}}
+														</p>
+														<p>
+															{{$resource.section_four.modal1.requirements.requ4}}
+														</p>
+														<p>
+															{{$resource.section_four.modal1.requirements.requ5}}
+														</p>
+														<p>
+															{{$resource.section_four.modal1.requirements.requ6}}
+														</p>
+													</div>
+
+
+
+
+
+													<a href="#tab-2" class="btn btn-primary rounded-pill"
+														data-bs-toggle="tab">{{$resource.section_four.modal1.btn_apply}}</a>
+												</div>
+
+												<div class="tab-pane fade" id="tab-2">
+													<div id="application">
+														<form class="text-start mb-3 needs-validated">
+
+															<div class="messages"></div>
+															<div class="controls">
+																<div class="row">
+
+																	<div class="form-label-group mb-4">
+																		<h6 class="mb-3">{{$resource.section_four.modal1.application.name}}
+																		</h6>
+																		<div class="form-label-group mb-4">
+																			<input id="form-name" type="text"
+																				class="form-control" name="name"
+																				placeholder="Name" required="required"
+																				data-error="Valid Name is required."
+																				style="width: 75%;">
+																			<label for="textInputExample">{{$resource.section_four.modal1.application.namelabel}}</label>
+
+																			<div class="help-block with-errors"></div>
+																		</div>
+																	</div>
+																	<div class="form-label-group mb-4">
+																		<h6 class="mb-3">{{$resource.section_four.modal1.application.email}}</h6>
+																		<div class="form-label-group mb-4">
+																			<input id="form_email" type="email"
+																				name="email" class="form-control"
+																				placeholder="xyz@example.com"
+																				required="required"
+																				data-error="Valid email is required."
+																				style="width: 75%;">
+																			<label for="form_email">{{$resource.section_four.modal1.application.emaillabel}}</label>
+
+																			<div class="help-block with-errors"></div>
+																		</div>
+																	</div>
+
+																	<div class="form-label-group mb-4">
+																		<h6 class="mb-3">{{$resource.section_four.modal1.application.phonenumber}}</h6>
+																		<div class="form-label-group mb-4">
+																			<input id="form_phone" type="tel"
+																				name="phone" class="form-control"
+																				placeholder=" Phone number"
+																				required="required"
+																				data-error="Valid phonenumber is required."
+																				style="width: 75%;">
+																			<label for="form_phone">{{$resource.section_four.modal1.application.phonenumberlabel}}</label>
+
+																			<div class="help-block with-errors"></div>
+																		</div>
+																	</div>
+																	<div class="form-label-group mb-4">
+																		<h6 class="mb-3">{{$resource.section_four.modal1.application.position}}</h6>
+																		<div class="form-label-group mb-4">
+																			<input id="form_position" type="text"
+																				name="position" class="form-control"
+																				placeholder="Position"
+																				style="width: 75%;">
+																			<label for="form_position">{{$resource.section_four.modal1.application.positionlabel}}</label>
+
+																			<div class="help-block with-errors"></div>
+																		</div>
+																	</div>
+																	<h6 class="mb-3">{{$resource.section_four.modal1.application.resume}}</h6>
+																	<input type="file" id="file-uploader" />
+																	<div class="col-12 text-center">
+																		<input type="submit"
+																			class="btn btn-primary rounded-pill btn-send mb-3"
+																			value="Apply"
+																			onclick="saveRecordtoDatabase()">
+																		<p class="text-muted"><strong>*</strong>{{$resource.section_four.modal1.application.requiredfields}}</p>
+																	</div>
+																</div>
+															</div>
+														</form>
+
 													</div>
 												</div>
-												<div class="form-label-group mb-4">
-													<h6 class="mb-3">Email</h6>
-													<div class="form-label-group mb-4">
-														<input id="form_email" type="email" name="email"
-															class="form-control" placeholder="xyz@example.com"
-															required="required"
-															data-error="Valid email is required."
-															style="width: 75%;">
-														<label for="form_email">Email *</label>
-
-														<div class="help-block with-errors"></div>
-													</div>
-												</div>
-
-												<div class="form-label-group mb-4">
-													<h6 class="mb-3">Phone Number</h6>
-													<div class="form-label-group mb-4">
-														<input id="form_phone" type="tel" name="phone"
-															class="form-control" placeholder=" Phone number"
-															required="required"
-															data-error="Valid phonenumber is required."
-															style="width: 75%;">
-														<label for="form_phone">Phone *</label>
-
-														<div class="help-block with-errors"></div>
-													</div>
-												</div>
-												<div class="form-label-group mb-4">
-													<h6 class="mb-3">Position</h6>
-													<div class="form-label-group mb-4">
-														<input id="form_position" type="text" name="position"
-															class="form-control" placeholder="Position"
-															style="width: 75%;">
-														<label for="form_position">Position</label>
-
-														<div class="help-block with-errors"></div>
-													</div>
-												</div>
-												<h6 class="mb-3">Resume</h6>
-												<input type="file" id="file-uploader" />
-												<div class="col-12 text-center">
-													<input type="submit"
-														class="btn btn-primary rounded-pill btn-send mb-3"
-														value="Apply" onclick="saveRecordtoDatabase()">
-													<p class="text-muted"><strong>*</strong> These fields are
-														required.</p>
-												</div>
-												<!-- /column -->
 											</div>
-											<!-- /.row -->
 										</div>
-										<!-- /.controls -->
-									</form>
+									</div>
 
-								</div>
+
+
+								</section>
+
+
 							</div>
-								<!--    Tabs    -->
-							</div>
+
 						</div>
 					</div>
+				</div>
 
-				</section>
+				<div id="myModal2" class="modal fade" tabindex="-1">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">{{$resource.section_four.modal2.title}}
+								</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+							</div>
+							<div class="modal-body">
+								<section id="tabs" class="wrapper pt-0 pb-md-4">
+									<div class="row">
+										<div class="col-lg-15">
+											<ul class="nav nav-tabs ">
+												<li class="nav-item"> <a class="nav-link active me-22"
+														data-bs-toggle="tab" href="#tab-3"><span>{{$resource.section_four.modal2.tab1}}</span></a>
+												</li>
+												<li class="nav-item"> <a class="nav-link" data-bs-toggle="tab"
+														href="#tab-4"><span>{{$resource.section_four.modal2.tab2}}</span></a> </li>
+											</ul>
+											<div class="tab-content">
+												<div class="tab-pane fade show active" id="tab-3">
 
+
+													<div>
+
+														<h5>{{$resource.section_four.modal2.responsibilities.title}}</h5>
+														<p>
+															{{$resource.section_four.modal2.responsibilities.resp1}}
+														</p>
+														<p>
+															{{$resource.section_four.modal2.responsibilities.resp2}}
+														</p>
+														<p>
+															{{$resource.section_four.modal2.responsibilities.resp3}}
+														</p>
+														<p>
+															{{$resource.section_four.modal2.responsibilities.resp4}}
+														</p>
+														<p>
+															{{$resource.section_four.modal2.responsibilities.resp5}}
+														</p>
+													</div>
+													<div>
+														<!-- <h5>Team:</h5>
+														<p>Cloud-Native Products</p> -->
+														<h5>{{$resource.section_four.modal2.requirements.title}}</h5>
+														<p>
+															{{$resource.section_four.modal2.requirements.requ1}}
+														</p>
+														<p>
+															-{{$resource.section_four.modal2.requirements.requ2}}
+														</p>
+														<p>
+															{{$resource.section_four.modal2.requirements.requ3}}
+														</p>
+														<p>
+															{{$resource.section_four.modal2.requirements.requ4}}
+														</p>
+														
+														
+													</div>
+
+
+
+
+
+													<a href="#tab-2" class="btn btn-primary rounded-pill"
+														data-bs-toggle="tab">{{$resource.section_four.modal2.btn_apply}}</a>
+												</div>
+
+												<div class="tab-pane fade" id="tab-4">
+													<div id="application">
+														<form class="text-start mb-3 needs-validated">
+
+															<div class="messages"></div>
+															<div class="controls">
+																<div class="row">
+
+																	<div class="form-label-group mb-4">
+																		<h6 class="mb-3">{{$resource.section_four.modal2.application.name}}</h6>
+																		<div class="form-label-group mb-4">
+																			<input id="form-name" type="text"
+																				class="form-control" name="name"
+																				placeholder="Name" required="required"
+																				data-error="Valid Name is required."
+																				style="width: 75%;">
+																			<label for="textInputExample">{{$resource.section_four.modal2.application.namelabel}}</label>
+
+																			<div class="help-block with-errors"></div>
+																		</div>
+																	</div>
+																	<div class="form-label-group mb-4">
+																		<h6 class="mb-3">{{$resource.section_four.modal2.application.email}}</h6>
+																		<div class="form-label-group mb-4">
+																			<input id="form_email" type="email"
+																				name="email" class="form-control"
+																				placeholder="xyz@example.com"
+																				required="required"
+																				data-error="Valid email is required."
+																				style="width: 75%;">
+																			<label for="form_email">{{$resource.section_four.modal2.application.emaillabel}}</label>
+
+																			<div class="help-block with-errors"></div>
+																		</div>
+																	</div>
+
+																	<div class="form-label-group mb-4">
+																		<h6 class="mb-3">{{$resource.section_four.modal2.application.phonenumber}}</h6>
+																		<div class="form-label-group mb-4">
+																			<input id="form_phone" type="tel"
+																				name="phone" class="form-control"
+																				placeholder=" Phone number"
+																				required="required"
+																				data-error="Valid phonenumber is required."
+																				style="width: 75%;">
+																			<label for="form_phone">{{$resource.section_four.modal2.application.phonenumberlabel}}</label>
+
+																			<div class="help-block with-errors"></div>
+																		</div>
+																	</div>
+																	<div class="form-label-group mb-4">
+																		<h6 class="mb-3">{{$resource.section_four.modal2.application.position}}</h6>
+																		<div class="form-label-group mb-4">
+																			<input id="form_position" type="text"
+																				name="position" class="form-control"
+																				placeholder="Position"
+																				style="width: 75%;">
+																			<label for="form_position">{{$resource.section_four.modal2.application.positionlabel}}</label>
+
+																			<div class="help-block with-errors"></div>
+																		</div>
+																	</div>
+																	<h6 class="mb-3">{{$resource.section_four.modal2.application.resume}}</h6>
+																	<input type="file" id="file-uploader" />
+																	<div class="col-12 text-center">
+																		<input type="submit"
+																			class="btn btn-primary rounded-pill btn-send mb-3"
+																			value="Apply"
+																			onclick="saveRecordtoDatabase()">
+																		<p class="text-muted"><strong>*</strong> {{$resource.section_four.modal2.application.requiredfields}}</p>
+																	</div>
+																</div>
+															</div>
+														</form>
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+								</section>
+
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div id="myModal3" class="modal fade" tabindex="-1">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">{{$resource.section_four.modal3.title}}
+								<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+							</div>
+							<div class="modal-body">
+								<section id="tabs" class="wrapper pt-0 pb-md-4">
+									<div class="row">
+										<div class="col-lg-15">
+											<ul class="nav nav-tabs ">
+												<li class="nav-item"> <a class="nav-link active me-22"
+														data-bs-toggle="tab" href="#tab-5"><span>{{$resource.section_four.modal3.tab1}}</span></a>
+												</li>
+												<li class="nav-item"> <a class="nav-link" data-bs-toggle="tab"
+														href="#tab-6"><span>{{$resource.section_four.modal3.tab2}}</span></a> </li>
+											</ul>
+											<div class="tab-content">
+												<div class="tab-pane fade show active" id="tab-5">
+
+
+													<div>
+
+														<h5>{{$resource.section_four.modal3.responsibilities.title}}</h5>
+														<p>
+															{{$resource.section_four.modal3.responsibilities.resp1}}
+														</p>
+														<p>
+															{{$resource.section_four.modal3.responsibilities.resp2}}
+														</p>
+														<p>
+															{{$resource.section_four.modal3.responsibilities.resp3}}
+														</p>
+														<p>
+															{{$resource.section_four.modal3.responsibilities.resp4}}
+														</p>
+														<p>
+															{{$resource.section_four.modal3.responsibilities.resp5}}
+														</p>
+														
+													</div>
+													<div>
+														<!-- <h5>Team:</h5>
+														<p>Cloud-Native Products</p> -->
+														<h5>{{$resource.section_four.modal3.requirements.title}}</h5>
+														<p>
+															{{$resource.section_four.modal3.requirements.requ1}}
+														</p>
+														<p>
+															-{{$resource.section_four.modal3.requirements.requ2}}
+														</p>
+														<p>
+															{{$resource.section_four.modal3.requirements.requ3}}
+														</p>
+														<p>
+															{{$resource.section_four.modal3.requirements.requ4}}
+														</p>
+														<p>
+															{{$resource.section_four.modal3.requirements.requ5}}
+														</p>
+														<p>
+															-{{$resource.section_four.modal3.requirements.requ6}}
+														</p>
+														<p>
+															{{$resource.section_four.modal3.requirements.requ7}}
+														</p>
+														<p>
+															{{$resource.section_four.modal3.requirements.requ8}}
+														</p>
+														<p>
+															{{$resource.section_four.modal3.requirements.requ9}}
+														</p>
+														<p>
+															-{{$resource.section_four.modal3.requirements.requ10}}
+														</p>
+														<p>
+															{{$resource.section_four.modal3.requirements.requ11}}
+														</p>
+														<p>
+															{{$resource.section_four.modal3.requirements.requ12}}
+														</p>
+														<p>
+															{{$resource.section_four.modal3.requirements.requ13}}
+														</p>
+														<p>
+															-{{$resource.section_four.modal3.requirements.requ14}}
+														</p>
+													</div>
+
+
+
+
+
+													<a href="#tab-2" class="btn btn-primary rounded-pill"
+														data-bs-toggle="tab">{{$resource.section_four.modal3.btn_apply}}</a>
+												</div>
+
+												<div class="tab-pane fade" id="tab-6">
+													<div id="application">
+														<form class="text-start mb-3 needs-validated">
+
+															<div class="messages"></div>
+															<div class="controls">
+																<div class="row">
+
+																	<div class="form-label-group mb-4">
+																		<h6 class="mb-3">{{$resource.section_four.modal3.application.name}}</h6>
+																		<div class="form-label-group mb-4">
+																			<input id="form-name" type="text"
+																				class="form-control" name="name"
+																				placeholder="Name" required="required"
+																				data-error="Valid Name is required."
+																				style="width: 75%;">
+																			<label for="textInputExample">{{$resource.section_four.modal3.application.namelabel}}</label>
+
+																			<div class="help-block with-errors"></div>
+																		</div>
+																	</div>
+																	<div class="form-label-group mb-4">
+																		<h6 class="mb-3">{{$resource.section_four.modal3.application.email}}</h6>
+																		<div class="form-label-group mb-4">
+																			<input id="form_email" type="email"
+																				name="email" class="form-control"
+																				placeholder="xyz@example.com"
+																				required="required"
+																				data-error="Valid email is required."
+																				style="width: 75%;">
+																			<label for="form_email">{{$resource.section_four.modal3.application.emaillabel}}</label>
+
+																			<div class="help-block with-errors"></div>
+																		</div>
+																	</div>
+
+																	<div class="form-label-group mb-4">
+																		<h6 class="mb-3">{{$resource.section_four.modal3.application.phonenumber}}</h6>
+																		<div class="form-label-group mb-4">
+																			<input id="form_phone" type="tel"
+																				name="phone" class="form-control"
+																				placeholder=" Phone number"
+																				required="required"
+																				data-error="Valid phonenumber is required."
+																				style="width: 75%;">
+																			<label for="form_phone">{{$resource.section_four.modal3.application.phonenumberlabel}}</label>
+
+																			<div class="help-block with-errors"></div>
+																		</div>
+																	</div>
+																	<div class="form-label-group mb-4">
+																		<h6 class="mb-3">{{$resource.section_four.modal3.application.position}}</h6>
+																		<div class="form-label-group mb-4">
+																			<input id="form_position" type="text"
+																				name="position" class="form-control"
+																				placeholder="Position"
+																				style="width: 75%;">
+																			<label for="form_position">{{$resource.section_four.modal3.application.positionlabel}}</label>
+
+																			<div class="help-block with-errors"></div>
+																		</div>
+																	</div>
+																	<h6 class="mb-3">{{$resource.section_four.modal3.application.resume}}</h6>
+																	<input type="file" id="file-uploader" />
+																	<div class="col-12 text-center">
+																		<input type="submit"
+																			class="btn btn-primary rounded-pill btn-send mb-3"
+																			value="Apply"
+																			onclick="saveRecordtoDatabase()">
+																		<p class="text-muted"><strong>*</strong>{{$resource.section_four.modal3.application.requiredfields}}</p>
+																	</div>
+																</div>
+															</div>
+														</form>
+
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+								</section>
+
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+					</div>
+
+		</section>
+		<section class="wrapper bg-linear-gradient">
+			<div class="container text-center pt-6">
+
+				<h4 class="mb-4 mb-xl-8 mb-lg-8 mb-md-6">
+					{{$resource.section_five.title}}
+				</h4>
+
+				<div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
+					<span><a class="btn btn-primary rounded-0 mx-1">{{$resource.section_five.btn_view}}</a></span>
+				</div>
+				<div class="pb-8"></div>
 
 			</div>
 
-		</div>
+		</section>
+	<!-- </div>
+
 	</div>
-</div>
-<!-- /Modal -->
-</div>
-<!-- /.content-wrapper -->
+	</div> -->
+	</div>
+	</div>
 
-<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
 
-<script>
-const firebaseConfig = {
-apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
-authDomain: "biggworks-dd979.firebaseapp.com",
-databaseURL: "https://biggworks-dd979-default-rtdb.asia-southeast1.firebasedatabase.app",
-projectId: "biggworks-dd979",
-storageBucket: "biggworks-dd979.appspot.com",
-messagingSenderId: "160882722753",
-appId: "1:160882722753:web:f067b273803ff585359140",
-measurementId: "G-377HKGT4RW"
-};
-firebase.initializeApp(firebaseConfig);
+	<script>
+		const firebaseConfig = {
+			apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
+			authDomain: "biggworks-dd979.firebaseapp.com",
+			databaseURL: "https://biggworks-dd979-default-rtdb.asia-southeast1.firebasedatabase.app",
+			projectId: "biggworks-dd979",
+			storageBucket: "biggworks-dd979.appspot.com",
+			messagingSenderId: "160882722753",
+			appId: "1:160882722753:web:f067b273803ff585359140",
+			measurementId: "G-377HKGT4RW"
+		};
+		firebase.initializeApp(firebaseConfig);
 
-let candidateInfo = firebase.database().ref("candidate");
+		let candidateInfo = firebase.database().ref("candidate");
 
-var application=document.getElementById("application");
+		var application = document.getElementById("application");
 
-function saveRecordtoDatabase() {
-console.log("saveRecordtoDatabase");
-event.preventDefault();
-let newCandidateInfo = candidateInfo.push();
+		function saveRecordtoDatabase() {
+			console.log("saveRecordtoDatabase");
+			event.preventDefault();
+			let newCandidateInfo = candidateInfo.push();
 
-newCandidateInfo.set({
-  name: document.getElementById('form-name').value,
-  email: document.getElementById('form_email').value,
-  phone: document.getElementById('form_phone').value,
-  position: document.getElementById('form_position').value
- 
-});
-}
-</script>
+			newCandidateInfo.set({
+				name: document.getElementById('form-name').value,
+				email: document.getElementById('form_email').value,
+				phone: document.getElementById('form_phone').value,
+				position: document.getElementById('form_position').value
+
+			});
+		}
+	</script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
 		crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
 		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
 		crossorigin="anonymous"></script>
-	
-  </div>
-  <!-- /.content-wrapper -->
-  {{ partial "footer.html" . }} {{ partial "page-progress.html" . }}
+
+	<!-- </div> -->
+	<!-- /.content-wrapper -->
+	{{ partial "footer.html" . }} {{ partial "page-progress.html" . }}
 </body>
 {{ end }}

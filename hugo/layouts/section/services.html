@@ -123,7 +123,7 @@
         <div class="row g-0 gy-8 gy-md mb-14">
           <div class="col-xl-1 col-lg-1"></div>
           <div class="col-md-5 col-lg-4 col-xl-4">
-            <div class="about-image card">
+            <div class="about-image card">  
               <div class="card-body">
                 <h4 class="mb-xl-8 mb-lg-8">{{$resource.section_four.card1.heading}}</h4>
                 <p class="mb-2">
@@ -209,8 +209,7 @@
                 <h4 class="mb-xl-10 mb-lg-10 mb-md-6">{{$resource.section_eight.card2.title}}</h4>
                 <p>
                     {{$resource.section_eight.card2.description}}
-                 
-                </p>
+               </p>
               </div>
             </div>
           </div>
@@ -262,11 +261,9 @@
     </section>
     <section class="wrapper">
       <div class="container text-center pt-10 pt-10">
-        <h3 class="display-4 mb-5">End to end product development</h3>
+        <h3 class="display-4 mb-5">{{$resource.section_ten.title}}</h3>
         <p class="lead fs-lg px-xl-18 mb-10 px-lg-18">
-          Ever y stage of the product requires a unique set of exper ts to
-          collaborate closely and build a user- centric product that resolves
-          specific business challenges.
+          {{$resource.section_ten.sub_title}}
         </p>
         <div class="grid">
           <div class="row my-2 offset-xl-1 offset-md-0 offset-1">
@@ -278,10 +275,10 @@
                   <div class="text-center">
                     <img
                       class="mb-xl-8 pt-xl-4 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
-                      src="https://res.cloudinary.com/biggworks/image/upload/v1675766859/ui_ux_design_y4j1lu.png"
+                      src="{{$resource.section_ten.card1.image}}"
                       alt=""
                     />
-                    <p class="lead">View Career Path</p>
+                    <p class="lead">{{$resource.section_ten.card1.title}}</p>
                   </div>
                 </div>
               </div>
@@ -290,18 +287,18 @@
             <div
               class="item col-md-5 col-xl-3 col-lg-3 mb-xl-12 col-4 mb-lg-12 mb-md-12 mb-10"
             >
-              <div class="card career-card-technology">
-                <div class="card-body">
-                  <div class="text-center">
-                    <img
-                      class="mb-xl-8 pt-xl-4 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
-                      src="https://res.cloudinary.com/biggworks/image/upload/v1675766847/cloud_a_nd_dev_mciovf.png"
-                      alt=""
-                    />
-                    <p class="lead">View Career Path</p>
-                  </div>
+            <div class="card career-card-technology">
+              <div class="card-body">
+                <div class="text-center">
+                  <img
+                    class="mb-xl-8 pt-xl-4 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
+                    src="{{$resource.section_ten.card2.image}}"
+                    alt=""
+                  />
+                  <p class="lead">{{$resource.section_ten.card1.title}}</p>
                 </div>
               </div>
+            </div>
             </div>
             <div class="col-xl-1 col-lg-1 col-md-1"></div>
 
@@ -313,10 +310,10 @@
                   <div class="text-center">
                     <img
                       class="mb-xl-8 pt-xl-4 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
-                      src="https://res.cloudinary.com/biggworks/image/upload/v1675766816/data_eng_x8dtxe.png"
+                      src="{{$resource.section_ten.card3.image}}"
                       alt=""
                     />
-                    <p class="lead">View Career Path</p>
+                    <p class="lead">{{$resource.section_ten.card3.title}}</p>
                   </div>
                 </div>
               </div>
@@ -331,10 +328,10 @@
                   <div class="text-center">
                     <img
                       class="mb-xl-8 pt-xl-4 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
-                      src="https://res.cloudinary.com/biggworks/image/upload/v1675766803/back_end_avvzij.png"
+                      src="{{$resource.section_ten.card4.image}}"
                       alt=""
                     />
-                    <p class="lead">View Career Path</p>
+                    <p class="lead">{{$resource.section_ten.card4.title}}</p>
                   </div>
                 </div>
               </div>
@@ -348,10 +345,10 @@
                   <div class="text-center">
                     <img
                       class="mb-xl-8 pt-xl-4 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
-                      src="https://res.cloudinary.com/biggworks/image/upload/v1675766786/machine_lear_cthsru.png"
+                      src="{{$resource.section_ten.card5.image}}"
                       alt=""
                     />
-                    <p class="lead">View Career Path</p>
+                    <p class="lead">{{$resource.section_ten.card5.title}}</p>
                   </div>
                 </div>
               </div>
@@ -366,10 +363,10 @@
                   <div class="text-center">
                     <img
                       class="mb-xl-8 pt-xl-4 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
-                      src="https://res.cloudinary.com/biggworks/image/upload/v1675766775/quality_qi6hbl.png"
+                      src="{{$resource.section_ten.card6.image}}"
                       alt=""
                     />
-                    <p class="lead">View Career Path</p>
+                    <p class="lead">{{$resource.section_ten.card6.title}}</p>
                   </div>
                 </div>
               </div>
@@ -385,10 +382,11 @@
             <h2
               class="fs-16 fw-normal ls-3x text-uppercase text-left mb-xl-6 mb-lg-6 mb-md-6 mb-4"
             >
-              take the next step
+            {{$resource.section_eleven.title}}
+
             </h2>
             <h4 class="mb-xl-12 mb-lg-12 mb-md-12 mb-6">
-              Ready to build your next bigg idea?
+              {{$resource.section_eleven.sub_title}}
             </h4>
           </div>
           <div class="col-xl-2 col-lg-2 col-md-2 col-1"></div>
@@ -399,7 +397,8 @@
               data-delay="600"
             >
               <span
-                ><a class="btn btn-primary rounded-0 mx-1">Talk to Us</a></span
+                ><a class="btn btn-primary rounded-0 mx-1">{{$resource.section_one.btn_talk_to_us}}
+                </a></span
               >
             </div>
           </div>

@@ -1,483 +1,483 @@
-{{ define "main" }} {{ $nav := .Site.Data.nav.nav }} 
-
-{{ $resource := getJSON "http://bw-strapi:1337/index" }}
-<link
-  rel="shortcut icon"
-  href="https://res.cloudinary.com/biggworks/image/upload/v1666248096/favicon_xsthfp.ico"
-/>
-
-<!-- {{ printf "My data: %s"  $resource.section_second }} -->
-
-<body>
-  <div class="content-wrapper">
-    <header class="wrapper bg-soft-primary">
-      {{ partial "nav.html" . }}
-      <!-- /.navbar -->
-    </header>
-    <section class="wrapper bg-white">
-      <div
-        class="d-flex align-items-center bg-overlay-400 img-fluid home_backgrownd_image"
-      >
+{{ define "main" }} {{ $nav := .Site.Data.nav.nav }} {{ $resource := getJSON
+  "http://bw-strapi:1337/index" }}
+  <link
+    rel="shortcut icon"
+    href="https://res.cloudinary.com/biggworks/image/upload/v1666248096/favicon_xsthfp.ico"
+  />
+  
+  <!-- {{ printf "My data: %s"  $resource.section_two }} -->
+  
+  <body>
+    <div class="content-wrapper">
+      <header class="wrapper bg-soft-primary">
+        {{ partial "nav.html" . }}
+        <!-- /.navbar -->
+      </header>
+      <section class="wrapper bg-white">
         <div
-          class="container pt-15 pb-22 pt-md-14 pb-md-22 pt-xl-1 text-center"
+          class="d-flex align-items-center bg-overlay-400 img-fluid home_backgrownd_image"
         >
-          <div class="row mb-10">
-            <div
-              class="col-md-10 col-lg-10 col-xl-10 col-xxl-8 mx-auto mb-13"
-              data-group="page-title"
-            >
-              <h2
-                class="fs-16 fw-normal ls-3x text-uppercase mb-5 mt-md-10 pt-xl-10"
-              >
-                {{$resource.section_one.title}}
-              </h2>
-              <h1 class="display-1 mb-4">{{$resource.section_one.subtitle}}</h1>
-              <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7">
-                {{$resource.section_one.description}}
-              </p>
+          <div
+            class="container pt-15 pb-22 pt-md-14 pb-md-22 pt-xl-1 text-center"
+          >
+            <div class="row mb-10">
               <div
-                class="d-flex justify-content-center"
-                data-group="page-title-buttons"
-                data-delay="600"
+                class="col-md-10 col-lg-10 col-xl-10 col-xxl-8 mx-auto mb-13"
+                data-group="page-title"
               >
-                <span
-                  ><a class="btn btn-primary rounded-0 mx-1"
-                    >
-                    {{$resource.section_one.btn_talk_to_us}}
-                    </a
-                  ></span
+                <h2
+                  class="fs-16 fw-normal ls-3x text-uppercase mb-5 mt-md-10 pt-xl-10"
                 >
+                  {{$resource.section_one.title}}
+                </h2>
+                <h1 class="display-1 mb-4">{{$resource.section_one.subtitle}}</h1>
+                <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7">
+                  {{$resource.section_one.description}}
+                </p>
+                <div
+                  class="d-flex justify-content-center"
+                  data-group="page-title-buttons"
+                  data-delay="600"
+                >
+                  <span
+                    ><a class="btn btn-primary rounded-0 mx-1"
+                      >{{$resource.section_one.btn_talk_to_us}}</a
+                    ></span
+                  >
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="wrapper bg-white">
-      <div class="container py-8 pt-4 pt-md-4">
-        <h2 class="fs-15 text-uppercase"></h2>
-        <div
-          class="carousel owl-carousel clients"
-          data-margin="30"
-          data-loop="true"
-          data-dots="false"
-          data-autoplay="true"
-          data-autoplay-timeout="1500"
-          data-responsive='{"0":{"items": "2"}, "768":{"items": "4"}, "992":{"items": "5"}, "1200":{"items": "6"}, "1400":{"items": "7"}}'
-        >
-          <div class="item px-5">
-            <img
-              src={{$resource.image_carousel.havells}}
-              alt=""
-            />
-          </div>
-          <div class="item px-5">
-            <img
-              src={{$resource.image_carousel.aritha}}
-              alt=""
-            />
-          </div>
-          <div class="item px-5">
-            <img
-              src={{$resource.image_carousel.ck1}}
-              alt=""
-            />
-          </div>
-          <div class="item px-5">
-            <img
-              src={{$resource.image_carousel.interdid}}
-              alt=""
-            />
-          </div>
-          <div class="item px-8">
-            <img
-              src={{$resource.image_carousel.a}}
-              alt=""
-            />
-          </div>
-          <div class="item px-5">
-            <img
-              src={{$resource.image_carousel.hold_it_write}}
-              alt=""
-            />
-          </div>
-          <div class="item px-5">
-            <img
-              src={{$resource.image_carousel.flows}}
-              alt=""
-            />
-          </div>
-          <div class="item px-5">
-            <img
-              src={{$resource.image_carousel.assured}}
-              alt=""
-            />
-          </div>
-          <div class="item px-5">
-            <img
-              src={{$resource.image_carousel.xard}}
-              alt=""
-            />
-          </div>
-          <div class="item px-5">
-            <img
-              src={{$resource.image_carousel.banix}}
-              alt=""
-            />
-          </div>
-          <div class="item px-5">
-            <img
-              src={{$resource.image_carousel.hq}}
-              alt=""
-            />
-          </div>
-          <div class="item px-5">
-            <img
-              src="{{$resource.image_carousel.succor}}"
-              alt=""
-            />
-          </div>
-          <div class="item px-1">
-            <img
-              class="col-xl-10"
-              src={{$resource.image_carousel.cognitive}}
-              alt=""
-            />
-          </div>
-          <div class="item px-5">
-            <img
-              src="{{$resource.image_carousel.mediat}}"
-              alt=""
-            />
-          </div>
-          <div class="item px-5">
-            <img
-              src={{$resource.image_carousel.kemsys}}
-              alt=""
-            />
-          </div>
-          <div class="item px-5">
-            <img
-              src={{$resource.image_carousel.kalibre}}
-              alt=""
-            />
-          </div>
-          <div class="item px-5">
-            <img
-              src={{$resource.image_carousel.justghar}}
-              alt=""
-            />
-          </div>
-          <div class="item px-5">
-            <img
-              src={{$resource.image_carousel.sure}}
-              alt=""
-            />
-          </div>
-          <div class="item px-5">
-            <div class="row">
+      </section>
+  
+      <section class="wrapper bg-white">
+        <div class="container py-8 pt-4 pt-md-4">
+          <h2 class="fs-15 text-uppercase"></h2>
+          <div
+            class="carousel owl-carousel clients"
+            data-margin="30"
+            data-loop="true"
+            data-dots="false"
+            data-autoplay="true"
+            data-autoplay-timeout="1500"
+            data-responsive='{"0":{"items": "2"}, "768":{"items": "4"}, "992":{"items": "5"}, "1200":{"items": "6"}, "1400":{"items": "7"}}'
+          >
+            <div class="item px-5">
               <img
-                class="col-md-12"
-                src={{$resource.image_carousel.vithamas_technologies}}
+                src={{$resource.image_carousel.havells}}
+                alt=""
+              />
+            </div>
+            <div class="item px-5">
+              <img
+                src={{$resource.image_carousel.aritha}}
+                alt=""
+              />
+            </div>
+            <div class="item px-5">
+              <img
+                src={{$resource.image_carousel.ck1}}
+                alt=""
+              />
+            </div>
+            <div class="item px-5">
+              <img
+                src={{$resource.image_carousel.interdid}}
+                alt=""
+              />
+            </div>
+            <div class="item px-8">
+              <img
+                src={{$resource.image_carousel.a}}
+                alt=""
+              />
+            </div>
+            <div class="item px-5">
+              <img
+                src={{$resource.image_carousel.hold_it_write}}
+                alt=""
+              />
+            </div>
+            <div class="item px-5">
+              <img
+                src={{$resource.image_carousel.flows}}
+                alt=""
+              />
+            </div>
+            <div class="item px-5">
+              <img
+                src={{$resource.image_carousel.assured}}
+                alt=""
+              />
+            </div>
+            <div class="item px-5">
+              <img
+                src={{$resource.image_carousel.xard}}
+                alt=""
+              />
+            </div>
+            <div class="item px-5">
+              <img
+                src={{$resource.image_carousel.banix}}
+                alt=""
+              />
+            </div>
+            <div class="item px-5">
+              <img
+                src={{$resource.image_carousel.hq}}
+                alt=""
+              />
+            </div>
+            <div class="item px-5">
+              <img
+                src="{{$resource.image_carousel.succor}}"
+                alt=""
+              />
+            </div>
+            <div class="item px-1">
+              <img
+                class="col-xl-10"
+                src={{$resource.image_carousel.cognitive}}
+                alt=""
+              />
+            </div>
+            <div class="item px-5">
+              <img
+                src="{{$resource.image_carousel.mediat}}"
+                alt=""
+              />
+            </div>
+            <div class="item px-5">
+              <img
+                src={{$resource.image_carousel.kemsys}}
+                alt=""
+              />
+            </div>
+            <div class="item px-5">
+              <img
+                src={{$resource.image_carousel.kalibre}}
+                alt=""
+              />
+            </div>
+            <div class="item px-5">
+              <img
+                src={{$resource.image_carousel.justghar}}
+                alt=""
+              />
+            </div>
+            <div class="item px-5">
+              <img
+                src={{$resource.image_carousel.sure}}
+                alt=""
+              />
+            </div>
+            <div class="item px-5">
+              <div class="row">
+                <img
+                  class="col-md-12"
+                  src={{$resource.image_carousel.vithamas_technologies}}
+                  alt=""
+                />
+              </div>
+            </div>
+  
+            <div class="item px-5">
+              <img
+                src="{{$resource.image_carousel.chirp}}"
                 alt=""
               />
             </div>
           </div>
-
-          <div class="item px-5">
-            <img
-              src="{{$resource.image_carousel.chirp}}"
-              alt=""
-            />
-          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="wrapper bg-white">
-      <div class="container pb-4 pb-md-4">
-        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-          <div
-            class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center"
-          >
-            <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5">
-              {{$resource.section_second.Title}}
-            </h2>
-            <h3 class="display-4 mb-4">
-              {{$resource.section_second.Subtitle}}
-            </h3>
-            <p class="lead fs-lg mb-10">
-              {{$resource.section_second.Description}}
-            </p>
-          </div>
-        </div>
-
-        <div class="row gx-md-1 offset-1 gx-2 gy-8 mb-14 mb-md-17">
-          <div class="col-md-3 col-lg-3 col-xl-3 col-12">
-            <div class="item col-md-12">
-              <figure class="figure mb-5">
-                <img
-                  class="service-image img-fluid"
-                  src={{$resource.section_second.service1.imageSrc}}
-                  alt={{$resource.section_second.service1.imageAlt}}
-                />
-              </figure>
-            </div>
-
-            <h4 class="text-left mb-5">{{$resource.section_second.service1.title}}</h4>
-            <p class="mb-0 lh-sm">
-              {{$resource.section_second.service1.description}}
-            </p>
-          </div>
-
-          <div class="col-xl-1 col-lg-1 col-md-1"></div>
-          <div class="col-md-3 col-lg-3 col-xl-3 col-12">
-            <div class="item col-md-12">
-              <figure class="figure mb-5">
-                <img
-                  class="service-image img-fluid"
-                  src={{$resource.section_second.service2.imageSrc}}
-                  alt={{$resource.section_second.service2.imageAlt}}
-                />
-              </figure>
-            </div>
-            <h4 class="text-left mb-5">{{$resource.section_second.service2.title}}</h4>
-            <p class="mb-0 lh-sm">{{$resource.section_second.service2.description}}</p>
-          </div>
-
-          <div class="col-xl-1 col-md-1"></div>
-          <div class="col-md-3 col-lg-3 col-12">
-            <div class="item col-md-12">
-              <figure class="figure mb-5">
-                <img
-                  class="service-image img-fluid"
-                  src={{$resource.section_second.service3.imageSrc}}
-                  alt={{$resource.section_second.service3.imageAlt}}
-                />
-              </figure>
-            </div>
-            <h4 class="text-left mb-5">{{$resource.section_second.service3.title}}</h4>
-            <p class="mb-0 lh-sm">
-              {{$resource.section_second.service3.description}}
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="wrapper bg-white">
-      <div class="container pb-14 pb-md-12">
-        <div class="row gx-lg-8 gx-xl-12 gy-10 pb-md-6 align-items-center">
-          <div
-            class="col-md-10 col-lg-10 col-xl-12 col-xxl-6 mx-auto text-center"
-          >
-            <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5">
-              {{$resource.section_third.Title}}
-            </h2>
-            <h3 class="display-4 mb-4">
-              {{$resource.section_third.Subtitle}}
-            </h3>
-            <p class="lead fs-lg mb-6">
-              {{$resource.section_third.Description}}
-            </p>
-          </div>
-        </div>
-        <div class="row g-0 gy-8 gy-md mb-4 mb-md-10 mb-xl-20 mb-lg-16">
-          <div class="col-xl-1"></div>
-          <div class="col-md-5 col-lg-4 col-xl-4">
-            <div class="about-image card">
-              <div class="card-body">
-                <h4>{{$resource.section_third.approach1.heading}}</h4>
-                <p class="mb-2">
-                  {{$resource.section_third.approach1.description}}
-                </p>
-                <ul class="icon-list bullet-bg">
-                  <li>
-                    <i class="uil uil-check"></i>
-                    <span><span class="fw-semibold">{{$resource.section_third.approach1.point1.bold}}</span> {{$resource.section_third.approach1.point1.not_bold}}</span>
-                  </li>
-                  <li>
-                    <i class="uil uil-check"></i
-                    ><span>
-                      <span class="fw-semibold">{{$resource.section_third.approach1.point2.bold}}</span> {{$resource.section_third.approach1.point2.not_bold}}</span>
-                    
-                  </li>
-                  <li>
-                    <i class="uil uil-check"></i
-                    ><span
-                      ><span class="fw-semibold">{{$resource.section_third.approach1.point3.bold}}</span> {{$resource.section_third.approach1.point3.not_bold}}</span>
-                    
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-2 col-md-2"></div>
-
-          <div class="col-md-5 col-lg-4 col-xl-4">
-            <div class="about-image card">
-              <div class="card-body">
-                <h4>{{$resource.section_third.approach2.heading}}</h4>
-                <p class="mb-2">
-                  {{$resource.section_third.approach2.description}}
-                </p>
-                <ul class="icon-list bullet-bg">
-
-
-                  <li>
-                    <i class="uil uil-check"></i>
-                    <span><span class="fw-semibold">{{$resource.section_third.approach2.point1.bold}}</span> {{$resource.section_third.approach2.point1.not_bold}}</span>
-                  </li>
-
-
-                  <li>
-                    <i class="uil uil-check"></i
-                    ><span
-                      ><span class="fw-semibold">{{$resource.section_third.approach2.point2.bold}}</span>
-                      {{$resource.section_third.approach2.point2.not_bold}}</span
-                    >
-                  </li>
-                  <li>
-                    <i class="uil uil-check"></i
-                    ><span
-                      ><span class="fw-semibold">{{$resource.section_third.approach2.point3.bold}}</span> {{$resource.section_third.approach2.point3.not_bold}}</span
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row g-0 gy-8 mb-4 mb-md-14">
-          <div class="col-xl-1"></div>
-          <div class="col-md-5 col-lg-4">
-            <div class="about-image card">
-              <div class="card-body">
-                <h4>{{$resource.section_third.approach3.heading}}</h4>
-                <p class="mb-2">
-                  {{$resource.section_third.approach3.description}}
-                </p>
-                <ul class="icon-list bullet-bg">
-                  <li>
-                    <i class="uil uil-check"></i
-                    ><span
-                      ><span class="fw-semibold">{{$resource.section_third.approach3.point1.bold}}</span> {{$resource.section_third.approach3.point1.not_bold}}</span
-                    >
-                  </li>
-                  <li>
-                    <i class="uil uil-check"></i
-                    ><span
-                      ><span class="fw-semibold">{{$resource.section_third.approach3.point2.bold}}</span> {{$resource.section_third.approach3.point2.not_bold}}</span
-                    >
-                  </li>
-                  <li>
-                    <i class="uil uil-check"></i
-                    ><span
-                      ><span class="fw-semibold">{{$resource.section_third.approach3.point3.bold}}</span>
-                      {{$resource.section_third.approach3.point3.not_bold}}</span
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2 col-xl-2"></div>
-          <div class="col-md-5 col-lg-4">
-            <div class="about-image card">
-              <div class="card-body">
-                <h4>{{$resource.section_third.approach4.heading}}</h4>
-                <p class="mb-2">
-                  {{$resource.section_third.approach4.description}}
-                </p>
-                <ul class="icon-list bullet-bg">
-                  <li>
-                    <i class="uil uil-check"></i
-                    ><span
-                      ><span class="fw-semibold">{{$resource.section_third.approach4.point1.bold}}</span>
-                      {{$resource.section_third.approach4.point1.not_bold}}</span
-                    >
-                  </li>
-                  <li>
-                    <i class="uil uil-check"></i
-                    ><span
-                      ><span class="fw-semibold">{{$resource.section_third.approach4.point2.bold}}</span>
-                      {{$resource.section_third.approach4.point2.not_bold}}</span
-                    >
-                  </li>
-                  <li>
-                    <i class="uil uil-check"></i
-                    ><span
-                      ><span class="fw-semibold">{{$resource.section_third.approach4.point3.bold}}</span> {{$resource.section_third.approach4.point3.not_bold}}</span
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="wrapper bg-white">
-      <div class="container pb-4 pb-md-16">
-        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-          <div class="col-lg-5 col-md-9 mx-auto pb-md-2">
-            <h2
-              class="fs-16 fw-normal ls-3x text-uppercase mb-6 text-left pt-md-0"
-              style="text-align: left"
+      </section>
+  
+      <section class="wrapper bg-white">
+        <div class="container pb-4 pb-md-4">
+          <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+            <div
+              class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center"
             >
-            {{$resource.section_fourth.title}}
-            
-            </h2>
-            <h3 class="display-4 mb-4" style="text-align: left">
-              {{$resource.section_fourth.subtitle}}
-            </h3>
-            <p class="lead fs-lg mb-6" style="text-align: left">
-              {{$resource.section_fourth.description}}
-            </p>
-            <div class="row gx-md-8 gy-8 mb-14 mb-md-20">
-              <div class="col-xl-8 col-md-8">
-                <ul class="icon-list bullet-bg mb-0">
-                  <li>
-                    <span><i class="uil uil-check"></i></span
-                    ><span>{{$resource.section_fourth.feature1}}</span>
-                  </li>
-                  <li>
-                    <span><i class="uil uil-check"></i></span
-                    ><span>{{$resource.section_fourth.feature2}}</span>
-                  </li>
-                  <li>
-                    <span><i class="uil uil-check"></i></span
-                    ><span>{{$resource.section_fourth.feature3}}</span>
-                  </li>
-                </ul>
+              <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5">
+                {{$resource.section_two.Title}}
+              </h2>
+              <h3 class="display-4 mb-4">
+                {{$resource.section_two.Subtitle}}
+              </h3>
+              <p class="lead fs-lg mb-10">
+                {{$resource.section_two.Description}}
+              </p>
+            </div>
+          </div>
+  
+          <div class="row gx-md-1 offset-1 gx-2 gy-8 mb-14 mb-md-17">
+            <div class="col-md-3 col-lg-3 col-xl-3 col-12">
+              <div class="item col-md-12">
+                <figure class="figure mb-5">
+                  <img
+                    class="service-image img-fluid"
+                    src={{$resource.section_two.service1.imageSrc}}
+                    alt={{$resource.section_two.service1.imageAlt}}
+                  />
+                </figure>
+              </div>
+  
+              <h4 class="text-left mb-5">{{$resource.section_two.service1.title}}</h4>
+              <p class="mb-0 lh-sm">
+                <!-- New Product Development, Digital Transformation, Enterprise
+                Modernization? <br />We are your Digital Factory. -->
+                {{$resource.section_two.service1.description}}
+              </p>
+            </div>
+  
+            <div class="col-xl-1 col-lg-1 col-md-1"></div>
+            <div class="col-md-3 col-lg-3 col-xl-3 col-12">
+              <div class="item col-md-12">
+                <figure class="figure mb-5">
+                  <img
+                    class="service-image img-fluid"
+                    src={{$resource.section_two.service2.imageSrc}}
+                    alt={{$resource.section_two.service2.imageAlt}}
+                  />
+                </figure>
+              </div>
+              <h4 class="text-left mb-5">{{$resource.section_two.service2.title}}</h4>
+              <p class="mb-0 lh-sm">{{$resource.section_two.service2.description}}</p>
+            </div>
+  
+            <div class="col-xl-1 col-md-1"></div>
+            <div class="col-md-3 col-lg-3 col-12">
+              <div class="item col-md-12">
+                <figure class="figure mb-5">
+                  <img
+                    class="service-image img-fluid"
+                    src={{$resource.section_two.service3.imageSrc}}
+                    alt={{$resource.section_two.service3.imageAlt}}
+                  />
+                </figure>
+              </div>
+              <h4 class="text-left mb-5">{{$resource.section_two.service3.title}}</h4>
+              <p class="mb-0 lh-sm">
+                {{$resource.section_two.service3.description}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section class="wrapper bg-white">
+        <div class="container pb-14 pb-md-12">
+          <div class="row gx-lg-8 gx-xl-12 gy-10 pb-md-6 align-items-center">
+            <div
+              class="col-md-10 col-lg-10 col-xl-12 col-xxl-6 mx-auto text-center"
+            >
+              <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5">
+                {{$resource.section_three.Title}}
+              </h2>
+              <h3 class="display-4 mb-4">
+                {{$resource.section_three.Subtitle}}
+              </h3>
+              <p class="lead fs-lg mb-6">
+                {{$resource.section_three.Description}}
+              </p>
+            </div>
+          </div>
+          <div class="row g-0 gy-8 gy-md mb-4 mb-md-10 mb-xl-20 mb-lg-16">
+            <div class="col-xl-1"></div>
+            <div class="col-md-5 col-lg-4 col-xl-4">
+              <div class="about-image card">
+                <div class="card-body">
+                  <h4>{{$resource.section_three.approach1.heading}}</h4>
+                  <p class="mb-2">
+                    {{$resource.section_three.approach1.description}}
+                  </p>
+                  <ul class="icon-list bullet-bg">
+                    <li>
+                      <i class="uil uil-check"></i>
+                      <span><span class="fw-semibold">{{$resource.section_three.approach1.point1.bold}}</span> {{$resource.section_three.approach1.point1.not_bold}}</span>
+                    </li>
+                    <li>
+                      <i class="uil uil-check"></i
+                      ><span>
+                        <span class="fw-semibold">{{$resource.section_three.approach1.point2.bold}}</span> {{$resource.section_three.approach1.point2.not_bold}}</span>
+                      
+                    </li>
+                    <li>
+                      <i class="uil uil-check"></i
+                      ><span
+                        ><span class="fw-semibold">{{$resource.section_three.approach1.point3.bold}}</span> {{$resource.section_three.approach1.point3.not_bold}}</span>
+                      
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-2 col-md-2"></div>
+  
+            <div class="col-md-5 col-lg-4 col-xl-4">
+              <div class="about-image card">
+                <div class="card-body">
+                  <h4>{{$resource.section_three.approach2.heading}}</h4>
+                  <p class="mb-2">
+                    {{$resource.section_three.approach2.description}}
+                  </p>
+                  <ul class="icon-list bullet-bg">
+  
+  
+                    <li>
+                      <i class="uil uil-check"></i>
+                      <span><span class="fw-semibold">{{$resource.section_three.approach2.point1.bold}}</span> {{$resource.section_three.approach2.point1.not_bold}}</span>
+                    </li>
+  
+  
+                    <li>
+                      <i class="uil uil-check"></i
+                      ><span
+                        ><span class="fw-semibold">{{$resource.section_three.approach2.point2.bold}}</span>
+                        {{$resource.section_three.approach2.point2.not_bold}}</span
+                      >
+                    </li>
+                    <li>
+                      <i class="uil uil-check"></i
+                      ><span
+                        ><span class="fw-semibold">{{$resource.section_three.approach2.point3.bold}}</span> {{$resource.section_three.approach2.point3.not_bold}}</span
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-7 col-md-12 col-sm-5 order-lg-2 mt-0 mt-md-0">
-            <img
-              class="why_choose_image w-auto img-fluid"
-              src={{$resource.section_fourth.image}}
-            />
+          <div class="row g-0 gy-8 mb-4 mb-md-14">
+            <div class="col-xl-1"></div>
+            <div class="col-md-5 col-lg-4">
+              <div class="about-image card">
+                <div class="card-body">
+                  <h4>{{$resource.section_three.approach3.heading}}</h4>
+                  <p class="mb-2">
+                    {{$resource.section_three.approach3.description}}
+                  </p>
+                  <ul class="icon-list bullet-bg">
+                    <li>
+                      <i class="uil uil-check"></i
+                      ><span
+                        ><span class="fw-semibold">{{$resource.section_three.approach3.point1.bold}}</span> {{$resource.section_three.approach3.point1.not_bold}}</span
+                      >
+                    </li>
+                    <li>
+                      <i class="uil uil-check"></i
+                      ><span
+                        ><span class="fw-semibold">{{$resource.section_three.approach3.point2.bold}}</span> {{$resource.section_three.approach3.point2.not_bold}}</span
+                      >
+                    </li>
+                    <li>
+                      <i class="uil uil-check"></i
+                      ><span
+                        ><span class="fw-semibold">{{$resource.section_three.approach3.point3.bold}}</span>
+                        {{$resource.section_three.approach3.point3.not_bold}}</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 col-xl-2"></div>
+            <div class="col-md-5 col-lg-4">
+              <div class="about-image card">
+                <div class="card-body">
+                  <h4>{{$resource.section_three.approach4.heading}}</h4>
+                  <p class="mb-2">
+                    {{$resource.section_three.approach4.description}}
+                  </p>
+                  <ul class="icon-list bullet-bg">
+                    <li>
+                      <i class="uil uil-check"></i
+                      ><span
+                        ><span class="fw-semibold">{{$resource.section_three.approach4.point1.bold}}</span>
+                        {{$resource.section_three.approach4.point1.not_bold}}</span
+                      >
+                    </li>
+                    <li>
+                      <i class="uil uil-check"></i
+                      ><span
+                        ><span class="fw-semibold">{{$resource.section_three.approach4.point2.bold}}</span>
+                        {{$resource.section_three.approach4.point2.not_bold}}</span
+                      >
+                    </li>
+                    <li>
+                      <i class="uil uil-check"></i
+                      ><span
+                        ><span class="fw-semibold">{{$resource.section_three.approach4.point3.bold}}</span> {{$resource.section_three.approach4.point3.not_bold}}</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
-  <!-- /.content-wrapper -->
-
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin="anonymous"
-  ></script>
-
-  {{ partial "footer.html" . }} {{ partial "page-progress.html" . }}
-</body>
-{{ end }}
+      </section>
+  
+      <section class="wrapper bg-white">
+        <div class="container pb-4 pb-md-16">
+          <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+            <div class="col-lg-5 col-md-9 mx-auto pb-md-2">
+              <h2
+                class="fs-16 fw-normal ls-3x text-uppercase mb-6 text-left pt-md-0"
+                style="text-align: left"
+              >
+              {{$resource.section_four.title}}
+              
+              </h2>
+              <h3 class="display-4 mb-4" style="text-align: left">
+                {{$resource.section_four.subtitle}}
+              </h3>
+              <p class="lead fs-lg mb-6" style="text-align: left">
+                {{$resource.section_four.description}}
+              </p>
+              <div class="row gx-md-8 gy-8 mb-14 mb-md-20">
+                <div class="col-xl-8 col-md-8">
+                  <ul class="icon-list bullet-bg mb-0">
+                    <li>
+                      <span><i class="uil uil-check"></i></span
+                      ><span>{{$resource.section_four.feature1}}</span>
+                    </li>
+                    <li>
+                      <span><i class="uil uil-check"></i></span
+                      ><span>{{$resource.section_four.feature2}}</span>
+                    </li>
+                    <li>
+                      <span><i class="uil uil-check"></i></span
+                      ><span>{{$resource.section_four.feature3}}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7 col-md-12 col-sm-5 order-lg-2 mt-0 mt-md-0">
+              <img
+                class="why_choose_image w-auto img-fluid"
+                src={{$resource.section_four.image}}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- /.content-wrapper -->
+  
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+  
+    {{ partial "footer.html" . }} {{ partial "page-progress.html" . }}
+  </body>
+  {{ end }}
+  
