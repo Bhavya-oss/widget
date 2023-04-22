@@ -1,0 +1,28 @@
+{
+    "routes": [
+      {
+        "method": "GET",
+        "path": "/biggworks-project-asset-tracking-solution",
+        "handler": "biggworks-project-asset-tracking-solution.find",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "PUT",
+        "path": "/biggworks-project-asset-tracking-solution",
+        "handler": "biggworks-project-asset-tracking-solution.update",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "DELETE",
+        "path": "/biggworks-project-asset-tracking-solution",
+        "handler": "biggworks-project-asset-tracking-solution.delete",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+  }

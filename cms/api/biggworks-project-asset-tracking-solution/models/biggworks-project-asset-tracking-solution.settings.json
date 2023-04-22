@@ -1,0 +1,21 @@
+{
+    "kind": "singleType",
+    "collectionName": "biggworks-project-asset-tracking-solution",
+    "info": {
+      "name": "biggworks-project-asset-tracking-solution",
+      "description": "The biggworks-project-asset-tracking-solution page content"
+    },
+    "options": {
+      "increments": true,
+      "timestamps": true,
+      "draftAndPublish": true
+    },
+    "pluginOptions": {
+      "i18n": {
+        "localized": true
+      }
+    },
+    "attributes": {
+      
+    }
+  }
