@@ -1,0 +1,28 @@
+{
+    "routes": [
+      {
+        "method": "GET",
+        "path": "/biggworks-project-smart-lights",
+        "handler": "biggworks-project-smart-lights.find",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "PUT",
+        "path": "/biggworks-project-smart-lights",
+        "handler": "biggworks-project-smart-lights.update",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "DELETE",
+        "path": "/biggworks-project-smart-lights",
+        "handler": "biggworks-project-smart-lights.delete",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+  }

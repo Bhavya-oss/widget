@@ -1,0 +1,28 @@
+{
+    "routes": [
+      {
+        "method": "GET",
+        "path": "/biggworks-project-aerodynamic-performance-measurement",
+        "handler": "biggworks-project-aerodynamic-performance-measurement.find",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "PUT",
+        "path": "/biggworks-project-aerodynamic-performance-measurement",
+        "handler": "biggworks-project-aerodynamic-performance-measurement.update",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "DELETE",
+        "path": "/biggworks-project-aerodynamic-performance-measurement",
+        "handler": "biggworks-project-aerodynamic-performance-measurement.delete",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+  }

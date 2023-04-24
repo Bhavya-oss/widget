@@ -1,0 +1,28 @@
+{
+    "routes": [
+      {
+        "method": "GET",
+        "path": "/biggworks-project-geofence-alert-system",
+        "handler": "biggworks-project-geofence-alert-system.find",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "PUT",
+        "path": "/biggworks-project-geofence-alert-system",
+        "handler": "biggworks-project-geofence-alert-system.update",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "DELETE",
+        "path": "/biggworks-project-geofence-alert-system",
+        "handler": "biggworks-project-geofence-alert-system.delete",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+  }

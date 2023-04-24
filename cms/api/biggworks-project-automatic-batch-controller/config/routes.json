@@ -1,0 +1,28 @@
+{
+    "routes": [
+      {
+        "method": "GET",
+        "path": "/biggworks-project-automatic-batch-controller",
+        "handler": "biggworks-project-automatic-batch-controller.find",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "PUT",
+        "path": "/biggworks-project-automatic-batch-controller",
+        "handler": "biggworks-project-automatic-batch-controller.update",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "DELETE",
+        "path": "/biggworks-project-automatic-batch-controller",
+        "handler": "biggworks-project-automatic-batch-controller.delete",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+  }

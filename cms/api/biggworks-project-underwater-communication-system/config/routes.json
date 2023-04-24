@@ -1,0 +1,28 @@
+{
+    "routes": [
+      {
+        "method": "GET",
+        "path": "/biggworks-project-underwater-communication-system",
+        "handler": "biggworks-project-underwater-communication-system.find",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "PUT",
+        "path": "/biggworks-project-underwater-communication-system",
+        "handler": "biggworks-project-underwater-communication-system.update",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "DELETE",
+        "path": "/biggworks-project-underwater-communication-system",
+        "handler": "biggworks-project-underwater-communication-system.delete",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+  }

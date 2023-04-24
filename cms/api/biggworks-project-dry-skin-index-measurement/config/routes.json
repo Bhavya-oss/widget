@@ -1,0 +1,28 @@
+{
+    "routes": [
+      {
+        "method": "GET",
+        "path": "/biggworks-project-dry-skin-index-measurement",
+        "handler": "biggworks-project-dry-skin-index-measurement.find",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "PUT",
+        "path": "/biggworks-project-dry-skin-index-measurement",
+        "handler": "biggworks-project-dry-skin-index-measurement.update",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "DELETE",
+        "path": "/biggworks-project-dry-skin-index-measurement",
+        "handler": "biggworks-project-dry-skin-index-measurement.delete",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+  }

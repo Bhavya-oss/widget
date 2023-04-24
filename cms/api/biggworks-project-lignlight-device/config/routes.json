@@ -1,0 +1,28 @@
+{
+    "routes": [
+      {
+        "method": "GET",
+        "path": "/biggworks-project-lignlight-device",
+        "handler": "biggworks-project-lignlight-device.find",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "PUT",
+        "path": "/biggworks-project-lignlight-device",
+        "handler": "biggworks-project-lignlight-device.update",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "DELETE",
+        "path": "/biggworks-project-lignlight-device",
+        "handler": "biggworks-project-lignlight-device.delete",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+  }

@@ -1,0 +1,28 @@
+{
+    "routes": [
+      {
+        "method": "GET",
+        "path": "/biggworks-project-energy-asset-tracking-beacon",
+        "handler": "biggworks-project-energy-asset-tracking-beacon.find",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "PUT",
+        "path": "/biggworks-project-energy-asset-tracking-beacon",
+        "handler": "biggworks-project-energy-asset-tracking-beacon.update",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "DELETE",
+        "path": "/biggworks-project-energy-asset-tracking-beacon",
+        "handler": "biggworks-project-energy-asset-tracking-beacon.delete",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+  }

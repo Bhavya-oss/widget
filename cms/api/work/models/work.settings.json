@@ -16,6 +16,21 @@
     }
   },
   "attributes": {
-    
+    "section_one": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "json"
+    },
+    "section_two": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "json"
+    }
   }
 }

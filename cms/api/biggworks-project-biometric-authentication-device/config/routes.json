@@ -1,0 +1,28 @@
+{
+    "routes": [
+      {
+        "method": "GET",
+        "path": "/biggworks-project-biometric-authentication-device",
+        "handler": "biggworks-project-biometric-authentication-device.find",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "PUT",
+        "path": "/biggworks-project-biometric-authentication-device",
+        "handler": "biggworks-project-biometric-authentication-device.update",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "DELETE",
+        "path": "/biggworks-project-biometric-authentication-device",
+        "handler": "biggworks-project-biometric-authentication-device.delete",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+  }

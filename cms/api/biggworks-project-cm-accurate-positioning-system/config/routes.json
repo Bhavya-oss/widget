@@ -1,0 +1,28 @@
+{
+    "routes": [
+      {
+        "method": "GET",
+        "path": "/biggworks-project-cm-accurate-positioning-system",
+        "handler": "biggworks-project-cm-accurate-positioning-system.find",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "PUT",
+        "path": "/biggworks-project-cm-accurate-positioning-system",
+        "handler": "biggworks-project-cm-accurate-positioning-system.update",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "DELETE",
+        "path": "/biggworks-project-cm-accurate-positioning-system",
+        "handler": "biggworks-project-cm-accurate-positioning-system.delete",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+  }

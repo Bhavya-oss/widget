@@ -1,0 +1,28 @@
+{
+    "routes": [
+      {
+        "method": "GET",
+        "path": "/biggworks-project-depth-and-temperature-monitoring",
+        "handler": "biggworks-project-depth-and-temperature-monitoring.find",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "PUT",
+        "path": "/biggworks-project-depth-and-temperature-monitoring",
+        "handler": "biggworks-project-depth-and-temperature-monitoring.update",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "DELETE",
+        "path": "/biggworks-project-depth-and-temperature-monitoring",
+        "handler": "biggworks-project-depth-and-temperature-monitoring.delete",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+  }

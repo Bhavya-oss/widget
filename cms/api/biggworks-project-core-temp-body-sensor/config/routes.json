@@ -1,0 +1,28 @@
+{
+    "routes": [
+      {
+        "method": "GET",
+        "path": "/biggworks-project-core-temp-body-sensor",
+        "handler": "biggworks-project-core-temp-body-sensor.find",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "PUT",
+        "path": "/biggworks-project-core-temp-body-sensor",
+        "handler": "biggworks-project-core-temp-body-sensor.update",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "DELETE",
+        "path": "/biggworks-project-core-temp-body-sensor",
+        "handler": "biggworks-project-core-temp-body-sensor.delete",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+  }
