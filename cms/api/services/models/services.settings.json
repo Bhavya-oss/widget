@@ -40,7 +40,7 @@
       },
       "type": "json"
     },
-    "image_four": {
+    "section_four": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -88,7 +88,7 @@
       },
       "type": "json"
     },
-    "image_ten": {
+    "section-ten": {
       "pluginOptions": {
         "i18n": {
           "localized": true

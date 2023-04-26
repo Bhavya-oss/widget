@@ -15,19 +15,13 @@
       </header>
       <section class="wrapper bg-white">
         <div
-          class="d-flex align-items-center bg-overlay-400 img-fluid home_backgrownd_image"
-        >
-          <div
-            class="container pt-15 pb-22 pt-md-14 pb-md-22 pt-xl-1 text-center"
-          >
+          class="d-flex align-items-center bg-overlay-400 img-fluid home_backgrownd_image">
+          <div class="container pb-22 pb-md-22 text-center">
             <div class="row mb-10">
               <div
                 class="col-md-10 col-lg-10 col-xl-10 col-xxl-8 mx-auto mb-13"
-                data-group="page-title"
-              >
-                <h2
-                  class="fs-16 fw-normal ls-3x text-uppercase mb-5 mt-md-10 pt-xl-10"
-                >
+                data-group="page-title">
+                <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5 pt-10">
                   {{$resource.section_one.title}}
                 </h2>
                 <h1 class="display-1 mb-4">{{$resource.section_one.subtitle}}</h1>
@@ -42,14 +36,14 @@
                   <span
                     ><a href="#myModal1" class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
                       >{{$resource.section_one.btn_talk_to_us}}</a
-                    ></span
-                  >
-                </div>
-                <div id="myModal1" class="modal fade" tabindex="-1">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h4 class="modal-title">{{$resource.section_one.modal_title}}
+                      ></span
+                      >
+                    </div>
+                    <div id="myModal1" class="modal fade" tabindex="-1">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <!-- <div class="modal-header"> -->
+                            <h4 class="modal-title text-center pt-10">{{$resource.section_one.modal_title}}
                         </h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                       </div>
@@ -109,9 +103,11 @@
                                           <div class="help-block with-errors"></div>
                                         </div>
                                       </div>
-                                      <div class="col-12 pb-10">
-                                        <input type="submit" class="btn btn-primary  rounded-0 btn-send mb-3"
+                                      <div class="col-8"></div>
+                                      <div class="col-4">
+                                        <input type="submit" class="btn btn-primary  rounded-0 btn-send mb-3 justify-content-right"
                                           value="Send message">
+                    
                     
                                       </div>
                                     </div>
@@ -173,12 +169,7 @@
                 alt=""
               />
             </div>
-            <div class="item px-8">
-              <img
-                src={{$resource.image_carousel.a}}
-                alt=""
-              />
-            </div>
+            
             <div class="item px-5">
               <img
                 src={{$resource.image_carousel.hold_it_write}}
@@ -262,7 +253,7 @@
               <div class="row">
                 <img
                   class="col-md-12"
-                  src={{$resource.image_carousel.vithamas_technologies}}
+                  src={{$resource.image_carousel.vithamas}}
                   alt=""
                 />
               </div>
@@ -280,14 +271,13 @@
   
       <section class="wrapper bg-white">
         <div class="container pb-4 pb-md-4">
-          <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+          <div class="row gx-lg-8 gy-10 align-items-center">
             <div
-              class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center"
-            >
-              <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5">
+              class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center">
+              <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
                 {{$resource.section_two.Title}}
               </h2>
-              <h3 class="display-4 mb-4">
+              <h3 class="display-4 mb-3">
                 {{$resource.section_two.Subtitle}}
               </h3>
               <p class="lead fs-lg mb-10">
@@ -296,11 +286,12 @@
             </div>
           </div>
   
-          <div class="row gx-md-1 offset-1 gx-2 gy-8 mb-14 mb-md-17">
+          <div
+            class="row gx-md-1 offset-1 gx-2 gy-8 mb-12">
             <div class="col-md-3 col-lg-3 col-xl-3 col-12">
               <div class="item col-md-12">
                 <figure class="figure mb-5">
-                  <img
+                    <img
                     class="service-image img-fluid"
                     src={{$resource.section_two.service1.imageSrc}}
                     alt={{$resource.section_two.service1.imageAlt}}
@@ -358,160 +349,117 @@
               class="col-md-10 col-lg-10 col-xl-12 col-xxl-6 mx-auto text-center"
             >
               <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5">
-                {{$resource.section_three.Title}}
+                {{$resource.section_three.title}}
               </h2>
               <h3 class="display-4 mb-4">
-                {{$resource.section_three.Subtitle}}
+                {{$resource.section_three.subtitle}}
               </h3>
               <p class="lead fs-lg mb-6">
-                {{$resource.section_three.Description}}
+                {{$resource.section_three.description}}
               </p>
             </div>
           </div>
-          <div class="row g-0 gy-8 gy-md mb-4 mb-md-10 mb-xl-20 mb-lg-16">
-            <div class="col-xl-1"></div>
+          <div class="row g-0 gy-8 gy-md mb-4 mb-md-10 mb-xl-12 mb-lg-16">
+            <div class="col-xl-1 pe-18"></div>
             <div class="col-md-5 col-lg-4 col-xl-4">
               <div class="about-image card">
                 <div class="card-body">
-                  <h4>{{$resource.section_three.approach1.heading}}</h4>
+                  <h4 class="mb-4">{{$resource.section_three.approach1.heading}}</h4>
                   <p class="mb-2">
                     {{$resource.section_three.approach1.description}}
                   </p>
-                  <ul class="icon-list bullet-bg">
-                    <li>
-                      <i class="uil uil-check"></i>
-                      <span><span class="fw-semibold">{{$resource.section_three.approach1.point1.bold}}</span> {{$resource.section_three.approach1.point1.not_bold}}</span>
-                    </li>
-                    <li>
-                      <i class="uil uil-check"></i
-                      ><span>
-                        <span class="fw-semibold">{{$resource.section_three.approach1.point2.bold}}</span> {{$resource.section_three.approach1.point2.not_bold}}</span>
-                      
-                    </li>
-                    <li>
-                      <i class="uil uil-check"></i
-                      ><span
-                        ><span class="fw-semibold">{{$resource.section_three.approach1.point3.bold}}</span> {{$resource.section_three.approach1.point3.not_bold}}</span>
-                      
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-2 col-md-2"></div>
-  
-            <div class="col-md-5 col-lg-4 col-xl-4">
-              <div class="about-image card">
-                <div class="card-body">
-                  <h4>{{$resource.section_three.approach2.heading}}</h4>
+                  <div
+                        ><span class="fw-semibold">{{$resource.section_three.approach1.point1.bold}}</span> {{$resource.section_three.approach1.point1.not_bold}}</div
+                        >
+                        <div
+                          ><span class="fw-semibold">{{$resource.section_three.approach1.point2.bold}}</span> {{$resource.section_three.approach1.point2.not_bold}}</div
+                          >
+                      <div
+                            ><span class="fw-semibold">{{$resource.section_three.approach1.point3.bold}}</span> {{$resource.section_three.approach1.point3.not_bold}}</div
+                            >
+                          
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-1 col-md-2"></div>
+
+                  <div class="col-md-5 col-lg-4 col-xl-4">
+                    <div class="about-image card">
+                      <div class="card-body">
+                        <h4 class="mb-4">{{$resource.section_three.approach2.heading}}</h4>
                   <p class="mb-2">
                     {{$resource.section_three.approach2.description}}
                   </p>
-                  <ul class="icon-list bullet-bg">
-  
-  
-                    <li>
-                      <i class="uil uil-check"></i>
-                      <span><span class="fw-semibold">{{$resource.section_three.approach2.point1.bold}}</span> {{$resource.section_three.approach2.point1.not_bold}}</span>
-                    </li>
-  
-  
-                    <li>
-                      <i class="uil uil-check"></i
-                      ><span
-                        ><span class="fw-semibold">{{$resource.section_three.approach2.point2.bold}}</span>
-                        {{$resource.section_three.approach2.point2.not_bold}}</span
-                      >
-                    </li>
-                    <li>
-                      <i class="uil uil-check"></i
-                      ><span
-                        ><span class="fw-semibold">{{$resource.section_three.approach2.point3.bold}}</span> {{$resource.section_three.approach2.point3.not_bold}}</span
-                      >
-                    </li>
-                  </ul>
+                  <div
+                        ><span class="fw-semibold"
+                          >{{$resource.section_three.approach2.point1.bold}}</span> {{$resource.section_three.approach2.point1.not_bold}}</div
+                          >
+                          <div
+                            ><span class="fw-semibold">{{$resource.section_three.approach2.point2.bold}}</span>
+                        {{$resource.section_three.approach2.point2.not_bold}}</div
+                        >
+                        <div
+                          ><span class="fw-semibold">{{$resource.section_three.approach2.point3.bold}}</span> {{$resource.section_three.approach2.point3.not_bold}}</div
+                          >
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="row g-0 gy-8 mb-4 mb-md-14">
-            <div class="col-xl-1"></div>
-            <div class="col-md-5 col-lg-4">
-              <div class="about-image card">
-                <div class="card-body">
-                  <h4>{{$resource.section_three.approach3.heading}}</h4>
+              <div class="row g-0 gy-8 mb-4 mb-md-12">
+                <div class="col-xl-1 pe-18"></div>
+                <div class="col-md-5 col-lg-4">
+                  <div class="about-image card">
+                    <div class="card-body">
+                      <h4 class="mb-4">{{$resource.section_three.approach3.heading}}</h4>
                   <p class="mb-2">
                     {{$resource.section_three.approach3.description}}
                   </p>
-                  <ul class="icon-list bullet-bg">
-                    <li>
-                      <i class="uil uil-check"></i
-                      ><span
-                        ><span class="fw-semibold">{{$resource.section_three.approach3.point1.bold}}</span> {{$resource.section_three.approach3.point1.not_bold}}</span
-                      >
-                    </li>
-                    <li>
-                      <i class="uil uil-check"></i
-                      ><span
-                        ><span class="fw-semibold">{{$resource.section_three.approach3.point2.bold}}</span> {{$resource.section_three.approach3.point2.not_bold}}</span
-                      >
-                    </li>
-                    <li>
-                      <i class="uil uil-check"></i
-                      ><span
-                        ><span class="fw-semibold">{{$resource.section_three.approach3.point3.bold}}</span>
-                        {{$resource.section_three.approach3.point3.not_bold}}</span
-                      >
-                    </li>
-                  </ul>
+                  <div
+                        ><span class="fw-semibold">{{$resource.section_three.approach3.point1.bold}}</span> {{$resource.section_three.approach3.point1.not_bold}}</div
+                        >
+                        <div
+                          ><span class="fw-semibold">{{$resource.section_three.approach3.point2.bold}}</span> {{$resource.section_three.approach3.point2.not_bold}}</div
+                          >
+                          <div
+                            ><span class="fw-semibold">{{$resource.section_three.approach3.point3.bold}}</span>
+                        {{$resource.section_three.approach3.point3.not_bold}}</div
+                        >
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-2 col-xl-2"></div>
-            <div class="col-md-5 col-lg-4">
-              <div class="about-image card">
-                <div class="card-body">
-                  <h4>{{$resource.section_three.approach4.heading}}</h4>
+              <div class="col-md-2 col-xl-1"></div>
+              <div class="col-md-5 col-lg-4">
+                <div class="about-image card">
+                  <div class="card-body">
+                    <h4 class="mb-4">{{$resource.section_three.approach4.heading}}</h4>
                   <p class="mb-2">
                     {{$resource.section_three.approach4.description}}
                   </p>
-                  <ul class="icon-list bullet-bg">
-                    <li>
-                      <i class="uil uil-check"></i
-                      ><span
+                  <div
                         ><span class="fw-semibold">{{$resource.section_three.approach4.point1.bold}}</span>
-                        {{$resource.section_three.approach4.point1.not_bold}}</span
-                      >
-                    </li>
-                    <li>
-                      <i class="uil uil-check"></i
-                      ><span
-                        ><span class="fw-semibold">{{$resource.section_three.approach4.point2.bold}}</span>
-                        {{$resource.section_three.approach4.point2.not_bold}}</span
-                      >
-                    </li>
-                    <li>
-                      <i class="uil uil-check"></i
-                      ><span
-                        ><span class="fw-semibold">{{$resource.section_three.approach4.point3.bold}}</span> {{$resource.section_three.approach4.point3.not_bold}}</span
-                      >
-                    </li>
-                  </ul>
+                        {{$resource.section_three.approach4.point1.not_bold}}</div
+                        >
+                        <div
+                          ><span class="fw-semibold">{{$resource.section_three.approach4.point2.bold}}</span>
+                        {{$resource.section_three.approach4.point2.not_bold}}</div
+                        >
+                        <div
+                          ><span class="fw-semibold">{{$resource.section_three.approach4.point3.bold}}</span> {{$resource.section_three.approach4.point3.not_bold}}</div
+                          >
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
       </section>
   
       <section class="wrapper bg-white">
-        <div class="container pb-4 pb-md-16">
-          <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+        <div class="container">
+          <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center pb-10">
             <div class="col-lg-5 col-md-9 mx-auto pb-md-2">
               <h2
                 class="fs-16 fw-normal ls-3x text-uppercase mb-6 text-left pt-md-0"
-                style="text-align: left"
-              >
+                style="text-align: left">
               {{$resource.section_four.title}}
               
               </h2>
@@ -521,25 +469,18 @@
               <p class="lead fs-lg mb-6" style="text-align: left">
                 {{$resource.section_four.description}}
               </p>
-              <div class="row gx-md-8 gy-8 mb-14 mb-md-20">
-                <div class="col-xl-8 col-md-8">
-                  <ul class="icon-list bullet-bg mb-0">
-                    <li>
-                      <span><i class="uil uil-check"></i></span
-                      ><span>{{$resource.section_four.feature1}}</span>
-                    </li>
-                    <li>
-                      <span><i class="uil uil-check"></i></span
-                      ><span>{{$resource.section_four.feature2}}</span>
-                    </li>
-                    <li>
-                      <span><i class="uil uil-check"></i></span
-                      ><span>{{$resource.section_four.feature3}}</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+              <div class="row gy-2 mb-6 mb-md-8">
+                <div class="col-1">
+                    <img class="" src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"/></div>
+                    <div class="col-11">{{$resource.section_four.feature1}}</div>
+                    <div class="col-1"><img class="" src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"/></div>
+                      <div class="col-11">{{$resource.section_four.feature2}}</div>
+                   
+                      <div class="col-1"><img class="" src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"/></div>
+                      <div class="col-11">{{$resource.section_four.feature3}}</div>
+                   
+                    </div>
+                  </div>
             <div class="col-lg-7 col-md-12 col-sm-5 order-lg-2 mt-0 mt-md-0">
               <img
                 class="why_choose_image w-auto img-fluid"
