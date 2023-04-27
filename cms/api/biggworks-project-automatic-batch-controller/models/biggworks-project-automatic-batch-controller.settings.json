@@ -40,14 +40,6 @@
         },
         "type": "json"
       },
-      "section_five": {
-        "pluginOptions": {
-          "i18n": {
-            "localized": true
-          }
-        },
-        "type": "json"
-      },
       "section_four": {
         "pluginOptions": {
           "i18n": {
@@ -56,6 +48,15 @@
         },
         "type": "json"
       },
+      "section_five": {
+        "pluginOptions": {
+          "i18n": {
+            "localized": true
+          }
+        },
+        "type": "json"
+      },
+     
       "section_six": {
         "pluginOptions": {
           "i18n": {
