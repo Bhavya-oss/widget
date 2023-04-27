@@ -15341,6 +15341,9 @@ textarea.form-control.is-invalid {
   .pe-lg-20 {
     padding-right: 10rem !important;
   }
+  .pe-lg-20_5{
+    padding-right: 11rem !important;
+  }
   .pe-lg-21 {
     padding-right: 12.5rem !important;
   }
@@ -15490,6 +15493,9 @@ textarea.form-control.is-invalid {
   }
   .ps-lg-18 {
     padding-left: 8rem !important;
+  }
+  .ps-lg-18_5{
+    padding-left: 8.5rem !important;
   }
   .ps-lg-19 {
     padding-left: 9rem !important;
@@ -35944,7 +35950,7 @@ footer.bg-dark.angled.upper-start:before {
 }
 
 .home_backgrownd_image {
-  background-image: url(../../img/photos/homehero.png);
+  background-image: url(https://res.cloudinary.com/biggworks/image/upload/v1682493577/Group_171_gxbeou.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -35955,6 +35961,10 @@ footer.bg-dark.angled.upper-start:before {
 
 .bg-linear-gradient{
   background:linear-gradient(180deg, #EDFCFB 0%, #A3EAEC 51.75%, #AAD8F1 100%);
+}
+
+.bg-linear-gradient-projects{
+  background: linear-gradient(180deg, #FFFFFF 0%, #A3EAEC 46.15%, #AAD8F1 100%);
 }
 
 .bg-robust-tracking{
@@ -36093,7 +36103,7 @@ border-radius: 30px;
 } */
  
 .service_background_image {
-  background-image: url(../../img/photos/service\ hero.png);
+  background-image: url(https://res.cloudinary.com/biggworks/image/upload/v1682506425/Group_11300_msgjhu.png);
   background-repeat: no-repeat;
   background-position-x: right;
   background-image: cover;
@@ -36135,13 +36145,13 @@ border-radius: 30px;
 
 blockquote.icon:before {
   content: "\201D";
-  position: absolute;
-  top: -3.5rem;
-  left: 10rem;
-  color: rgb(52 63 82 / 15%);
-  font-size: 15rem;
-  line-height: 1;
-  z-index: 1;
+    position: absolute;
+    top: -3.5rem;
+    left: 14rem;
+    color: rgb(52 63 82 / 15%);
+    font-size: 18rem;
+    line-height: 1;
+    z-index: 1;
 }
 
 blockquote.text-center.icon-top:before {
@@ -36896,4 +36906,21 @@ display: inline-block;
   min-height: 324px;
   border-radius: 8px;
 
+}
+
+.build{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 21px;
+line-height: 34px;
+}
+
+.navbar-header-color{
+  background: #ffffff;
+
+}
+
+.bg-linear-gradient-career{
+  background: linear-gradient(180deg, #FFFFFF 0%, #A3EAEC 51.75%, #AAD8F1 100%);
 }

@@ -36103,7 +36103,7 @@ border-radius: 30px;
 } */
  
 .service_background_image {
-  background-image: url(../../img/photos/service\ hero.png);
+  background-image: url(https://res.cloudinary.com/biggworks/image/upload/v1682506425/Group_11300_msgjhu.png);
   background-repeat: no-repeat;
   background-position-x: right;
   background-image: cover;
@@ -36919,4 +36919,8 @@ line-height: 34px;
 .navbar-header-color{
   background: #ffffff;
 
+}
+
+.bg-linear-gradient-career{
+  background: linear-gradient(180deg, #FFFFFF 0%, #A3EAEC 51.75%, #AAD8F1 100%);
 }

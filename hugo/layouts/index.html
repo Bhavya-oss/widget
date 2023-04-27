@@ -31,8 +31,7 @@
                 <div
                   class="d-flex justify-content-center"
                   data-group="page-title-buttons"
-                  data-delay="600"
-                >
+                  data-delay="600">
                   <span
                     ><a href="#myModal1" class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
                       >{{$resource.section_one.btn_talk_to_us}}</a
@@ -43,90 +42,89 @@
                       <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                           <!-- <div class="modal-header"> -->
-                            <h4 class="modal-title text-center pt-10">{{$resource.section_one.modal_title}}
-                        </h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                      </div>
-                      <div class="modal-body">
-                        <section id="tabs" class="wrapper pt-0 pb-md-4">
-                          <div class="row">
-                            <div class="col-lg-15">
-                              
-                              <div class="tab-content">
-                                
-        
-                                <form class="contact-form" method="post" id="formContact" onsubmit="saveContactInfo()">
-                                  <div class="messages"></div>
-                                  <div class="controls">
-                                    <div class="row gx-4">
-                                      <div class="col-md-6">
-                                        <div class="form-label-group mb-4">
-                                          <input id="form_name" type="text" name="name" class="form-control"
-                                            placeholder="Jane" required="required"
-                                            data-error="First Name is required.">
-                                          <label for="form_name">{{$resource.section_one.fname}}</label>
-                                          <div class="help-block with-errors"></div>
+                            <h4 class="modal-title text-center pt-6">{{$resource.section_one.modal_title}}
+                            </h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                          <!-- </div> -->
+                          <div class="modal-body">
+                            <section id="tabs" class="wrapper pt-0 pb-md-4">
+                              <div class="row">
+                                <div class="col-lg-15">
+                                  
+                                  <div class="tab-content">
+                                    
+            
+                                    <form class="contact-form" method="post" id="formContact" onsubmit="saveContactInfo()">
+                                      <div class="messages"></div>
+                                      <div class="controls">
+                                        <div class="row gx-4">
+                                          <div class="col-md-6">
+                                            <div class="form-label-group mb-4">
+                                              <input id="form_name" type="text" name="name" class="form-control"
+                                                placeholder="Jane" required="required"
+                                                data-error="First Name is required.">
+                                              <label for="form_name">{{$resource.section_one.fname}}</label>
+                                              <div class="help-block with-errors"></div>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-6">
+                                            <div class="form-label-group mb-4">
+                                              <input id="form_lastname" type="text" name="surname" class="form-control"
+                                                placeholder="Doe" required="required"
+                                                data-error="Last Name is required.">
+                                              <label for="form_lastname">{{$resource.section_one.lastname}}</label>
+                                              <div class="help-block with-errors"></div>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-6">
+                                            <div class="form-label-group mb-4">
+                                              <input id="form_email" type="email" name="email" class="form-control"
+                                                placeholder="jane.doe@example.com" required="required"
+                                                data-error="Valid email is required.">
+                                              <label for="form_email">{{$resource.section_one.email}}</label>
+                                              <div class="help-block with-errors"></div>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-6">
+                                            <div class="form-label-group mb-4">
+                                              <input id="form_phone" type="tel" name="phone" class="form-control"
+                                                placeholder="Your phone number">
+                                              <label for="form_phone">{{$resource.section_one.phone}}</label>
+                                              <div class="help-block with-errors"></div>
+                                            </div>
+                                          </div>
+                                          <div class="col-12">
+                                            <div class="form-label-group mb-4">
+                                              <textarea id="form_message" name="message" class="form-control"
+                                                placeholder="Your message" rows="5" required="required"
+                                                data-error="Message is required."></textarea>
+                                              <label for="form_message">{{$resource.section_one.message}}</label>
+                                              <div class="help-block with-errors"></div>
+                                            </div>
+                                          </div>
+                                          <div class="col-9"></div>
+                                          <div class="col-1">
+                                            <input type="submit" class="btn btn-primary  rounded-0 btn-send mb-3"
+                                              value="Send message">
+                        
+                                          </div>
                                         </div>
                                       </div>
-                                      <div class="col-md-6">
-                                        <div class="form-label-group mb-4">
-                                          <input id="form_lastname" type="text" name="surname" class="form-control"
-                                            placeholder="Doe" required="required"
-                                            data-error="Last Name is required.">
-                                          <label for="form_lastname">{{$resource.section_one.lastname}}</label>
-                                          <div class="help-block with-errors"></div>
-                                        </div>
-                                      </div>
-                                      <div class="col-md-6">
-                                        <div class="form-label-group mb-4">
-                                          <input id="form_email" type="email" name="email" class="form-control"
-                                            placeholder="jane.doe@example.com" required="required"
-                                            data-error="Valid email is required.">
-                                          <label for="form_email">{{$resource.section_one.email}}</label>
-                                          <div class="help-block with-errors"></div>
-                                        </div>
-                                      </div>
-                                      <div class="col-md-6">
-                                        <div class="form-label-group mb-4">
-                                          <input id="form_phone" type="tel" name="phone" class="form-control"
-                                            placeholder="Your phone number">
-                                          <label for="form_phone">{{$resource.section_one.phone}}</label>
-                                          <div class="help-block with-errors"></div>
-                                        </div>
-                                      </div>
-                                      <div class="col-12">
-                                        <div class="form-label-group mb-4">
-                                          <textarea id="form_message" name="message" class="form-control"
-                                            placeholder="Your message" rows="5" required="required"
-                                            data-error="Message is required."></textarea>
-                                          <label for="form_message">{{$resource.section_one.message}}</label>
-                                          <div class="help-block with-errors"></div>
-                                        </div>
-                                      </div>
-                                      <div class="col-8"></div>
-                                      <div class="col-4">
-                                        <input type="submit" class="btn btn-primary  rounded-0 btn-send mb-3 justify-content-right"
-                                          value="Send message">
-                    
-                    
-                                      </div>
-                                    </div>
+                                    </form>
                                   </div>
-                                </form>
+                                </div>
                               </div>
-                            </div>
+            
+            
+            
+                            </section>
+            
+            
                           </div>
-        
-        
-        
-                        </section>
-        
-        
+            
+                        </div>
                       </div>
-        
                     </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

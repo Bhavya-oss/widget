@@ -88,7 +88,7 @@
       },
       "type": "json"
     },
-    "section-ten": {
+    "section_ten": {
       "pluginOptions": {
         "i18n": {
           "localized": true
