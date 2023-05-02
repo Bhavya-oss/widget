@@ -5,14 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="shortcut icon" href="https://res.cloudinary.com/biggworks/image/upload/v1666339564/favicon_sk31cq.ico" />
 
-  {{ $dm := resources.Get "css/font/dm.css" }}
-  <link href="{{ $dm.RelPermalink }}" rel="stylesheet" crossorigin="anonymous"/>
-  {{ $plugins := resources.Get "css/plugins.css" }}
-  <link href="{{ $plugins.RelPermalink }}" rel="stylesheet" crossorigin="anonymous"/>
+  {{ $dm := resources.Get "css/font/dm.css" | resources.Minify }}
+  <!-- <link href="{{ $dm.RelPermalink }}" rel="stylesheet" crossorigin="anonymous"/> -->
+  {{ $plugins := resources.Get "css/plugins.css" | resources.Minify }}
+  <!-- <link href="{{ $plugins.RelPermalink }}" rel="stylesheet" crossorigin="anonymous"/> -->
 
-  {{ $bw := resources.Get "css/theme/bw.css" }}
-  <link href="{{ $bw.RelPermalink }}" rel="stylesheet" crossorigin="anonymous"/>
+  {{ $bw := resources.Get "css/theme/bw.css" | resources.Minify }}
+  <!-- <link href="{{ $bw.RelPermalink }}" rel="stylesheet" crossorigin="anonymous"/> -->
+
+
+
  
+  {{ $concatenatedCSS := slice $dm $plugins $bw| resources.Concat "css/style.css" | resources.Minify | resources.Fingerprint }}
+  <link href="{{ $concatenatedCSS.RelPermalink }}" rel="stylesheet"/>
+
+  
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
