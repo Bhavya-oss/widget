@@ -2999,9 +2999,9 @@ progress {
   color: #495c77;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(8, 60, 130, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0);
   appearance: none;
-  border-radius: 0.4rem;
+  /* border-radius: 0.4rem; */
   box-shadow: 0rem 0rem 1.25rem rgba(30, 34, 40, 0.04);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
@@ -24342,7 +24342,7 @@ form.dark-fields .form-control::placeholder {
   border: 2px solid transparent;
   box-sizing: border-box;
   transform: translateY(0);
-  padding: 0.5rem 1.2rem;
+  padding: 0.70rem 2.15rem;
   font-size: 0.8rem;
   border-radius: 0.4rem;
   transition: all 200ms ease-in-out;
@@ -35946,7 +35946,7 @@ footer.bg-dark.angled.upper-start:before {
 
 .about-image {
   box-shadow: 0px 0px 48px 16px rgba(30, 30, 30, 0.05);
-  min-height: 324px;
+  /* min-height: 324px; */
 }
 
 .home_backgrownd_image {
@@ -35960,7 +35960,7 @@ footer.bg-dark.angled.upper-start:before {
 }
 
 .bg-linear-gradient{
-  background:linear-gradient(180deg, #EDFCFB 0%, #A3EAEC 51.75%, #AAD8F1 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(163, 234, 236, 0.5) 100%);
 }
 
 .bg-linear-gradient-projects{
@@ -36086,7 +36086,7 @@ border-radius: 30px;
 } */
 
 .career-card{
-  min-height: 350px;
+  min-height: 280px;
   box-shadow: 0px 0px 48px 16px rgba(30, 30, 30, 0.05);
 
 }
@@ -36923,4 +36923,149 @@ line-height: 34px;
 
 .bg-linear-gradient-career{
   background: linear-gradient(180deg, #FFFFFF 0%, #A3EAEC 51.75%, #AAD8F1 100%);
+}
+ 
+.buttonfont {
+  color: black; /* Set the font color to black */
+}
+
+button-fontcolor,
+button-fontcolor:visited {
+  color: black; /* Set the font color to black */
+}
+
+.animate {
+	width: 1800%;
+	animation: marquee 20s linear infinite;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+.logo a {
+	width: 80px;
+	-webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+
+
+
+
+
+
+.slider {
+  /* width: 1000px;
+  height: 100px;
+  position: relative;
+  background: white;
+  box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
+  display: flex; */
+  overflow: hidden;
+}
+.slide {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  animation: slideshow 12s linear infinite;
+  animation-delay: 0s;
+
+}
+/* .slide img {
+  height: 70px;
+  padding: 0 30px 0 30px;
+} */
+@keyframes slideshow {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-100%);}
+}
+.slider::before, .slider::after {
+  height: 100px;
+  width: 200px;
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%);
+  z-index: 2;
+
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider::after {
+  right:0;
+  top:0;
+  transform: rotateZ(180deg);
+}
+
+.button-widthincrease {
+  width: 200px;
+}
+@media only screen and (min-width: 1024px) {
+  
+  .service-card{
+    min-height: 245px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+.service-card{
+  min-height: 330px;
+}
+}
+
+@media only screen and (min-width: 1024px) {
+  
+  .scalability-card{
+    min-height: 300px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .scalability-card{
+    min-height: 410px;
+  }
+  }
+
+  .careers_background_image {
+    background-image: url(https://res.cloudinary.com/biggworks/image/upload/v1684475450/25460_Converted_2_dxglkl.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-image: cover;
+    background-origin: content-box;
+  }
+
+  
+
+.card-body-career {
+  flex: 1 1 auto;
+  padding: 2rem 2rem 1rem 2rem;
+}
+
+
+ .btn-gmail .btn{
+  
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1.7;
+    letter-spacing: -0.01rem;
+    color: #495c77;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-color: transparent;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    transform: translateY(0);
+    padding: 0.5rem 1.2rem;
+    font-size: 0.8rem;
+    border-radius: 0.4rem;
+    transition: all 200ms ease-in-out;
+}
+
+
+
+.careers-background{
+  background: #EDFCFB;
 }

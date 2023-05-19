@@ -10,3 +10,8 @@ ignoreErrors = ["error-remote-getjson"]
 [caches]
   [caches.getjson]
     maxAge = "30s"
+
+[minify]
+  disableHTML = true
+  disableCSS = false
+  disableJS = false

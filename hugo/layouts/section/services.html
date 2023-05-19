@@ -10,21 +10,21 @@
     </header>
 
     <section class="wrapper bg-white">
-			<div class="d-flex align-items-center bg-overlay-400 service_background_image">
-				<div class="container pt-1 pb-12 pb-xl-18 pb-16 pt-md-14 pb-md-20 pt-xl-1">
-					<div class="row mb-10">
+      <div>
+			<div class="d-flex align-items-center bg-overlay-400 px-xl-21 px-md-0 service_background_image">
+				<div class="container pt-1 pb-12 pb-xl-18 pb-16 pt-md-6 pt-xl-1">
+					<div class="row gy-10">
 						<div class="col-xl-10 col-lg-12">
+							
 							<h2
-								class="fs-16 fw-normal ls-3x text-uppercase mb-5 mt-17 mt-md-10 mb-md-4 mt-xl-15 mt-lg-10 mb-xl-5 mb-lg-5 col-xl-3 service-text service-text-large-screen">
+								class="fs-16 fw-normal ls-3x pt-10 text-uppercase mb-5 mt-17 mt-md-10 mb-md-4 mt-xl-19 mt-lg-10 mb-xl-5 mb-lg-5 col-xl-3 pt-xl-10 service-text service-text-large-screen">
                 {{$resource.section_one.title}}
               </h2>
 
-							<h3
-								class="display-4 mb-4 mb-lg-5 mb-xl-5 pe-xl-25 pe-lg-25 pe-md-0 service-text service-text-large-screen">
+							<h3 class="display-4 mb-4 mb-lg-5 mb-xl-5 pe-xl-25 pe-lg-25 pe-md-0 service-text service-text-large-screen">
                 {{$resource.section_one.subtitle}}
               </h3>
-							<p
-								class="fs-lg text-left mb-7 col-xl-7 col-lg-7 pe-xl-16 pe-lg-16 pe-md-0 service-text service-text-large-screen">
+						<p class="lead fs-lg text-left mb-7 col-xl-7 col-lg-7 pe-xl-16 pe-lg-16 pe-md-0 service-text service-text-large-screen">
                 {{$resource.section_one.description}}
               </p>
               <div
@@ -33,7 +33,7 @@
                 data-delay="600"
               >
                 <span
-                  ><a href="#myModal1" class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
+                  ><a href="#myModal1" class="btn btn-primary rounded-0" data-bs-toggle="modal"
                     >{{$resource.section_one.btn_talk_to_us}}</a
                   ></span
                 >
@@ -102,8 +102,8 @@
                                         <div class="help-block with-errors"></div>
                                       </div>
                                     </div>
-                                    <div class="col-9"></div>
-                                    <div class="col-1">
+                                    <div class="col-8 col-xl-9 col-lg-9 col-md-7"></div>
+                                    <div class="col-1 ps-md-6 ps-xl-4 ps-lg-4 ps-2">
                                       <input type="submit" class="btn btn-primary  rounded-0 btn-send mb-3"
                                         value="Send message">
                   
@@ -129,20 +129,18 @@
           </div>
         </div>
       </div>
+      
     </section>
 
     <section class="wrapper bg-white">
-			<div class="container py-14 pt-4 pt-md-4 pb-5">
+			<div class="container pb-5">
         <h2 class="fs-15 text-uppercase"></h2>
-        <div
-          class="carousel owl-carousel clients"
-          data-margin="30"
-          data-loop="true"
+        <div class="slider">
+             
+          <div class="slide" data-loop="true"
           data-dots="false"
-          data-autoplay="true"
-          data-autoplay-timeout="1500"
-          data-responsive='{"0":{"items": "2"}, "768":{"items": "4"}, "992":{"items": "5"}, "1200":{"items": "6"}, "1400":{"items": "7"}}'
-        >
+          data-autoplay="true">
+
           <div class="item px-5">
             <img src="{{$resource.section_two.android}}" alt="" />
           </div>
@@ -164,39 +162,91 @@
           <div class="item px-5">
             <img src="{{$resource.section_two.java}}" alt="" />
           </div>
+
+
+          <div class="item px-5">
+            <img src="{{$resource.section_two.android}}" alt="" />
+          </div>
+          <div class="item px-5">
+            <img src="{{$resource.section_two.python}}" alt="" />
+          </div>
+          <div class="item px-5">
+            <img src="{{$resource.section_two.react}}" alt="" />
+          </div>
+          <div class="item px-5">
+            <img src="{{$resource.section_two.ios}}" alt="" />
+          </div>
+          <div class="item px-8">
+            <img src="{{$resource.section_two.api}}" alt="" />
+          </div>
+          <div class="item px-5">
+            <img src="{{$resource.section_two.aws}}" alt="" />
+          </div>
+          <div class="item px-5">
+            <img src="{{$resource.section_two.java}}" alt="" />
+          </div>
+
+          <div class="item px-5">
+            <img src="{{$resource.section_two.android}}" alt="" />
+          </div>
+          <div class="item px-5">
+            <img src="{{$resource.section_two.python}}" alt="" />
+          </div>
+          <div class="item px-5">
+            <img src="{{$resource.section_two.react}}" alt="" />
+          </div>
+          <div class="item px-5">
+            <img src="{{$resource.section_two.ios}}" alt="" />
+          </div>
+          <div class="item px-8">
+            <img src="{{$resource.section_two.api}}" alt="" />
+          </div>
+          <div class="item px-5">
+            <img src="{{$resource.section_two.aws}}" alt="" />
+          </div>
+          <div class="item px-5">
+            <img src="{{$resource.section_two.java}}" alt="" />
+          </div>
+
         </div>
+      </div>
       </div>
     </section>
 
     <section class="wrapper">
 			<div class="container text-center">
+        <div class="row align-items-center">
+          <div class="col-xl-6 col-md-12 mx-auto text-center">
+            <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
+              {{$resource.section_three.heading}}            </h2>
+              <h3 class="display-4">
+              {{$resource.section_three.Subtitle}}
+              </h3>
+            </div>
+            <div class="col-xl-10 col-md-12 mx-auto text-center">
 
-				<h2 class="fs-16 fw-normal ls-3x mb-4 mb-xl-5 mb-md-6 text-uppercase text-muted">
-        {{$resource.section_three.heading}}
-      </h2>
-      <p class="lh-lg text-left mb-14 mb-xl-10 mb-lg-14 px-xl-15 mb-md-12">
-        {{$resource.section_three.paragraph1}}
-          
-      </p>
+            <p class="lead fs-lg mb-8">
+              {{$resource.section_three.Description}}
+            </p>
+          </div>
+        </div>
+				
 
       <div class="row">
-        <div class="col-0 col-xl-2 col-lg-2 col-md-2"></div>
+        <div class="col-0 col-xl-1 col-lg-1 col-md-1"></div>
           <!-- <div class="col-12 col-xl-8 col-lg-8 col-md-4"> -->
           <img
-            class="col-12 col-xl-8 col-lg-8 col-md-8"
+            class="col-12 col-xl-10 col-lg-10 col-md-10"
         src={{$resource.section_three.image}}
             alt=""
           />
           <!-- </div> -->
           <div class="col-md-1"></div>
 				</div>
-				<p
-					class="lh-lg text-left mb-12 pt-6">
-            {{$resource.section_three.paragraph2}}
-          </p>
+			
         </div>
       </section>
-      <section class="wrapper">
+      <!-- <section class="wrapper">
         <div class="container">
           <div class="row g-0 gy-8 gy-md mb-14">
             <div class="col-xl-1 col-lg-1 ps-xl-19 ps-0 ps-md-0"></div>
@@ -224,18 +274,157 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="wrapper bg-linear-gradient">
 			<div class="container text-left">
 				<h4 class="mb-4 pt-10">{{$resource.section_five.heading}}</h4>
-        <p class="build pe-xl-23 pb-10">
+        <p class="build pb-12">
             {{$resource.section_five.paragraph}}
         </p>
       </div>
       <!-- <div class="mb-xl-6 mb-lg-6"></div> -->
     </section>
-    <section class="wrapper">
+    <section class="wrapper bg-white">
+      <div class="container pb-14 pb-xl-0 pb-lg-0 pb-md-4">
+        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+          <div class="col-md-10 col-lg-12 col-xl-8 mx-auto text-center">
+            <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
+              {{$resource.section_four.title}}
+            </h2>
+            <h3 class="display-4 mb-4">
+              {{$resource.section_four.subtitle}}
+            </h3>
+            </div>
+            </div>
+            <div class="col-md-10 col-lg-10 col-xl-7 mx-auto text-center">
+             
+
+            <p class="lead fs-lg mb-9">
+              {{$resource.section_four.description}}
+            </p>
+          </div>
+        <div class="row g-0 mb-8">
+          <div class="col-xl-1 pe-18"></div>
+          <div class="col-md-5 col-lg-4 col-xl-4">
+            <div class="about-image">
+              <div class="card-body">
+                <h4 class="mb-4">{{$resource.section_four.card1.heading}}</h4>
+                <p class="mb-2">
+                  {{$resource.section_four.card1.paragraph}}
+                </p>
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-1 col-md-2"></div>
+
+          <div class="col-md-5 col-lg-4 col-xl-4">
+            <div class="about-image service-card card">
+              <div class="card-body">
+                <h4 class="mb-4">{{$resource.section_four.card2.heading}}</h4>
+                <p class="mb-2">
+                  {{$resource.section_four.card2.paragraph}}
+                </p>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </section>
+
+    <section class="wrapper bg-linear-gradient">
+			<div class="container pb-12 pt-10">
+				<h4 class="mb-2">{{$resource.section_seven.heading1}}</h4>
+        <p class="build">
+            {{$resource.section_seven.paragraph1}}
+        </p>
+        <h4 class="mb-2 pt-2">{{$resource.section_seven.heading2}}</h4>
+        <p class="build">
+            {{$resource.section_seven.paragraph2}}
+
+        </p>
+        
+      </div>
+    </section>
+
+    <section class="wrapper bg-white">
+      <div class="container pb-14 pb-xl-12 pb-lg-14 pb-md-4">
+        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+          <div class="col-md-10 col-lg-10 col-xl-12 col-xxl-6 mx-auto text-center">
+            <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
+              {{$resource.section_eight.title}}
+            </h2>
+            <h3 class="display-4 mb-4">
+              {{$resource.section_eight.subtitle}}
+            </h3>
+            </div>
+            </div>
+            <div class="col-md-10 col-lg-10 col-xl-8 mx-auto text-center">
+
+            <p class="lead fs-lg mb-9">
+              {{$resource.section_eight.description}}
+            </p>
+          </div>
+        <div class="row g-0 mb-4 mb-md-10 mb-xl-14 mb-lg-14">
+          <div class="col-xl-1 pe-18"></div>
+          <div class="col-md-5 col-lg-4 col-xl-4">
+            <div class="about-image">
+              <div class="card-body">
+                <h4 class="mb-4">{{$resource.section_eight.card1.title}}</h4>
+                <p class="mb-2">
+                  {{$resource.section_eight.card1.description}}
+                </p>
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-1 col-md-2"></div>
+
+          <div class="col-md-5 col-lg-4 col-xl-4">
+            <div class="about-image card">
+              <div class="card-body">
+                <h4 class="mb-4">{{$resource.section_eight.card2.title}}</h4>
+                <p class="mb-2">
+                  {{$resource.section_eight.card2.description}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-0 gy-8 mb-4 mb-md-0">
+          <div class="col-xl-1 pe-18"></div>
+          <div class="col-md-5 col-lg-4">
+            <div class="about-image card">
+              <div class="card-body">
+                <h4 class="mb-4">{{$resource.section_eight.card3.title}}</h4>
+                <p class="mb-2">
+                  {{$resource.section_eight.card3.description}}
+                </p>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 col-xl-1"></div>
+          <div class="col-md-5 col-lg-4">
+            <div class="about-image scalability-card card">
+              <div class="card-body">
+                <h4 class="mb-4">{{$resource.section_eight.card4.title}}</h4>
+                <p class="mb-2">
+                  {{$resource.section_eight.card4.description}}
+                </p>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- <section class="wrapper">
 			<div class="container text-center">
 				<h2 class="fs-16 fw-normal ls-3x mb-5 pt-6 text-uppercase text-muted">
             {{$resource.section_six.title}}
@@ -248,102 +437,54 @@
         </p>
       </div>
     </section>
+     -->
     
-    <section class="wrapper bg-linear-gradient">
-			<div class="container">
-				<h4 class="mb-2 pt-10">{{$resource.section_seven.heading1}}</h4>
-        <p class="build pe-xl-23">
-            {{$resource.section_seven.paragraph1}}
-        </p>
-        <h4 class="mb-2 pt-2">{{$resource.section_seven.heading2}}</h4>
-        <p class="pb-10 pe-xl-23 build">
-            {{$resource.section_seven.paragraph2}}
 
-        </p>
-        
-      </div>
-    </section>
-
-    <section class="wrapper">
-			<div class="container">
-				<h3 class="display-4 pt-xl-8 mb-xl-10 text-center pt-md-8 pt-6">
-            {{$resource.section_eight.title}}</h3>
-            <div class="row g-0 gy-8 gy-md mb-4 mb-md-10 mb-xl-12 mb-lg-16">
-              <div class="col-xl-1 pe-18"></div>
-              <div class="col-md-5 col-lg-4 col-xl-4">
-                <div class="about-image card">
-                  <div class="card-body">
-                    <h4 class="mb-xl-8 mb-lg-8 mb-md-3">{{$resource.section_eight.card1.title}}</h4>
-                <p>
-                    {{$resource.section_eight.card1.description}}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-1 col-md-2"></div>
-
-					<div class="col-md-5 col-lg-4 col-xl-4">
-						<div class="about-image card">
-							<div class="card-body">
-								<h4 class="mb-xl-8 mb-lg-8 mb-md-3">{{$resource.section_eight.card2.title}}</h4>
-                <p>
-                    {{$resource.section_eight.card2.description}}
-               </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row g-0 gy-8 mb-4 mb-md-12">
-					<div class="col-xl-1 pe-18"></div>
-					<div class="col-md-5 col-lg-4">
-						<div class="about-image card">
-							<div class="card-body">
-								<h4 class="mb-xl-8 mb-lg-8 mb-md-3">
-                    {{$resource.section_eight.card3.title}}
-                </h4>
-                <p>
-                    {{$resource.section_eight.card3.description}}
-                  
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-2 col-xl-1"></div>
-					<div class="col-md-5 col-lg-4">
-						<div class="about-image card">
-							<div class="card-body">
-								<h4 class="mb-xl-8 mb-lg-8 mb-md-3">{{$resource.section_eight.card4.title}}</h4>
-                <p>
-                    {{$resource.section_eight.card4.description}}
-                 
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+   
 
     <section class="wrapper bg-linear-gradient">
-			<div class="container pt-10 pb-10">
+			<div class="container pt-6">
 				<div class="row">
-					<div class="col-xl-7 col-lg-7 col-md-7"></div>
-					<div class="col-xl-5 col-lg-5 col-md-5">
-						<p class="lead fs-lg mb-4">
-                {{$resource.section_nine.content}}
+          <div class="col-xl-1 col-md-1 col-lg-1 col-0 ps-xl-17"></div>
+					<div class="col-xl-4 col-lg-4 col-md-4">
+            <img class="mb-4" src="{{$resource.section_nine.kemsys.img}}"/>
+            <p class="mb-4 pe-xl-13">{{$resource.section_nine.kemsys.description}}</p>
+            <h4 class="mb-2">{{$resource.section_nine.kemsys.author}}</h4>
+            <p>
+              {{$resource.section_nine.kemsys.company}}
             </p>
-            <h6>{{$resource.section_nine.author}}</h6>
-            <p>{{$resource.section_nine.position}}</p>
+          </div>
+          <div class="col-2"></div>
+					<div class="col-xl-4 col-lg-4 col-md-4">
+						<img class="mb-5" src="{{$resource.section_nine.kalibre.img}}"/>
+            <p class="mb-4 pe-xl-13">{{$resource.section_nine.kalibre.description}}</p>
+            <h4 class="mb-2">{{$resource.section_nine.kalibre.author}}</h4>
+            <p>
+              {{$resource.section_nine.kalibre.company}}
+            </p>
           </div>
         </div>
       </div>
     </section>
     <section class="wrapper">
-			<div class="container text-center pt-8">
-				<h3 class="display-4 mb-4">{{$resource.section_ten.title}}</h3>
-        <p class="lead fs-lg px-xl-18 mb-10 px-lg-18">
-          {{$resource.section_ten.sub_title}}
-        </p>
+			<div class="container text-center pt-12">
+        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+          <div class="col-md-10 col-lg-10 col-xl-12 col-xxl-6 mx-auto text-center">
+            <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
+              {{$resource.section_ten.title}}
+            </h2>
+            <h3 class="display-4 mb-4">
+              {{$resource.section_ten.sub_title}}
+            </h3>
+            </div>
+            </div>
+            <div class="col-md-10 col-lg-10 col-xl-8 mx-auto text-center">
+
+            <p class="lead fs-lg mb-9">
+              {{$resource.section_ten.description}}
+            </p>
+          </div>
+			
         <div class="grid">
 					<div class="row my-2 offset-xl-1  offset-md-0 offset-1">
 						<div class="item col-md-5 col-xl-3 col-lg-3 mb-xl-12 col-4 mb-lg-12 mb-md-12 mb-10">
@@ -401,7 +542,7 @@
                 <div class="card-body">
                   <div class="text-center">
                     <img
-                      class="mb-xl-8 pt-xl-4 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
+                      class="mb-xl-6 pt-xl-3 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
                       src="{{$resource.section_ten.card4.image}}"
                       alt=""
                     />
@@ -450,20 +591,17 @@
       </div>
     </section>
     <section class="wrapper  bg-linear-gradient">
-			<div class="container pt-xl-8 pt-lg-8 pt-md-12 pt-10 pb-6">
+			<div class="container pt-xl-6 pt-lg-6 pt-md-8 pt-10 pb-6">
 				<div class="row">
 					<div class="col-xl-6 col-lg-6 col-md-6">
-						<h2 class="fs-16 fw-normal ls-3x text-uppercase text-left mb-xl-6 mb-lg-6 mb-md-6 mb-4">
-            {{$resource.section_eleven.title}}
-
-          </h2>
-          <h4 class="mb-xl-6 mb-lg-6 mb-md-12 mb-6">
+						
+          <h4 class="mb-xl-6 mb-lg-6 mb-md-0 mb-6 pt-5">
               {{$resource.section_eleven.sub_title}}
             </h4>
 					</div>
-					<div class="col-xl-2 col-lg-2 col-md-2 col-1"></div>
-          <div class="col-xl-4 col-lg-4 col-md">
-						<div class="d-flex justify-content-center pt-5" data-group="page-title-buttons" data-delay="600">
+					<div class="col-xl-3 col-lg-3 col-md-2 col-1"></div>
+          <div class="col-xl-3 col-lg-3 col-md-3 ps-16">
+						<div class="d-flex justify-content-center pt-2" data-group="page-title-buttons" data-delay="600">
 							<span><a href="#myModal1" class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal">{{$resource.section_one.btn_talk_to_us}}
                 </a></span
               >

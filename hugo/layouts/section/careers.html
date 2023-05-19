@@ -9,7 +9,130 @@
 			<!-- /.navbar -->
 		</header>
 		<!-- /header -->
-		<section class="wrapper bg-linear-gradient-career">
+
+		<section class="wrapper bg-white">
+			<div class="d-flex align-items-center bg-overlay-400 px-xl-23 px-md-0 careers_background_image">
+				<div class="container pt-1 pb-12 pb-xl-18 pb-16 pt-md-6 pt-xl-1">
+					<div class="row gy-10">
+						<div class="col-xl-11 col-lg-12">
+							
+							<h2
+								class="fs-16 fw-normal ls-3x pt-10 text-uppercase mb-5 mt-6 mt-md-10 mb-md-4 mt-xl-8 mt-lg-6 mb-xl-5 mb-lg-5 col-xl-3 pt-xl-6 service-text service-text-large-screen">
+                {{$resource.section_one.title}}
+              </h2>
+			  		<div class="col-10">
+						<h3 class="display-4 mb-4 mb-lg-5 mb-xl-5 pe-xl-25 pe-lg-25 pe-md-0 service-text service-text-large-screen">
+                {{$resource.section_one.subtitle}}
+						</h3>
+		</div>
+			<p class="lead fs-lg text-left mb-7 col-xl-7 col-lg-7 pe-xl-16 pe-lg-16 pe-md-0 service-text service-text-large-screen">
+                {{$resource.section_one.description}}
+              </p>
+              <div
+                class="service-text service-text-large-screen"
+                data-group="page-title-buttons service-text"
+                data-delay="600"
+              >
+                <span
+                  ><a href="#mymodel" class="btn btn-primary rounded-0" 
+                    >{{$resource.section_one.btn_talk_to_us}}</a
+                  ></span
+                >
+              </div>
+              <div id="myModal1" class="modal fade" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <!-- <div class="modal-header"> -->
+                      <h4 class="modal-title text-center pt-6">{{$resource.section_one.modal_title}}
+                      </h4>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <!-- </div> -->
+                    <div class="modal-body">
+                      <section id="tabs" class="wrapper pt-0 pb-md-4">
+                        <div class="row">
+                          <div class="col-lg-15">
+                            
+                            <div class="tab-content">
+                              
+      
+                              <form class="contact-form" method="post" id="formContact" onsubmit="saveRecordtoDatabase()">
+                                <div class="messages"></div>
+                                <div class="controls">
+                                  <div class="row gx-4">
+                                    <div class="col-md-6">
+                                      <div class="form-label-group mb-4">
+                                        <input id="form_name" type="text" name="name" class="form-control"
+                                          placeholder="Jane" required="required"
+                                          data-error="First Name is required.">
+                                        <label for="form_name">{{$resource.section_one.fname}}</label>
+                                        <div class="help-block with-errors"></div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="form-label-group mb-4">
+                                        <input id="form_lastname" type="text" name="surname" class="form-control"
+                                          placeholder="Doe" required="required"
+                                          data-error="Last Name is required.">
+                                        <label for="form_lastname">{{$resource.section_one.lastname}}</label>
+                                        <div class="help-block with-errors"></div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="form-label-group mb-4">
+                                        <input id="form_email" type="email" name="email" class="form-control"
+                                          placeholder="jane.doe@example.com" required="required"
+                                          data-error="Valid email is required.">
+                                        <label for="form_email">{{$resource.section_one.email}}</label>
+                                        <div class="help-block with-errors"></div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="form-label-group mb-4">
+                                        <input id="form_phone" type="tel" name="phone" class="form-control"
+                                          placeholder="Your phone number">
+                                        <label for="form_phone">{{$resource.section_one.phone}}</label>
+                                        <div class="help-block with-errors"></div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12">
+                                      <div class="form-label-group mb-4">
+                                        <textarea id="form_message" name="message" class="form-control"
+                                          placeholder="Your message" rows="5" required="required"
+                                          data-error="Message is required."></textarea>
+                                        <label for="form_message">{{$resource.section_one.message}}</label>
+                                        <div class="help-block with-errors"></div>
+                                      </div>
+                                    </div>
+                                    <div class="col-8 col-xl-9 col-lg-9 col-md-7"></div>
+                                    <div class="col-1 ps-md-6 ps-xl-4 ps-lg-4 ps-2">
+                                      <input type="submit" class="btn btn-primary  rounded-0 btn-send mb-3"
+                                        value="Send message">
+                  
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+      
+      
+      
+                      </section>
+      
+      
+                    </div>
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+		<!-- <section class="wrapper bg-linear-gradient-career">
 			<div class="container">
 				<div class="row mb-10">
 					<h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5 mt-12 text-left">
@@ -22,26 +145,37 @@
 						{{$resource.section_one.description}}
 
 					</p>
-					<!-- <p class="lead fs-lg mb-10">
+					<p class="lead fs-lg mb-10">
 					Looking for internships?
-				</p> -->
+				</p>
 				</div>
 
 			</div>
-		</section>
+		</section> -->
 
 		<section class="wrapper">
 			<div class="container text-center">
 
-				<h3 class="display-4 mb-4">
+				<div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+					<div class="col-md-10 col-lg-12 col-xl-8 mx-auto text-center">
+					  <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
 					{{$resource.section_two.title}}
+				  </h2>
+				  <h3 class="display-4 mb-4">
+					{{$resource.section_two.Subtitle}}
+				  </h3>
+				</div>
+            </div>
+            <div class="col-md-10 col-lg-10 col-xl-9 mx-auto text-center">
+             
 
-					
-				</h3>
-				<p class="lead fs-lg text-left mb-9 px-xl-20">
+            <p class="lead fs-lg mb-9">
 					{{$resource.section_two.description}}
+				  </p>
+				</div>
+			  </div>
 
-				</p>
+				
 			</div>
 
 
@@ -49,14 +183,14 @@
 
 
 		<section class="wrapper bg-light">
-			<div class="container pb-2">
+			<div class="container pb-7">
 				<div class="grid">
 					<div class="row">
 						<div class="item col-md-6 col-xl-4 mb-10">
 							<div class="card">
-								<div class="card-body career-card">
-									<div class="text-center">
-										<img class="text-center mb-8"
+								<div class="card-body-career career-card">
+									<div class="text-left">
+										<img class="text-center mb-7"
 											src="{{$resource.section_three.card1.image}}"
 											alt="" />
 
@@ -71,8 +205,8 @@
 						</div>
 						<div class="item col-md-6 col-xl-4 mb-10">
 							<div class="card">
-								<div class="card-body career-card">
-									<div class="text-center">
+								<div class="career-card card-body-career">
+									<div class="text-left">
 										<img class="text-center mb-11"
 											src="{{$resource.section_three.card2.image}}"
 											alt="" />
@@ -88,9 +222,9 @@
 						</div>
 						<div class="item col-md-6 col-xl-4 mb-10">
 							<div class="card">
-								<div class="card-body career-card">
-									<div class="text-center">
-										<img class="text-center mb-6"
+								<div class="card-body-career career-card">
+									<div class="text-left">
+										<img class="text-center mb-4"
 											src="{{$resource.section_three.card3.image}}"
 											alt="" />
 
@@ -107,17 +241,150 @@
 			</div>
 
 		</section>
-		<section class="wrapper bg-light wrapper-border">
-			<div class="container py-0 py-md-0 py-xl-4">
-				<div class="container text-center">
 
-					<h3 class="display-4 mb-5">
-						{{$resource.section_four.title}}
-					</h3>
-					<p class="lead fs-lg text-left mb-12">
-						{{$resource.section_four.description}}
-					</p>
+		<section class="wrapper bg-white">
+			<div class="container pb-6 pb-md-6">
+				<div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+					<div class="col-md-10 col-lg-12 col-xl-8 mx-auto text-center">
+					  <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
+						{{$resource.section_six.title}}
+					  </h2>
+					  <h3 class="display-4 mb-4">
+						{{$resource.section_six.subtitle}}
+					  </h3>
+					  </div>
+					  </div>
+					  <div class="col-md-10 col-lg-10 col-xl-7 mx-auto text-center">
+					   
+		  
+					  <p class="lead fs-lg mb-9">
+						{{$resource.section_six.description}}
+					  </p>
+					</div>
+				<div class="grid">
+					<div class="row my-2 offset-1 offset-xl-1 offset-md-0">
+						<div class="item col-md-5 col-xl-3 col-lg-3 mb-xl-12 col-4 mb-lg-12 mb-md-12 mb-10 ps-md-8 ps-xl-0">
+							<div class="card career-card-technology">
+								<div class="card-body">
+									<div class="text-center">
+
+
+										<h4 class="mb-xl-6 mb-lg-6 mb-xl-6 mb-md-6 pt-4 mb-6">{{$resource.section_six.card1.role}}</h4>
+										<p class="lead mb-xl-6 mb-lg-6 mb-md-6 mb-6">{{$resource.section_six.card1.status}}
+										</p>
+										<p class="lead">{{$resource.section_six.card1.career}}</p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="col-xl-1 col-lg-1 col-md-1"></div>
+						<div class="item col-md-5 col-xl-3 col-lg-3 mb-xl-12 col-4 mb-lg-12 mb-md-12 mb-10 ps-xl-0">
+							<div class="card career-card-technology">
+								<div class="card-body">
+									<div class="text-center">
+
+
+										<h4 class="mb-xl-6 mb-lg-6 mb-xl-6 mb-md-6 pt-4 mb-6">{{$resource.section_six.card2.role}}</h4>
+										<p class="lead mb-xl-6 mb-lg-6 mb-md-6 mb-6">{{$resource.section_six.card2.status}}
+										</p>
+										<p class="lead">{{$resource.section_six.card2.career}}</p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="col-xl-1 col-lg-1 col-md-1"></div>
+
+						<div class="item col-md-5 col-xl-3 col-lg-3 col-4 mb-xl-12 mb-lg-12 mb-md-12 mb-10 ps-md-8 ps-xl-0">
+							<div class="card career-card-technology">
+								<div class="card-body">
+									<div class="text-center">
+
+
+										<h4 class="mb-xl-6 mb-lg-6 mb-xl-6 mb-md-6 pt-4 mb-6">{{$resource.section_six.card3.role}}</h4>
+										<p class="lead mb-xl-6 mb-lg-6 mb-md-6 mb-6">{{$resource.section_six.card3.status}}
+										</p>
+										<p class="lead">{{$resource.section_six.card3.career}}</p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="col-md-1"></div>
+						
+						<div class="item col-md-5 col-xl-3 col-lg-3 col-4 mb-xl-4 mb-lg-12 mb-md-4 mb-10 ps-xl-0">
+							<div class="card career-card-technology">
+								<div class="card-body">
+									<div class="text-center">
+
+
+										<h4 class="mb-xl-6 mb-lg-6 mb-xl-6 mb-md-6 pt-4 mb-6">{{$resource.section_six.car4.role}}</h4>
+										<p class="lead mb-xl-6 mb-lg-6 mb-md-6 mb-6">{{$resource.section_six.card4.status}}
+										</p>
+										<p class="lead">{{$resource.section_six.card4.career}}</p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="col-xl-1 col-lg-1 col-md-1"></div>
+						<div class="item col-md-5 col-xl-3 col-lg-3 col-4 mb-xl-4 mb-lg-12 mb-md-4 mb-10 ps-md-8 ps-xl-0">
+							<div class="card career-card-technology">
+								<div class="card-body">
+									<div class="text-center">
+
+
+										<h4 class="mb-xl-6 mb-lg-6 mb-xl-6 mb-md-6 pt-4 mb-6">{{$resource.section_six.card5.role}}</h4>
+										<p class="lead mb-xl-6 mb-lg-6 mb-md-6 mb-6">{{$resource.section_six.card5.status}}
+										</p>
+										<p class="lead">{{$resource.section_six.card5.career}}</p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="col-xl-1 col-lg-1 col-md-1"></div>
+
+						<div class="item col-md-5 col-xl-3 col-lg-3 col-4 mb-xl-4 mb-lg-12 mb-md-4 mb-10 ps-xl-0">
+							<div class="card career-card-technology">
+								<div class="card-body">
+									<div class="text-center">
+
+
+										<h4 class="mb-xl-6 mb-lg-6 mb-xl-6 mb-md-6 pt-4 mb-6">{{$resource.section_six.card6.role}}</h4>
+										<p class="lead mb-xl-6 mb-lg-6 mb-md-6 mb-6">{{$resource.section_six.card6.status}}
+										</p>
+										<p class="lead">{{$resource.section_six.card6.career}}</p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
 				</div>
+
+			</div>
+		</section>
+
+
+		<section class="wrapper bg-light">
+			<div class="container py-0 py-md-0 py-xl-4">
+				<div class="row align-items-center">
+					<div class="col-xl-6 col-md-12 mx-auto text-center">
+					  <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
+						{{$resource.section_four.title}}            </h2>
+						<h3 class="display-4">
+						{{$resource.section_four.subtitle}}
+						</h3>
+					  </div>
+					  <div class="col-xl-10 col-md-12 mx-auto text-center">
+		  
+					  <p class="lead fs-lg mb-8">
+						{{$resource.section_four.description}}
+					  </p>
+					</div>
+				  </div>
 
 				<div class="card my-4 mb-6">
 					<div class="card-body">
@@ -127,7 +394,7 @@
 								<p class="lead"><u>{{$resource.section_four.card1.requirement}}</u></p>
 								<h6 class="text-muted">{{$resource.section_four.card1.status}}</h6>
 							</div>
-							<div class="col-xl-4 col-lg-4"> </div>
+							<div class="col-xl-4 col-lg-4 col-md-3"> </div>
 							<!-- <div class="col-sm-2 col-xl-4 col-lg-4 col-md-4">
 								<h6 class="pe-8"> EUR up to 11 700 Before Tax
 									(Business Contract)</h6>
@@ -150,7 +417,7 @@
 								<p class="lead"><u>{{$resource.section_four.card2.requirement}}</u></p>
 								<h6 class="text-muted">{{$resource.section_four.card2.status}}</h6>
 							</div>
-							<div class="col-xl-4 col-lg-4"> </div>
+							<div class="col-xl-4 col-lg-4 col-md-3"> </div>
 
 							<!-- <div class="col-sm-2 col-xl-4 col-lg-4 col-md-4">
 								<h6 class="pe-8"> EUR 3 530 - 5 510 Before Tax
@@ -174,7 +441,7 @@
 								<p class="lead"><u>{{$resource.section_four.card3.requirement}}</u></p>
 								<h6 class="text-muted">{{$resource.section_four.card3.status}}</h6>
 							</div>
-							<div class="col-xl-4 col-lg-4"> </div>
+							<div class="col-xl-4 col-lg-4 col-md-3"> </div>
 
 							<!-- <div class="col-sm-2 col-xl-4 col-lg-4 col-md-4">
 								<h6 class="pe-8">EUR 3 530 - 5 510 Before Tax
@@ -736,21 +1003,27 @@
 					</div>
 
 		</section>
-		<section class="wrapper bg-linear-gradient">
-			<div class="container text-center pt-6">
-
-				<h4 class="mb-4 mb-xl-8 mb-lg-8 mb-md-6">
-					{{$resource.section_five.title}}
-				</h4>
-
-				<div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
-					<span><a class="btn btn-primary rounded-0 mx-1">{{$resource.section_five.btn_view}}</a></span>
-				</div>
-				<div class="pb-8"></div>
-
-			</div>
-
-		</section>
+		
+		<section class="wrapper  careers-background">
+			<div class="container pt-xl-6 pt-lg-6 pt-md-8 pt-10 pb-6">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6">
+						
+          <h4 class="mb-xl-6 mb-lg-6 mb-md-0 mb-6 pt-5">
+			{{$resource.section_five.title}}
+            </h4>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-2 col-1"></div>
+          <div class="col-xl-3 col-lg-3 col-md-3 ps-16">
+						<div class="d-flex justify-content-center pt-2" data-group="page-title-buttons" data-delay="600">
+							<span><a href="#myModal1" class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal">{{$resource.section_five.btn_view}}
+                </a></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 	<!-- </div>
 
 	</div>

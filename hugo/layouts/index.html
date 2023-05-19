@@ -1,563 +1,532 @@
 {{ define "main" }} {{ $nav := .Site.Data.nav.nav }} {{ $resource := getJSON
-  "http://bw-strapi:1337/index" }}
-  <link
-    rel="shortcut icon"
-    href="https://res.cloudinary.com/biggworks/image/upload/v1666248096/favicon_xsthfp.ico"
-  />
+"http://bw-strapi:1337/index" }}
+<link rel="shortcut icon" href="https://res.cloudinary.com/biggworks/image/upload/v1666248096/favicon_xsthfp.ico" />
 
-  <!-- {{ printf "My data: %s"  $resource.section_two }} -->
-  
-  <body>
-    <div class="content-wrapper">
-      <header class="wrapper bg-soft-primary">
-        {{ partial "nav.html" . }}
-        <!-- /.navbar -->
-      </header>
-      <section class="wrapper bg-white">
-        <div
-          class="d-flex align-items-center bg-overlay-400 img-fluid home_backgrownd_image">
-          <div class="container pb-22 pb-md-22 text-center">
-            <div class="row mb-10">
-              <div
-                class="col-md-10 col-lg-10 col-xl-10 col-xxl-8 mx-auto mb-13"
-                data-group="page-title">
-                <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5 pt-10">
-                  {{$resource.section_one.title}}
-                </h2>
-                <h1 class="display-1 mb-4">{{$resource.section_one.subtitle}}</h1>
-                <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7">
-                  {{$resource.section_one.description}}
-                </p>
-                <div
-                  class="d-flex justify-content-center"
-                  data-group="page-title-buttons"
-                  data-delay="600">
-                  <span
-                    ><a href="#myModal1" class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
-                      >{{$resource.section_one.btn_talk_to_us}}</a
-                      ></span
-                      >
-                    </div>
-                    <div id="myModal1" class="modal fade" tabindex="-1">
-                      <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                          <!-- <div class="modal-header"> -->
-                            <h4 class="modal-title text-center pt-6">{{$resource.section_one.modal_title}}
-                            </h4>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                          <!-- </div> -->
-                          <div class="modal-body">
-                            <section id="tabs" class="wrapper pt-0 pb-md-4">
-                              <div class="row">
-                                <div class="col-lg-15">
-                                  
-                                  <div class="tab-content">
-                                    
-            
-                                    <form class="contact-form" method="post" id="formContact" onsubmit="saveRecordtoDatabase()">
-                                      <div class="messages"></div>
-                                      <div class="controls">
-                                        <div class="row gx-4">
-                                          <div class="col-md-6">
-                                            <div class="form-label-group mb-4">
-                                              <input id="form_name" type="text" name="name" class="form-control"
-                                                placeholder="Jane" required="required"
-                                                data-error="First Name is required.">
-                                              <label for="form_name">{{$resource.section_one.fname}}</label>
-                                              <div class="help-block with-errors"></div>
-                                            </div>
-                                          </div>
-                                          <div class="col-md-6">
-                                            <div class="form-label-group mb-4">
-                                              <input id="form_lastname" type="text" name="surname" class="form-control"
-                                                placeholder="Doe" required="required"
-                                                data-error="Last Name is required.">
-                                              <label for="form_lastname">{{$resource.section_one.lastname}}</label>
-                                              <div class="help-block with-errors"></div>
-                                            </div>
-                                          </div>
-                                          <div class="col-md-6">
-                                            <div class="form-label-group mb-4">
-                                              <input id="form_email" type="email" name="email" class="form-control"
-                                                placeholder="jane.doe@example.com" required="required"
-                                                data-error="Valid email is required.">
-                                              <label for="form_email">{{$resource.section_one.email}}</label>
-                                              <div class="help-block with-errors"></div>
-                                            </div>
-                                          </div>
-                                          <div class="col-md-6">
-                                            <div class="form-label-group mb-4">
-                                              <input id="form_phone" type="tel" name="phone" class="form-control"
-                                                placeholder="Your phone number">
-                                              <label for="form_phone">{{$resource.section_one.phone}}</label>
-                                              <div class="help-block with-errors"></div>
-                                            </div>
-                                          </div>
-                                          <div class="col-12">
-                                            <div class="form-label-group mb-4">
-                                              <textarea id="form_message" name="message" class="form-control"
-                                                placeholder="Your message" rows="5" required="required"
-                                                data-error="Message is required."></textarea>
-                                              <label for="form_message">{{$resource.section_one.message}}</label>
-                                              <div class="help-block with-errors"></div>
-                                            </div>
-                                          </div>
-                                          <div class="col-9"></div>
-                                          <div class="col-1">
-                                            <input type="submit" class="btn btn-primary  rounded-0 btn-send mb-3"
-                                              value="Send message">
-                        
-                                          </div>
-                                        </div>
+<!-- {{ printf "My data: %s"  $resource.section_two }} -->
+
+<body>
+  <div class="content-wrapper">
+    <header class="wrapper bg-soft-primary">
+      {{ partial "nav.html" . }}
+      <!-- /.navbar -->
+    </header>
+    <section class="wrapper bg-white">
+      <div class="d-flex align-items-center bg-overlay-400 img-fluid home_backgrownd_image">
+        <div class="container pb-22 pb-md-22 text-center">
+          <div class="row mb-10">
+            <div class="col-md-10 col-lg-10 col-xl-10 col-xxl-8 mx-auto mb-13" data-group="page-title">
+              <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5 pt-8">
+                {{$resource.section_one.title}}
+              </h2>
+              <h1 class="display-1 mb-4">{{$resource.section_one.subtitle}}</h1>
+              <p class="lead fs-lg px-xl-12 px-xxl-6 mb-7">
+                {{$resource.section_one.description}}
+              </p>
+              <div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
+                <span><a href="#myModal1" class="btn btn-primary rounded-0 mx-1"
+                    data-bs-toggle="modal">{{$resource.section_one.btn_talk_to_us}}</a></span>
+              </div>
+              <div id="myModal1" class="modal fade" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <!-- <div class="modal-header"> -->
+                    <h4 class="modal-title text-center pt-6">{{$resource.section_one.modal_title}}
+                    </h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <!-- </div> -->
+                    <div class="modal-body">
+                      <section id="tabs" class="wrapper pt-0 pb-md-4">
+                        <div class="row">
+                          <div class="col-lg-15">
+
+                            <div class="tab-content">
+
+
+                              <form class="contact-form" method="post" id="formContact"
+                                onsubmit="saveRecordtoDatabase()">
+                                <div class="messages"></div>
+                                <div class="controls">
+                                  <div class="row gx-4">
+                                    <div class="col-md-6">
+                                      <div class="form-label-group mb-4">
+                                        <input id="form_name" type="text" name="name" class="form-control"
+                                          placeholder="Jane" required="required" data-error="First Name is required.">
+                                        <label for="form_name">{{$resource.section_one.fname}}</label>
+                                        <div class="help-block with-errors"></div>
                                       </div>
-                                    </form>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="form-label-group mb-4">
+                                        <input id="form_lastname" type="text" name="surname" class="form-control"
+                                          placeholder="Doe" required="required" data-error="Last Name is required.">
+                                        <label for="form_lastname">{{$resource.section_one.lastname}}</label>
+                                        <div class="help-block with-errors"></div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="form-label-group mb-4">
+                                        <input id="form_email" type="email" name="email" class="form-control"
+                                          placeholder="jane.doe@example.com" required="required"
+                                          data-error="Valid email is required.">
+                                        <label for="form_email">{{$resource.section_one.email}}</label>
+                                        <div class="help-block with-errors"></div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="form-label-group mb-4">
+                                        <input id="form_phone" type="tel" name="phone" class="form-control"
+                                          placeholder="Your phone number">
+                                        <label for="form_phone">{{$resource.section_one.phone}}</label>
+                                        <div class="help-block with-errors"></div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12">
+                                      <div class="form-label-group mb-4">
+                                        <textarea id="form_message" name="message" class="form-control"
+                                          placeholder="Your message" rows="5" required="required"
+                                          data-error="Message is required."></textarea>
+                                        <label for="form_message">{{$resource.section_one.message}}</label>
+                                        <div class="help-block with-errors"></div>
+                                      </div>
+                                    </div>
+                                    <div class="col-2 col-xl-9 col-lg-9 col-md-7"></div>
+                                    <div class="col-1 ps-md-4 ps-xl-1 ps-lg-2 ps-2">
+                                      <input type="submit" class="btn btn-primary button-widthincrease rounded-0 btn-send mb-3"
+                                        value="Send message">
+
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-            
-            
-            
-                            </section>
-            
-            
+                              </form>
+                            </div>
                           </div>
-            
                         </div>
-                      </div>
+
+
+
+                      </section>
+
+
                     </div>
+
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-  
-      <section class="wrapper bg-white">
-        <div class="container py-8 pt-4 pt-md-4">
-          <h2 class="fs-15 text-uppercase"></h2>
-          <div
-            class="carousel owl-carousel clients"
-            data-margin="30"
-            data-loop="true"
-            data-dots="false"
-            data-autoplay="true"
-            data-autoplay-timeout="1500"
-            data-responsive='{"0":{"items": "2"}, "768":{"items": "4"}, "992":{"items": "5"}, "1200":{"items": "6"}, "1400":{"items": "7"}}'
-          >
+      </div>
+    </section>
+
+    <section class="wrapper bg-white">
+      <div class="container py-8 pt-4 pt-md-4">
+        <h1 class="display-1 mb-4"></h1>
+        <div class="slider">
+
+          <div class="slide" data-loop="true" data-dots="false" data-autoplay="true">
             <div class="item px-5">
-              <img
-                src={{$resource.image_carousel.havells}}
-                alt=""
-              />
+              <img src={{$resource.image_carousel.havells}} alt="" />
             </div>
             <div class="item px-5">
-              <img
-                src={{$resource.image_carousel.aritha}}
-                alt=""
-              />
+              <img src={{$resource.image_carousel.aritha}} alt="" />
             </div>
             <div class="item px-5">
-              <img
-                src={{$resource.image_carousel.ck1}}
-                alt=""
-              />
+              <img src={{$resource.image_carousel.ck1}} alt="" />
             </div>
             <div class="item px-5">
-              <img
-                src={{$resource.image_carousel.interdid}}
-                alt=""
-              />
+              <img src={{$resource.image_carousel.interdid}} alt="" />
             </div>
-            
+
             <div class="item px-5">
-              <img
-                src={{$resource.image_carousel.hold_it_write}}
-                alt=""
-              />
+              <img src={{$resource.image_carousel.hold_it_write}} alt="" />
             </div>
             <div class="item px-5">
-              <img
-                src={{$resource.image_carousel.flows}}
-                alt=""
-              />
+              <img src={{$resource.image_carousel.flows}} alt="" />
             </div>
             <div class="item px-5">
-              <img
-                src={{$resource.image_carousel.assured}}
-                alt=""
-              />
+              <img src={{$resource.image_carousel.assured}} alt="" />
             </div>
             <div class="item px-5">
-              <img
-                src={{$resource.image_carousel.xard}}
-                alt=""
-              />
+              <img src={{$resource.image_carousel.xard}} alt="" />
             </div>
             <div class="item px-5">
-              <img
-                src={{$resource.image_carousel.banix}}
-                alt=""
-              />
+              <img src={{$resource.image_carousel.banix}} alt="" />
             </div>
             <div class="item px-5">
-              <img
-                src={{$resource.image_carousel.hq}}
-                alt=""
-              />
+              <img src={{$resource.image_carousel.hq}} alt="" />
             </div>
             <div class="item px-5">
-              <img
-                src="{{$resource.image_carousel.succor}}"
-                alt=""
-              />
+              <img src="{{$resource.image_carousel.succor}}" alt="" />
             </div>
             <div class="item px-1">
-              <img
-                class="col-xl-10"
-                src={{$resource.image_carousel.cognitive}}
-                alt=""
-              />
+              <img class="col-xl-10" src={{$resource.image_carousel.cognitive}} alt="" />
             </div>
             <div class="item px-5">
-              <img
-                src="{{$resource.image_carousel.mediat}}"
-                alt=""
-              />
+              <img src="{{$resource.image_carousel.mediat}}" alt="" />
             </div>
             <div class="item px-5">
-              <img
-                src={{$resource.image_carousel.kemsys}}
-                alt=""
-              />
+              <img src={{$resource.image_carousel.kemsys}} alt="" />
             </div>
             <div class="item px-5">
-              <img
-                src={{$resource.image_carousel.kalibre}}
-                alt=""
-              />
+              <img src={{$resource.image_carousel.kalibre}} alt="" />
             </div>
             <div class="item px-5">
-              <img
-                src={{$resource.image_carousel.justghar}}
-                alt=""
-              />
+              <img src={{$resource.image_carousel.justghar}} alt="" />
             </div>
             <div class="item px-5">
-              <img
-                src={{$resource.image_carousel.sure}}
-                alt=""
-              />
+              <img src={{$resource.image_carousel.sure}} alt="" />
             </div>
             <div class="item px-5">
               <div class="row">
-                <img
-                  class="col-md-12"
-                  src={{$resource.image_carousel.vithamas}}
-                  alt=""
-                />
+                <img class="col-md-12" src={{$resource.image_carousel.vithamas}} alt="" />
               </div>
             </div>
-  
+
             <div class="item px-5">
-              <img
-                src="{{$resource.image_carousel.chirp}}"
-                alt=""
-              />
+              <img src="{{$resource.image_carousel.chirp}}" alt="" />
             </div>
 
             <div class="item px-5">
-              <img
-                src="{{$resource.image_carousel.appadvice}}"
-                alt=""
-              />
+              <img src="{{$resource.image_carousel.appadvice}}" alt="" />
             </div>
 
             <div class="item px-5">
-              <img
-                src="{{$resource.image_carousel.ismart}}"
-                alt=""
-              />
+              <img src="{{$resource.image_carousel.ismart}}" alt="" />
             </div>
 
             <div class="item px-5">
-              <img
-                src="{{$resource.image_carousel.sewj}}"
-                alt=""
-              />
+              <img src="{{$resource.image_carousel.sewj}}" alt="" />
             </div>
           </div>
         </div>
-      </section>
-  
-      <section class="wrapper bg-white">
-        <div class="container pb-4 pb-md-4">
-          <div class="row gx-lg-8 gy-10 align-items-center">
-            <div
-              class="col-md-10 col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center">
-              <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
-                {{$resource.section_two.Title}}
-              </h2>
-              <h3 class="display-4 mb-3">
-                {{$resource.section_two.Subtitle}}
-              </h3>
-              <p class="lead fs-lg mb-10">
-                {{$resource.section_two.Description}}
-              </p>
+      </div>
+    </section>
+
+    <!-- <section class="wrapper bg-white">
+        <div class="container py-8 pt-4 pt-md-4">
+          <h2 class="fs-15 text-uppercase"></h2>
+        
+            <div class="slider">
+             
+          <div class="slide" data-loop="true"
+          data-dots="false"
+          data-autoplay="true">
+
+
+         
+            <div class="item px-5">
+              <img src="https://res.cloudinary.com/biggworks/image/upload/v1682689742/havells_1_zpofp4.jpg" alt="" />
             </div>
+            <div class="item px-5">
+              <img src="https://res.cloudinary.com/biggworks/image/upload/v1682689974/aritha_1_oaqs1z.jpg" alt="" />
+            </div>
+            <div class="item px-5">
+              <img src="https://res.cloudinary.com/biggworks/image/upload/v1682689751/CAREER_CRAFT_1_hs2wrn.jpg" alt="" />
+            </div>
+            <div class="item px-5">
+              <img src="https://res.cloudinary.com/biggworks/image/upload/v1682689768/interdit_1_njr1bf.jpg" alt="" />
+            </div>
+            <div class="item px-8">
+              <img src="https://res.cloudinary.com/biggworks/image/upload/v1682689679/app_device_tjlmt8.jpg" alt="" />
+            </div>
+            <div class="item px-5">
+              <img src="https://res.cloudinary.com/biggworks/image/upload/v1682689785/hold_it_1_yum8ud.jpg" alt="" />
+            </div>
+            <div class="item px-5">
+              <img src="https://res.cloudinary.com/biggworks/image/upload/v1682689797/flows_1_y3vwrw.jpg" alt="" />
+            </div>
+            <div class="item px-5">
+              <img src="https://res.cloudinary.com/biggworks/image/upload/v1682689814/assured_automation_1_ay0dis.jpg" alt="" />
+            </div>
+            <div class="item px-5">
+              <img src="https://res.cloudinary.com/biggworks/image/upload/v1682689827/xard_pay_1_f0zdgp.jpg" alt="" />
+            </div>
+            <div class="item px-5">
+              <img src="https://res.cloudinary.com/biggworks/image/upload/v1682689840/banix_1_vaqgck.jpg" alt="" />
+            </div>
+            <div class="item px-5">
+              <img src="https://res.cloudinary.com/biggworks/image/upload/v1682689852/hqinc_1_fsquuh.jpg" alt="" />
+            </div>
+            <div class="item px-5">
+              <img src="https://res.cloudinary.com/biggworks/image/upload/v1682689944/succorfish_0_1_x5eyno.jpg" alt="" />
+            </div>
+            <div class="item px-1">
+              <img class="col-xl-10" src="https://res.cloudinary.com/biggworks/image/upload/v1682689963/cognitive_clouds_1_zcchuo.jpg" alt="" />
+            </div>
+            <div class="item px-5">
+              <img src="https://res.cloudinary.com/biggworks/image/upload/v1682690013/mediatek_1_n7cv2b.jpg" alt="" />
+            </div>
+            <div class="item px-5">
+              <img src="https://res.cloudinary.com/biggworks/image/upload/v1682690024/kemsys_1_chqdp5.jpg" alt="" />
+            </div>
+            <div class="item px-5">
+              <img src="https://res.cloudinary.com/biggworks/image/upload/v1682689892/kalibre_1_bndzsa.jpg" alt="" />
+            </div>
+            <div class="item px-5">
+              <img src="https://res.cloudinary.com/biggworks/image/upload/v1682689709/justghar_1_mlwxvi.jpg" alt="" />
+            </div>
+            <div class="item px-5">
+              <img src="https://res.cloudinary.com/biggworks/image/upload/v1682689728/sureprop_1_ylep7w.jpg" alt="" />
+            </div>
+            <div class="item px-5">
+              <div class="row">
+              <img class="col-md-12" src="https://res.cloudinary.com/biggworks/image/upload/v1682689699/i_smart_tz4frv.jpg" alt="" />
+            </div>
+            </div>
+
+            <div class="item px-5">
+              <img src="https://res.cloudinary.com/biggworks/image/upload/v1682689862/chirpsound_1_gxrghi.jpg" alt="" />
+            </div>
+            <div class="item px-5">
+              <img src="https://res.cloudinary.com/biggworks/image/upload/v1682689690/sew_jzmwzr.jpg" alt="" />
+            </div>
+
+
+
+         
+          
           </div>
-  
-          <div
-            class="row gx-md-1 offset-1 gx-2 gy-8 mb-12">
-            <div class="col-md-3 col-lg-3 col-xl-3 col-12">
-              <div class="item col-md-12">
-                <figure class="figure mb-5">
-                    <img
-                    class="service-image img-fluid"
-                    src={{$resource.section_two.service1.imageSrc}}
-                    alt={{$resource.section_two.service1.imageAlt}}
-                  />
-                </figure>
-              </div>
-  
-              <h4 class="text-left mb-5">{{$resource.section_two.service1.title}}</h4>
-              <p class="mb-0 lh-sm">
-                <!-- New Product Development, Digital Transformation, Enterprise
+        </div>
+        </div>
+      </section>
+   -->
+    <section class="wrapper bg-white">
+      <div class="container">
+        <div class="row gx-lg-8 gy-10 align-items-center">
+          <div class="col-12 mx-auto text-center">
+            <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
+              {{$resource.section_two.Title}}
+            </h2>
+            <h1 class="display-1 mb-4">
+              {{$resource.section_two.Subtitle}}
+            </h1>
+            <p class="lead fs-lg mb-8">
+              {{$resource.section_two.Description}}
+            </p>
+          </div>
+        </div>
+
+        <div class="row gx-md-1 offset-1 gx-2 gy-8 mb-12">
+          <div class="col-md-3 col-lg-3 col-xl-3 col-12">
+            <div class="item col-md-12">
+              <figure class="figure mb-5">
+                <img class="service-image img-fluid" src={{$resource.section_two.service1.imageSrc}}
+                  alt={{$resource.section_two.service1.imageAlt}} />
+              </figure>
+            </div>
+
+            <h4 class="text-left mb-5">{{$resource.section_two.service1.title}}</h4>
+            <p class="mb-0 lh-sm">
+              <!-- New Product Development, Digital Transformation, Enterprise
                 Modernization? <br />We are your Digital Factory. -->
-                {{$resource.section_two.service1.description}}
-              </p>
+              {{$resource.section_two.service1.description}}
+            </p>
+          </div>
+
+          <div class="col-xl-1 col-lg-1 col-md-1"></div>
+          <div class="col-md-3 col-lg-3 col-xl-3 col-12">
+            <div class="item col-md-12">
+              <figure class="figure mb-5">
+                <img class="service-image img-fluid" src={{$resource.section_two.service2.imageSrc}}
+                  alt={{$resource.section_two.service2.imageAlt}} />
+              </figure>
             </div>
-  
-            <div class="col-xl-1 col-lg-1 col-md-1"></div>
-            <div class="col-md-3 col-lg-3 col-xl-3 col-12">
-              <div class="item col-md-12">
-                <figure class="figure mb-5">
-                  <img
-                    class="service-image img-fluid"
-                    src={{$resource.section_two.service2.imageSrc}}
-                    alt={{$resource.section_two.service2.imageAlt}}
-                  />
-                </figure>
-              </div>
-              <h4 class="text-left mb-5">{{$resource.section_two.service2.title}}</h4>
-              <p class="mb-0 lh-sm">{{$resource.section_two.service2.description}}</p>
+            <h4 class="text-left mb-5">{{$resource.section_two.service2.title}}</h4>
+            <p class="mb-0 lh-sm">{{$resource.section_two.service2.description}}</p>
+          </div>
+
+          <div class="col-xl-1 col-md-1"></div>
+          <div class="col-md-3 col-lg-3 col-12">
+            <div class="item col-md-12">
+              <figure class="figure mb-5">
+                <img class="service-image img-fluid" src={{$resource.section_two.service3.imageSrc}}
+                  alt={{$resource.section_two.service3.imageAlt}} />
+              </figure>
             </div>
-  
-            <div class="col-xl-1 col-md-1"></div>
-            <div class="col-md-3 col-lg-3 col-12">
-              <div class="item col-md-12">
-                <figure class="figure mb-5">
-                  <img
-                    class="service-image img-fluid"
-                    src={{$resource.section_two.service3.imageSrc}}
-                    alt={{$resource.section_two.service3.imageAlt}}
-                  />
-                </figure>
+            <h4 class="text-left mb-5">{{$resource.section_two.service3.title}}</h4>
+            <p class="mb-0 lh-sm">
+              {{$resource.section_two.service3.description}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrapper bg-white">
+      <div class="container pb-14 pb-xl-12 pb-lg-14 pb-md-4">
+        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+          <div class="col-md-10 col-lg-10 col-xl-12 col-xxl-6 mx-auto text-center">
+            <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
+              {{$resource.section_three.title}}
+            </h2>
+            <h1 class="display-1 mb-4">
+              {{$resource.section_three.subtitle}}
+            </h1>
+            </div>
+            </div>
+            <div class="col-md-10 col-lg-10 col-xl-12 col-xxl-12 mx-auto text-center">
+
+            <p class="lead fs-lg mb-9">
+              {{$resource.section_three.description}}
+            </p>
+          </div>
+        <div class="row g-0 mb-4 mb-md-10 mb-xl-14 mb-lg-14">
+          <div class="col-xl-1 pe-18"></div>
+          <div class="col-md-5 col-lg-4 col-xl-4">
+            <div class="about-image">
+              <div class="card-body">
+                <h4 class="mb-4">{{$resource.section_three.approach1.heading}}</h4>
+                <p class="mb-2">
+                  {{$resource.section_three.approach1.description}}
+                </p>
+                <div><span class="fw-semibold">{{$resource.section_three.approach1.point1.bold}}</span>
+                  {{$resource.section_three.approach1.point1.not_bold}}</div>
+                <div><span class="fw-semibold">{{$resource.section_three.approach1.point2.bold}}</span>
+                  {{$resource.section_three.approach1.point2.not_bold}}</div>
+                <div><span class="fw-semibold">{{$resource.section_three.approach1.point3.bold}}</span>
+                  {{$resource.section_three.approach1.point3.not_bold}}</div>
+
               </div>
-              <h4 class="text-left mb-5">{{$resource.section_two.service3.title}}</h4>
-              <p class="mb-0 lh-sm">
-                {{$resource.section_two.service3.description}}
-              </p>
+            </div>
+          </div>
+          <div class="col-xl-1 col-md-2"></div>
+
+          <div class="col-md-5 col-lg-4 col-xl-4">
+            <div class="about-image card">
+              <div class="card-body">
+                <h4 class="mb-4">{{$resource.section_three.approach2.heading}}</h4>
+                <p class="mb-2">
+                  {{$resource.section_three.approach2.description}}
+                </p>
+                <div><span class="fw-semibold">{{$resource.section_three.approach2.point1.bold}}</span>
+                  {{$resource.section_three.approach2.point1.not_bold}}</div>
+                <div><span class="fw-semibold">{{$resource.section_three.approach2.point2.bold}}</span>
+                  {{$resource.section_three.approach2.point2.not_bold}}</div>
+                <div><span class="fw-semibold">{{$resource.section_three.approach2.point3.bold}}</span>
+                  {{$resource.section_three.approach2.point3.not_bold}}</div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-  
-      <section class="wrapper bg-white">
-        <div class="container pb-14 pb-md-12">
-          <div class="row gx-lg-8 gx-xl-12 gy-10 pb-md-6 align-items-center">
-            <div
-              class="col-md-10 col-lg-10 col-xl-12 col-xxl-6 mx-auto text-center"
-            >
-              <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5">
-                {{$resource.section_three.title}}
-              </h2>
-              <h3 class="display-4 mb-4">
-                {{$resource.section_three.subtitle}}
-              </h3>
-              <p class="lead fs-lg mb-6">
-                {{$resource.section_three.description}}
-              </p>
+        <div class="row g-0 gy-8 mb-4 mb-md-12">
+          <div class="col-xl-1 pe-18"></div>
+          <div class="col-md-5 col-lg-4">
+            <div class="about-image card">
+              <div class="card-body">
+                <h4 class="mb-4">{{$resource.section_three.approach3.heading}}</h4>
+                <p class="mb-2">
+                  {{$resource.section_three.approach3.description}}
+                </p>
+                <div><span class="fw-semibold">{{$resource.section_three.approach3.point1.bold}}</span>
+                  {{$resource.section_three.approach3.point1.not_bold}}</div>
+                <div><span class="fw-semibold">{{$resource.section_three.approach3.point2.bold}}</span>
+                  {{$resource.section_three.approach3.point2.not_bold}}</div>
+                <div><span class="fw-semibold">{{$resource.section_three.approach3.point3.bold}}</span>
+                  {{$resource.section_three.approach3.point3.not_bold}}</div>
+              </div>
             </div>
           </div>
-          <div class="row g-0 gy-8 gy-md mb-4 mb-md-10 mb-xl-12 mb-lg-16">
-            <div class="col-xl-1 pe-18"></div>
-            <div class="col-md-5 col-lg-4 col-xl-4">
-              <div class="about-image card">
-                <div class="card-body">
-                  <h4 class="mb-4">{{$resource.section_three.approach1.heading}}</h4>
-                  <p class="mb-2">
-                    {{$resource.section_three.approach1.description}}
-                  </p>
-                  <div
-                        ><span class="fw-semibold">{{$resource.section_three.approach1.point1.bold}}</span> {{$resource.section_three.approach1.point1.not_bold}}</div
-                        >
-                        <div
-                          ><span class="fw-semibold">{{$resource.section_three.approach1.point2.bold}}</span> {{$resource.section_three.approach1.point2.not_bold}}</div
-                          >
-                      <div
-                            ><span class="fw-semibold">{{$resource.section_three.approach1.point3.bold}}</span> {{$resource.section_three.approach1.point3.not_bold}}</div
-                            >
-                          
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xl-1 col-md-2"></div>
-
-                  <div class="col-md-5 col-lg-4 col-xl-4">
-                    <div class="about-image card">
-                      <div class="card-body">
-                        <h4 class="mb-4">{{$resource.section_three.approach2.heading}}</h4>
-                  <p class="mb-2">
-                    {{$resource.section_three.approach2.description}}
-                  </p>
-                  <div
-                        ><span class="fw-semibold"
-                          >{{$resource.section_three.approach2.point1.bold}}</span> {{$resource.section_three.approach2.point1.not_bold}}</div
-                          >
-                          <div
-                            ><span class="fw-semibold">{{$resource.section_three.approach2.point2.bold}}</span>
-                        {{$resource.section_three.approach2.point2.not_bold}}</div
-                        >
-                        <div
-                          ><span class="fw-semibold">{{$resource.section_three.approach2.point3.bold}}</span> {{$resource.section_three.approach2.point3.not_bold}}</div
-                          >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row g-0 gy-8 mb-4 mb-md-12">
-                <div class="col-xl-1 pe-18"></div>
-                <div class="col-md-5 col-lg-4">
-                  <div class="about-image card">
-                    <div class="card-body">
-                      <h4 class="mb-4">{{$resource.section_three.approach3.heading}}</h4>
-                  <p class="mb-2">
-                    {{$resource.section_three.approach3.description}}
-                  </p>
-                  <div
-                        ><span class="fw-semibold">{{$resource.section_three.approach3.point1.bold}}</span> {{$resource.section_three.approach3.point1.not_bold}}</div
-                        >
-                        <div
-                          ><span class="fw-semibold">{{$resource.section_three.approach3.point2.bold}}</span> {{$resource.section_three.approach3.point2.not_bold}}</div
-                          >
-                          <div
-                            ><span class="fw-semibold">{{$resource.section_three.approach3.point3.bold}}</span>
-                        {{$resource.section_three.approach3.point3.not_bold}}</div
-                        >
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2 col-xl-1"></div>
-              <div class="col-md-5 col-lg-4">
-                <div class="about-image card">
-                  <div class="card-body">
-                    <h4 class="mb-4">{{$resource.section_three.approach4.heading}}</h4>
-                  <p class="mb-2">
-                    {{$resource.section_three.approach4.description}}
-                  </p>
-                  <div
-                        ><span class="fw-semibold">{{$resource.section_three.approach4.point1.bold}}</span>
-                        {{$resource.section_three.approach4.point1.not_bold}}</div
-                        >
-                        <div
-                          ><span class="fw-semibold">{{$resource.section_three.approach4.point2.bold}}</span>
-                        {{$resource.section_three.approach4.point2.not_bold}}</div
-                        >
-                        <div
-                          ><span class="fw-semibold">{{$resource.section_three.approach4.point3.bold}}</span> {{$resource.section_three.approach4.point3.not_bold}}</div
-                          >
-                    </div>
-                  </div>
-                </div>
+          <div class="col-md-2 col-xl-1"></div>
+          <div class="col-md-5 col-lg-4">
+            <div class="about-image card">
+              <div class="card-body">
+                <h4 class="mb-4">{{$resource.section_three.approach4.heading}}</h4>
+                <p class="mb-2">
+                  {{$resource.section_three.approach4.description}}
+                </p>
+                <div><span class="fw-semibold">{{$resource.section_three.approach4.point1.bold}}</span>
+                  {{$resource.section_three.approach4.point1.not_bold}}</div>
+                <div><span class="fw-semibold">{{$resource.section_three.approach4.point2.bold}}</span>
+                  {{$resource.section_three.approach4.point2.not_bold}}</div>
+                <div><span class="fw-semibold">{{$resource.section_three.approach4.point3.bold}}</span>
+                  {{$resource.section_three.approach4.point3.not_bold}}</div>
               </div>
             </div>
-      </section>
-  
-      <section class="wrapper bg-white">
-        <div class="container">
-          <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center pb-10">
-            <div class="col-lg-5 col-md-9 mx-auto pb-md-2">
-              <h2
-                class="fs-16 fw-normal ls-3x text-uppercase mb-6 text-left pt-md-0"
-                style="text-align: left">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrapper bg-white">
+      <div class="container">
+        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center pb-10">
+          <div class="col-lg-6 col-md-9 mx-auto pb-md-2">
+            <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-6 text-left pt-md-0" style="text-align: left">
               {{$resource.section_four.title}}
-              
-              </h2>
-              <h3 class="display-4 mb-4" style="text-align: left">
-                {{$resource.section_four.subtitle}}
+
+            </h2>
+            <h1 class="display-1 mb-4" style="text-align: left">
+              {{$resource.section_four.subtitle}}
               </h3>
               <p class="lead fs-lg mb-6" style="text-align: left">
                 {{$resource.section_four.description}}
               </p>
               <div class="row gy-2 mb-6 mb-md-8">
                 <div class="col-1">
-                    <img class="" src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"/></div>
-                    <div class="col-11">{{$resource.section_four.feature1}}</div>
-                    <div class="col-1"><img class="" src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"/></div>
-                      <div class="col-11">{{$resource.section_four.feature2}}</div>
-                   
-                      <div class="col-1"><img class="" src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"/></div>
-                      <div class="col-11">{{$resource.section_four.feature3}}</div>
-                   
-                    </div>
-                  </div>
-            <div class="col-lg-7 col-md-12 col-sm-5 order-lg-2 mt-0 mt-md-0">
-              <img
-                class="why_choose_image w-auto img-fluid"
-                src={{$resource.section_four.image}}
-              />
-            </div>
+                  <img class=""
+                    src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" />
+                </div>
+                <div class="col-11">{{$resource.section_four.feature1}}</div>
+                <div class="col-1"><img class=""
+                    src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" /></div>
+                <div class="col-11">{{$resource.section_four.feature2}}</div>
+
+                <div class="col-1"><img class=""
+                    src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" /></div>
+                <div class="col-11">{{$resource.section_four.feature3}}</div>
+
+              </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-5 order-lg-2 mt-0 mt-md-0">
+            <img class="why_choose_image w-auto img-fluid" src={{$resource.section_four.image}} />
           </div>
         </div>
-      </section>
-    </div>
-    <!-- /.content-wrapper -->
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+      </div>
+    </section>
+  </div>
+  <!-- /.content-wrapper -->
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
 
-    <script>
+  <script>
     const firebaseConfig = {
-    apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
-    authDomain: "biggworks-dd979.firebaseapp.com",
-    databaseURL: "https://biggworks-dd979-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "biggworks-dd979",
-    storageBucket: "biggworks-dd979.appspot.com",
-    messagingSenderId: "160882722753",
-    appId: "1:160882722753:web:f067b273803ff585359140",
-    measurementId: "G-377HKGT4RW"
+      apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
+      authDomain: "biggworks-dd979.firebaseapp.com",
+      databaseURL: "https://biggworks-dd979-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "biggworks-dd979",
+      storageBucket: "biggworks-dd979.appspot.com",
+      messagingSenderId: "160882722753",
+      appId: "1:160882722753:web:f067b273803ff585359140",
+      measurementId: "G-377HKGT4RW"
     };
     firebase.initializeApp(firebaseConfig);
-    
+
     let candidateInfo = firebase.database().ref("candidate");
-    
-    var application=document.getElementById("application");
-    
+
+    var application = document.getElementById("application");
+
     function saveRecordtoDatabase() {
-    console.log("saveRecordtoDatabase");
-    event.preventDefault();
-    let newCandidateInfo = candidateInfo.push();
-    
-    newCandidateInfo.set({
-      name: document.getElementById('form_name').value,
-      email: document.getElementById('form_email').value,
-      phone: document.getElementById('form_phone').value,
-      // position: document.getElementById('name').value
-      surname: document.getElementById('form_lastname').value,
-      message: document.getElementById('form_message').value
-     
-    });
+      console.log("saveRecordtoDatabase");
+      event.preventDefault();
+      let newCandidateInfo = candidateInfo.push();
+
+      newCandidateInfo.set({
+        name: document.getElementById('form_name').value,
+        email: document.getElementById('form_email').value,
+        phone: document.getElementById('form_phone').value,
+        // position: document.getElementById('name').value
+        surname: document.getElementById('form_lastname').value,
+        message: document.getElementById('form_message').value
+
+      });
     }
-    </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-    ></script>
-  
-    {{ partial "footer.html" . }} {{ partial "page-progress.html" . }}
-  </body>
-  {{ end }}
-  
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous"></script>
+
+  {{ partial "footer.html" . }} {{ partial "page-progress.html" . }}
+</body>
+{{ end }}

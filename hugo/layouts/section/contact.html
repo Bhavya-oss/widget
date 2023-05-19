@@ -9,18 +9,35 @@
 
     <section class="wrapper">
         <div class="container pb-6 text-center">
-            <div class="row">
-                <!-- <div class="col-sm-10 col-md-8 col-lg-6 col-xl-6 col-xxl-5 mx-auto"> -->
-                    <h2 class="fs-16 fw-normal text-uppercase text-muted pt-5 mb-5">{{$resource.section_one.title}}</h2>
+            <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+                <div class="col-md-10 col-lg-12 col-xl-8 mx-auto text-center">
+                  <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4 pt-14">
+                    {{$resource.section_one.title}}
+                  </h2>
+                  <h3 class="display-4 mb-4">
+                    {{$resource.section_one.subtitle}}
+                  </h3>
+                  </div>
+                  </div>
+                  <div class="col-md-10 col-lg-10 col-xl-7 mx-auto text-center">
+                   
+      
+                  <p class="lead fs-lg mb-9">
+                    {{$resource.section_one.description}}
+                  </p>
+                </div>
+            <!-- <div class="row">
+                <div class="col-sm-10 col-md-8 col-lg-6 col-xl-6 col-xxl-5 mx-auto">
+                    <h2 class="fs-16 fw-normal text-uppercase text-muted pt-8 mb-5">{{$resource.section_one.title}}</h2>
                 <h3 class="display-4 mb-4">{{$resource.section_one.subtitle}}</h3>
                 <p class="fs-lg px-lg-7 px-xl-7 px-xxl-6">{{$resource.section_one.description}}</p>
-                <!-- </div> -->
-            </div>
+                </div>
+            </div> -->
         </div>
     </section>
     <section class="wrapper bg-linear-gradient">
-        <div class="container bp-20">
-            <h4 class="pt-10 text-center mb-8">{{$resource.section_two.title}}</h4>
+        <div class="container bp-22">
+            <!-- <h4 class="pt-10 text-center mb-8">{{$resource.section_two.title}}</h4> -->
             <div class="row offset-2">
                 <div class="col-9">
                     <form class="contact-form" method="post" id="formContact" onsubmit="saveContactInfo()">
@@ -71,20 +88,37 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
-                                <div class="col-12 pb-10">
-                                    <input type="submit" class="btn btn-primary  rounded-0 btn-send mb-3"
-                                        value="Send message">
-
-                                </div>
-                            </div>
+                                <!-- <div class="col-1 col-xl-9 col-lg-9 col-md-6 pb-15"></div> -->
+                                          <div class="col-2 mb-8">
+                                            <input type="submit" class="btn btn-primary  rounded-0 btn-send mb-3"
+                                              value="Send message">
+                        
+                                          </div>
+                            <!-- </div> -->
                         </div>
                     </form>
                 </div>
             </div>
     </section>
     <section>
-        <div class="container">
-            <h4 class="px-7 px-lg-15 px-xl-15 px-md-10 mb-6 pt-10">{{$resource.section_three.office_locations}}</h4>
+        <div class="container pt-10">
+            <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+                <div class="col-md-10 col-lg-12 col-xl-8 mx-auto text-center">
+                  <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
+                    {{$resource.section_three.title}}
+                  </h2>
+                  <h3 class="display-4 mb-4">
+                    {{$resource.section_three.subtitle}}
+                  </h3>
+                  </div>
+                  </div>
+                  <div class="col-md-10 col-lg-10 col-xl-7 mx-auto text-center">
+                   
+      
+                  <p class="lead fs-lg mb-9">
+                    {{$resource.section_three.description}}
+                  </p>
+                </div>
 
 
             <div class="row gx-md-1 offset-1 gx-2 gy-8 mb-10 mb-md-10">
@@ -122,31 +156,40 @@
         </div>
 
     </section>
-<section>
+<!-- <section>
     <h4 class="ps-6 ps-lg-22 pt-md-0 ps-xl-23_5">{{$resource.section_four.title}}</h4>
     <div class="row">
         <p class="col-12 col-lg-7 ps-lg-24 px-10">{{$resource.section_four.description}}</p>
         <h4 class="ps-10 ps-lg-19 pb-8 ps-lg-24">{{$resource.section_four.phone_number}}</h4>
     </div>
 
-</section>
-<section class="wrapper bg-linear-gradient">
+</section> -->
+
+
+
+<section class="wrapper careers-background">
     <div class="container">
-        <div class="row mt-4 pt-8 text-center">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-3 col-6 mb-8 col-md-4 ps-lg-18_5 pe-lg-20_5">
+        <div class="row mt-4 pt-8">
+            <div class="col-xl-6 col-lg-6 col-md-6">
+                
+                <h4 class="mb-md-0 mb-6 pt-5">
+                  {{$resource.section_five.title}}
+                  </h4>
+                          </div>
+            <div class="col-xl-3"></div>
+            <div class="col-lg-2 col-xl-1 col-6 mb-8 col-md-4">
                 <a href="{{$resource.section_five.facebook_link}}" target="_blank">
                 <img
                     src="{{$resource.section_five.facebook_image}}" />
                 </a>
             </div>
-            <div class="col-lg-3 col-6 col-xs-4 mb-8 mobile-text-center col-md-4 pe-lg-15 ps-lg-15">
+            <div class="col-lg-2 col-xl-1 col-6 col-xs-4 mb-8 mobile-text-center col-md-4">
                 <a href="{{$resource.section_five.instagram_link}}" target="_blank">
                 <img
                     src="{{$resource.section_five.instagram_image}}" />
                 </a>
             </div>
-            <div class="col-lg-3 col-6 mb-8 col-md-4 pe-lg-15 ps-lg-15">
+            <div class="col-lg-2 col-xl-1 col-6 mb-8 col-md-4">
                 <a href="{{$resource.section_five.linkedin_link}}" target="_blank">
                 <img
                     src="{{$resource.section_five.lonkedin_image}}" target="_blank"/>
@@ -156,6 +199,8 @@
     </div>
 
     </section>
+
+    
 
     <!-- <section class="wrapper bg-soft-primary">
         <div class="container pt-10 pb-10 pt-md-14 text-center">
