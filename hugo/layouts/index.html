@@ -89,13 +89,13 @@
                                         <div class="help-block with-errors"></div>
                                       </div>
                                     </div>
-                                    <div class="col-2 col-xl-9 col-lg-9 col-md-7"></div>
-                                    <div class="col-1 ps-md-4 ps-xl-1 ps-lg-2 ps-2">
+                                    <!-- <div class="col-2 col-xl-9 col-lg-9 col-md-7"></div> -->
+                                    <div class="col-1">
                                       <input type="submit" class="btn btn-primary button-widthincrease rounded-0 btn-send mb-3"
                                         value="Send message">
 
                                     </div>
-                                  </div>
+                                  <!-- </div> -->
                                 </div>
                               </form>
                             </div>
@@ -297,9 +297,9 @@
             <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
               {{$resource.section_two.Title}}
             </h2>
-            <h1 class="display-1 mb-4">
+            <h3 class="display-4 mb-4">
               {{$resource.section_two.Subtitle}}
-            </h1>
+            </h3>
             <p class="lead fs-lg mb-8">
               {{$resource.section_two.Description}}
             </p>
@@ -359,9 +359,9 @@
             <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
               {{$resource.section_three.title}}
             </h2>
-            <h1 class="display-1 mb-4">
+            <h3 class="display-4 mb-4">
               {{$resource.section_three.subtitle}}
-            </h1>
+            </h3>
             </div>
             </div>
             <div class="col-md-10 col-lg-10 col-xl-12 col-xxl-12 mx-auto text-center">
@@ -408,7 +408,7 @@
             </div>
           </div>
         </div>
-        <div class="row g-0 gy-8 mb-4 mb-md-12">
+        <div class="row g-0 gy-8 mb-4 mb-md-4">
           <div class="col-xl-1 pe-18"></div>
           <div class="col-md-5 col-lg-4">
             <div class="about-image card">
@@ -450,15 +450,15 @@
     <section class="wrapper bg-white">
       <div class="container">
         <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center pb-10">
-          <div class="col-lg-6 col-md-9 mx-auto pb-md-2">
-            <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-6 text-left pt-md-0" style="text-align: left">
+          <div class="col-lg-6 col-md-9 col-xl-5">
+            <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4 text-left">
               {{$resource.section_four.title}}
 
             </h2>
-            <h1 class="display-1 mb-4" style="text-align: left">
+            <h1 class="display-1 mb-4 text-left">
               {{$resource.section_four.subtitle}}
-              </h3>
-              <p class="lead fs-lg mb-6" style="text-align: left">
+            </h1>
+              <p class="lead fs-lg mb-6 text-left">
                 {{$resource.section_four.description}}
               </p>
               <div class="row gy-2 mb-6 mb-md-8">
@@ -477,7 +477,7 @@
 
               </div>
           </div>
-          <div class="col-lg-6 col-md-12 col-sm-5 order-lg-2 mt-0 mt-md-0">
+          <div class="col-lg-7 col-xl-7 col-md-12 col-sm-5">
             <img class="why_choose_image w-auto img-fluid" src={{$resource.section_four.image}} />
           </div>
         </div>

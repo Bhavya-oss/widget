@@ -12,12 +12,12 @@
 
 		<section class="wrapper bg-white">
 			<div class="d-flex align-items-center bg-overlay-400 px-xl-23 px-md-0 careers_background_image">
-				<div class="container pt-1 pb-12 pb-xl-18 pb-16 pt-md-6 pt-xl-1">
+				<div class="container pt-1 pb-12 pb-xl-18 pb-16 pt-md-0 pt-xl-1">
 					<div class="row gy-10">
-						<div class="col-xl-11 col-lg-12">
+						<div class="col-xl-12 col-lg-12">
 							
 							<h2
-								class="fs-16 fw-normal ls-3x pt-10 text-uppercase mb-5 mt-6 mt-md-10 mb-md-4 mt-xl-8 mt-lg-6 mb-xl-5 mb-lg-5 col-xl-3 pt-xl-6 service-text service-text-large-screen">
+								class="fs-16 fw-normal ls-3x pt-10 text-uppercase mb-5 mt-6 mt-md-2 mb-md-4 mt-xl-8 mt-lg-6 mb-xl-5 mb-lg-5 col-xl-3 pt-xl-6 service-text service-text-large-screen">
                 {{$resource.section_one.title}}
               </h2>
 			  		<div class="col-10">
@@ -34,7 +34,7 @@
                 data-delay="600"
               >
                 <span
-                  ><a href="#mymodel" class="btn btn-primary rounded-0" 
+                  ><a href="#mymodel" class="btn btn-primary rounded-0" id="scrollButton"
                     >{{$resource.section_one.btn_talk_to_us}}</a
                   ></span
                 >
@@ -103,13 +103,13 @@
                                         <div class="help-block with-errors"></div>
                                       </div>
                                     </div>
-                                    <div class="col-8 col-xl-9 col-lg-9 col-md-7"></div>
-                                    <div class="col-1 ps-md-6 ps-xl-4 ps-lg-4 ps-2">
+                                    <!-- <div class="col-8 col-xl-9 col-lg-9 col-md-7"></div> -->
+                                    <div class="col-1">
                                       <input type="submit" class="btn btn-primary  rounded-0 btn-send mb-3"
                                         value="Send message">
                   
                                     </div>
-                                  </div>
+                                  <!-- </div> -->
                                 </div>
                               </form>
                             </div>
@@ -372,7 +372,7 @@
 			<div class="container py-0 py-md-0 py-xl-4">
 				<div class="row align-items-center">
 					<div class="col-xl-6 col-md-12 mx-auto text-center">
-					  <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
+					  <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4" id="mymodel">
 						{{$resource.section_four.title}}            </h2>
 						<h3 class="display-4">
 						{{$resource.section_four.subtitle}}
@@ -1009,9 +1009,9 @@
 				<div class="row">
 					<div class="col-xl-6 col-lg-6 col-md-6">
 						
-          <h4 class="mb-xl-6 mb-lg-6 mb-md-0 mb-6 pt-5">
+          <p class="service_ready mb-xl-6 mb-lg-6 mb-md-0 mb-6 pt-5">
 			{{$resource.section_five.title}}
-            </h4>
+		  </p>
 					</div>
 					<div class="col-xl-3 col-lg-3 col-md-2 col-1"></div>
           <div class="col-xl-3 col-lg-3 col-md-3 ps-16">
