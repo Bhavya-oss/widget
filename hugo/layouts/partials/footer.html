@@ -48,9 +48,9 @@
 					<p class="mb-5">Subscribe to get latest updates.</p>
 					<div class="newsletter-wrapper">
 						<div id="mc_embed_signup2">
-							<form
-								action="https://elemisfreebies.us20.list-manage.com/subscribe/post?u=aa4947f70a475ce162057838d&amp;id=b49ef47a9a"
-								method="post" id="mc-embedded-subscribe-form2" name="mc-embedded-subscribe-form"
+							<!-- <form
+								
+								method="post" id="" name="mc-embedded-subscribe-form"
 								class="validate dark-fields" target="_blank" novalidate>
 								<div id="mc_embed_signup_scroll2">
 									<div class="mc-field-group input-group form-label-group">
@@ -58,8 +58,11 @@
 											placeholder="Email Address" id="mce-EMAIL2">
 										<label for="mce-EMAIL2">Email Address</label>
 										<input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe2"
-											class="btn btn-light button-fontcolor">
+											class="btn_btn  btn-light button-fontcolor">
 									</div>
+									
+									<div id="message" class="mt-2"></div>
+
 									<div id="mce-responses2" class="clear">
 										<div class="response" id="mce-error-response2" style="display:none"></div>
 										<div class="response" id="mce-success-response2" style="display:none"></div>
@@ -69,7 +72,28 @@
 											value=""></div>
 									<div class="clear"></div>
 								</div>
-							</form>
+							</form> -->
+							<form method="post" id="" name="mc-embedded-subscribe-form" class="validate dark-fields" novalidate>
+								<div id="mc_embed_signup_scroll2">
+								  <div class="mc-field-group input-group form-label-group">
+									<input type="email" value="" name="EMAIL" class="required email form-control" placeholder="Email Address" id="mce-EMAIL2">
+									<label for="mce-EMAIL2">Email Address</label>
+									<input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe2" class="btn_btn  btn-light button-fontcolor">
+								  </div>
+							  
+								  <div id="message" class="mt-2"></div>
+							  
+								  <div id="mce-responses2" class="clear">
+									<div class="response" id="mce-error-response2" style="display:none"></div>
+									<div class="response" id="mce-success-response2" style="display:none"></div>
+								  </div>
+								  <div style="position: absolute; left: -5000px;" aria-hidden="true">
+									<input type="text" name="b_ddc180777a163e0f9f66ee014_4b1bcfa0bc" tabindex="-1" value="">
+								  </div>
+								  <div class="clear"></div>
+								</div>
+							  </form>
+							  
 						</div>
 					</div>
 				</div>
@@ -77,3 +101,21 @@
 		</div>
 	</div>
 </footer>
+<script>
+	const emailField = document.getElementById('mce-EMAIL2');
+const joinButton = document.getElementById('mc-embedded-subscribe2');
+const message = document.getElementById('message');
+
+// Add event listener to the join button
+joinButton.addEventListener('click', function() {
+  // Get the email entered by the user
+  const email = emailField.value;
+
+  if (email.trim() !== '') { // Check if the email field is not empty
+    // Display the subscribed message
+	
+	message.style.color = 'blue';
+    message.textContent = 'Subscribed';
+  }
+});
+</script>

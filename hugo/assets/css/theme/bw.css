@@ -21547,7 +21547,7 @@ body {
 
 ::selection {
   background: rgba(63, 120, 224, 0.7);
-  color: #fff;
+  color: #ffffff;
 }
 
 button:focus {
@@ -24349,6 +24349,27 @@ form.dark-fields .form-control::placeholder {
   box-sizing: border-box;
   transform: translateY(0);
   padding: 0.70rem 2.15rem;
+  font-size: 0.8rem;
+  border-radius: 0.4rem;
+  transition: all 200ms ease-in-out;
+}
+
+.btn_btn {
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1.7;
+  letter-spacing: -0.01rem;
+  color: #495c77;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  transform: translateY(0);
+  padding: 0.70rem 1.5rem;
   font-size: 0.8rem;
   border-radius: 0.4rem;
   transition: all 200ms ease-in-out;
@@ -36109,7 +36130,7 @@ border-radius: 30px;
 } */
  
 .service_background_image {
-  background-image: url(https://res.cloudinary.com/biggworks/image/upload/v1682506425/Group_11300_msgjhu.png);
+  background-image: url(https://res.cloudinary.com/biggworks/image/upload/v1684575182/Group_11526_ztupax.png);
   background-repeat: no-repeat;
   background-position-x: right;
   background-image: cover;
@@ -36118,7 +36139,6 @@ border-radius: 30px;
 
 .service-card {
   box-shadow: 0px 0px 48px 16px rgba(30, 30, 30, 0.05);
-  min-height: 475px;
 }
 @media (min-width: 768px) {
   .service-card {
@@ -37033,7 +37053,7 @@ button-fontcolor:visited {
   }
 
   .careers_background_image {
-    background-image: url(https://res.cloudinary.com/biggworks/image/upload/v1684475450/25460_Converted_2_dxglkl.png);
+    background-image: url(https://res.cloudinary.com/biggworks/image/upload/v1684737295/CAREER_HERO_igfawf.png);
     background-repeat: no-repeat;
     background-position-x: right;
     background-image: cover;
@@ -37064,7 +37084,7 @@ button-fontcolor:visited {
     border: 2px solid transparent;
     box-sizing: border-box;
     transform: translateY(0);
-    padding: 0.5rem 1.2rem;
+    padding: 0.5rem 1.25rem;
     font-size: 0.8rem;
     border-radius: 0.4rem;
     transition: all 200ms ease-in-out;
