@@ -10,14 +10,14 @@
     </header>
 
     <section class="wrapper bg-white">
-      <div>
-			<div class="d-flex align-items-center bg-overlay-400 px-xl-21 px-md-0 service_background_image pb-13">
+      
+			<div class="d-flex align-items-center bg-overlay-400 px-xl-21 px-md-0 service_background_image pb-16 pb-md-22 pb-xxl-13">
 				<div class="container pt-md-0 pt-xl-1">
 					<div class="row gy-10">
 						<div class="col-xl-6 col-lg-6">
 							
 							<h2
-								class="fs-16 fw-normal ls-3x text-uppercase mb-5 mt-md-0 mb-md-4 mt-xl-18 mb-lg-5">
+								class="fs-16 fw-normal ls-3x text-uppercase mb-5 mt-14 mt-md-12 mb-md-0 mt-xl-18 mb-lg-5 mb-md-8 service-text service-text-large-screen">
                 {{$resource.section_one.title}}
               </h2>
 
@@ -276,6 +276,8 @@
       </div>
     </section> -->
 
+
+    
     <section class="wrapper bg-linear-gradient">
 			<div class="container text-left">
 				<h4 class="mb-4 pt-10">{{$resource.section_five.heading}}</h4>
@@ -285,8 +287,10 @@
       </div>
       <!-- <div class="mb-xl-6 mb-lg-6"></div> -->
     </section>
+
+
     <section class="wrapper bg-white">
-      <div class="container pb-14 pb-xl-0 pb-lg-0 pb-md-4">
+      <div class="container pb-4 pb-xl-0 pb-lg-0 pb-md-4">
         <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
           <div class="col-md-10 col-lg-12 col-xl-8 mx-auto text-center">
             <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
@@ -306,11 +310,11 @@
           </div>
         <div class="row g-0 mb-8">
           <div class="col-xl-1 pe-18"></div>
-          <div class="col-md-5 col-lg-4 col-xl-4">
-            <div class="about-image">
-              <div class="card-body">
+          <div class="col-md-5 col-lg-4 col-xl-4 mb-13 mb-xl-0 mb-md-0 mb-lg-0">
+            <div class="about-image card">
+              <div class="card-body-agile-methods card-body">
                 <h4 class="mb-4">{{$resource.section_four.card1.heading}}</h4>
-                <p class="mb-2">
+                <p class="">
                   {{$resource.section_four.card1.paragraph}}
                 </p>
                
@@ -320,10 +324,10 @@
           <div class="col-xl-1 col-md-2"></div>
 
           <div class="col-md-5 col-lg-4 col-xl-4">
-            <div class="about-image service-card card">
-              <div class="card-body">
+            <div class="about-image card">
+              <div class="card-body-agile-methods complete-accountability-card card-body">
                 <h4 class="mb-4">{{$resource.section_four.card2.heading}}</h4>
-                <p class="mb-2">
+                <p class="">
                   {{$resource.section_four.card2.paragraph}}
                 </p>
                
@@ -351,7 +355,7 @@
     </section>
 
     <section class="wrapper bg-white">
-      <div class="container pb-14 pb-xl-12 pb-lg-14 pb-md-4">
+      <div class="container pb-4 pb-xl-8 pb-lg-14 pb-md-4">
         <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
           <div class="col-md-10 col-lg-10 col-xl-8 mx-auto text-center">
             <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
@@ -370,9 +374,9 @@
           </div>
         <div class="row g-0 mb-4 mb-md-10 mb-xl-15 mb-lg-14">
           <div class="col-xl-1 pe-18"></div>
-          <div class="col-md-5 col-lg-4 col-xl-4">
+          <div class="col-md-5 col-lg-4 col-xl-4 mb-13 mb-xl-0 mb-md-0 mb-lg-0">
             <div class="about-image">
-              <div class="card-body">
+              <div class="card-body card-body-service">
                 <h4 class="mb-4">{{$resource.section_eight.card1.title}}</h4>
                 <p class="mb-2">
                   {{$resource.section_eight.card1.description}}
@@ -383,9 +387,9 @@
           </div>
           <div class="col-xl-1 col-md-2"></div>
 
-          <div class="col-md-5 col-lg-4 col-xl-4">
+          <div class="col-md-5 col-lg-4 col-xl-4 mb-4 mb-xl-0 mb-md-0 mb-lg-0">
             <div class="about-image card">
-              <div class="card-body">
+              <div class="card-body card-body-service">
                 <h4 class="mb-4">{{$resource.section_eight.card2.title}}</h4>
                 <p class="mb-2">
                   {{$resource.section_eight.card2.description}}
@@ -398,7 +402,7 @@
           <div class="col-xl-1 pe-18"></div>
           <div class="col-md-5 col-lg-4">
             <div class="about-image card">
-              <div class="card-body">
+              <div class="card-body card-body-service">
                 <h4 class="mb-4">{{$resource.section_eight.card3.title}}</h4>
                 <p class="mb-2">
                   {{$resource.section_eight.card3.description}}
@@ -446,19 +450,19 @@
 			<div class="container">
 				<div class="row">
           <div class="col-xl-1 col-md-1 col-lg-1 col-0 ps-xl-17"></div>
-					<div class="col-xl-4 col-lg-4 col-md-4">
-            <img class="mb-5" src="{{$resource.section_nine.dermidia.img}}"/>
-            <p class="mb-6 pe-xl-13">{{$resource.section_nine.dermidia.description}}</p>
-            <h4 class="mb-2">{{$resource.section_nine.dermidia.author}}</h4>
+					<div class="col-xl-4 col-lg-4 col-md-4 mb-6 mb-xl-0 mb-lg-0 mb-md-0">
+            <img class="mb-4" src="{{$resource.section_nine.dermidia.img}}"/>
+            <p class="mb-xl-9 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.dermidia.description}}</p>
+            <h4 class="mb-1">{{$resource.section_nine.dermidia.author}}</h4>
             <p>
               {{$resource.section_nine.dermidia.company}}
             </p>
           </div>
           <div class="col-2"></div>
 					<div class="col-xl-4 col-lg-4 col-md-4">
-						<img class="mb-5" src="{{$resource.section_nine.flows.img}}"/>
+						<img class="mb-4" src="{{$resource.section_nine.flows.img}}"/>
             <p class="mb-4 pe-xl-13">{{$resource.section_nine.flows.description}}</p>
-            <h4 class="mb-2">{{$resource.section_nine.flows.author}}</h4>
+            <h4 class="mb-1">{{$resource.section_nine.flows.author}}</h4>
             <p>
               {{$resource.section_nine.flows.company}}
             </p>
@@ -487,7 +491,7 @@
 			
         <div class="grid">
 					<div class="row my-2 offset-xl-1 offset-md-0 offset-1 mb-8">
-						<div class="item col-md-5 col-xl-3 col-lg-3 mb-xl-12 col-4 mb-lg-12 mb-md-12 mb-10">
+						<div class="item col-md-5 col-xl-3 col-lg-3 mb-xl-15 col-4 mb-lg-12 mb-md-12 mb-10">
 							<div class="card career-card-technology">
 								<div class="card-body">
 									<div class="text-center">
@@ -502,11 +506,11 @@
 							</div>
 						</div>
 						<div class="col-xl-1 col-lg-1 col-md-1"></div>
-						<div class="item col-md-5 col-xl-3 col-lg-3 mb-xl-12 col-4 mb-lg-12 mb-md-12 mb-10">
+						<div class="item col-md-5 col-xl-3 col-lg-3 mb-xl-15 col-4 mb-lg-12 mb-md-12 mb-10">
 							<div class="card career-card-technology">
 								<div class="card-body">
 									<div class="text-center">
-										<img class="mb-xl-8 pt-xl-4 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
+										<img class="mb-xl-8 pt-xl-3 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
                     src="{{$resource.section_ten.card2.image}}"
                     alt=""
                   />
@@ -518,7 +522,7 @@
             <div class="col-xl-1 col-lg-1 col-md-1"></div>
 
             <div
-              class="item col-md-5 col-xl-3 col-lg-3 mb-xl-12 col-4 mb-lg-12 mb-md-12 mb-10"
+              class="item col-md-5 col-xl-3 col-lg-3 mb-xl-15 col-4 mb-lg-12 mb-md-12 mb-10"
             >
               <div class="card career-card-technology">
                 <div class="card-body">
@@ -534,8 +538,7 @@
               </div>
             </div>
             <div class="col-md-1"></div>
-            </div>
-            <div class="row my-2 mb-10 offset-xl-1 offset-md-0 offset-1">
+            
 
             <div
               class="item col-md-5 col-xl-3 col-lg-3 col-4 mb-xl-4 mb-lg-12 mb-md-4 mb-10"
@@ -544,7 +547,7 @@
                 <div class="card-body">
                   <div class="text-center">
                     <img
-                      class="mb-xl-6 pt-xl-3 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
+                      class="mb-xl-5 pt-xl-3 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
                       src="{{$resource.section_ten.card4.image}}"
                       alt=""
                     />
@@ -561,7 +564,7 @@
                 <div class="card-body">
                   <div class="text-center">
                     <img
-                      class="mb-xl-8 pt-xl-4 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
+                      class="mb-xl-6 pt-xl-3 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
                       src="{{$resource.section_ten.card5.image}}"
                       alt=""
                     />
@@ -579,7 +582,7 @@
                 <div class="card-body">
                   <div class="text-center">
                     <img
-                      class="mb-xl-8 pt-xl-4 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
+                      class="mb-xl-8 pt-xl-3 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
                       src="{{$resource.section_ten.card6.image}}"
                       alt=""
                     />

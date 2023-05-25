@@ -11,21 +11,18 @@
 		<!-- /header -->
 
 		<section class="wrapper bg-white">
-			<div class="d-flex align-items-center bg-overlay-400 px-xl-21 px-md-0 mt-12 careers_background_image">
-				<div class="container pb-12 pb-xl-14">
-					<div class="row">
-						<div class="col-xl-12 col-lg-12">
-							
-							<h2
-								class="fs-16 fw-normal ls-3x text-uppercase mb-5 mb-md-5 mb-xl-5 mb-lg-5 col-xl-3 service-text service-text-large-screen">
+
+			<div class="container mt-15 pb-xl-0">
+				<div class="row mb-18 mb-md-12">
+					<div class="col-12 col-md-6 col-xl-6 col-lg-6 mb-6">
+						<h2
+								class="fs-16 fw-normal ls-3x text-uppercase mb-5 mb-md-5 mb-xl-5 mb-lg-5">
                 {{$resource.section_one.title}}
               </h2>
-			  		<div class="col-10">
-						<h1 class="display-1 mb-4 mb-lg-5 mb-xl-5 pe-xl-22 pe-lg-25 pe-md-0 service-text service-text-large-screen">
+						<h1 class="display-1 mb-4 mb-lg-5 mb-xl-5 ">
                 {{$resource.section_one.subtitle}}
 						</h1>
-		</div>
-			<p class="lead fs-lg text-left mb-7 col-xl-7 col-lg-7 mb-7 pe-xl-16 pe-lg-16 pe-md-0 service-text service-text-large-screen">
+			<p class="lead fs-lg text-left mb-7 ">
                 {{$resource.section_one.description}}
               </p>
               <div
@@ -34,102 +31,23 @@
                 data-delay="600"
               >
                 <span
-                  ><a href="#mymodel" class="btn btn-primary rounded-0" id="scrollButton"
+                  ><a  href="#mymodel" class="btn btn-primary rounded-0" 
                     >{{$resource.section_one.btn_talk_to_us}}</a
                   ></span
                 >
               </div>
-              <div id="myModal1" class="modal fade" tabindex="-1">
-                <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                    <!-- <div class="modal-header"> -->
-                      <h4 class="modal-title text-center pt-6">{{$resource.section_one.modal_title}}
-                      </h4>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    <!-- </div> -->
-                    <div class="modal-body">
-                      <section id="tabs" class="wrapper pt-0 pb-md-4">
-                        <div class="row">
-                          <div class="col-lg-15">
-                            
-                            <div class="tab-content">
-                              
-      
-                              <form class="contact-form" method="post" id="formContact" onsubmit="saveRecordtoDatabase()">
-                                <div class="messages"></div>
-                                <div class="controls">
-                                  <div class="row gx-4">
-                                    <div class="col-md-6">
-                                      <div class="form-label-group mb-4">
-                                        <input id="form_name" type="text" name="name" class="form-control"
-                                          placeholder="Jane" required="required"
-                                          data-error="First Name is required.">
-                                        <label for="form_name">{{$resource.section_one.fname}}</label>
-                                        <div class="help-block with-errors"></div>
-                                      </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                      <div class="form-label-group mb-4">
-                                        <input id="form_lastname" type="text" name="surname" class="form-control"
-                                          placeholder="Doe" required="required"
-                                          data-error="Last Name is required.">
-                                        <label for="form_lastname">{{$resource.section_one.lastname}}</label>
-                                        <div class="help-block with-errors"></div>
-                                      </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                      <div class="form-label-group mb-4">
-                                        <input id="form_email" type="email" name="email" class="form-control"
-                                          placeholder="jane.doe@example.com" required="required"
-                                          data-error="Valid email is required.">
-                                        <label for="form_email">{{$resource.section_one.email}}</label>
-                                        <div class="help-block with-errors"></div>
-                                      </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                      <div class="form-label-group mb-4">
-                                        <input id="form_phone" type="tel" name="phone" class="form-control"
-                                          placeholder="Your phone number">
-                                        <label for="form_phone">{{$resource.section_one.phone}}</label>
-                                        <div class="help-block with-errors"></div>
-                                      </div>
-                                    </div>
-                                    <div class="col-12">
-                                      <div class="form-label-group mb-4">
-                                        <textarea id="form_message" name="message" class="form-control"
-                                          placeholder="Your message" rows="5" required="required"
-                                          data-error="Message is required."></textarea>
-                                        <label for="form_message">{{$resource.section_one.message}}</label>
-                                        <div class="help-block with-errors"></div>
-                                      </div>
-                                    </div>
-                                    <!-- <div class="col-8 col-xl-9 col-lg-9 col-md-7"></div> -->
-                                    <div class="col-1">
-                                      <input type="submit" class="btn btn-primary  rounded-0 btn-send mb-3"
-                                        value="Send message">
-                  
-                                    </div>
-                                  <!-- </div> -->
-                                </div>
-                              </form>
-                            </div>
-                          </div>
-                        </div>
-      
-      
-      
-                      </section>
-      
-      
-                    </div>
-      
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+						</div>
+					<div class="col-2 col-md-0"></div>
+					<div class="col-12 col-xl-4 col-lg-6 col-md-4">
+						<img class="img-fluid"
+							src="https://res.cloudinary.com/biggworks/image/upload/v1684737295/CAREER_HERO_igfawf.png"
+							alt="" />
+					</div>
+
+			</div>
+			
+	  </div>
     </section>
 
 		<!-- <section class="wrapper bg-linear-gradient-career">
@@ -262,7 +180,7 @@
 					  </p>
 					</div>
 				<div class="grid">
-					<div class="row my-2 offset-1 offset-xl-1 offset-md-0 mb-4">
+					<div class="row my-2 offset-1 offset-xl-1 offset-md-0 mb-6">
 						<div class="item col-md-5 col-xl-3 col-lg-3 mb-xl-12 col-4 mb-lg-12 mb-md-12 mb-10 ps-md-8 ps-xl-0">
 							<div class="card career-card-technology">
 								<div class="card-body">
@@ -311,16 +229,16 @@
 
 							</div>
 						</div>
-						</div>
-						<div class="row my-2 offset-1 offset-xl-1 offset-md-0 mb-4">
-						
+
+						<div class="col-xl-1 col-lg-1 col-md-1"></div>
+
 						<div class="item col-md-5 col-xl-3 col-lg-3 col-4 mb-xl-4 mb-lg-12 mb-md-4 mb-10 ps-xl-0">
 							<div class="card career-card-technology">
 								<div class="card-body">
 									<div class="text-center">
 
 
-										<h4 class="mb-xl-6 mb-lg-6 mb-xl-6 mb-md-6 pt-4 mb-6">{{$resource.section_six.car4.role}}</h4>
+										<h4 class="mb-xl-6 mb-lg-6 mb-xl-6 mb-md-6 pt-4 mb-6">{{$resource.section_six.card4.role}}</h4>
 										<p class="lead mb-xl-6 mb-lg-6 mb-md-6 mb-6">{{$resource.section_six.card4.status}}
 										</p>
 										<p class="lead">{{$resource.section_six.card4.career}}</p>
@@ -369,11 +287,11 @@
 		</section>
 
 
-		<section class="wrapper bg-light">
+		<section class="wrapper bg-light" id="mymodel">
 			<div class="container py-0 py-md-0 py-xl-4 mb-5">
 				<div class="row align-items-center">
 					<div class="col-xl-8 col-md-12 mx-auto text-center">
-					  <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4" id="mymodel">
+					  <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4" >
 						{{$resource.section_four.title}}            </h2>
 						<h1 class="display-1">
 						{{$resource.section_four.subtitle}}
@@ -1017,7 +935,7 @@
 					<div class="col-xl-3 col-lg-3 col-md-2 col-1"></div>
           <div class="col-xl-3 col-lg-3 col-md-3 ps-16">
 						<div class="d-flex justify-content-center pt-2" data-group="page-title-buttons" data-delay="600">
-							<span><a href="#myModal1" class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal">{{$resource.section_five.btn_view}}
+							<span><a href="" class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal">{{$resource.section_five.btn_view}}
                 </a></span
               >
             </div>

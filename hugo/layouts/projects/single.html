@@ -21,7 +21,7 @@
                             <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5">
                                 {{$resource.section_one.title}}
                             </h2>
-                            <h3 class="display-4 mb-6 mb-lg-10 mb-xl-10 mb-md-7 lh-sm">
+                            <h3 class="display-4 mb-6 lh-sm">
                                 {{$resource.section_one.subtitle}}
                             </h3>
                             <div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
@@ -34,11 +34,9 @@
                             <div id="myModal1" class="modal fade" tabindex="-1">
                                 <div class="modal-dialog modal-lg">
                                   <div class="modal-content">
-                                    <!-- <div class="modal-header"> -->
                                       <h4 class="modal-title text-center pt-6">{{$resource.section_one.modal_title}}
                                       </h4>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                    <!-- </div> -->
                                     <div class="modal-body">
                                       <section id="tabs" class="wrapper pt-0 pb-md-4">
                                         <div class="row">
@@ -139,26 +137,71 @@
         </section>
         <section class="wrapper">
             <div class="container px-0 px-xl-14 px-lg-14 px-md-0">
-                <p class="pt-lg-20_5 pt-md-8 pt-md-15 pt-0 px-5 text-justify">{{$resource.section_three.description}}
+                <p class="paragraph-project pt-lg-20_5 pt-md-8 pt-md-15 pt-0 px-5 text-justify">{{$resource.section_three.description}}
                 </p>
-                <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-0 mt-2 px-8">{{$resource.section_three.client}}</h4>
-                <ul class="unordered-list bullet-primary text-justify paragraph_justify px-xl-8 px-3">
-                    <li class="ms-4 pe-4">{{$resource.section_three.client1}}</li>
+                <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-0 mt-2 px-4_5">{{$resource.section_three.client}}</h4>
+                
+                <div class="content">
 
-                    {{ if $resource.section_three.client2 }}
-                    <li class="ms-4 pe-4">{{$resource.section_three.client2}}
+                  <div class="row-container mb-4">
+                      <img class="ps-5" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png" />
+                      <div class="points-project ms-3">{{$resource.section_three.client1}}</div>
+                  </div>
+                  
+                  {{ if $resource.section_three.client2 }}
+                  <div class="row-container mb-4">
+                    <img class="ps-5" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png" />
+                    <div class="points-project ms-3">{{$resource.section_three.client2}}</div>
+                  </div>
+                  {{ end }}
+                  
+                  {{ if $resource.section_three.client3 }}
+                  <div class="row-container mb-4">
+                    <img class="ps-5" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png" />
+                    <div class="points-project ms-3">{{$resource.section_three.client3}}</div>
+                  </div>
+                  {{ end }}
+                  
+                  {{ if $resource.section_three.client4 }}
+                  <div class="row-container mb-4">
+                    <img class="ps-5" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png" />
+                    <div class="points-project ms-3">{{$resource.section_three.client4}}</div>
+                  </div>
+                  {{ end }}
+                  
+                  {{ if $resource.section_three.client5 }}
+                  <div class="row-container mb-4">
+                    <img class="ps-5" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png" />
+                    <div class="points-project ms-3">{{$resource.section_three.client5}}</div>
+                  </div>
+                  {{ end }}
+                  
+                  {{ if $resource.section_three.client6 }}
+                  <div class="row-container mb-4">
+                    <img class="ps-5" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png" />
+                    <div class="points-project ms-3">{{$resource.section_three.client6}}</div>
+                  </div>
+                  {{ end }}
+                  
+                  {{ if $resource.section_three.client7 }}
+                  <div class="row-container mb-4">
+                    <img class="ps-5" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png" />
+                    <div class="points-project ms-3">{{$resource.section_three.client7}}</div>
+                  </div>
+                  {{ end }}
+                  
+                  {{ if $resource.section_three.client8 }}
+                  <div class="row-container mb-4">
+                    <img class="ps-5" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png" />
+                    <div class="points-project ms-3 ">{{$resource.section_three.client8}}</div>
+                  </div>
+                  {{ end }}
+                  
+                  <a href="#1" class="read-more read-more-project  ps-5">Read More <img class="ps-3" src="https://res.cloudinary.com/biggworks/image/upload/v1684996473/Vector_5_yl7o1f.png" alt=""/></a>
+                 
 
 
-                    </li>
-                    {{ end }}
-                    {{ if $resource.section_three.client3 }}
-                    <li class="ms-4 pe-4">{{$resource.section_three.client3}}
-
-
-                    </li>
-                    {{ end }}
-                    {{ if $resource.section_three.client4 }}
-                    <li class="ms-4 pe-4">{{$resource.section_three.client4}}
+</div>
 
 
 
@@ -167,23 +210,6 @@
 
 
 
-                    </li>
-                    {{ end }}
-
-                    {{ if $resource.section_three.client5 }}
-                    <li class="ms-4 pe-4">{{$resource.section_three.client5}}
-
-
-                    </li>
-                    {{ end }}
-                    {{ if $resource.section_three.client6 }}
-                    <li class="ms-4 pe-4">{{$resource.section_three.client6}}
-
-
-                    </li>
-                    {{ end }}
-                    {{ if $resource.section_three.client7 }}
-                    <li class="ms-4 pe-4">{{$resource.section_three.client7}}
 
 
 
@@ -192,22 +218,19 @@
 
 
 
-                    </li>
-                    {{ end }}
-                    {{ if $resource.section_three.client8 }}
-                    <li class="ms-4 pe-4">{{$resource.section_three.client8}}
 
 
 
 
 
 
+               
+                
+               
+                
+                
 
-
-                    </li>
-                    {{ end }}
-                </ul>
-                <div class="row g-0">
+                <div class="row g-0 mb-10">
                     <div class="col-1 col-lg-3 col-md-2 col-xl-3"></div>
                     <div class="col-lg-9 col-md-9 col-xl-9 col-10 pt-8">
 
@@ -227,50 +250,52 @@
                
               
                 <div class="row mb-6 mt-4">
-
-                    <div class="col-lg-2 col-xs-4 col-6 col-sm-4 mb-8 pl-10 mobile-text-center col-md-4"><img
+                  
+                    <div class="col-lg-1 col-xl-1 col-xs-4 col-6 col-sm-4 mb-8 mobile-text-center col-md-4 pe-15"><img
                             src="{{$resource.section_four.hardware.hardwareimage1}}" />
                     </div>
-                    <div class="col-lg-2 col-xs-4  col-6 col-sm-4 mb-8 col-md-4"><img
+                    <div class="col-lg-1 col-xl-1 col-xs-4  col-6 col-sm-4 mb-8 col-md-4 mx-5"><img
                             src="{{$resource.section_four.hardware.hardwareimage2}}" />
                     </div>
                     {{ if $resource.section_four.hardware.hardwareimage3}}
-                    <div class="col-lg-2 col-6 col-xs-4 mb-8 mobile-text-center col-md-4"><img
+                    <div class="col-lg-1 col-xl-1 col-6 col-xs-4 mb-8 mobile-text-center col-md-4 mx-5"><img
                             src="{{$resource.section_four.hardware.hardwareimage3}}" />
                     </div>
                     {{ end }}
                     {{ if $resource.section_four.hardware.hardwareimage4}}
-                    <div class="col-lg-2 col-6 mb-8 col-md-4"><img
+                    <div class="col-lg-1 col-xl-1 col-6 mb-8 col-md-4 mx-5 mobile-text-center"><img
                             src="{{$resource.section_four.hardware.hardwareimage4}}" />
                     </div>
                     {{ end }}
                     {{ if $resource.section_four.hardware.hardwareimage5}}
-                    <div class="col-lg-2 col-6 col-xs-4 mb-8 mobile-text-center col-md-4"><img
+                    <div class="col-lg-1 col-xl-1 col-6 col-xs-4 mb-8 mobile-text-center col-md-4 mx-5"><img
                             src="{{$resource.section_four.hardware.hardwareimage5}}" />
                     </div>
                     {{ end }}
                     {{ if $resource.section_four.hardware.hardwareimage6}}
-                    <div class="col-lg-2 col-6 mb-8 col-md-4"><img
+                    <div class="col-lg-1 col-xl-1 col-6 mb-8 col-md-4 mx-5"><img
                             src="{{$resource.section_four.hardware.hardwareimage6}}"/>
                     </div>
                     {{ end }}
                     {{ if $resource.section_four.hardware.hardwareimage7}}
-                    <div class="col-lg-2 col-6 col-md-4 mb-8 mobile-text-center col-md-4"><img
+                    <div class="col-lg-1 col-xl-1 col-6 col-md-4 mb-8 mobile-text-center col-md-4 mx-5"><img
                             src="{{$resource.section_four.hardware.hardwareimage7}}" />
                     </div>
                     {{ end }}
+
+                    <div class="col-1"></div>
                     {{ if $resource.section_four.hardware.hardwareimage8}}
-                    <div class="col-lg-2 col-6 mb-8 col-md-4"><img
+                    <div class="col-lg-1 col-xl-1 col-6 mb-8 col-md-4 pe-15"><img
                         src="{{$resource.section_four.hardware.hardwareimage8}}"/>
                     </div>
                     {{end }}
                     {{ if $resource.section_four.hardware.hardwareimage9}}
-                     <div class="col-lg-2 col-6 col-md-4 mb-8 mobile-text-center col-md-4"><img
+                     <div class="col-lg-1 col-xl-1 col-6 col-md-4 mb-8 mobile-text-center col-md-4 mx-5"><img
                         src="{{$resource.section_four.hardware.hardwareimage9}}" />
                      </div>
                      {{ end }}
                      {{ if $resource.section_four.hardware.hardwareimage10}}
-                     <div class="col-lg-2 col-6 col-md-4 mb-8 mobile-text-center col-md-4"><img
+                     <div class="col-lg-1 col-xl-1 col-6 col-md-4 mb-8 mobile-text-center col-md-4 mx-5"><img
                         src="{{$resource.section_four.hardware.hardwareimage10}}" />
                      </div>
                      {{ end }}
@@ -280,10 +305,10 @@
                 {{ if $resource.section_four.cloudserver }}
                 <h4 class="mb-6 mt-4 fw-semibold fw-semibold">{{$resource.section_four.cloudserver.cloudserverheading}}</h4>
                 <div class="row mt-4">
-                    <div class="col-6 col-lg-2  mb-4 mobile-text-center col-md-4"><img
+                    <div class="col-6 col-lg-2 mb-4 mobile-text-center col-md-4 pe-15"><img
                             src="{{$resource.section_four.cloudserver.cloudserverimage1}}" />
                     </div>
-                    <div class="col-6 col-lg-2  mb-4 col-md-4"><img src="{{$resource.section_four.cloudserver.cloudserverimage2}}" />
+                    <div class="col-6 col-lg-2 mb-4 col-md-4 mx-5"><img src="{{$resource.section_four.cloudserver.cloudserverimage2}}" />
                     </div>
 
                 </div>
@@ -294,16 +319,16 @@
                 <h4 class="mb-7 mt-4 fw-semibold fw-semibold">{{$resource.section_four.mobileapplications.mobileapplicationsheading}}</h4>
                 
                 <div class="row mb-7 mt-4">
-                    <div class="col-6 col-lg-2  mb-4 mobile-text-center col-md-4"><img
+                    <div class="col-6 col-lg-1 col-xl-1 mb-4 mobile-text-center col-md-4 pe-15"><img
                             src="{{$resource.section_four.mobileapplications.mobileapplicationsimage1}}" />
                     </div>
-                    <div class="col-6 col-lg-2  mb-4 col-md-4"><img
+                    <div class="col-6 col-lg-1 col-xl-1 mb-4 col-md-4 mx-5"><img
                             src="{{$resource.section_four.mobileapplications.mobileapplicationsimage2}}" />
                     </div>
-                    <div class="col-6 col-lg-2  mb-4 mobile-text-center col-md-4"><img
+                    <div class="col-6 col-lg-1 col-xl-1 mb-4 mobile-text-center col-md-4 mx-5"><img
                         src="{{$resource.section_four.mobileapplications.mobileapplicationsimage3}}" />
                 </div>
-                <div class="col-6 col-lg-2  mb-4 col-md-4"><img
+                <div class="col-6 col-lg-1 col-xl-1 mb-4 col-md-4 mx-5"><img
                         src="{{$resource.section_four.mobileapplications.mobileapplicationsimage4}}" />
                 </div>
 
@@ -312,13 +337,13 @@
                 {{ if $resource.section_four.webapplications }}
                 <h4 class="mb-6 mt-4 fw-semibold fw-semibold">{{$resource.section_four.webapplications.webapplicationsheading}}</h4>
                 <div class="row mt-4">
-                    <div class="col-lg-2 col-xs-4 col-6 col-sm-4 mb-8 pl-10 mobile-text-center col-md-4"><img
+                    <div class="col-lg-1 col-xl-1 col-xs-4 col-6 col-sm-4 mb-8 pl-10 mobile-text-center col-md-4 pe-15"><img
                         src="{{$resource.section_four.webapplications.webapplicationsimage1}}" />
                 </div>
-                <div class="col-lg-2 col-xs-4  col-6 col-sm-4 mb-8 col-md-4"><img
+                <div class="col-lg-1 col-xl-1 col-xs-4  col-6 col-sm-4 mb-8 col-md-4 mx-5"><img
                         src="{{$resource.section_four.webapplications.webapplicationsimage2}}" />
                 </div>
-                <div class="col-lg-2 col-6 col-xs-4 mb-8 mobile-text-center col-md-4"><img
+                <div class="col-lg-1 col-xl-1 col-6 col-xs-4 mb-8 mobile-text-center col-md-4 mx-5"><img
                         src="{{$resource.section_four.webapplications.webapplicationsimage3}}" />
                 </div>
                 </div>
@@ -333,33 +358,56 @@
                 <div class="col-12">
                     <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{$resource.section_five.title}}</h4>
 
-                    <ul class="unordered-list bullet-primary mb-4 paragraph_justify">
-                        <li class="ms-4 pe-4">{{$resource.section_five.point1}}
-                        </li>
-                        {{ if $resource.section_five.point2 }}
-                        <li class="ms-4 pe-4">{{$resource.section_five.point2}}
-                        </li>
-                        {{ end }}
-                        {{ if $resource.section_five.point3 }}
-                        <li class="ms-4 pe-4">{{$resource.section_five.point3}}
-                        </li>
-                        {{ end }}
-                        {{ if $resource.section_five.point4 }}
-                        <li class="ms-4 pe-4">{{$resource.section_five.point4}}
-                        </li>
-                        {{ end }}
-                        {{ if $resource.section_five.point5 }}
-                        <li class="ms-4 pe-4">{{$resource.section_five.point5}}
-                        </li>
-                        {{ end }}
 
+                    <div class="content">
 
+                    <div class="row-container mb-4">
+                      <img class="" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png"/>
+                      <div class="points-project ms-3">{{$resource.section_five.point1}}</div>
+      
+                    </div>
+                    {{ if $resource.section_five.point2 }}
 
+                    <div class="row-container mb-4">
+                      <img class="" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png"/>
+                      <div class="points-project ms-3">{{$resource.section_five.point2}}</div>
+      
+                    </div>
+                    {{ end }}
 
+                    {{ if $resource.section_five.point3 }}
 
+                    <div class="row-container mb-4">
+                      <img class="" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png"/>
+                      <div class="points-project ms-3">{{$resource.section_five.point3}}</div>
+      
+                    </div>
+                    {{ end }}
 
-                    </ul>
+                    {{ if $resource.section_five.point4 }}
 
+                    <div class="row-container mb-4">
+                      <img class="" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png"/>
+                      <div class="points-project ms-3">{{$resource.section_five.point4}}</div>
+      
+                    </div>
+                    {{ end }}
+
+                    {{ if $resource.section_five.point5 }}
+
+                    <div class="row-container mb-4">
+                      <img class="" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png"/>
+                      <div class="points-project ms-3">{{$resource.section_five.point5}}</div>
+      
+                    </div>
+                    {{ end }}
+                    <a href="#" class="read-more read-more-project">Read More <img class="ps-3" src="https://res.cloudinary.com/biggworks/image/upload/v1684996473/Vector_5_yl7o1f.png" alt=""/></a>
+
+                    </div>
+
+                    
+
+                   
                 </div>
             </div>
 
@@ -372,7 +420,7 @@
                     <div class="col-md-6 col-lg-8 text-justify">
                         <h4 class="mb-md-2 mt-xl-8 mt-lg-8 mt-4">{{$resource.section_six.title}}</h4>
 
-                        <p class="paragraph_justify mb-8 pt-3">{{$resource.section_six.description}}</p>
+                        <p class="points-project paragraph_justify mb-8 pt-3">{{$resource.section_six.description}}</p>
                     </div>
 
                     <div class="col-5 col-md-1 col-xl-1"></div>
@@ -389,22 +437,25 @@
 
         <section class="wrapper bg-linear-gradient">
             <div class="container  px-3 px-xl-14 px-lg-14 px-md-00">
-                <div class="row">
+            
+              
+              
+               <div class="row">
                     <div class="col-lg-6 col-md-6 col-12">
-                        <h3 class="display-6 mt-8 mt-lg-12 mt-xl-12 mt-md-12 mt- mb-6">
-                            {{$resource.section_seven.heading1}}</h3>
-                        <p class="mb-8 paragraph_justify">{{$resource.section_seven.description1}}</p>
+                        <p class="project-unlock mt-8 mt-lg-12 mt-xl-12 mt-md-12 mt- mb-6">
+                            {{$resource.section_seven.heading1}}</p>
+                            <p class="lead fs-lg mb-8 paragraph_justify">{{$resource.section_seven.description1}}</p>
                         <button type="button"  href="#myModal1" data-bs-toggle="modal"
                             class="btn btn-primary btn-lg rounded-0">{{$resource.section_seven.btn_talk_to_us}}</button>
                     </div>
                     <div class="col-1"></div>
                     <div class="col-lg-5 col-12 col-md-5">
-                        <h4 class="mb-4 mt-12 paragraph_justify">{{$resource.section_seven.heading2}}</h4>
-                        <p class="mb-4">{{$resource.section_seven.description2}}</p>
-                        <h4 class="mb-4">{{$resource.section_seven.heading3}}</h4>
-                        <p class="mb-4">{{$resource.section_seven.description3}}</p>
-                        <h4 class="mb-4">{{$resource.section_seven.heading4}}</h4>
-                        <p class="mb-8 mb-xl-12 mb-lg-12 mb-md-12">{{$resource.section_seven.description4}}</p>
+                        <p class="project-lates mb-4 mt-13 paragraph_justify">{{$resource.section_seven.heading2}}</p>
+                        <p class="project-stay mb-10">{{$resource.section_seven.description2}}</p>
+                        <p class="project-lates mb-4">{{$resource.section_seven.heading3}}</p>
+                        <p class="project-stay mb-10">{{$resource.section_seven.description3}}</p>
+                        <p class="project-lates mb-4">{{$resource.section_seven.heading4}}</p>
+                        <p class="project-stay mb-10 mb-xl-12 mb-lg-12 mb-md-12">{{$resource.section_seven.description4}}</p>
                     </div>
 
                 </div>
@@ -419,20 +470,20 @@
                         {{ if $resource.section_seven.prev_project}}
                         <a href="{{ $resource.section_seven.prev_link }}">
                             <button type="button"
-                                class="btn btn-outline-primary rounded-pill mt-8 mb-8">{{$resource.section_seven.prev_project}}</button>
+                                class="btn btn-outline-primary rounded-0 mt-8 mb-8">{{$resource.section_seven.prev_project}}</button>
                         </a>
                         {{ end }}
                         {{ if $resource.section_seven.next_project}}
-                        <a href="{{ $resource.section_seven.next_link }}">
+                        <a class="ps-4" href="{{ $resource.section_seven.next_link }}">
                             <button type="button"
-                                class="btn btn-outline-primary rounded-pill mt-8 mb-8">{{$resource.section_seven.next_project}}</button>
+                                class="btn btn-outline-primary rounded-0 mt-8 mb-8">{{$resource.section_seven.next_project}}</button>
                         </a>
                         {{ end }}
                     </div>
                     <aside class="col-md-3 col-lg-4 sidebar text-center text-md-end">
 
                         <button type="button"
-                            class="btn btn-primary btn-lg rounded-pill mt-8 mb-8 ms-20">{{$resource.section_seven.btn_share}}</button>
+                            class="btn btn-primary btn-lg rounded-0 mt-8 mb-8 ms-20">{{$resource.section_seven.btn_share}}</button>
 
 
 
@@ -490,6 +541,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous"></script>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var readMoreLinks = document.querySelectorAll('.read-more');
+        
+            readMoreLinks.forEach(function(readMoreLink) {
+              var rowContainers = readMoreLink.parentElement.querySelectorAll('.row-container');
+              var hiddenContainers = Array.from(rowContainers).slice(3);
+        
+              hiddenContainers.forEach(function(container) {
+                container.classList.add('hidden');
+              });
+        
+              if (hiddenContainers.length > 0) {
+                readMoreLink.style.display = 'block';
+              }
+        
+              readMoreLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                hiddenContainers.forEach(function(container) {
+                  container.classList.remove('hidden');
+                });
+        
+                readMoreLink.style.display = 'none';
+              });
+            });
+          });
+        </script>
 
     {{ partial "footer.html" . }} {{ partial "page-progress.html" . }}
 </body>
