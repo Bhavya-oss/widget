@@ -120,3 +120,50 @@ joinButton.addEventListener('click', function(e) {
   }
 });
 </script>
+<script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
+    authDomain: "biggworks-dd979.firebaseapp.com",
+    databaseURL: "https://biggworks-dd979-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "biggworks-dd979",
+    storageBucket: "biggworks-dd979.appspot.com",
+    messagingSenderId: "160882722753",
+    appId: "1:160882722753:web:f067b273803ff585359140",
+    measurementId: "G-377HKGT4RW"
+    };
+    firebase.initializeApp(firebaseConfig);
+    
+    let candidateInfo = firebase.database().ref("candidate");
+    
+    var application=document.getElementById("application");
+    
+    function saveRecordtoDatabase() {
+    console.log("saveRecordtoDatabase");
+    event.preventDefault();
+    let newCandidateInfo = candidateInfo.push();
+    
+    newCandidateInfo.set({
+      name: document.getElementById('form_name').value,
+      email: document.getElementById('form_email').value,
+      phone: document.getElementById('form_phone').value,
+      // position: document.getElementById('name').value
+      surname: document.getElementById('form_lastname').value,
+      message: document.getElementById('form_message').value
+     
+    });
+    }
+    </script>
+
+	<script>
+const emailInput = document.getElementById("email-input").value; // Assuming you have an input field with the id "email-input"
+
+const emailsRef = firebase.database().ref("emails");
+emailsRef.push().set({ email: emailInput })
+  .then(() => {
+    console.log("Email ID saved to Firebase database.");
+  })
+  .catch((error) => {
+    console.error("Error saving email ID:", error);
+  });
+
+	</script>

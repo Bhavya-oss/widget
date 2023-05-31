@@ -32,90 +32,91 @@
 
 
                             <div id="myModal1" class="modal fade" tabindex="-1">
-                                <div class="modal-dialog modal-lg">
-                                  <div class="modal-content">
-                                      <h4 class="modal-title text-center pt-6">{{$resource.section_one.modal_title}}
-                                      </h4>
-                                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                    <div class="modal-body">
-                                      <section id="tabs" class="wrapper pt-0 pb-md-4">
-                                        <div class="row">
-                                          <div class="col-lg-15">
-                                            
-                                            <div class="tab-content">
-                                              
-                      
-                                              <form class="contact-form" method="post" id="formContact" onsubmit="saveRecordtoDatabase()">
-                                                <div class="messages"></div>
-                                                <div class="controls">
-                                                  <div class="row gx-4">
-                                                    <div class="col-md-6">
-                                                      <div class="form-label-group mb-4">
-                                                        <input id="form_name" type="text" name="name" class="form-control"
-                                                          placeholder="Jane" required="required"
-                                                          data-error="First Name is required.">
-                                                        <label for="form_name">{{$resource.section_one.fname}}</label>
-                                                        <div class="help-block with-errors"></div>
-                                                      </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                      <div class="form-label-group mb-4">
-                                                        <input id="form_lastname" type="text" name="surname" class="form-control"
-                                                          placeholder="Doe" required="required"
-                                                          data-error="Last Name is required.">
-                                                        <label for="form_lastname">{{$resource.section_one.lastname}}</label>
-                                                        <div class="help-block with-errors"></div>
-                                                      </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                      <div class="form-label-group mb-4">
-                                                        <input id="form_email" type="email" name="email" class="form-control"
-                                                          placeholder="jane.doe@example.com" required="required"
-                                                          data-error="Valid email is required.">
-                                                        <label for="form_email">{{$resource.section_one.email}}</label>
-                                                        <div class="help-block with-errors"></div>
-                                                      </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                      <div class="form-label-group mb-4">
-                                                        <input id="form_phone" type="tel" name="phone" class="form-control"
-                                                          placeholder="Your phone number">
-                                                        <label for="form_phone">{{$resource.section_one.phone}}</label>
-                                                        <div class="help-block with-errors"></div>
-                                                      </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                      <div class="form-label-group mb-4">
-                                                        <textarea id="form_message" name="message" class="form-control"
-                                                          placeholder="Your message" rows="5" required="required"
-                                                          data-error="Message is required."></textarea>
-                                                        <label for="form_message">{{$resource.section_one.message}}</label>
-                                                        <div class="help-block with-errors"></div>
-                                                      </div>
-                                                    </div>
-                                                    <div class="col-8 col-xl-9 col-lg-9 col-md-7"></div>
-                                                    <div class="col-1">
-                                                      <input type="submit" class="btn btn-primary  rounded-0 btn-send mb-3"
-                                                        value="Send message">
-                                  
+                              <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                  <!-- <div class="modal-header"> -->
+                                  <h4 class="modal-title text-center pt-6">{{$resource.section_one.modal_title}}
+                                  </h4>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                  <!-- </div> -->
+                                  <div class="modal-body">
+                                    <section id="tabs" class="wrapper pt-0 pb-md-4">
+                                      <div class="row">
+                                        <div class="col-lg-15">
+              
+                                          <div class="tab-content">
+              
+              
+                                            <form class="contact-form" method="post" id="formContact"
+                                              onsubmit="saveRecordtoDatabase()">
+                                              <div class="messages"></div>
+                                              <div class="controls">
+                                                <div class="row gx-4">
+                                                  <div class="col-md-6">
+                                                    <div class="form-label-group mb-4">
+                                                      <input id="form_name" type="text" name="name" class="form-control"
+                                                        placeholder="Jane" required="required" data-error="First Name is required.">
+                                                      <label for="form_name">{{$resource.section_one.fname}}</label>
+                                                      <div class="help-block with-errors"></div>
                                                     </div>
                                                   </div>
-                                                </div>
-                                              </form>
-                                            </div>
+                                                  <div class="col-md-6">
+                                                    <div class="form-label-group mb-4">
+                                                      <input id="form_lastname" type="text" name="surname" class="form-control"
+                                                        placeholder="Doe" required="required" data-error="Last Name is required.">
+                                                      <label for="form_lastname">{{$resource.section_one.lastname}}</label>
+                                                      <div class="help-block with-errors"></div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <div class="form-label-group mb-4">
+                                                      <input id="form_email" type="email" name="email" class="form-control"
+                                                        placeholder="jane.doe@example.com" required="required"
+                                                        data-error="Valid email is required.">
+                                                      <label for="form_email">{{$resource.section_one.email}}</label>
+                                                      <div class="help-block with-errors"></div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <div class="form-label-group mb-4">
+                                                      <input id="form_phone" type="tel" name="phone" class="form-control"
+                                                        placeholder="Your phone number">
+                                                      <label for="form_phone">{{$resource.section_one.phone}}</label>
+                                                      <div class="help-block with-errors"></div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col-12">
+                                                    <div class="form-label-group mb-4">
+                                                      <textarea id="form_message" name="message" class="form-control"
+                                                        placeholder="Your message" rows="5" required="required"
+                                                        data-error="Message is required."></textarea>
+                                                      <label for="form_message">{{$resource.section_one.message}}</label>
+                                                      <div class="help-block with-errors"></div>
+                                                    </div>
+                                                  </div>
+                                                  <!-- <div class="col-2 col-xl-9 col-lg-9 col-md-7"></div> -->
+                                                  <div class="col-1">
+                                                    <input type="submit" class="btn btn-primary button-widthincrease rounded-0 btn-send mb-3"
+                                                      value="Send message">
+              
+                                                  </div>
+                                                <!-- </div> -->
+                                              </div>
+                                            </form>
                                           </div>
                                         </div>
-                      
-                      
-                      
-                                      </section>
-                      
-                      
-                                    </div>
-                      
+                                      </div>
+              
+              
+              
+                                    </section>
+              
+              
                                   </div>
+              
                                 </div>
                               </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -136,7 +137,7 @@
             </div>
         </section>
         <section class="wrapper">
-            <div class="container px-0 px-xl-14 px-lg-14 px-md-0">
+            <div class="container px-0 px-xl-12 px-lg-12 px-md-0">
                 <p class="pt-lg-20_5 pt-md-8 pt-md-15 pt-0 px-5 text-justify">{{$resource.section_three.description}}
                 </p>
                 <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-0 mt-2 px-4_5">{{$resource.section_three.client}}</h4>
@@ -231,10 +232,10 @@
                 
 
                 <div class="row g-0 mb-10">
-                    <div class="col-1 col-lg-3 col-md-2 col-xl-3"></div>
+                    <div class="col-1 col-lg-3 col-md-2 col-xl-2"></div>
                     <div class="col-lg-9 col-md-9 col-xl-9 col-10 pt-8">
 
-                        <img class="mobile-robust-tracking col-12 col-xl-8 col-lg-8 img-fluid"
+                        <img class="mobile-robust-tracking col-12 col-xl-12 col-lg-8 img-fluid"
                             src="{{$resource.section_three.image}}" alt="" />
                     </div>
                 </div>
@@ -251,51 +252,51 @@
               
                 <div class="row mt-4">
                   
-                    <div class="col-lg-1 col-xl-1 col-xs-4 col-6 col-sm-4 mb-8 mobile-text-center col-md-4 pe-15"><img
+                    <div class="col-lg-1 col-xl-1 col-xs-4 col-6 col-sm-4 mb-8 mobile-text-center col-md-4 pe-14"><img
                             src="{{$resource.section_four.hardware.hardwareimage1}}" />
                     </div>
-                    <div class="col-lg-1 col-xl-1 col-xs-4  col-6 col-sm-4 mb-8 col-md-4 mx-5"><img
+                    <div class="col-lg-1 col-xl-1 col-xs-4  col-6 col-sm-4 mb-8 col-md-4 mx-3"><img
                             src="{{$resource.section_four.hardware.hardwareimage2}}" />
                     </div>
                     {{ if $resource.section_four.hardware.hardwareimage3}}
-                    <div class="col-lg-1 col-xl-1 col-6 col-xs-4 mb-8 mobile-text-center col-md-4 mx-5"><img
+                    <div class="col-lg-1 col-xl-1 col-6 col-xs-4 mb-8 mobile-text-center col-md-4 mx-3"><img
                             src="{{$resource.section_four.hardware.hardwareimage3}}" />
                     </div>
                     {{ end }}
                     {{ if $resource.section_four.hardware.hardwareimage4}}
-                    <div class="col-lg-1 col-xl-1 col-6 mb-8 col-md-4 mx-5 mobile-text-center"><img
+                    <div class="col-lg-1 col-xl-1 col-6 mb-8 col-md-4 mx-3 mobile-text-center"><img
                             src="{{$resource.section_four.hardware.hardwareimage4}}" />
                     </div>
                     {{ end }}
                     {{ if $resource.section_four.hardware.hardwareimage5}}
-                    <div class="col-lg-1 col-xl-1 col-6 col-xs-4 mb-8 mobile-text-center col-md-4 mx-5"><img
+                    <div class="col-lg-1 col-xl-1 col-6 col-xs-4 mb-8 mobile-text-center col-md-4 mx-3"><img
                             src="{{$resource.section_four.hardware.hardwareimage5}}" />
                     </div>
                     {{ end }}
                     {{ if $resource.section_four.hardware.hardwareimage6}}
-                    <div class="col-lg-1 col-xl-1 col-6 mb-8 col-md-4 mx-5"><img
+                    <div class="col-lg-1 col-xl-1 col-6 mb-8 col-md-4 mx-3"><img
                             src="{{$resource.section_four.hardware.hardwareimage6}}"/>
                     </div>
                     {{ end }}
                     {{ if $resource.section_four.hardware.hardwareimage7}}
-                    <div class="col-lg-1 col-xl-1 col-6 col-md-4 mb-8 mobile-text-center col-md-4 mx-5"><img
+                    <div class="col-lg-1 col-xl-1 col-6 col-md-4 mb-8 mobile-text-center col-md-4 mx-3"><img
                             src="{{$resource.section_four.hardware.hardwareimage7}}" />
                     </div>
                     {{ end }}
 
-                    <div class="col-1"></div>
+                    <div class="col-3"></div>
                     {{ if $resource.section_four.hardware.hardwareimage8}}
-                    <div class="col-lg-1 col-xl-1 col-6 mb-6 col-md-4 pe-15"><img
+                    <div class="col-lg-1 col-xl-1 col-6 mb-6 col-md-4 pe-14"><img
                         src="{{$resource.section_four.hardware.hardwareimage8}}"/>
                     </div>
                     {{end }}
                     {{ if $resource.section_four.hardware.hardwareimage9}}
-                     <div class="col-lg-1 col-xl-1 col-6 col-md-4 mb-6 mobile-text-center col-md-4 mx-5"><img
+                     <div class="col-lg-1 col-xl-1 col-6 col-md-4 mb-6 mobile-text-center col-md-4 mx-3"><img
                         src="{{$resource.section_four.hardware.hardwareimage9}}" />
                      </div>
                      {{ end }}
                      {{ if $resource.section_four.hardware.hardwareimage10}}
-                     <div class="col-lg-1 col-xl-1 col-6 col-md-4 mb-6 mobile-text-center col-md-4 mx-5"><img
+                     <div class="col-lg-1 col-xl-1 col-6 col-md-4 mb-6 mobile-text-center col-md-4 mx-3"><img
                         src="{{$resource.section_four.hardware.hardwareimage10}}" />
                      </div>
                      {{ end }}
@@ -305,10 +306,10 @@
                 {{ if $resource.section_four.cloudserver }}
                 <h4 class="mt-4 mb-7 fw-semibold fw-semibold">{{$resource.section_four.cloudserver.cloudserverheading}}</h4>
                 <div class="row mt-4">
-                    <div class="col-6 col-lg-1 col-xl-1 mb-6 mobile-text-center col-md-4 pe-15"><img
+                    <div class="col-6 col-lg-1 col-xl-1 mb-6 mobile-text-center col-md-4 pe-14"><img
                             src="{{$resource.section_four.cloudserver.cloudserverimage1}}" />
                     </div>
-                    <div class="col-6 col-lg-2 mb-6 col-md-4 mx-5"><img src="{{$resource.section_four.cloudserver.cloudserverimage2}}" />
+                    <div class="col-6 col-lg-2 mb-6 col-md-4 mx-3"><img src="{{$resource.section_four.cloudserver.cloudserverimage2}}" />
                     </div>
 
                 </div>
@@ -319,16 +320,16 @@
                 <h4 class="mb-7 mt-4 fw-semibold fw-semibold">{{$resource.section_four.mobileapplications.mobileapplicationsheading}}</h4>
                 
                 <div class="row mt-4">
-                    <div class="col-6 col-lg-1 col-xl-1 mb-6 mobile-text-center col-md-4 pe-15"><img
+                    <div class="col-6 col-lg-1 col-xl-1 mb-6 mobile-text-center col-md-4 pe-14"><img
                             src="{{$resource.section_four.mobileapplications.mobileapplicationsimage1}}" />
                     </div>
-                    <div class="col-6 col-lg-1 col-xl-1 mb-6 col-md-4 mx-5"><img
+                    <div class="col-6 col-lg-1 col-xl-1 mb-6 col-md-4 mx-3"><img
                             src="{{$resource.section_four.mobileapplications.mobileapplicationsimage2}}" />
                     </div>
-                    <div class="col-6 col-lg-1 col-xl-1 mb-6 mobile-text-center col-md-4 mx-5"><img
+                    <div class="col-6 col-lg-1 col-xl-1 mb-6 mobile-text-center col-md-4 mx-3"><img
                         src="{{$resource.section_four.mobileapplications.mobileapplicationsimage3}}" />
                 </div>
-                <div class="col-6 col-lg-1 col-xl-1 mb-6 col-md-4 mx-5"><img
+                <div class="col-6 col-lg-1 col-xl-1 mb-6 col-md-4 mx-3"><img
                         src="{{$resource.section_four.mobileapplications.mobileapplicationsimage4}}" />
                 </div>
 
@@ -337,13 +338,13 @@
                 {{ if $resource.section_four.webapplications }}
                 <h4 class="mb-6 mt-4 fw-semibold fw-semibold">{{$resource.section_four.webapplications.webapplicationsheading}}</h4>
                 <div class="row mt-4">
-                    <div class="col-lg-1 col-xl-1 col-xs-4 col-6 col-sm-4 mb-6 pl-10 mobile-text-center col-md-4 pe-15"><img
+                    <div class="col-lg-1 col-xl-1 col-xs-4 col-6 col-sm-4 mb-6 pl-10 mobile-text-center col-md-4 pe-14"><img
                         src="{{$resource.section_four.webapplications.webapplicationsimage1}}" />
                 </div>
-                <div class="col-lg-1 col-xl-1 col-xs-4  col-6 col-sm-4 mb-6 col-md-4 mx-5"><img
+                <div class="col-lg-1 col-xl-1 col-xs-4  col-6 col-sm-4 mb-6 col-md-4 mx-3"><img
                         src="{{$resource.section_four.webapplications.webapplicationsimage2}}" />
                 </div>
-                <div class="col-lg-1 col-xl-1 col-6 col-xs-4 mb-6 mobile-text-center col-md-4 mx-5"><img
+                <div class="col-lg-1 col-xl-1 col-6 col-xs-4 mb-6 mobile-text-center col-md-4 mx-3"><img
                         src="{{$resource.section_four.webapplications.webapplicationsimage3}}" />
                 </div>
                 </div>
@@ -468,13 +469,13 @@
                 <div class="row gx-md-6 gy-3 gy-md-0">
                     <div class="col-md-6 col-lg-8 align-self-center text-center text-md-start navigation">
                         {{ if $resource.section_seven.prev_project}}
-                        <a href="{{ $resource.section_seven.prev_link }}">
+                        <a class="pe-4" href="{{ $resource.section_seven.prev_link }}">
                             <button type="button"
                                 class="btn btn-outline-primary rounded-0 mt-8 mb-8">{{$resource.section_seven.prev_project}}</button>
                         </a>
                         {{ end }}
                         {{ if $resource.section_seven.next_project}}
-                        <a class="ps-4" href="{{ $resource.section_seven.next_link }}">
+                        <a href="{{ $resource.section_seven.next_link }}">
                             <button type="button"
                                 class="btn btn-outline-primary rounded-0 mt-8 mb-8">{{$resource.section_seven.next_project}}</button>
                         </a>

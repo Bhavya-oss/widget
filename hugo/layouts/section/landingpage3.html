@@ -1,0 +1,655 @@
+{{ define "main" }}
+{{ $resource := getJSON "http://bw-strapi:1337/landingpage3" }}
+<!-- {{ printf "My data: %s"  $resource}} -->
+
+<body>
+	<div class="content-wrapper">
+		<header class="wrapper bg-gray">
+			{{ partial "nav.html" . }}
+			<!-- /.navbar -->
+		</header>
+		<!-- /header -->
+
+		
+        <section class="wrapper">
+            <div class="container mt-8">
+
+                <div class="row mb-12">
+                    <div class="col-12 col-md-6 col-xl-6 col-lg-6 mb-6">
+                        <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5 pt-15">
+                            MOBILE APPS
+                        </h2>
+                        <h1 class="display-1 mb-4">
+                            Get the right talent
+for the right job
+                        </h1>
+                        <p class="lead fs-lg text-left mb-7">
+                            Our team can help you build a big and
+impactful app that reaches your target
+audience.
+                        </p>
+
+                        <button type="button" class="btn btn-primary rounded-0" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Get in touch
+                        </button>
+
+
+              
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="pt-3 px-6" id="exampleModalLabel">We've got it all. Get in touch and
+                                    discover how we can support you.
+                                </h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body align-items-center">
+
+                                <form id="sub-form" class="gform"
+                                    action="https://script.google.com/macros/s/AKfycbwSUFF8rUFXktl1jBANVMG6wQuBW5bFNIg_HXh1/exec"
+                                    method="POST">
+                                    <div class="form-group mb-4">
+
+                                        <h6 class="mb-3 ">Full Name <span class="text-danger">*</span></h6>
+                                        <input class="form-control lb-lg" type="text" placeholder="Your name"
+                                            name="name" value="" required />
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <h6 class="mb-3">Email ID <span class="text-danger">*</span></h6>
+                                        <input class="form-control" type="email"
+                                            placeholder="Your e-mail address" name="email" value="" required />
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <h6 class="mb-3">Phone Number <span class="text-danger">*</span></h6>
+                                        <input class="form-control" type="text" placeholder="Your Phone Number"
+                                            name="company" value="" />
+                                    </div>
+
+
+                                    <div class="form-group mb-4">
+                                        <h6 class="mb-3">Select your project budget <span
+                                                class="text-danger">*</span></h6>
+                                        <div class="form-select-wrapper ">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option class="text-muted" hidden>Select your project budget
+                                                </option>
+                                                <option value="$10-30k">$10-30k</option>
+                                                <option value="$30-60k">$30-60k</option>
+                                                <option value="$60-100k">$60-100k</option>
+                                                <option value="$100k+">$100k+</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- <select class="form-control niceselect" placeholder="Select your project budget" name="budget">
+            <option class="text-muted" hidden>Select your project budget </option>
+        <option value="$10-30k">$10-30k</option>
+        <option value="$30-60k">$30-60k</option>
+        <option value="$60-100k">$60-100k</option>
+        <option value="$100k+">$100k+</option>
+        </select> -->
+
+                                    </div>
+                                    <!-- <div class="form-select-wrapper ">
+            <select class="form-select" aria-label="Default select example">
+                <option class="text-muted" hidden>Select your project budget </option>
+                <option value="$10-30k">$10-30k</option>
+        <option value="$30-60k">$30-60k</option>
+        <option value="$60-100k">$60-100k</option>
+        <option value="$100k+">$100k+</option>
+            </select>
+        </div> -->
+
+
+
+        
+
+                                    <div class="form-group mb-4">
+                                        <h6 class="mb-3">Please describe your project <span
+                                                class="text-danger">*</span></h6>
+                                        <textarea class="form-control expandable"
+                                            placeholder="Please describe your project"
+                                            name="project_description" rows="5"></textarea>
+                                    </div>
+                                    
+                                    <div class="d-flex" data-group="page-title-buttons" data-delay="600">
+                                        <span><a class="btn btn-primary rounded-0 mx-1">Send</a></span>
+                                    </div>
+                                </form>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                    </div>
+                    <!-- <div class="col-xl-1"></div> -->
+                    <div class="col-12 col-xl-6 col-lg-6 col-md-6">
+                        <img class="col-12 col-xl-12 col-lg-6 col-md-12 img-fluid"
+                            src="https://res.cloudinary.com/biggworks/image/upload/v1685508986/Group_11410_fji0y6.png"
+                            alt="" />
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="wrapper">
+            <div class="container card-container-landingpage">
+
+                <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+                    <div class="col-md-10 col-lg-10 col-xl-8 mx-auto text-center">
+                        <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
+                            SERVICE AND OFFERINGS
+                        </h2>
+                        <h1 class="display-1 mb-4">
+                            What we offer for mobile
+                            application development ?
+                        </h1>
+                    </div>
+                </div>
+                <div class="col-md-10 col-lg-8 col-xl-9 mx-auto text-center">
+
+                    <p class="lead fs-lg mb-12">
+                        Talents are not one-size-fits-all; this is the reason why we have bifurcated them into 3
+                        categories based on their level of experience, skills, professional certifications, demand
+                        for the role and the complexity of the responsibilities.
+                    </p>
+                </div>
+
+
+                <div class="grid mb-4">
+					<div class="row">
+						<div class="item col-md-6 col-xl-4 mb-10">
+							<div class="card about-image">
+								<div class="card-body">
+									
+									<h4 class="mb-4">Android mobile app development</h4>
+                <p class="mb-0">
+                    With years of experience in mobile app
+development, we provide inclusive
+mobile app development solutions for
+the Android operating system.
+                </p>
+
+								</div>
+
+							</div>
+						</div>
+						<div class="item col-md-6 col-xl-4 mb-10">
+							<div class="card about-image">
+								<div class="card-body">
+									
+									<h4 class="mb-4">IOS development</h4>
+									<p class="mb-0">Our expert team of iOS app developers
+                                        leverages modern technologies and
+                                        frameworks to build phenomenal
+                                        applications that help you take
+                                        advantage of the mobile opportunity.
+									</p>
+
+								</div>
+
+							</div>
+						</div>
+						<div class="item col-md-6 col-xl-4 mb-10">
+							<div class="card about-image">
+								<div class="card-body">
+									
+									<h4 class="mb-4">Cross-platform app <br>
+                                        development</h4>
+									<p class="mb-0"> Every project is overseen by an
+                                        experienced domain expert who will
+                                        manage the entire project and will be
+                                        your point of contact.</p>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+               
+               
+                
+               
+            </div>
+        </section>
+
+        <section class="our_process_new">
+            <div class="container container-desktoplandingpage pb-8">
+
+                <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+                    <div class="col-md-10 col-lg-10 col-xl-8 mx-auto text-center">
+                        <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
+                            SERVICE AND OFFERINGS
+                        </h2>
+                        <h1 class="display-1 mb-4">
+                            Our mobile application
+                            development process
+                        </h1>
+                    </div>
+                </div>
+                <div class="col-md-10 col-lg-8 col-xl-9 mx-auto text-center">
+
+                    <p class="lead fs-lg mb-12">
+                        Mobile development life cycle is majorly divided into 5 stages.
+                    </p>
+                </div>
+
+               
+                <div class="row pb-6 offset-1">
+                    <ul class="process_step">
+                        <li class="step_one">
+                            <div class="box_main">
+                            <div class="im_box">
+                                <img src="https://res.cloudinary.com/biggworks/image/upload/v1685510144/Group_11600_e12hka.png" alt="">
+                            </div>
+                            <div class="cnt_box">
+                                <p class="lead fs-lg">Analysis of requirement</p>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="step_two">
+                            <div class="box_main">
+                            <div class="im_box">
+                                <img src="https://res.cloudinary.com/biggworks/image/upload/v1685510123/Group_11604_cqog32.png" alt="">
+                            </div>
+                            <div class="cnt_box">
+                               
+                                <p class="lead fs-lg">Wireframing and designing</p>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="step_three">
+                            <div class="box_main">
+                            <div class="im_box">
+                                <img src="https://res.cloudinary.com/biggworks/image/upload/v1685510111/Group_11608_oi1u0i.png" alt="">
+                            </div>
+                            <div class="cnt_box">
+                                <p class="lead fs-lg">Development</p>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="step_four">
+                            <div class="box_main">
+                            <div class="im_box">
+                                <img src="https://res.cloudinary.com/biggworks/image/upload/v1685510093/Group_11609_ljtva5.png" alt="">
+                            </div>
+                            <div class="cnt_box">
+                                <p class="lead fs-lg">Testing</p>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="step_five">
+                            <div class="box_main">
+                            <div class="im_box">
+                                <img src="https://res.cloudinary.com/biggworks/image/upload/v1685510086/Group_11611_qep8ti.png" alt="">
+                            </div>
+                            <div class="cnt_box">
+                                <p class="lead fs-lg">Deployment</p>
+                            </div>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div
+                  class="d-flex justify-content-center"
+                  data-group="page-title-buttons"
+                  data-delay="600">
+                  <span
+                    ><a class="btn btn-primary rounded-0 mx-1"
+                      >Get in touch</a
+                    ></span
+                  >
+                </div> -->
+                <div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
+					<span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
+							data-bs-target="#exampleModal">Get in touch</a></span>
+				</div>
+            </div>
+        </section>
+
+        <section class="wrapper bg-linear-gradient">
+            <div class="container pb-4 pt-6">
+                <p class="project-unlock mb-xl-2 text-center">With Biggworks, hiring the top remote Indian talent is made easy</p>
+                <p class="lead fs-lg mb-8 text-center">
+                    Access the talent network of 50,000+ experts with 100+ skill sets
+                </p>
+                <div class="text-center">
+                    <img class="img-fluid" src="https://res.cloudinary.com/biggworks/image/upload/v1685511885/Group_11618_zixm15.png" alt=""/>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrapper">
+            <div class="container mt-8 mb-8">
+                
+                <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+                    <div class="col-md-10 col-lg-10 col-xl-8 mx-auto text-center">
+                        <p class="project-unlock pb-0">
+                            Why Choose Us?
+                        </p>
+                        
+
+                    <p class="lead fs-lg mb-6">
+                        We work with commitment and on-time delivery. With us, you can
+leverage from the following benefits
+                    </p>
+                </div>
+
+                <div class="row mb-xl-3 mb-md-5">
+                    <div class="col-1">
+                        <img class="ps-xl-11 ps-md-3"
+                          src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" />
+                      </div>
+                      <div class="col-3 landingpage-points">Access to the latest technology</div>
+                      <div class="col-1">
+                        <img class="ps-xl-11 ps-md-3"
+                          src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" />
+                      </div>
+                      <div class="col-3 landingpage-points pb-md-3 pb-xl-0">Expertise</div>
+                      <div class="col-1">
+                        <img class="ps-xl-11 ps-md-3"
+                          src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" />
+                      </div>
+                      <div class="col-3 landingpage-points">User-centric design</div>
+                </div>
+               
+                <div class="row mb-3 mb-md-5">
+                    <div class="col-1">
+                        <img class="ps-xl-11 ps-md-3"
+                          src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" />
+                      </div>
+                      <div class="col-3 landingpage-points">High-quality deliverables</div>
+                      <div class="col-1">
+                        <img class="ps-xl-11 ps-md-3"
+                          src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" />
+                      </div>
+                      <div class="col-3 landingpage-points pb-md-3 pb-xl-0">Time-saving</div>
+                      <div class="col-1">
+                        <img class="ps-xl-11 ps-md-3"
+                          src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" />
+                      </div>
+                      <div class="col-3 landingpage-points">Cross-platform development</div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-1">
+                        <img class="ps-xl-11 ps-md-3"
+                          src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" />
+                      </div>
+                      <div class="col-3 landingpage-points">Ongoing support and
+                        maintenance</div>
+                      <div class="col-1">
+                        <img class="ps-xl-11 ps-md-3"
+                          src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" />
+                      </div>
+                      <div class="col-3 landingpage-points pb-md-6 pb-xl-0">Cost-effective</div>
+                      <div class="col-1">
+                        <img class="ps-xl-11 ps-md-3"
+                          src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" />
+                      </div>
+                      <div class="col-3 landingpage-points pb-md-6 pb-xl-0">Security</div>
+                </div>
+
+                <!-- <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-xl-4 col-lg-4 col-12 col-md-12">
+                        <ul class="icon-list bullet-bg bullet-soft-primary">
+                            <h4 class="landingpage-points">
+                                <li><img class="pe-3"
+                                        src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"
+                                        alt="" />Access to the latest technology</li>
+                            </h4>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-12 col-md-12">
+                        <ul class="icon-list bullet-bg bullet-soft-primary">
+                            <h4 class="landingpage-points">
+                                <li class="ps-xl-4"><img class="pe-3"
+                                        src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"
+                                        alt="" /> Expertise</li>
+                            </h4>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-12 col-md-12">
+                        <ul class="icon-list bullet-bg bullet-soft-primary">
+                            <h4 class="landingpage-points">
+                                <li class="ps-xl-13"><img class="pe-3"
+                                        src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"
+                                        alt="" />User-centric design</li>
+                            </h4>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1"></div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-12">
+                        <ul class="icon-list bullet-bg bullet-soft-primary">
+                            <h4 class="landingpage-points">                                
+                                <li><img class="pe-3"
+                                        src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"
+                                        alt="" />High-quality deliverables</li>
+                            </h4>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-12 col-12">
+                        <ul class="icon-list bullet-bg bullet-soft-primary">
+                            <h4 class="landingpage-points">                               
+                                 <li class="ps-xl-4"><img class="pe-3"
+                                        src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"
+                                        alt="" />Time-saving</li>
+                            </h4>
+                          
+                        </ul>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-12">
+                        <ul class="icon-list bullet-bg bullet-soft-primary">
+                            <h4 class="landingpage-points">                               
+                                 <li class="ps-xl-13"><img class="pe-3"
+                                        src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"
+                                        alt="" />Cross-platform development</li>
+                            </h4>
+                          
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="row mb-8">
+                    <div class="col-1"></div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-12">
+                        <ul class="icon-list bullet-bg bullet-soft-primary">
+                            <h4 class="landingpage-points">                              
+                                  <li><img class="pe-3"
+                                        src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"
+                                        alt="" /> Ongoing support and
+                                        maintenance</li>
+                            </h4>
+                           
+                        </ul>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-12 col-12">
+                        <ul class="icon-list bullet-bg bullet-soft-primary">
+                            <h4 class="landingpage-points">                               
+                                 <li class="ps-xl-4"><img class="pe-3"
+                                        src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"
+                                        alt="" />Cost-effective</li>
+                            </h4>
+                           
+                            <h4>
+                        </ul>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-12">
+                        <ul class="icon-list bullet-bg bullet-soft-primary">
+                            <h4 class="landingpage-points">                              
+                                  <li class="ps-xl-13"><img class="pe-3"
+                                        src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"
+                                        alt="" /> Security</li>
+                            </h4>
+                          
+                            <h4>
+                        </ul>
+                    </div>
+                </div> -->
+
+               
+
+
+    <!-- <div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
+        <span><a class="btn btn-primary rounded-0 mx-1">Get in touch</a></span>
+    </div> -->
+    <div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
+        <span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">Get in touch</a></span>
+    </div>
+    </div>
+    </section>
+
+    <section class="wrapper">
+        <div class="container pt-8 pb-8">
+            <div class="row gy-10">
+                <div class="col-12 col-xl-6 col-lg-6 col-md-5">
+                    <p class="project-unlock mb-6">What our clients says about us</p>
+                    <div class="landingpage-card-client-says card mb-6">
+                        <div class="card-body">
+                            <p class="lead fs-lg mb-2 px-4">
+                                Biggworks gave me option to preserve the equity i
+                                had earned that would not have been feasible
+                                otherwise. without biggworks, my options would
+                                have expired and gone back to my former employer
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1 col-xl-1 col-lg-1 col-md-0"></div>
+                <div class="col-10 col-md-6 col-xl-4 col-lg-5 text-right pt-xl-13 pt-md-16 pt-lg-8 pt-4">
+                    <img class="col-10 col-md-12 landingpage-image img-fluid"
+                        src="https://res.cloudinary.com/biggworks/image/upload/v1685362420/smiling-redhead-man-with-laptop-looking-camera-cafe_1_htxnvw.png"
+                        alt="" />
+                </div>
+            </div>
+            <div class="row">
+                <!-- <div class="col-1 col-xl-1 col-md-1 col-lg-1 ps-md-5">
+                    
+                </div> -->
+                <div class="col-10 col-md-10 col-xl-6 col-lg-6 pt-xl-0 pt-md-0 pt-10">
+
+                    <div class="item pb-12">
+                        <!-- <blockquote class="icon icon-right"> -->
+                            <div class="background-blockquote">
+                            <h3 class=""><img class="pe-3" src="https://res.cloudinary.com/biggworks/image/upload/v1676265189/senior_fcwdlm.png"
+                                alt="" />  <span>senior software engineer</span></h3>
+                            <p class="ps-11_5">San Fracisco, California</p>
+                        </div>
+                            <div class="blockquote-details ps-20">
+
+                            </div>
+                        <!-- </blockquote> -->
+                    </div>
+
+                </div>
+            </div>
+            <div class="d-flex" data-group="page-title-buttons" data-delay="600">
+                <span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">Discover what we can do for you</a></span>
+            </div>
+
+
+
+        </div>
+    </section>
+   
+    
+    <section class="wrapper bg-linear-gradient">
+        <div class="container pb-10">
+        <div class="row text-left">
+            <div class="col-md-10 col-lg-10 col-xl-12 col-xxl-6 text-left">
+
+                <h4 class="mb-4 pt-6">
+                    How can we help you?
+                </h4>
+                <p class="lead fs-lg mb-6">
+                    Get in touch and let's find out how we can curate our
+                    offerings to match your organization's needs.
+                </p>
+                <div class="d-flex" data-group="page-title-buttons" data-delay="600">
+                    <span><a class="btn btn-primary rounded-0" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Get in touch</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+		
+	</div>
+	</div>
+
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+
+	<script>
+		const firebaseConfig = {
+			apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
+			authDomain: "biggworks-dd979.firebaseapp.com",
+			databaseURL: "https://biggworks-dd979-default-rtdb.asia-southeast1.firebasedatabase.app",
+			projectId: "biggworks-dd979",
+			storageBucket: "biggworks-dd979.appspot.com",
+			messagingSenderId: "160882722753",
+			appId: "1:160882722753:web:f067b273803ff585359140",
+			measurementId: "G-377HKGT4RW"
+		};
+		firebase.initializeApp(firebaseConfig);
+
+		let candidateInfo = firebase.database().ref("candidate");
+
+		var application = document.getElementById("application");
+
+		function saveRecordtoDatabase() {
+			console.log("saveRecordtoDatabase");
+			event.preventDefault();
+			let newCandidateInfo = candidateInfo.push();
+
+			newCandidateInfo.set({
+				name: document.getElementById('form-name').value,
+				email: document.getElementById('form_email').value,
+				phone: document.getElementById('form_phone').value,
+				position: document.getElementById('form_position').value
+
+			});
+		}
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+		crossorigin="anonymous"></script>
+
+	<!-- </div> -->
+	<!-- /.content-wrapper -->
+	{{ partial "footer.html" . }} {{ partial "page-progress.html" . }}
+</body>
+{{ end }}

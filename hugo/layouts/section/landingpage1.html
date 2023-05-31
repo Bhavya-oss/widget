@@ -1,0 +1,685 @@
+{{ define "main" }}
+{{ $resource := getJSON "http://bw-strapi:1337/landingpage1" }}
+<!-- {{ printf "My data: %s"  $resource}} -->
+
+<body>
+	<div class="content-wrapper">
+		<header class="wrapper bg-gray">
+			{{ partial "nav.html" . }}
+			<!-- /.navbar -->
+		</header>
+		<!-- /header -->
+
+		<section class="wrapper">
+			<div class="container mt-13 pb-xl-10">
+				<div class="row mb-18 mb-md-12">
+					<div class="col-12 col-md-6 col-xl-6 col-lg-6 mb-6">
+						<h2
+								class="fs-16 fw-normal ls-3x text-uppercase mb-5 mb-md-5 mb-xl-5 mb-lg-5">
+                IOT DEVELOPMENT
+              </h2>
+						<h1 class="display-1 mb-4 mb-lg-5 mb-xl-5 ">
+                            "Innovating the future of IoT, today."
+                            
+						</h1>
+			<p class="lead fs-lg text-left mb-7 ">
+                "Together, we forge the future by crafting innovative experiences and cutting-edge products."
+              </p>
+						<button type="button" class="btn btn-primary rounded-0" data-bs-toggle="modal"
+							data-bs-target="#exampleModal">
+							Talk to Us
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel"
+							aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h4 class="pt-3 px-6" id="exampleModalLabel">We've got it all. Get in touch and
+											discover how we can support you.
+										</h4>
+										<button type="button" class="btn-close" data-bs-dismiss="modal"
+											aria-label="Close"></button>
+									</div>
+									<div class="modal-body align-items-center">
+
+										<form id="sub-form" class="gform"
+											action="https://script.google.com/macros/s/AKfycbwSUFF8rUFXktl1jBANVMG6wQuBW5bFNIg_HXh1/exec"
+											method="POST">
+											<div class="form-group mb-4">
+
+												<h6 class="mb-3 ">Full Name <span class="text-danger">*</span></h6>
+												<input class="form-control lb-lg" type="text" placeholder="Your name"
+													name="name" value="" required />
+											</div>
+											<div class="form-group mb-4">
+												<h6 class="mb-3">Email ID <span class="text-danger">*</span></h6>
+												<input class="form-control" type="email"
+													placeholder="Your e-mail address" name="email" value="" required />
+											</div>
+											<div class="form-group mb-4">
+												<h6 class="mb-3">Phone Number <span class="text-danger">*</span></h6>
+												<input class="form-control" type="text" placeholder="Your Phone Number"
+													name="company" value="" />
+											</div>
+
+
+											<div class="form-group mb-4">
+												<h6 class="mb-3">Select your project budget <span
+														class="text-danger">*</span></h6>
+												<div class="form-select-wrapper ">
+													<select class="form-select" aria-label="Default select example">
+														<option class="text-muted" hidden>Select your project budget
+														</option>
+														<option value="$10-30k">$10-30k</option>
+														<option value="$30-60k">$30-60k</option>
+														<option value="$60-100k">$60-100k</option>
+														<option value="$100k+">$100k+</option>
+													</select>
+												</div>
+
+												<!-- <select class="form-control niceselect" placeholder="Select your project budget" name="budget">
+					<option class="text-muted" hidden>Select your project budget </option>
+				<option value="$10-30k">$10-30k</option>
+				<option value="$30-60k">$30-60k</option>
+				<option value="$60-100k">$60-100k</option>
+				<option value="$100k+">$100k+</option>
+				</select> -->
+
+											</div>
+											<!-- <div class="form-select-wrapper ">
+					<select class="form-select" aria-label="Default select example">
+						<option class="text-muted" hidden>Select your project budget </option>
+						<option value="$10-30k">$10-30k</option>
+				<option value="$30-60k">$30-60k</option>
+				<option value="$60-100k">$60-100k</option>
+				<option value="$100k+">$100k+</option>
+					</select>
+				</div> -->
+
+
+
+				
+
+											<div class="form-group mb-4">
+												<h6 class="mb-3">Please describe your project <span
+														class="text-danger">*</span></h6>
+												<textarea class="form-control expandable"
+													placeholder="Please describe your project"
+													name="project_description" rows="5"></textarea>
+											</div>
+											
+											<div class="d-flex" data-group="page-title-buttons" data-delay="600">
+												<span><a class="btn btn-primary rounded-0 mx-1">Send</a></span>
+											</div>
+										</form>
+										
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-xl-6 col-lg-6 col-md-6">
+						<img class="col-12 col-xl-12 col-lg-6 col-md-12 img-fluid"
+							src="https://res.cloudinary.com/biggworks/image/upload/v1676265266/hero_landing_zytjzq.png"
+							alt="" />
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- <section class="wrapper">
+<div class="container">
+	<div class="row align-items-center">
+	<h3 class="display-4 mb-4 text-center">Get digital solutions for all business stages</h3>
+						<p class="lead fs-lg mb-12 text-">
+							We will assist you in defining and designing your smart product, and aim to
+							launch an MVP or first version with key features within a period of 3 to 6 months.
+						</p>
+					</div>
+</div>
+</section> -->
+
+
+
+		<section class="wrapper">
+			<div class="container pt-xl-6 pt-md-0">
+				
+                <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+					<div class="col-md-10 col-lg-12 col-xl-8 mx-auto text-center">
+					  <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
+
+IOT DEVELOPMENT                    </h2>
+				  <h1 class="display-1 mb-4">
+                    Get digital solutions for all business stages				  </h1>
+				</div>
+            </div>
+            <div class="col-md-10 col-lg-10 col-xl-9 mx-auto text-center">
+             
+
+            <p class="lead fs-lg mb-12">
+                We will assist you in defining and designing your smart product, and aim to
+                launch an MVP or first version with key features within a period of 3 to 6 months.				  </p>
+				</div>
+						
+					
+
+				<div class="row mb-4">
+					<!-- <div class="col-xl-1 col-lg-1 col-md-1 col-0"></div> -->
+					<div class="col-xl-1 col-md-1 col-lg-1 ps-md-0 ps-xl-8 ps-lg-13 ps-5">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1685355091/Group_2_elovcd.png" alt="" />
+					</div>
+					<div class="col-11 col-xl-5 col-lg-4 col-md-5">
+						<h4 class="pe-md-8">IoT Hardware architecture</h4>
+						<p class="mb-10">Smart product design and development. Expert advice on
+							SoC or IoT boards like Raspberry-Pi and BeagleBone.
+							Comprehensive firmware development and IoT ecosystem
+							support.</p>
+					</div>
+					<div class="col-md-1 col-xl-1 col-lg-1 ps-md-0 ps-xl-6 ps-lg-13 ps-5">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1685355076/outline_1_iqeqza.png" alt="" />
+					</div>
+					<div class="col-11 col-xl-5 col-lg-4 col-md-5">
+						<h4>IoT embedded software</h4>
+						<p class="mb-4">We will assist you in defining and designing your smart
+							product, and aim to launch an MVP or first version with
+							key features within a period of 3 to 6 months.</p>
+					</div>
+
+
+				</div>
+
+
+				<div class="row mb-4">
+					<!-- <div class="col-xl-1 col-lg-1 col-md-1 col-0"></div> -->
+					<div class="col-xl-1 col-md-1 col-lg-1 ps-md-0 ps-xl-8 ps-lg-13 ps-5">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1685355059/Group_3_aukl1d.png" alt="" />
+					</div>
+					<div class="col-10 col-xl-5 col-lg-4 col-md-5">
+						<h4 class="pe-md-8">IoT Connectivity implementation</h4>
+						<p class="mb-10">Expert IoT system engineers adding secure wireless
+							control and connectivity (cellular, Wi-Fi, RFID, GPS,
+							Bluetooth) to your product.</p>
+					</div>
+					<!-- <div class="col-md-1"></div> -->
+					<div class="col-md-1 col-xl-1 col-lg-1 ps-md-0 ps-xl-6 ps-lg-13 ps-5">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1685355051/5d232803be882773b4acea47_programming.svg_1_wq73sz.png" alt="" />
+					</div>
+					<div class="col-11 col-xl-5 col-lg-4 col-md-5 ps-10 ps-md-0 ps-lg-0 ps-xl-0">
+						<h4>Rapid prototyping</h4>
+						<p class="mb-4">Fast-track your IoT product and move from concept
+							idea to a field-deployable working prototype.</p>
+					</div>
+
+
+				</div>
+
+
+				<div class="row">
+					<!-- <div class="col-xl-1 col-lg-1 col-md-1 col-0"></div> -->
+					<div class="col-xl-1 col-md-1 col-lg-1 ps-md-0 ps-xl-6 ps-lg-13">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1685355043/Page-1_exzqzu.png" alt="" />
+					</div>
+					<div class="col-11 col-xl-5 col-lg-4 col-md-5 ps-md-0 ps-lg-0 ps-xl-0">
+						<h4 class="pe-md-8">IoT mobile and web development</h4>
+						<p class="mb-10">We specialize in building stunning IoT mobile apps for
+							enterprises. Designing and developing bespoke solutions,
+							analyzing data to drive business growth through informed
+							decisions.</p>
+					</div>
+					<!-- <div class="col-md-1"></div> -->
+					<div class="col-md-1 col-xl-1 col-lg-1 ps-md-0 ps-xl-6 ps-lg-13">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1685355033/Group_11459_1_noeyfp.png" alt="" />
+					</div>
+					<div class="col-11 col-xl-5 col-lg-4 col-md-5 ps-md-0 ps-lg-0 ps-xl-0">
+						<h4>Design for Manufacturing</h4>
+						<p class="mb-4">Design for Manufacturing (DFM) for cost-effective,
+							high-quality product design, compliant with standards
+							and built to withstand environment.</p>
+					</div>
+
+
+				</div>
+
+
+
+				<div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
+					<span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
+							data-bs-target="#exampleModal">Get in touch</a></span>
+				</div>
+			</div>
+
+		</section>
+
+
+		<section class="wrapper">
+			<div class="container mb-6 pt-6">
+				<div class="row mt-9">
+					<div class="col-12 col-xl-5 col-lg-5 col-md-12">
+						<h3 class="mb-4">What You Get During Your 7-Day Trial</h3>
+
+						<div class="row gy-2 mb-6 mb-md-8">
+							<div class="col-1">
+							  <img class=""
+								src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" />
+							</div>
+							<div class="col-11">Access to All Features (Geo-Targeting,
+								Video Popups, A/B Testing, Gamification)</div>
+							<div class="col-1"><img class=""
+								src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" /></div>
+							<div class="col-11">Unlimited Number of Campaigns</div>
+			
+							<div class="col-1"><img class=""
+								src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" /></div>
+							<div class="col-11">Unlimited Number of Domains</div>
+
+							<div class="col-1"><img class=""
+								src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" /></div>
+							<div class="col-11">Dedicated Success Manager</div>
+
+							<div class="col-1"><img class=""
+								src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" /></div>
+							<div class="col-11">One Custom-Made Campaign Made By One
+								of Our Conversion Experts</div>
+			
+						  </div>
+
+						<!-- <ul class="icon-list bullet-bg bullet-soft-primary">
+							<li><i class="uil uil-check"></i>Access to All Features (Geo-Targeting,
+								Video Popups, A/B Testing, Gamification)</li>
+							<li><i class="uil uil-check"></i>Unlimited Number of Campaigns</li>
+							<li><i class="uil uil-check"></i>Unlimited Number of Domains</li>
+							<li><i class="uil uil-check"></i>Dedicated Success Manager</li>
+							<li class="mb-10"><i class="uil uil-check"></i>One Custom-Made Campaign Made By One
+								of Our Conversion Experts</li>
+
+						</ul> -->
+						<h3 class="mb-1">Trusted by 2,500 Brands Worldwide</h3>
+						<div class="col-md-3"></div>
+						<div class="col-xl-12 col-lg-5 col-12 col-md-8">
+							<img class="col-12 col-lg-11 col-xl-11 col-md-12 text-center"
+								src="https://res.cloudinary.com/biggworks/image/upload/v1676265203/clients_aoi50t.png"
+								alt="" />
+						</div>
+					</div>
+					<div class="col-1 col-xl-1 col-lg-1 col-md-0"></div>
+					<div class="col-12 col-xl-6 col-lg-6 col-md-12">
+						<div class="about-image card">
+							<div class="card-body-landingpage card-body">
+								<p class="mb-6 project-unlock">Why biggworks for IoT Development?</p>
+								<div class="row mb-4">
+									<div class="col-1 col-md-1 pe-md-7">
+										<img src="https://res.cloudinary.com/biggworks/image/upload/v1685425901/Delivery_Time_1_hr1hyq.png"
+											alt="" />
+									</div>
+									<div class="col-11 col-xl-10 col-lg-10 col-md-10">
+										<p class="project-lates ps-6 ps-xl-4 ps-lg-4 ps-md-4">Quicker Turnaround</p>
+										<p class="ps-6 ps-xl-4 ps-lg-4 ps-md-4 mb-6">Launch your proof of concept or
+											minimum viable
+											products with our time-efficient IoT development
+											services.</p>
+									</div>
+								</div>
+								<div class="row mb-4">
+									<div class="col-1 col-md-1 pe-md-7">
+										<img src="https://res.cloudinary.com/biggworks/image/upload/v1685354480/Protect_1_maoqng.png"
+											alt="" />
+									</div>
+									<div class="col-10 col-xl-10 col-lg-10 col-md-10">
+										<p class="project-lates ps-6 ps-xl-4 ps-lg-4 ps-md-4">Uncompromised Security</p>
+										<p class="ps-6 ps-xl-4 ps-lg-4 ps-md-4 mb-6">We use advanced security protocols
+											and tools to ensure
+											secure data collection and management.</p>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-1 col-md-1 pe-md-7">
+										<img src="https://res.cloudinary.com/biggworks/image/upload/v1685354451/Life_Cycle_1_cmm6fq.png"
+											alt="" />
+									</div>
+									<div class="col-10 col-xl-10 col-lg-10 col-md-10">
+										<p class="project-lates ps-6 ps-xl-4 ps-lg-4 ps-md-4">Complete Lifecycle Support</p>
+										<p class="ps-6 ps-xl-4 ps-lg-4 ps-md-4 mb-1">Our IoT development services are
+											tailored to offer you a
+											full-fledged development experience.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<section class="wrapper bg-linear-gradient">
+			<div class="container mt-10 pb-4">
+
+
+				<h4 class="mb-4 pt-12">Have an awesome IoT development idea?</h4>
+				<p class="lead fs-lg mb-6">
+					But don't know how to get started? Hire our expert loT
+					developers to build you the smart apps
+				</p>
+				<div class="d-flex pb-6" data-group="page-title-buttons" data-delay="600">
+					<span><a class="btn btn-primary rounded-0" data-bs-toggle="modal"
+							data-bs-target="#exampleModal">Contact us today</a></span>
+				</div>
+			</div>
+		</section>
+		<section class="wrapper">
+			<div class="container pt-8">
+				<div class="row gy-10">
+					<div class="col-12 col-xl-6 col-lg-6 col-md-5">
+						<p class="project-unlock mb-6">What our clients says about us</p>
+						<div class="landingpage-card-client-says card mb-6">
+							<div class="card-body">
+								<p class="lead fs-lg mb-2 px-4">
+									Biggworks gave me option to preserve the equity i
+									had earned that would not have been feasible
+									otherwise. without biggworks, my options would
+									have expired and gone back to my former employer
+								</p>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-1 col-xl-1 col-lg-1 col-md-0"></div>
+					<div class="col-10 col-md-6 col-xl-4 col-lg-5 text-right pt-xl-13 pt-md-16 pt-lg-8 pt-4">
+						<img class="col-10 col-md-12 landingpage-image img-fluid"
+							src="https://res.cloudinary.com/biggworks/image/upload/v1685362420/smiling-redhead-man-with-laptop-looking-camera-cafe_1_htxnvw.png"
+							alt="" />
+					</div>
+				</div>
+				<div class="row">
+					<!-- <div class="col-1 col-xl-1 col-md-1 col-lg-1 ps-md-5">
+						
+					</div> -->
+					<div class="col-10 col-md-10 col-xl-6 col-lg-6 pt-xl-0 pt-md-0 pt-10">
+
+						<div class="item pb-12">
+							<!-- <blockquote class="icon icon-right"> -->
+                                <div class="background-blockquote">
+								<h3 class=""><img class="pe-3" src="https://res.cloudinary.com/biggworks/image/upload/v1676265189/senior_fcwdlm.png"
+									alt="" />  <span>senior software engineer</span></h3>
+								<p class="ps-11_5">San Fracisco, California</p>
+                            </div>
+								<div class="blockquote-details ps-20">
+
+								</div>
+							<!-- </blockquote> -->
+						</div>
+
+					</div>
+				</div>
+				<div class="d-flex" data-group="page-title-buttons" data-delay="600">
+					<span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
+							data-bs-target="#exampleModal">Discover what we can do for you</a></span>
+				</div>
+
+
+
+			</div>
+		</section>
+		
+		<section class="wrapper bg-linear-gradient">
+			<div class="container pb-3 mt-6">
+				<div class="row align-items-center">
+					<!-- <div class="col-12"> -->
+						<p class="project-unlock mb-0 mt-8 text-center">Technology that we work with</p>
+						<ul class="nav nav-tab-tabs nav-tab-pills text-center">
+							<li class="nav-item"> <a class="nav-tab-link active pt-6 pb-0 ps-xl-22 pe-xl-14" data-bs-toggle="tab"
+									href="#tab1-1"><span><p class="lead fs-lg">Connectivity &<br> Protocols</p></span></a> </li>
+							<li class="nav-item"> <a class="nav-tab-link pt-6 pb-0 pe-xl-14" data-bs-toggle="tab"
+									href="#tab1-2"></i><span><p class="lead fs-lg">Hardware</p></span></a> </li>
+							<li class="nav-item"> <a class="nav-tab-link pt-6 pb-0" data-bs-toggle="tab"
+									href="#tab1-3"><span><p class="lead fs-lg">IoT Framework and <br>programming</p></span></a> </li>
+							<!-- <li class="nav-item"> <a class="nav-tab-link pt-6 pb-6 px-xl-12" data-bs-toggle="tab"
+									href="#tab1-4"><span>Cloud and Devops</span></a> </li> -->
+
+						</ul>
+					<!-- </div> -->
+					<div class="tab-content">
+						<div class="tab-pane fade show active" id="tab1-1">
+							<img class="px-xl-20 px-lg-22 px-md-0 col-xl-12 col-md-12 col-12" src="https://res.cloudinary.com/biggworks/image/upload/v1677504305/Frame_427320780_1_qg4vqn.png" alt=""/>
+						</div>
+						<!--/.tab-pane -->
+						<div class="tab-pane fade" id="tab1-2">
+							<img class="text-center  px-xl-20 col-xl-12 col-md-12 col-12" src="https://res.cloudinary.com/biggworks/image/upload/v1677500407/Frame_427320781_ziy30k.png" alt=""/>
+						</div>
+						<!--/.tab-pane -->
+						<div class="tab-pane fade" id="tab1-3">
+							<img class="text-center px-xl-22 px-md-12 col-xl-12 col-md-12 col-12" src="https://res.cloudinary.com/biggworks/image/upload/v1677500397/Frame_427320782_utnlvm.png" alt=""/>
+						</div>
+						<!--/.tab-pane -->
+					</div>
+				</div>
+
+</div>
+</section>
+		<section class="wrapper">
+			<div class="container mb-10 pt-10">
+                <div class="row align-items-center">
+                    <div class="col-xl-12 col-md-12 mx-auto text-center">
+                      <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
+                        we develop          </h2>
+                        <h1 class="display-1">
+                            End to end Product Development
+                        </h1>
+                      </div>
+                      <div class="col-xl-8 col-md-12 mx-auto text-center">
+          
+                      <p class="lead fs-lg mb-8">
+                        Every stage of the product requires a unique set of experts to collaborate
+                        closely and build a user centric product that resolves specific business
+                        challenges.
+                      </p>
+                    </div>
+                  </div>				<div class="row mb-xl-4 mb-12">
+					<div class="col-3 col-xl-1 col-lg-1 col-md-1 ps-xl-8 ps-lg-8 ps-md-0 ps-4">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1685354416/Smart-Wearables.svg_yovgmb.png"
+							alt="" />
+
+					</div>
+					<div class="col-7 col-xl-3 col-lg-3 col-md-3">
+						<p class="mt-4 landingpage_end_to_end">Smart Wearables </p>
+					</div>
+					<div class="col-3 col-xl-1 col-lg-1 col-md-1 ps-xl-8 ps-lg-8 ps-md-0">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1685354358/Health-Monitoring-Devices.svg_bwbnnv.png"
+							alt="" />
+					</div>
+					<div class="col-7 col-xl-3 col-lg-3 col-md-3">
+						<p class="mt-4 landingpage_end_to_end">Health Monitoring Devices</p>
+					</div>
+					<div class="col-3 col-xl-1 col-lg-1 col-md-1 ps-xl-8 ps-lg-8 ps-md-0">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1685354317/Sports-Activity-Trackers.svg_nxfvig.png"
+							alt="" />
+					</div>
+					<div class="col-7 col-xl-3 col-md-3 col-lg-3">
+						<p class="mt-4 landingpage_end_to_end">Sports Activity Trackers</p>
+					</div>
+				</div>
+				<div class="row mb-xl-4 mb-12">
+					<div class="col-3 col-xl-1 col-lg-1 col-md-1 ps-xl-8 ps-lg-8 ps-md-0">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1685354404/Home-Automation-Controllers.svg_q65mls.png"
+							alt="" />
+
+					</div>
+					<div class="col-7 col-xl-3 col-md-3 col-lg-3">
+						<p class="mt-4 landingpage_end_to_end">Home Automation </p>
+					</div>
+					<div class="col-3 col-xl-1 col-md-1 col-lg-1 ps-xl-8 ps-lg-8 ps-md-0">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1685354349/Connected-Consumer-Products.svg_elwsyl.png"
+							alt="" />
+					</div>
+					<div class="col-7 col-xl-3 col-md-3 col-lg-3">
+						<p class="mt-4 landingpage_end_to_end">Connected Consumer Products</p>
+					</div>
+					<div class="col-3 col-xl-1 col-md-1 col-lg-1 ps-xl-8 ps-lg-8 ps-md-0">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1685354325/Security-Cameras.svg_u0pfot.png"
+							alt="" />
+					</div>
+					<div class="col-7 col-xl-3 col-lg-3 col-md-3">
+						<p class="mt-4 landingpage_end_to_end">Security Systems</p>
+					</div>
+				</div>
+				<div class="row mb-xl-0 mb-12">
+					<div class="col-3 col-xl-1 col-lg-1 col-md-1 ps-xl-8 ps-lg-8 ps-md-0">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1685354379/Environmental-Sensors.svg_owa2hv.png"
+							alt="" />
+
+					</div>
+					<div class="col-7 col-xl-3 col-lg-3 col-md-3">
+						<p class="mt-4 landingpage_end_to_end">Environmental Sensors</p>
+					</div>
+					<div class="col-3 col-xl-1 col-md-1 col-lg-1 ps-xl-8 ps-lg-8 ps-md-0">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1685354341/Connected-Production-Systems.svg_qvw7qe.png"
+							alt="" />
+					</div>
+					<div class="col-7 col-xl-3 col-md-3 col-lg-3">
+						<p class="mt-4 landingpage_end_to_end">Industry 4.0</p>
+					</div>
+					<div class="col-3 col-xl-1 col-md-1 col-lg-1 ps-xl-8 ps-lg-8 ps-md-0">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1685354308/Constrained-Sensor-Edge-Devices.svg_oinzrv.png"
+							alt="" />
+					</div>
+					<div class="col-7 col-xl-3 col-md-3 col-lg-3">
+						<p class="mt-4 landingpage_end_to_end">Constrained Sensor Edge Devices</p>
+					</div>
+				</div>
+				<div class="row mb-4">
+					<div class="col-3 col-xl-1 col-md-1 col-lg-1 ps-5  ps-lg-8 ps-md-0">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1685354368/Frame_196_tlohuk.png"
+							alt="" />
+
+					</div>
+					<div class="col-7 col-md-3 col-xl-3 col-lg-3 col-md-3 pe-5 ">
+						<p class="mt-4 landingpage_end_to_end">Automotive </p>
+					</div>
+					<div class="col-3 col-xl-1 col-md-1 col-lg-1 ps-6 ps-xl-7 ps-lg-8 ps-md-0">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1685354332/Frame_197_nguzrf.png"
+							alt="" />
+					</div>
+					<div class="col-7 col-xl-3 col-lg-3 col-md-3">
+						<p class="mt-4 landingpage_end_to_end">Asset Tracking</p>
+					</div>
+					<div class="col-3 col-xl-1 col-lg-1 col-md-1 ps-6 ps-md-0 ps-lg-8 text-center">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1685354302/Frame_198_senhyi.png"
+							alt="" />
+					</div>
+					<div class="col-7 col-xl-3 col-md-3 col-lg-3 mb-4">
+						<p class="mt-4 landingpage_end_to_end">Smart buildings and smart city</p>
+					</div>
+				</div>
+
+				<div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
+					<span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
+							data-bs-target="#exampleModal">Start a conversation</a></span>
+				</div>
+			</div>
+		</section>
+		
+
+
+
+
+
+			
+		
+			<section class="wrapper bg-linear-gradient">
+				<div class="container pb-10">
+				<div class="row text-left">
+					<div class="col-md-10 col-lg-10 col-xl-12 col-xxl-6 text-left">
+
+						<h4 class="mb-4 pt-6">
+							How can we help you?
+						</h4>
+						<p class="lead fs-lg mb-6">
+							Get in touch and let's find out how we can curate our
+							offerings to match your organization's needs.
+						</p>
+						<div class="d-flex" data-group="page-title-buttons" data-delay="600">
+							<span><a class="btn btn-primary rounded-0" data-bs-toggle="modal"
+									data-bs-target="#exampleModal">Get in touch</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- <section class="wrapper  careers-background">
+			<div class="container pt-xl-6 pt-lg-6 pt-md-8 pt-10 pb-6">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 col-md-6">
+						
+          <p class="service_ready mb-xl-6 mb-lg-6 mb-md-0 mb-6 pt-5">
+			{{$resource.section_five.title}}
+		  </p>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-2 col-1"></div>
+          <div class="col-xl-3 col-lg-3 col-md-3 ps-16">
+						<div class="d-flex justify-content-center pt-2" data-group="page-title-buttons" data-delay="600">
+							<span><a href="" class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal">{{$resource.section_five.btn_view}}
+                </a></span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+	<!-- </div>
+
+	</div>
+	</div> -->
+	</div>
+	</div>
+
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+
+	<script>
+		const firebaseConfig = {
+			apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
+			authDomain: "biggworks-dd979.firebaseapp.com",
+			databaseURL: "https://biggworks-dd979-default-rtdb.asia-southeast1.firebasedatabase.app",
+			projectId: "biggworks-dd979",
+			storageBucket: "biggworks-dd979.appspot.com",
+			messagingSenderId: "160882722753",
+			appId: "1:160882722753:web:f067b273803ff585359140",
+			measurementId: "G-377HKGT4RW"
+		};
+		firebase.initializeApp(firebaseConfig);
+
+		let candidateInfo = firebase.database().ref("candidate");
+
+		var application = document.getElementById("application");
+
+		function saveRecordtoDatabase() {
+			console.log("saveRecordtoDatabase");
+			event.preventDefault();
+			let newCandidateInfo = candidateInfo.push();
+
+			newCandidateInfo.set({
+				name: document.getElementById('form-name').value,
+				email: document.getElementById('form_email').value,
+				phone: document.getElementById('form_phone').value,
+				position: document.getElementById('form_position').value
+
+			});
+		}
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+		crossorigin="anonymous"></script>
+
+	<!-- </div> -->
+	<!-- /.content-wrapper -->
+	{{ partial "footer.html" . }} {{ partial "page-progress.html" . }}
+</body>
+{{ end }}
