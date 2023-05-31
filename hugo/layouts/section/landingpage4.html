@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $resource := getJSON "http://bw-strapi:1337/careers" }}
+{{ $resource := getJSON "http://bw-strapi:1337/landingpage4" }}
 <!-- {{ printf "My data: %s"  $resource}} -->
 
 <body>
@@ -10,943 +10,487 @@
 		</header>
 		<!-- /header -->
 
-		<section class="wrapper bg-white">
-
-			<div class="container mt-15 pb-xl-0">
+		<section class="wrapper">
+			<div class="container mt-18 pb-4">
 				<div class="row mb-18 mb-md-12">
 					<div class="col-12 col-md-6 col-xl-6 col-lg-6 mb-6">
-						<h2
-								class="fs-16 fw-normal ls-3x text-uppercase mb-5 mb-md-5 mb-xl-5 mb-lg-5">
-                {{$resource.section_one.title}}
-              </h2>
-						<h1 class="display-1 mb-4 mb-lg-5 mb-xl-5 ">
-                {{$resource.section_one.subtitle}}
+						<h1 class="display-1 mb-4 mt-xl-12 mt-md-0">
+							Your Bigg Idea Needs a Bigg Team
 						</h1>
-			<p class="lead fs-lg text-left mb-7 ">
-                {{$resource.section_one.description}}
-              </p>
-              <div
-                class="service-text service-text-large-screen"
-                data-group="page-title-buttons service-text"
-                data-delay="600"
-              >
-                <span
-                  ><a  href="#mymodel" class="btn btn-primary rounded-0" 
-                    >{{$resource.section_one.btn_talk_to_us}}</a
-                  ></span
-                >
-              </div>
+						<p class="lead fs-lg text-left mb-7">
+							Our team can help you build a big and impactful app that reaches your target audience.
+						</p>
+						<!-- <div class="d-flex" data-group="page-title-buttons" data-delay="600">
+							<span><a class="btn btn-primary rounded-0 mx-1">Talk to Us</a></span>
+						</div> -->
+						<!-- Button trigger modal -->
+						<button type="button" class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
+							data-bs-target="#exampleModal">
+							Get in touch
+						</button>
 
-						</div>
-					<div class="col-2 col-md-0"></div>
-					<div class="col-12 col-xl-4 col-lg-6 col-md-4">
-						<img class="img-fluid"
-							src="https://res.cloudinary.com/biggworks/image/upload/v1685431693/Group_11498_1_rsulml.png"
-							alt="" />
-					</div>
+						<!-- Modal -->
+						<div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel"
+							aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h4 class="pt-3 px-6" id="exampleModalLabel">We've got it all. Get in touch and
+											discover how we can support you.
+										</h4>
+										<button type="button" class="btn-close" data-bs-dismiss="modal"
+											aria-label="Close"></button>
+									</div>
+									<div class="modal-body align-items-center">
 
-			</div>
-			
-	  </div>
-    </section>
+										<form id="sub-form" class="gform"
+											action="https://script.google.com/macros/s/AKfycbwSUFF8rUFXktl1jBANVMG6wQuBW5bFNIg_HXh1/exec"
+											method="POST">
+											<div class="form-group mb-4">
 
-		<!-- <section class="wrapper bg-linear-gradient-career">
-			<div class="container">
-				<div class="row mb-10">
-					<h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5 mt-12 text-left">
-						{{$resource.section_one.title}}
-					</h2>
-					<h3 class="display-4 mb-4 ">
-						{{$resource.section_one.subtitle}}
-					</h3>
-					<p class="lead fs-lg text-left mb-7 col-xl-7 col-lg-7 col-md-10">
-						{{$resource.section_one.description}}
+												<h6 class="mb-3 ">Full Name <span class="text-danger">*</span></h6>
+												<input class="form-control lb-lg" type="text" placeholder="Your name"
+													name="name" value="" required />
+											</div>
+											<div class="form-group mb-4">
+												<h6 class="mb-3">Email ID <span class="text-danger">*</span></h6>
+												<input class="form-control" type="email"
+													placeholder="Your e-mail address" name="email" value="" required />
+											</div>
+											<div class="form-group mb-4">
+												<h6 class="mb-3">Phone Number <span class="text-danger">*</span></h6>
+												<input class="form-control" type="text" placeholder="Your Phone Number"
+													name="company" value="" />
+											</div>
 
-					</p>
-					<p class="lead fs-lg mb-10">
-					Looking for internships?
-				</p>
-				</div>
 
-			</div>
-		</section> -->
+											<div class="form-group mb-4">
+												<h6 class="mb-3">Select your project budget <span
+														class="text-danger">*</span></h6>
+												<div class="form-select-wrapper ">
+													<select class="form-select" aria-label="Default select example">
+														<option class="text-muted" hidden>Select your project budget
+														</option>
+														<option value="$10-30k">$10-30k</option>
+														<option value="$30-60k">$30-60k</option>
+														<option value="$60-100k">$60-100k</option>
+														<option value="$100k+">$100k+</option>
+													</select>
+												</div>
 
-		<section class="wrapper">
-			<div class="container text-center">
+												<!-- <select class="form-control niceselect" placeholder="Select your project budget" name="budget">
+					<option class="text-muted" hidden>Select your project budget </option>
+				<option value="$10-30k">$10-30k</option>
+				<option value="$30-60k">$30-60k</option>
+				<option value="$60-100k">$60-100k</option>
+				<option value="$100k+">$100k+</option>
+				</select> -->
 
-				<div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-					<div class="col-md-10 col-lg-12 col-xl-8 mx-auto text-center">
-					  <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
-					{{$resource.section_two.title}}
-				  </h2>
-				  <h1 class="display-1 mb-4">
-					{{$resource.section_two.Subtitle}}
-				  </h1>
-				</div>
-            </div>
-            <div class="col-md-10 col-lg-10 col-xl-9 mx-auto text-center">
-             
+											</div>
+											<!-- <div class="form-select-wrapper ">
+					<select class="form-select" aria-label="Default select example">
+						<option class="text-muted" hidden>Select your project budget </option>
+						<option value="$10-30k">$10-30k</option>
+				<option value="$30-60k">$30-60k</option>
+				<option value="$60-100k">$60-100k</option>
+				<option value="$100k+">$100k+</option>
+					</select>
+				</div> -->
 
-            <p class="lead fs-lg mb-12">
-					{{$resource.section_two.description}}
-				  </p>
-				</div>
-			  </div>
+
 
 				
-			</div>
 
-
-		</section>
-
-
-		<section class="wrapper bg-light">
-			<div class="container pb-7">
-				<div class="grid">
-					<div class="row">
-						<div class="item col-md-6 col-xl-4 mb-10">
-							<div class="card">
-								<div class="card-body-career career-card">
-									<div class="text-left">
-										<img class="text-center mb-6"
-											src="{{$resource.section_three.card1.image}}"
-											alt="" />
-
+											<div class="form-group mb-4">
+												<h6 class="mb-3">Please describe your project <span
+														class="text-danger">*</span></h6>
+												<textarea class="form-control expandable"
+													placeholder="Please describe your project"
+													name="project_description" rows="5"></textarea>
+											</div>
+											
+											<div class="d-flex" data-group="page-title-buttons" data-delay="600">
+												<span><a class="btn btn-primary rounded-0 mx-1">Send</a></span>
+											</div>
+										</form>
+										
 									</div>
-									<h4>{{$resource.section_three.card1.title}}</h4>
-									<p>{{$resource.section_three.card1.description}}
-									</p>
 
 								</div>
-
-							</div>
-						</div>
-						<div class="item col-md-6 col-xl-4 mb-10">
-							<div class="card">
-								<div class="career-card card-body-career">
-									<div class="text-left">
-										<img class="text-center mb-6"
-											src="{{$resource.section_three.card2.image}}"
-											alt="" />
-
-									</div>
-									<h4>{{$resource.section_three.card2.title}}</h4>
-									<p>{{$resource.section_three.card2.description}}
-									</p>
-
-								</div>
-
-							</div>
-						</div>
-						<div class="item col-md-6 col-xl-4 mb-10">
-							<div class="card">
-								<div class="card-body-career career-card">
-									<div class="text-left">
-										<img class="text-center mb-6"
-											src="{{$resource.section_three.card3.image}}"
-											alt="" />
-
-									</div>
-									<h4>{{$resource.section_three.card3.title}}</h4>
-									<p>{{$resource.section_three.card3.description}}</p>
-
-								</div>
-
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-
-		</section>
-
-		<!-- <section class="wrapper bg-white">
-			<div class="container pb-6 pb-md-6">
-				<div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-					<div class="col-md-10 col-lg-12 col-xl-10 mx-auto text-center">
-					  <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
-						{{$resource.section_six.title}}
-					  </h2>
-					  <h1 class="display-1 mb-4">
-						{{$resource.section_six.subtitle}}
-					  </h1>
-					  </div>
-					  </div>
-					  <div class="col-md-10 col-lg-10 col-xl-7 mx-auto text-center">
-					   
-		  
-					  <p class="lead fs-lg mb-12">
-						{{$resource.section_six.description}}
-					  </p>
-					</div>
-				<div class="grid">
-					<div class="row my-2 offset-1 offset-xl-1 offset-md-0 mb-6">
-						<div class="item col-md-5 col-xl-3 col-lg-3 mb-xl-12 col-4 mb-lg-12 mb-md-12 mb-10 ps-md-8 ps-xl-0">
-							<div class="card career-card-technology">
-								<div class="card-body">
-									<div class="text-center">
-
-
-										<h4 class="mb-xl-6 mb-lg-6 mb-xl-6 mb-md-6 pt-4 mb-6">{{$resource.section_six.card1.role}}</h4>
-										<p class="lead mb-xl-6 mb-lg-6 mb-md-6 mb-6">{{$resource.section_six.card1.status}}
-										</p>
-										<p class="lead">{{$resource.section_six.card1.career}}</p>
-									</div>
-								</div>
-
-							</div>
-						</div>
-						<div class="col-xl-1 col-lg-1 col-md-1"></div>
-						<div class="item col-md-5 col-xl-3 col-lg-3 mb-xl-12 col-4 mb-lg-12 mb-md-12 mb-10 ps-xl-0">
-							<div class="card career-card-technology">
-								<div class="card-body">
-									<div class="text-center">
-
-
-										<h4 class="mb-xl-6 mb-lg-6 mb-xl-6 mb-md-6 pt-4 mb-6">{{$resource.section_six.card2.role}}</h4>
-										<p class="lead mb-xl-6 mb-lg-6 mb-md-6 mb-6">{{$resource.section_six.card2.status}}
-										</p>
-										<p class="lead">{{$resource.section_six.card2.career}}</p>
-									</div>
-								</div>
-
-							</div>
-						</div>
-						<div class="col-xl-1 col-lg-1 col-md-1"></div>
-
-						<div class="item col-md-5 col-xl-3 col-lg-3 col-4 mb-xl-12 mb-lg-12 mb-md-12 mb-10 ps-md-8 ps-xl-0">
-							<div class="card career-card-technology">
-								<div class="card-body">
-									<div class="text-center">
-
-
-										<h4 class="mb-xl-6 mb-lg-6 mb-xl-6 mb-md-6 pt-4 mb-6">{{$resource.section_six.card3.role}}</h4>
-										<p class="lead mb-xl-6 mb-lg-6 mb-md-6 mb-6">{{$resource.section_six.card3.status}}
-										</p>
-										<p class="lead">{{$resource.section_six.card3.career}}</p>
-									</div>
-								</div>
-
-							</div>
-						</div>
-
-						<div class="col-xl-1 col-lg-1 col-md-1"></div>
-
-						<div class="item col-md-5 col-xl-3 col-lg-3 col-4 mb-xl-4 mb-lg-12 mb-md-4 mb-10 ps-xl-0">
-							<div class="card career-card-technology">
-								<div class="card-body">
-									<div class="text-center">
-
-
-										<h4 class="mb-xl-6 mb-lg-6 mb-xl-6 mb-md-6 pt-4 mb-6">{{$resource.section_six.card4.role}}</h4>
-										<p class="lead mb-xl-6 mb-lg-6 mb-md-6 mb-6">{{$resource.section_six.card4.status}}
-										</p>
-										<p class="lead">{{$resource.section_six.card4.career}}</p>
-									</div>
-								</div>
-
-							</div>
-						</div>
-						<div class="col-xl-1 col-lg-1 col-md-1"></div>
-						<div class="item col-md-5 col-xl-3 col-lg-3 col-4 mb-xl-4 mb-lg-12 mb-md-4 mb-10 ps-md-8 ps-xl-0">
-							<div class="card career-card-technology">
-								<div class="card-body">
-									<div class="text-center">
-
-
-										<h4 class="mb-xl-6 mb-lg-6 mb-xl-6 mb-md-6 pt-4 mb-6">{{$resource.section_six.card5.role}}</h4>
-										<p class="lead mb-xl-6 mb-lg-6 mb-md-6 mb-6">{{$resource.section_six.card5.status}}
-										</p>
-										<p class="lead">{{$resource.section_six.card5.career}}</p>
-									</div>
-								</div>
-
-							</div>
-						</div>
-						<div class="col-xl-1 col-lg-1 col-md-1"></div>
-
-						<div class="item col-md-5 col-xl-3 col-lg-3 col-4 mb-xl-4 mb-lg-12 mb-md-4 mb-10 ps-xl-0">
-							<div class="card career-card-technology">
-								<div class="card-body">
-									<div class="text-center">
-
-
-										<h4 class="mb-xl-6 mb-lg-6 mb-xl-6 mb-md-6 pt-4 mb-6">{{$resource.section_six.card6.role}}</h4>
-										<p class="lead mb-xl-6 mb-lg-6 mb-md-6 mb-6">{{$resource.section_six.card6.status}}
-										</p>
-										<p class="lead">{{$resource.section_six.card6.career}}</p>
-									</div>
-								</div>
-
-							</div>
-						</div>
+					<div class="col-12 col-xl-6 col-lg-6 col-md-6">
+						<img class="col-12 col-xl-12 col-lg-6 col-md-12 img-fluid"
+							src="https://res.cloudinary.com/biggworks/image/upload/v1677320583/hero_web_oy2con.png"
+							alt="" />
 					</div>
 				</div>
 
 			</div>
-		</section> -->
+		</section>
 
-
-		<section class="wrapper bg-light" id="mymodel">
-			<div class="container py-0 py-md-0 py-xl-4 mb-5">
-				<div class="row align-items-center">
-					<div class="col-xl-8 col-md-12 mx-auto text-center">
-					  <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4" >
-						{{$resource.section_four.title}}            </h2>
-						<h1 class="display-1">
-						{{$resource.section_four.subtitle}}
-						</h1>
-					  </div>
-					  <div class="col-xl-10 col-md-12 mx-auto text-center">
-		  
-					  <p class="lead fs-lg mb-6">
-						{{$resource.section_four.description}}
-					  </p>
+		<!-- <section class="wrapper">
+<div class="container">
+	<div class="row align-items-center">
+	<h3 class="display-4 mb-4 text-center">Get digital solutions for all business stages</h3>
+						<p class="lead fs-lg mb-12 text-">
+							We will assist you in defining and designing your smart product, and aim to
+							launch an MVP or first version with key features within a period of 3 to 6 months.
+						</p>
 					</div>
-				  </div>
-
-				<div class="card my-4 mb-6">
-					<div class="card-body">
-						<div class="row">
-							<div class="col-sm-2 col-xl-6 col-lg-6 col-md-5">
-								<h6>{{$resource.section_four.card1.role}}</h6>
-								<p class="lead"><u>{{$resource.section_four.card1.requirement}}</u></p>
-								<h6 class="text-muted">{{$resource.section_four.card1.status}}</h6>
-							</div>
-							<div class="col-xl-4 col-lg-4 col-md-3"> </div>
-							<!-- <div class="col-sm-2 col-xl-4 col-lg-4 col-md-4">
-								<h6 class="pe-8"> EUR up to 11 700 Before Tax
-									(Business Contract)</h6>
-								<p>EU , Poland</p>
-							</div> -->
+</div>
+</section> -->
 
 
-							<div class="col-sm-2 col-xl-2 col-lg-2 col-md-3">
-								<a href="#myModal1" class="btn btn-primary rounded-0 me-1 mb-2 mb-md-0"
-									data-bs-toggle="modal">{{$resource.section_four.card1.btn_apply}}</a>
-							</div>
-						</div>
+
+		<section class="wrapper">
+			<div class="container pt-6">
+				
+
+						<h3 class="display-4 mb-4 text-center">Why Choose Biggworks Talent Solutions?</h3>
+						<p class="lead fs-lg mb-12 text-center">
+							Uplers talent solutions help companies to hire the top remote talents faster, more efficiently and at 
+                            competitive salaries from India.
+						</p>
+					
+
+				<div class="row mb-6">
+					<!-- <div class="col-xl-1 col-lg-1 col-md-1 col-0"></div> -->
+					<div class="col-xl-1 col-md-1 col-lg-1 ps-md-0 ps-xl-8 ps-lg-13 ps-5">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1677322490/custom_we_tvnlkx.png" alt="" />
 					</div>
-				</div>
-				<div class="card my-4 mb-6">
-					<div class="card-body">
-						<div class="row">
-							<div class="col-sm-2 col-xl-6 col-lg-6 col-md-5">
-								<h6>{{$resource.section_four.card2.role}}</h6>
-								<p class="lead"><u>{{$resource.section_four.card2.requirement}}</u></p>
-								<h6 class="text-muted">{{$resource.section_four.card2.status}}</h6>
-							</div>
-							<div class="col-xl-4 col-lg-4 col-md-3"> </div>
-
-							<!-- <div class="col-sm-2 col-xl-4 col-lg-4 col-md-4">
-								<h6 class="pe-8"> EUR 3 530 - 5 510 Before Tax
-									(Business Contract)</h6>
-								<p>EU , Poland</p>
-							</div> -->
-
-
-							<div class="col-sm-2 col-xl-2 col-lg-2 col-md-3">
-								<a href="#myModal2" class="btn btn-primary rounded-0 me-1 mb-2 mb-md-0"
-									data-bs-toggle="modal">{{$resource.section_four.card2.btn_apply}}</a>
-							</div>
-						</div>
+					<div class="col-11 col-xl-4 col-lg-4 col-md-4">
+						<h4 class="pe-md-8">Custom web app Development</h4>
+						<p class="mb-10">We create custom web solutions with the latest technologies
+                            and our expertise to ensure uninterrupted customer experiences</p>
 					</div>
-				</div>
-				<div class="card my-4 mb-6">
-					<div class="card-body">
-						<div class="row">
-							<div class="col-sm-2 col-xl-6 col-lg-6 col-md-5">
-								<h6>{{$resource.section_four.card3.role}}</h6>
-								<p class="lead"><u>{{$resource.section_four.card3.requirement}}</u></p>
-								<h6 class="text-muted">{{$resource.section_four.card3.status}}</h6>
-							</div>
-							<div class="col-xl-4 col-lg-4 col-md-3"> </div>
-
-							<!-- <div class="col-sm-2 col-xl-4 col-lg-4 col-md-4">
-								<h6 class="pe-8">EUR 3 530 - 5 510 Before Tax
-									(Business Contract)</h6>
-								<p>EU , Poland</p>
-							</div> -->
-
-
-							<div class="col-sm-2 col-xl-2 col-lg-2 col-md-3">
-								<a href="#myModal3" class="btn btn-primary rounded-0 me-1 mb-2 mb-md-0"
-									data-bs-toggle="modal">{{$resource.section_four.card3.btn_apply}}</a>
-							</div>
-						</div>
+					<div class="col-md-2"></div>
+					<div class="col-md-1 col-xl-1 col-lg-1 ps-md-0 ps-xl-7 ps-lg-13 ps-5">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1677322463/mvp_mdxkcd.png" alt="" />
 					</div>
-				</div>
-				<!-- <div class="card my-4 mb-6">
-					<div class="card-body">
-						<div class="row">
-							<div class="col-sm-2 col-xl-6 col-lg-6 col-md-5">
-								<h6>UX Writer</h6>
-								<p class="lead"><u>Product Design</u></p>
-								<h6 class="text-muted">Ongoing</h6>
-							</div>
-
-							<div class="col-sm-2 col-xl-4 col-lg-4 col-md-4">
-								<h6 class="pe-8">EUR 3 530 - 5 510 Before Tax(Business Contract)</h6>
-								<p>EU , Poland</p>
-							</div>
-
-
-							<div class="col-sm-2 col-xl-2 col-lg-2 col-md-3">
-								<a href="#myModal" class="btn btn-primary rounded-0 me-1 mb-2 mb-md-0"
-									data-bs-toggle="modal">Apply Now</a>
-							</div>
-						</div>
-					</div>
-				</div> -->
-				<div id="myModal1" class="modal fade" tabindex="-1">
-					<div class="modal-dialog modal-lg">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title">{{$resource.section_four.modal1.title}}
-								</h5>
-								<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-							</div>
-							<div class="modal-body">
-								<section id="tabs" class="wrapper pt-0 pb-md-4">
-									<div class="row">
-										<div class="col-lg-15">
-											<ul class="nav nav-tabs ">
-												<li class="nav-item"> <a class="nav-link active me-22"
-														data-bs-toggle="tab" href="#tab-1"><span>{{$resource.section_four.modal1.tab1}}</span></a>
-												</li>
-												<li class="nav-item"> <a class="nav-link" data-bs-toggle="tab"
-														href="#tab-2"><span>{{$resource.section_four.modal1.tab2}}</span></a> </li>
-											</ul>
-											<div class="tab-content">
-												<div class="tab-pane fade show active" id="tab-1">
-
-
-													<div>
-
-														<h5>{{$resource.section_four.modal1.responsibilities.title}}</h5>
-														<p>
-															{{$resource.section_four.modal1.responsibilities.resp1}}
-														</p>
-														<p>
-															{{$resource.section_four.modal1.responsibilities.resp2}}
-														</p>
-														<p>
-															{{$resource.section_four.modal1.responsibilities.resp3}}
-														</p>
-														<p>
-															{{$resource.section_four.modal1.responsibilities.resp4}}
-														</p>
-														<p>
-															{{$resource.section_four.modal1.responsibilities.resp5}}
-														</p>
-														<p>
-															{{$resource.section_four.modal1.responsibilities.resp6}}
-														</p>
-													</div>
-													<div>
-														<!-- <h5>Team:</h5>
-														<p>Cloud-Native Products</p> -->
-														<h5>{{$resource.section_four.modal1.requirements.title}}</h5>
-														<p>
-															{{$resource.section_four.modal1.requirements.requ1}}
-														</p>
-														<p>
-															{{$resource.section_four.modal1.requirements.requ2}}
-														</p>
-														<p>
-															{{$resource.section_four.modal1.requirements.requ3}}
-														</p>
-														<p>
-															{{$resource.section_four.modal1.requirements.requ4}}
-														</p>
-														<p>
-															{{$resource.section_four.modal1.requirements.requ5}}
-														</p>
-														<p>
-															{{$resource.section_four.modal1.requirements.requ6}}
-														</p>
-													</div>
-
-
-
-
-
-													<a href="#tab-2" class="btn btn-primary rounded-pill"
-														data-bs-toggle="tab">{{$resource.section_four.modal1.btn_apply}}</a>
-												</div>
-
-												<div class="tab-pane fade" id="tab-2">
-													<div id="application">
-														<form class="text-start mb-3 needs-validated">
-
-															<div class="messages"></div>
-															<div class="controls">
-																<div class="row">
-
-																	<div class="form-label-group mb-4">
-																		<h6 class="mb-3">{{$resource.section_four.modal1.application.name}}
-																		</h6>
-																		<div class="form-label-group mb-4">
-																			<input id="form-name" type="text"
-																				class="form-control" name="name"
-																				placeholder="Name" required="required"
-																				data-error="Valid Name is required."
-																				style="width: 75%;">
-																			<label for="textInputExample">{{$resource.section_four.modal1.application.namelabel}}</label>
-
-																			<div class="help-block with-errors"></div>
-																		</div>
-																	</div>
-																	<div class="form-label-group mb-4">
-																		<h6 class="mb-3">{{$resource.section_four.modal1.application.email}}</h6>
-																		<div class="form-label-group mb-4">
-																			<input id="form_email" type="email"
-																				name="email" class="form-control"
-																				placeholder="xyz@example.com"
-																				required="required"
-																				data-error="Valid email is required."
-																				style="width: 75%;">
-																			<label for="form_email">{{$resource.section_four.modal1.application.emaillabel}}</label>
-
-																			<div class="help-block with-errors"></div>
-																		</div>
-																	</div>
-
-																	<div class="form-label-group mb-4">
-																		<h6 class="mb-3">{{$resource.section_four.modal1.application.phonenumber}}</h6>
-																		<div class="form-label-group mb-4">
-																			<input id="form_phone" type="tel"
-																				name="phone" class="form-control"
-																				placeholder=" Phone number"
-																				required="required"
-																				data-error="Valid phonenumber is required."
-																				style="width: 75%;">
-																			<label for="form_phone">{{$resource.section_four.modal1.application.phonenumberlabel}}</label>
-
-																			<div class="help-block with-errors"></div>
-																		</div>
-																	</div>
-																	<div class="form-label-group mb-4">
-																		<h6 class="mb-3">{{$resource.section_four.modal1.application.position}}</h6>
-																		<div class="form-label-group mb-4">
-																			<input id="form_position" type="text"
-																				name="position" class="form-control"
-																				placeholder="Position"
-																				style="width: 75%;">
-																			<label for="form_position">{{$resource.section_four.modal1.application.positionlabel}}</label>
-
-																			<div class="help-block with-errors"></div>
-																		</div>
-																	</div>
-																	<h6 class="mb-3">{{$resource.section_four.modal1.application.resume}}</h6>
-																	<input type="file" id="file-uploader" />
-																	<div class="col-12 text-center">
-																		<input type="submit"
-																			class="btn btn-primary rounded-pill btn-send mb-3"
-																			value="Apply"
-																			onclick="saveRecordtoDatabase()">
-																		<p class="text-muted"><strong>*</strong>{{$resource.section_four.modal1.application.requiredfields}}</p>
-																	</div>
-																</div>
-															</div>
-														</form>
-
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-
-
-
-								</section>
-
-
-							</div>
-
-						</div>
+					<div class="col-11 col-xl-4 col-lg-4 col-md-4 ps-10 ps-md-0 ps-lg-0 ps-xl-0">
+						<h4>MVP development</h4>
+						<p class="mb-4">Be market-ready by leveraging BiggWorks s MVP development
+                            expertise to test the product s feasibility, functionality, and
+                            usability before the launch!</p>
 					</div>
 				</div>
 
-				<div id="myModal2" class="modal fade" tabindex="-1">
-					<div class="modal-dialog modal-lg">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title">{{$resource.section_four.modal2.title}}
-								</h5>
-								<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-							</div>
-							<div class="modal-body">
-								<section id="tabs" class="wrapper pt-0 pb-md-4">
-									<div class="row">
-										<div class="col-lg-15">
-											<ul class="nav nav-tabs ">
-												<li class="nav-item"> <a class="nav-link active me-22"
-														data-bs-toggle="tab" href="#tab-3"><span>{{$resource.section_four.modal2.tab1}}</span></a>
-												</li>
-												<li class="nav-item"> <a class="nav-link" data-bs-toggle="tab"
-														href="#tab-4"><span>{{$resource.section_four.modal2.tab2}}</span></a> </li>
-											</ul>
-											<div class="tab-content">
-												<div class="tab-pane fade show active" id="tab-3">
 
-
-													<div>
-
-														<h5>{{$resource.section_four.modal2.responsibilities.title}}</h5>
-														<p>
-															{{$resource.section_four.modal2.responsibilities.resp1}}
-														</p>
-														<p>
-															{{$resource.section_four.modal2.responsibilities.resp2}}
-														</p>
-														<p>
-															{{$resource.section_four.modal2.responsibilities.resp3}}
-														</p>
-														<p>
-															{{$resource.section_four.modal2.responsibilities.resp4}}
-														</p>
-														<p>
-															{{$resource.section_four.modal2.responsibilities.resp5}}
-														</p>
-													</div>
-													<div>
-														<!-- <h5>Team:</h5>
-														<p>Cloud-Native Products</p> -->
-														<h5>{{$resource.section_four.modal2.requirements.title}}</h5>
-														<p>
-															{{$resource.section_four.modal2.requirements.requ1}}
-														</p>
-														<p>
-															{{$resource.section_four.modal2.requirements.requ2}}
-														</p>
-														<p>
-															{{$resource.section_four.modal2.requirements.requ3}}
-														</p>
-														<p>
-															{{$resource.section_four.modal2.requirements.requ4}}
-														</p>
-														
-														
-													</div>
-
-
-
-
-
-													<a href="#tab-2" class="btn btn-primary rounded-pill"
-														data-bs-toggle="tab">{{$resource.section_four.modal2.btn_apply}}</a>
-												</div>
-
-												<div class="tab-pane fade" id="tab-4">
-													<div id="application">
-														<form class="text-start mb-3 needs-validated">
-
-															<div class="messages"></div>
-															<div class="controls">
-																<div class="row">
-
-																	<div class="form-label-group mb-4">
-																		<h6 class="mb-3">{{$resource.section_four.modal2.application.name}}</h6>
-																		<div class="form-label-group mb-4">
-																			<input id="form-name" type="text"
-																				class="form-control" name="name"
-																				placeholder="Name" required="required"
-																				data-error="Valid Name is required."
-																				style="width: 75%;">
-																			<label for="textInputExample">{{$resource.section_four.modal2.application.namelabel}}</label>
-
-																			<div class="help-block with-errors"></div>
-																		</div>
-																	</div>
-																	<div class="form-label-group mb-4">
-																		<h6 class="mb-3">{{$resource.section_four.modal2.application.email}}</h6>
-																		<div class="form-label-group mb-4">
-																			<input id="form_email" type="email"
-																				name="email" class="form-control"
-																				placeholder="xyz@example.com"
-																				required="required"
-																				data-error="Valid email is required."
-																				style="width: 75%;">
-																			<label for="form_email">{{$resource.section_four.modal2.application.emaillabel}}</label>
-
-																			<div class="help-block with-errors"></div>
-																		</div>
-																	</div>
-
-																	<div class="form-label-group mb-4">
-																		<h6 class="mb-3">{{$resource.section_four.modal2.application.phonenumber}}</h6>
-																		<div class="form-label-group mb-4">
-																			<input id="form_phone" type="tel"
-																				name="phone" class="form-control"
-																				placeholder=" Phone number"
-																				required="required"
-																				data-error="Valid phonenumber is required."
-																				style="width: 75%;">
-																			<label for="form_phone">{{$resource.section_four.modal2.application.phonenumberlabel}}</label>
-
-																			<div class="help-block with-errors"></div>
-																		</div>
-																	</div>
-																	<div class="form-label-group mb-4">
-																		<h6 class="mb-3">{{$resource.section_four.modal2.application.position}}</h6>
-																		<div class="form-label-group mb-4">
-																			<input id="form_position" type="text"
-																				name="position" class="form-control"
-																				placeholder="Position"
-																				style="width: 75%;">
-																			<label for="form_position">{{$resource.section_four.modal2.application.positionlabel}}</label>
-
-																			<div class="help-block with-errors"></div>
-																		</div>
-																	</div>
-																	<h6 class="mb-3">{{$resource.section_four.modal2.application.resume}}</h6>
-																	<input type="file" id="file-uploader" />
-																	<div class="col-12 text-center">
-																		<input type="submit"
-																			class="btn btn-primary rounded-pill btn-send mb-3"
-																			value="Apply"
-																			onclick="saveRecordtoDatabase()">
-																		<p class="text-muted"><strong>*</strong> {{$resource.section_four.modal2.application.requiredfields}}</p>
-																	</div>
-																</div>
-															</div>
-														</form>
-
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-
-
-
-								</section>
-
-
-							</div>
-
-						</div>
+				<div class="row mb-6">
+					<!-- <div class="col-xl-1 col-lg-1 col-md-1 col-0"></div> -->
+					<div class="col-xl-1 col-md-1 col-lg-1 ps-md-0 ps-xl-8 ps-lg-13 ps-5">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1677322475/frontend_fgcufu.png" alt="" />
 					</div>
+					<div class="col-10 col-xl-4 col-lg-4 col-md-4">
+						<h4 class="pe-md-8">Frontend Development</h4>
+						<p class="mb-10">We create custom web solutions with the latest technologies
+                            and our expertise to ensure uninterrupted customer
+                            experiences</p>
+					</div>
+					<div class="col-md-2"></div>
+					<div class="col-md-1 col-xl-1 col-lg-1 ps-md-0 ps-xl-7 ps-lg-13 ps-5">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1677322529/backend_shth77.png" alt="" />
+					</div>
+					<div class="col-11 col-xl-4 col-lg-4 col-md-4 ps-10 ps-md-0 ps-lg-0 ps-xl-0">
+						<h4>Backend Development</h4>
+						<p class="mb-4">Have better data storage, security, and business logic with a
+                            reliable back-end in your Web Application</p>
+					</div>
+
+
 				</div>
 
-				<div id="myModal3" class="modal fade" tabindex="-1">
-					<div class="modal-dialog modal-lg">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title">{{$resource.section_four.modal3.title}}
-								<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-							</div>
-							<div class="modal-body">
-								<section id="tabs" class="wrapper pt-0 pb-md-4">
-									<div class="row">
-										<div class="col-lg-15">
-											<ul class="nav nav-tabs ">
-												<li class="nav-item"> <a class="nav-link active me-22"
-														data-bs-toggle="tab" href="#tab-5"><span>{{$resource.section_four.modal3.tab1}}</span></a>
-												</li>
-												<li class="nav-item"> <a class="nav-link" data-bs-toggle="tab"
-														href="#tab-6"><span>{{$resource.section_four.modal3.tab2}}</span></a> </li>
-											</ul>
-											<div class="tab-content">
-												<div class="tab-pane fade show active" id="tab-5">
 
-
-													<div>
-
-														<h5>{{$resource.section_four.modal3.responsibilities.title}}</h5>
-														<p>
-															{{$resource.section_four.modal3.responsibilities.resp1}}
-														</p>
-														<p>
-															{{$resource.section_four.modal3.responsibilities.resp2}}
-														</p>
-														<p>
-															{{$resource.section_four.modal3.responsibilities.resp3}}
-														</p>
-														<p>
-															{{$resource.section_four.modal3.responsibilities.resp4}}
-														</p>
-														<p>
-															{{$resource.section_four.modal3.responsibilities.resp5}}
-														</p>
-														
-													</div>
-													<div>
-														<!-- <h5>Team:</h5>
-														<p>Cloud-Native Products</p> -->
-														<h5>{{$resource.section_four.modal3.requirements.title}}</h5>
-														<p>
-															{{$resource.section_four.modal3.requirements.requ1}}
-														</p>
-														<p>
-															{{$resource.section_four.modal3.requirements.requ2}}
-														</p>
-														<p>
-															{{$resource.section_four.modal3.requirements.requ3}}
-														</p>
-														<p>
-															{{$resource.section_four.modal3.requirements.requ4}}
-														</p>
-														<p>
-															{{$resource.section_four.modal3.requirements.requ5}}
-														</p>
-														<p>
-															{{$resource.section_four.modal3.requirements.requ6}}
-														</p>
-														<p>
-															{{$resource.section_four.modal3.requirements.requ7}}
-														</p>
-														<p>
-															{{$resource.section_four.modal3.requirements.requ8}}
-														</p>
-														<p>
-															{{$resource.section_four.modal3.requirements.requ9}}
-														</p>
-														<p>
-															{{$resource.section_four.modal3.requirements.requ10}}
-														</p>
-														<p>
-															{{$resource.section_four.modal3.requirements.requ11}}
-														</p>
-														<p>
-															{{$resource.section_four.modal3.requirements.requ12}}
-														</p>
-														<p>
-															{{$resource.section_four.modal3.requirements.requ13}}
-														</p>
-														<p>
-															{{$resource.section_four.modal3.requirements.requ14}}
-														</p>
-													</div>
-
-
-
-
-
-													<a href="#tab-2" class="btn btn-primary rounded-pill"
-														data-bs-toggle="tab">{{$resource.section_four.modal3.btn_apply}}</a>
-												</div>
-
-												<div class="tab-pane fade" id="tab-6">
-													<div id="application">
-														<form class="text-start mb-3 needs-validated">
-
-															<div class="messages"></div>
-															<div class="controls">
-																<div class="row">
-
-																	<div class="form-label-group mb-4">
-																		<h6 class="mb-3">{{$resource.section_four.modal3.application.name}}</h6>
-																		<div class="form-label-group mb-4">
-																			<input id="form-name" type="text"
-																				class="form-control" name="name"
-																				placeholder="Name" required="required"
-																				data-error="Valid Name is required."
-																				style="width: 75%;">
-																			<label for="textInputExample">{{$resource.section_four.modal3.application.namelabel}}</label>
-
-																			<div class="help-block with-errors"></div>
-																		</div>
-																	</div>
-																	<div class="form-label-group mb-4">
-																		<h6 class="mb-3">{{$resource.section_four.modal3.application.email}}</h6>
-																		<div class="form-label-group mb-4">
-																			<input id="form_email" type="email"
-																				name="email" class="form-control"
-																				placeholder="xyz@example.com"
-																				required="required"
-																				data-error="Valid email is required."
-																				style="width: 75%;">
-																			<label for="form_email">{{$resource.section_four.modal3.application.emaillabel}}</label>
-
-																			<div class="help-block with-errors"></div>
-																		</div>
-																	</div>
-
-																	<div class="form-label-group mb-4">
-																		<h6 class="mb-3">{{$resource.section_four.modal3.application.phonenumber}}</h6>
-																		<div class="form-label-group mb-4">
-																			<input id="form_phone" type="tel"
-																				name="phone" class="form-control"
-																				placeholder=" Phone number"
-																				required="required"
-																				data-error="Valid phonenumber is required."
-																				style="width: 75%;">
-																			<label for="form_phone">{{$resource.section_four.modal3.application.phonenumberlabel}}</label>
-
-																			<div class="help-block with-errors"></div>
-																		</div>
-																	</div>
-																	<div class="form-label-group mb-4">
-																		<h6 class="mb-3">{{$resource.section_four.modal3.application.position}}</h6>
-																		<div class="form-label-group mb-4">
-																			<input id="form_position" type="text"
-																				name="position" class="form-control"
-																				placeholder="Position"
-																				style="width: 75%;">
-																			<label for="form_position">{{$resource.section_four.modal3.application.positionlabel}}</label>
-
-																			<div class="help-block with-errors"></div>
-																		</div>
-																	</div>
-																	<h6 class="mb-3">{{$resource.section_four.modal3.application.resume}}</h6>
-																	<input type="file" id="file-uploader" />
-																	<div class="col-12 text-center">
-																		<input type="submit"
-																			class="btn btn-primary rounded-pill btn-send mb-3"
-																			value="Apply"
-																			onclick="saveRecordtoDatabase()">
-																		<p class="text-muted"><strong>*</strong>{{$resource.section_four.modal3.application.requiredfields}}</p>
-																	</div>
-																</div>
-															</div>
-														</form>
-
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-
-
-
-								</section>
-
-
-							</div>
-
-						</div>
+				<div class="row mb-6">
+					<!-- <div class="col-xl-1 col-lg-1 col-md-1 col-0"></div> -->
+					<div class="col-xl-1 col-md-1 col-lg-1 ps-md-0 ps-xl-7 ps-lg-13">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1677322469/full_stack_gkn8it.png" alt="" />
 					</div>
+					<div class="col-11 col-xl-4 col-lg-4 col-md-4 ps-md-0 ps-lg-0 ps-xl-0">
+						<h4 class="pe-md-8">Full stack Development </h4>
+						<p class="mb-10">We have expertise in developing end-to-end web applications,
+                            from front-end UI/UX to back-end server and database
+                            management</p>
+					</div>
+					<div class="col-md-2"></div>
+					<div class="col-md-1 col-xl-1 col-lg-1 ps-md-0 ps-xl-7 ps-lg-13">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1677322451/ui_ux_qkpzwx.png" alt="" />
+					</div>
+					<div class="col-11 col-xl-4 col-lg-4 col-md-4 ps-md-0 ps-lg-0 ps-xl-0">
+						<h4>UI/UX Design</h4>
+						<p class="mb-4">Bigg Works is an experienced web design and development
+                            agency that utilizes UI and UX to bring our clients projects to life.</p>
+					</div>
+
+
 				</div>
+                <div class="row mb-6">
+					<!-- <div class="col-xl-1 col-lg-1 col-md-1 col-0"></div> -->
+					<div class="col-xl-1 col-md-1 col-lg-1 ps-md-0 ps-xl-8 ps-lg-13">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1677322482/e_commerce_ymncr7.png" alt="" />
 					</div>
+					<div class="col-11 col-xl-4 col-lg-4 col-md-4 ps-md-0 ps-lg-0 ps-xl-0">
+						<h4 class="pe-md-8">eCommerce & Marketplace App Development</h4>
+						<p class="mb-10">We offer the best-in-class E-commerce web solutions and
+                            marketplace app development services, tailored to meet the
+                            specific needs of our clients.</p>
+					</div>
+					<div class="col-md-2"></div>
+					<div class="col-md-1 col-xl-1 col-lg-1 ps-md-0 ps-xl-8 ps-lg-13">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1677322457/saas_sketlu.png" alt="" />
+					</div>
+					<div class="col-11 col-xl-4 col-lg-4 col-md-4 ps-md-0 ps-lg-0 ps-xl-0">
+						<h4>SaaS application development </h4>
+						<p class="mb-4">SaaS is a Multi-Billion Dollar Opportunity. BiggWorks is uniquely
+                            skilled and positioned to architect and build innovative, high
+                            quality SaaS products.</p>
+					</div>
+
+
+				</div>
+                <div class="row mb-6">
+					<!-- <div class="col-xl-1 col-lg-1 col-md-1 col-0"></div> -->
+					<div class="col-xl-1 col-md-1 col-lg-1 ps-md-0 ps-xl-8 ps-lg-13">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1677322503/cloud_k8kpoh.png" alt="" />
+					</div>
+					<div class="col-11 col-xl-4 col-lg-4 col-md-4 ps-md-0 ps-lg-0 ps-xl-0">
+						<h4 class="pe-md-8">Cloud Application Development</h4>
+						<p class="mb-10">Biggworks provides end-to-end services to cover all aspects of
+                            cloud application implementation</p>
+					</div>
+					<div class="col-md-2"></div>
+					<div class="col-md-1 col-xl-1 col-lg-1 ps-md-0 ps-xl-8 ps-lg-13">
+						<img src="https://res.cloudinary.com/biggworks/image/upload/v1677322496/cms_auosao.png" alt="" />
+					</div>
+					<div class="col-11 col-xl-4 col-lg-4 col-md-4 ps-md-0 ps-lg-0 ps-xl-0">
+						<h4>CMS Web Development</h4>
+						<p class="mb-4">We provide top-notch CMS web development services, utilizing
+                            the latest technologies and frameworks to deliver efficient,
+                            flexible, and scalable solutions to our clients</p>
+					</div>
+
+
+				</div>
+
+
+
+				<div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
+					<span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
+							data-bs-target="#exampleModal">Get in touch</a></span>
+				</div>
+			</div>
 
 		</section>
+
+
+		<section class="our_process_new">
+			<div class="container container-desktoplandingpage pt-2 pb-6">
+				 <h3 class="display-4 mb-4 text-center">Web Portal Development Process</h3>
+                <p class="lead fs-lg mb-10 text-center">
+					Portal development life cycle is majorly divided into five stages
+                </p>
+				<div class="row pb-8 offset-1">
+                    <ul class="process_step">
+                        <li class="step_one">
+                            <div class="box_main">
+                            <div class="im_box">
+                                <img src="https://res.cloudinary.com/biggworks/image/upload/v1677132535/requirement_cytfzg.png" alt="">
+                            </div>
+                            <div class="cnt_box">
+                                <h4>Architecture</h4>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="step_two">
+                            <div class="box_main">
+                            <div class="im_box">
+                                <img src="https://res.cloudinary.com/biggworks/image/upload/v1677132543/wireframe_kzvilk.png" alt="">
+                            </div>
+                            <div class="cnt_box">
+                               
+                                <h4>Development</h4>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="step_three">
+                            <div class="box_main">
+                            <div class="im_box">
+                                <img src="https://res.cloudinary.com/biggworks/image/upload/v1677132550/develpment_eeawck.png" alt="">
+                            </div>
+                            <div class="cnt_box">
+                                <h4>Testing </h4>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="step_four">
+                            <div class="box_main">
+                            <div class="im_box">
+                                <img src="https://res.cloudinary.com/biggworks/image/upload/v1677132557/testing_rburjx.png" alt="">
+                            </div>
+                            <div class="cnt_box">
+                                <h4>Deployment</h4>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="step_five">
+                            <div class="box_main">
+                            <div class="im_box">
+                                <img src="https://res.cloudinary.com/biggworks/image/upload/v1677132566/deployment_nmcrc6.png" alt="">
+                            </div>
+                            <div class="cnt_box">
+                                <h4>Production</h4>
+                            </div>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+				<div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
+					<span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
+							data-bs-target="#exampleModal">Get in touch</a></span>
+				</div>
+			</div>
+		</section>
+
 		
-		<!-- <section class="wrapper  careers-background">
-			<div class="container pt-xl-6 pt-lg-6 pt-md-8 pt-10 pb-6">
-				<div class="row">
-					<div class="col-xl-6 col-lg-6 col-md-6">
-						
-          <p class="service_ready mb-xl-6 mb-lg-6 mb-md-0 mb-6 pt-5">
-			{{$resource.section_five.title}}
-		  </p>
+		<section class="wrapper landingpae-bg-linear-gradient">
+			<div class="container container pb-6 pt-8">
+
+
+				<h3 class="display-4 mb-4 text-center">Technologies we use</h3>
+                <p class="lead fs-lg mb-8 text-center">
+                    Biggworks provides web development services based on the latest JavaScript frameworks and
+					modern back-end technologies.
+                </p>
+				<div class="text-center">
+                    <img class="img-fluid" src="https://res.cloudinary.com/biggworks/image/upload/v1677320575/web_tech_landing_xdaihr.png" alt=""/>
+                </div>
+			</div>
+		</section>
+
+<section class="wrapper">
+	<div class="container mb-6">
+		<h3 class="display-4 mb-4 text-center mt-10 mb-5">Why Choose Us?</h3>
+                <p class="lead fs-lg mb-12 text-center">
+                    What are the key benefits of working with the
+					Biggworks team?
+                </p>
+				<div class="row mb-4">
+					<div class="col-1"><img class="ps-xl-11 ps-md-4" src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" alt=""/></div>
+					<div class="col-5"><h4>Reliable cutting-edge technologies</h4></div>
+					<div class="col-1"><img class="ps-xl-11 ps-md-4" src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" alt=""/></div>
+					<div class="col-5"><h4>A talent pool of expert designers and
+						developers</h4></div>
+				</div>
+				<div class="row mb-4">
+					<div class="col-1"><img class="ps-xl-11 ps-md-4" src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" alt=""/></div>
+					<div class="col-5"><h4>A collaborative and friendly team</h4></div>
+					<div class="col-1"><img class="ps-xl-11 ps-md-4" src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" alt=""/></div>
+					<div class="col-5"><h4>High quality at affordable costs</h4></div>
+				</div>
+				<div class="row mb-4">
+					<div class="col-1"><img class="ps-xl-11 ps-md-4" src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" alt=""/></div>
+					<div class="col-5"><h4>Dedicated team to work exclusively for
+						your project</h4></div>
+					<div class="col-1"><img class="ps-xl-11 ps-md-4" src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" alt=""/></div>
+					<div class="col-5"><h4>Ongoing support and consulting</h4></div>
+				</div>
+				<div class="row mb-4">
+					<div class="col-1"><img class="ps-xl-11 ps-md-4" src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" alt=""/></div>
+					<div class="col-5"><h4>Rigorous quality assurance and
+						testing</h4></div>
+					<div class="col-1"><img class="ps-xl-11 ps-md-4" src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" alt=""/></div>
+					<div class="col-5"><h4>Proven track record of successful
+						projects</h4></div>
+				</div>
+				<div class="row mb-9">
+					<div class="col-1"><img class="ps-xl-11 ps-md-4" src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" alt=""/></div>
+					<div class="col-5"><h4>User-friendly web solutions and sites</h4></div>
+					
+				</div>
+				<div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
+					<span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
+							data-bs-target="#exampleModal">Get in touch</a></span>
+				</div>
+	</div>
+</section>
+
+<section class="wrapper">
+	<div class="container mb-14 pt-8">
+		<div class="row gy-10">
+			<div class="col-12 col-xl-6 col-lg-6 col-md-5">
+				<h3 class="display-4 mb-6">What our clients says about us </h3>
+				<div class="landingpage-card-client-says card mb-3">
+					<div class="card-body">
+						<p class="lead fs-lg mb-2">
+							Biggworks gave me option to preserve the equity i
+had earned that would not have been feasible
+otherwise. without biggworks, my options would
+have expired and gone back to my former employer
+						</p>
+
 					</div>
-					<div class="col-xl-3 col-lg-3 col-md-2 col-1"></div>
-          <div class="col-xl-3 col-lg-3 col-md-3 ps-16">
-						<div class="d-flex justify-content-center pt-2" data-group="page-title-buttons" data-delay="600">
-							<span><a href="" class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal">{{$resource.section_five.btn_view}}
-                </a></span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-	<!-- </div>
+				</div>
+			</div>
+			<div class="col-1 col-xl-1 col-lg-1 col-md-0"></div>
+			<div class="col-10 col-md-6 col-xl-4 col-lg-3 pt-xl-11 text-right pt-md-16">
+				<img class="col-10 col-md-12 col-xl-12 landingpage-image img-fluid"
+					src="https://res.cloudinary.com/biggworks/image/upload/v1676265174/testimonial_image_hob2pn.png"
+					alt="" />
+			</div>
+		</div>
+		<div class="row">
+			
+			<div class="col-10 col-md-10 col-xl-6 col-lg-6">
+
+				<div class="item">
+					<blockquote class="icon icon-right fs-lg">
+						<h5><img src="https://res.cloudinary.com/biggworks/image/upload/v1676265189/senior_fcwdlm.png"
+							alt="" />  <span>senior software engineer</span></h5>
+						<p class="ps-9">San Fracisco, California</p>
+						<div class="blockquote-details ps-20">
+
+						</div>
+					</blockquote>
+				</div>
+
+			</div>
+		</div>
+		<div class="d-flex" data-group="page-title-buttons" data-delay="600">
+			<span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
+					data-bs-target="#exampleModal">Get in touch</a></span>
+		</div>
+
+
 
 	</div>
-	</div> -->
+</section>
+		
+		
+		
+<section class="wrapper landingpae-bg-linear-gradient">
+	<div class="container">
+	<div class="row gx-lg-8 gx-xl-12 gy-10 pb-md-6 align-items-center">
+		<div class="col-md-10 col-lg-10 col-xl-12 col-xxl-6 mx-auto text-center">
+
+			<h3 class="display-4 mb-4 pt-6">
+				How can we help you?
+			</h3>
+			<p class="lead fs-lg mb-6">
+				Get in touch and let's find out how we can curate our
+				offerings to match your organization's needs.
+			</p>
+			<div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
+				<span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
+						data-bs-target="#exampleModal">Talk to Us</a></span>
+			</div>
+		</div>
+	</div>
+</div>
+</section>	
+		
+		
 	</div>
 	</div>
 
