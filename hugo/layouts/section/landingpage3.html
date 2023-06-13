@@ -5,34 +5,30 @@
 <body>
 	<div class="content-wrapper">
 		<header class="wrapper bg-gray">
-			{{ partial "nav.html" . }}
 			<!-- /.navbar -->
 		</header>
 		<!-- /header -->
 
 		
         <section class="wrapper">
-            <div class="container mt-8">
+            <div class="container mt-xl-8 mt-0 mb-xl-12 mb-md-8 mb-12">
 
-                <div class="row mb-12">
+                <div class="row">
                     <div class="col-12 col-md-6 col-xl-6 col-lg-6 mb-6">
-                        <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5 pt-15">
-                            MOBILE APPS
+                        <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5 pt-xl-15 pt-8 service-text">
+                            {{$resource.section_one.title}}
                         </h2>
-                        <h1 class="display-1 mb-4">
-                            Get the right talent
-for the right job
+                        <h1 class="display-1 mb-4 service-text">
+                            {{$resource.section_one.subtitle}}
                         </h1>
-                        <p class="lead fs-lg text-left mb-7">
-                            Our team can help you build a big and
-impactful app that reaches your target
-audience.
-                        </p>
+                        <p class="lead fs-lg text-left mb-7 service-text">
+                            {{$resource.section_one.description}}
+</p>
 
-                        <button type="button" class="btn btn-primary rounded-0" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">
-                            Get in touch
-                        </button>
+<div class="d-flex service-text mb-4" data-group="page-title-buttons" data-delay="600">
+    <span><a href="#exampleModal" class="btn btn-primary rounded-0"
+        data-bs-toggle="modal">{{$resource.section_one.get_in_touch}}</a></span>
+  </div>
 
 
               
@@ -43,46 +39,43 @@ audience.
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h4 class="pt-3 px-6" id="exampleModalLabel">We've got it all. Get in touch and
-                                    discover how we can support you.
+                                <h4 class="pt-3 px-4" id="exampleModalLabel">{{$resource.section_one.modal.heading}}
                                 </h4>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                                <p type="button" class="btn-custum" data-bs-dismiss="modal"><i class="uil uil-times"></i></p>
+
                             </div>
-                            <div class="modal-body align-items-center">
+                            <div class="modal-body-landingpage align-items-center">
 
                                 <form id="sub-form" class="gform"
                                     action="https://script.google.com/macros/s/AKfycbwSUFF8rUFXktl1jBANVMG6wQuBW5bFNIg_HXh1/exec"
                                     method="POST">
                                     <div class="form-group mb-4">
 
-                                        <h6 class="mb-3 ">Full Name <span class="text-danger">*</span></h6>
+                                        <h6 class="mb-3 ">{{$resource.section_one.modal.fullname}}<span class="text-danger">*</span></h6>
                                         <input class="form-control lb-lg" type="text" placeholder="Your name"
-                                            name="name" value="" required />
+                                            name="name" value="" required="required" data-error="First Name is required." />
                                     </div>
                                     <div class="form-group mb-4">
-                                        <h6 class="mb-3">Email ID <span class="text-danger">*</span></h6>
+                                        <h6 class="mb-3">{{$resource.section_one.modal.emailid}} <span class="text-danger">*</span></h6>
                                         <input class="form-control" type="email"
-                                            placeholder="Your e-mail address" name="email" value="" required />
+                                            placeholder="Your e-mail address" name="email" value="" required="required" data-error="Email is required" />
                                     </div>
                                     <div class="form-group mb-4">
-                                        <h6 class="mb-3">Phone Number <span class="text-danger">*</span></h6>
+                                        <h6 class="mb-3">{{$resource.section_one.modal.phone_number}} <span class="text-danger">*</span></h6>
                                         <input class="form-control" type="text" placeholder="Your Phone Number"
-                                            name="company" value="" />
+                                            name="company" value="" required="required" data-error="Phone number is required"/>
                                     </div>
 
 
                                     <div class="form-group mb-4">
-                                        <h6 class="mb-3">Select your project budget <span
-                                                class="text-danger">*</span></h6>
+                                        <h6 class="mb-3">{{$resource.section_one.modal.budget.heading}}</h6>
                                         <div class="form-select-wrapper ">
                                             <select class="form-select" aria-label="Default select example">
-                                                <option class="text-muted" hidden>Select your project budget
-                                                </option>
-                                                <option value="$10-30k">$10-30k</option>
-                                                <option value="$30-60k">$30-60k</option>
-                                                <option value="$60-100k">$60-100k</option>
-                                                <option value="$100k+">$100k+</option>
+                                               <option class="text-muted" value="select-budget" selected>{{$resource.section_one.modal.budget.heading}}</option>
+                                                <option value="$10-30k">{{$resource.section_one.modal.budget.budget1}}</option>
+                                                <option value="$30-60k">{{$resource.section_one.modal.budget.budget2}}</option>
+                                                <option value="$60-100k">{{$resource.section_one.modal.budget.budget3}}</option>
+                                                <option value="$100k+">{{$resource.section_one.modal.budget.budget4}}</option>
                                             </select>
                                         </div>
 
@@ -110,16 +103,15 @@ audience.
         
 
                                     <div class="form-group mb-4">
-                                        <h6 class="mb-3">Please describe your project <span
+                                        <h6 class="mb-3">{{$resource.section_one.modal.budget.request}} <span
                                                 class="text-danger">*</span></h6>
                                         <textarea class="form-control expandable"
                                             placeholder="Please describe your project"
                                             name="project_description" rows="5"></textarea>
                                     </div>
                                     
-                                    <div class="d-flex" data-group="page-title-buttons" data-delay="600">
-                                        <span><a class="btn btn-primary rounded-0 mx-1">Send</a></span>
-                                    </div>
+                                    <input type="submit" class="btn btn-primary rounded-0 btn-send mb-3"
+									value="Send">
                                 </form>
                                 
                             </div>
@@ -131,9 +123,9 @@ audience.
 
                     </div>
                     <!-- <div class="col-xl-1"></div> -->
-                    <div class="col-12 col-xl-6 col-lg-6 col-md-6">
-                        <img class="col-12 col-xl-12 col-lg-6 col-md-12 img-fluid"
-                            src="https://res.cloudinary.com/biggworks/image/upload/v1685508986/Group_11410_fji0y6.png"
+                    <div class="col-12 col-xl-6 col-lg-6 col-md-6 pt-md-14 pt-xl-0">
+                        <img class="col-12 col-xl-12 col-lg-12 col-md-12 img-fluid"
+                            src="{{$resource.section_one.img}}"
                             alt="" />
                     </div>
                 </div>
@@ -147,20 +139,17 @@ audience.
                 <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
                     <div class="col-md-10 col-lg-10 col-xl-8 mx-auto text-center">
                         <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
-                            SERVICE AND OFFERINGS
+                            {{$resource.section_two.title}} 
                         </h2>
                         <h1 class="display-1 mb-4">
-                            What we offer for mobile
-                            application development ?
+                            {{$resource.section_two.sub_title}}
                         </h1>
                     </div>
                 </div>
                 <div class="col-md-10 col-lg-8 col-xl-9 mx-auto text-center">
 
                     <p class="lead fs-lg mb-12">
-                        Talents are not one-size-fits-all; this is the reason why we have bifurcated them into 3
-                        categories based on their level of experience, skills, professional certifications, demand
-                        for the role and the complexity of the responsibilities.
+                        {{$resource.section_two.description}}
                     </p>
                 </div>
 
@@ -171,12 +160,9 @@ audience.
 							<div class="card about-image">
 								<div class="card-body">
 									
-									<h4 class="mb-4">Android mobile app development</h4>
+									<h4 class="mb-4">{{$resource.section_two.grid.card1.title}}</h4>
                 <p class="mb-0">
-                    With years of experience in mobile app
-development, we provide inclusive
-mobile app development solutions for
-the Android operating system.
+                    {{$resource.section_two.grid.card1.sub_title}}
                 </p>
 
 								</div>
@@ -187,12 +173,8 @@ the Android operating system.
 							<div class="card about-image">
 								<div class="card-body">
 									
-									<h4 class="mb-4">IOS development</h4>
-									<p class="mb-0">Our expert team of iOS app developers
-                                        leverages modern technologies and
-                                        frameworks to build phenomenal
-                                        applications that help you take
-                                        advantage of the mobile opportunity.
+									<h4 class="mb-4">{{$resource.section_two.grid.card2.title}}</h4>
+									<p class="mb-0">{{$resource.section_two.grid.card2.sub_title}}
 									</p>
 
 								</div>
@@ -203,12 +185,9 @@ the Android operating system.
 							<div class="card about-image">
 								<div class="card-body">
 									
-									<h4 class="mb-4">Cross-platform app <br>
-                                        development</h4>
-									<p class="mb-0"> Every project is overseen by an
-                                        experienced domain expert who will
-                                        manage the entire project and will be
-                                        your point of contact.</p>
+									<h4 class="mb-4">{{$resource.section_two.grid.card3.title}}<br>
+                                        {{$resource.section_two.grid.card3.title1}}</h4>
+									<p class="mb-0"> {{$resource.section_two.grid.card3.sub_title}}</p>
 
 								</div>
 
@@ -225,77 +204,76 @@ the Android operating system.
         </section>
 
         <section class="our_process_new">
-            <div class="container container-desktoplandingpage pb-8">
+            <div class="container container-desktoplandingpage pb-8 align-items-center">
 
-                <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+                <div class="row gx-lg-8 gx-xl-12 gy-10">
                     <div class="col-md-10 col-lg-10 col-xl-8 mx-auto text-center">
-                        <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
-                            SERVICE AND OFFERINGS
+                        <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4 mx-auto">
+                            {{$resource.section_three.title}}
                         </h2>
                         <h1 class="display-1 mb-4">
-                            Our mobile application
-                            development process
+                            {{$resource.section_three.sub_title}}
                         </h1>
                     </div>
                 </div>
                 <div class="col-md-10 col-lg-8 col-xl-9 mx-auto text-center">
 
                     <p class="lead fs-lg mb-12">
-                        Mobile development life cycle is majorly divided into 5 stages.
+                        {{$resource.section_three.description}}
                     </p>
                 </div>
 
                
-                <div class="row pb-6 offset-1">
+                <div class="row pb-6 offset-xl-1 offset-lg-1 offset-0">
                     <ul class="process_step">
                         <li class="step_one">
                             <div class="box_main">
                             <div class="im_box">
-                                <img src="https://res.cloudinary.com/biggworks/image/upload/v1685510144/Group_11600_e12hka.png" alt="">
+                                <img src="{{$resource.section_three.step_one.img}}" alt="">
                             </div>
                             <div class="cnt_box">
-                                <p class="lead fs-lg">Analysis of requirement</p>
+                                <p class="lead fs-lg">{{$resource.section_three.step_one.title}}</p>
                             </div>
                         </div>
                         </li>
                         <li class="step_two">
                             <div class="box_main">
                             <div class="im_box">
-                                <img src="https://res.cloudinary.com/biggworks/image/upload/v1685510123/Group_11604_cqog32.png" alt="">
+                                <img src="{{$resource.section_three.step_two.img}}" alt="">
                             </div>
                             <div class="cnt_box">
                                
-                                <p class="lead fs-lg">Wireframing and designing</p>
+                                <p class="lead fs-lg">{{$resource.section_three.step_two.title}}</p>
                             </div>
                         </div>
                         </li>
                         <li class="step_three">
                             <div class="box_main">
                             <div class="im_box">
-                                <img src="https://res.cloudinary.com/biggworks/image/upload/v1685510111/Group_11608_oi1u0i.png" alt="">
+                                <img src="{{$resource.section_three.step_three.img}}" alt="">
                             </div>
                             <div class="cnt_box">
-                                <p class="lead fs-lg">Development</p>
+                                <p class="lead fs-lg">{{$resource.section_three.step_three.title}}</p>
                             </div>
                         </div>
                         </li>
                         <li class="step_four">
                             <div class="box_main">
                             <div class="im_box">
-                                <img src="https://res.cloudinary.com/biggworks/image/upload/v1685510093/Group_11609_ljtva5.png" alt="">
+                                <img src="{{$resource.section_three.step_four.img}}" alt="">
                             </div>
                             <div class="cnt_box">
-                                <p class="lead fs-lg">Testing</p>
+                                <p class="lead fs-lg">{{$resource.section_three.step_four.title}}</p>
                             </div>
                         </div>
                         </li>
                         <li class="step_five">
                             <div class="box_main">
                             <div class="im_box">
-                                <img src="https://res.cloudinary.com/biggworks/image/upload/v1685510086/Group_11611_qep8ti.png" alt="">
+                                <img src="{{$resource.section_three.step_five.img}}" alt="">
                             </div>
                             <div class="cnt_box">
-                                <p class="lead fs-lg">Deployment</p>
+                                <p class="lead fs-lg">{{$resource.section_three.step_five.title}}</p>
                             </div>
                         </div>
                         </li>
@@ -313,22 +291,24 @@ the Android operating system.
                 </div> -->
                 <div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
 					<span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
-							data-bs-target="#exampleModal">Get in touch</a></span>
+							data-bs-target="#exampleModal">{{$resource.section_three.btn_get_in_touch}}</a></span>
 				</div>
             </div>
         </section>
 
         <section class="wrapper bg-linear-gradient">
             <div class="container pb-4 pt-6">
-                <p class="project-unlock mb-xl-2 text-center">With Biggworks, hiring the top remote Indian talent is made easy</p>
+                <p class="project-unlock mb-xl-2 text-center">{{$resource.section_four.title}}</p>
                 <p class="lead fs-lg mb-8 text-center">
-                    Access the talent network of 50,000+ experts with 100+ skill sets
+                    {{$resource.section_four.sub_title}}
                 </p>
                 <div class="text-center">
-                    <img class="img-fluid" src="https://res.cloudinary.com/biggworks/image/upload/v1685511885/Group_11618_zixm15.png" alt=""/>
+                    <img class="img-fluid" src="{{$resource.section_four.img}}" alt=""/>
                 </div>
             </div>
         </section>
+
+       
 
         <section class="wrapper">
             <div class="container mt-8 mb-8">
@@ -336,69 +316,67 @@ the Android operating system.
                 <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
                     <div class="col-md-10 col-lg-10 col-xl-8 mx-auto text-center">
                         <p class="project-unlock pb-0">
-                            Why Choose Us?
+                            {{$resource.section_five.title}}
                         </p>
                         
 
                     <p class="lead fs-lg mb-6">
-                        We work with commitment and on-time delivery. With us, you can
-leverage from the following benefits
+                        {{$resource.section_five.sub_title}}
                     </p>
                 </div>
 
-                <div class="row mb-xl-3 mb-md-5">
+                <div class="row mb-x">
                     <div class="col-1">
-                        <img class="ps-xl-11 ps-md-3"
-                          src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" />
+                        <img class="ps-xl-12 ps-md-3 mb-2 mb-xl-3 mb-lg-3"
+                          src="{{$resource.section_five.row1.img}}" />
                       </div>
-                      <div class="col-3 landingpage-points">Access to the latest technology</div>
+                      <div class="col-xl-3 col-lg-3 col-11 landingpage-points mb-2 mb-xl-3 mb-lg-3 ps-5 ps-xl-3 ps-lg-3">{{$resource.section_five.row1.title1}}</div>
                       <div class="col-1">
-                        <img class="ps-xl-11 ps-md-3"
-                          src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" />
+                        <img class="ps-xl-12 ps-md-3 mb-2 mb-xl-3 mb-lg-3"
+                          src="{{$resource.section_five.row1.img}}" />
                       </div>
-                      <div class="col-3 landingpage-points pb-md-3 pb-xl-0">Expertise</div>
+                      <div class="col-xl-3 col-lg-3 col-11 landingpage-points mb-2 mb-xl-3 mb-lg-3 ps-5 ps-xl-3 ps-lg-3">{{$resource.section_five.row1.title2}}</div>
                       <div class="col-1">
-                        <img class="ps-xl-11 ps-md-3"
-                          src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" />
+                        <img class="ps-xl-12 ps-md-3 mb-2 mb-xl-3 mb-lg-3"
+                          src="{{$resource.section_five.row1.img}}" />
                       </div>
-                      <div class="col-3 landingpage-points">User-centric design</div>
+                      <div class="col-xl-3 col-lg-3 col-11 landingpage-points mb-2 mb-xl-3 mb-lg-3 ps-5 ps-xl-3 ps-lg-3">{{$resource.section_five.row1.title3}}</div>
                 </div>
                
-                <div class="row mb-3 mb-md-5">
+                <div class="row">
                     <div class="col-1">
-                        <img class="ps-xl-11 ps-md-3"
-                          src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" />
+                        <img class="ps-xl-12 ps-md-3 mb-2 mb-xl-3 mb-lg-3"
+                          src="{{$resource.section_five.row2.img}}" />
                       </div>
-                      <div class="col-3 landingpage-points">High-quality deliverables</div>
+                      <div class="col-xl-3 col-lg-3 col-11 landingpage-points mb-2 mb-xl-3 mb-lg-3 ps-5 ps-xl-3 ps-lg-3">{{$resource.section_five.row2.title1}}</div>
                       <div class="col-1">
-                        <img class="ps-xl-11 ps-md-3"
-                          src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" />
+                        <img class="ps-xl-12 ps-md-3 mb-2 mb-xl-3 mb-lg-3"
+                          src="{{$resource.section_five.row2.img}}" />
                       </div>
-                      <div class="col-3 landingpage-points pb-md-3 pb-xl-0">Time-saving</div>
+                      <div class="col-xl-3 col-lg-3 col-11 landingpage-points mb-2 mb-xl-3 mb-lg-3 ps-5 ps-xl-3 ps-lg-3">{{$resource.section_five.row2.title2}}</div>
                       <div class="col-1">
-                        <img class="ps-xl-11 ps-md-3"
-                          src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" />
+                        <img class="ps-xl-12 ps-md-3 mb-2 mb-xl-3 mb-lg-3"
+                          src="{{$resource.section_five.row2.img}}" />
                       </div>
-                      <div class="col-3 landingpage-points">Cross-platform development</div>
+                      <div class="col-xl-3 col-lg-3 col-11 landingpage-points mb-2 mb-xl-3 mb-lg-3 ps-5 ps-xl-3 ps-lg-3">{{$resource.section_five.row2.title3}}</div>
                 </div>
 
-                <div class="row mb-4">
+                <div class="row">
                     <div class="col-1">
-                        <img class="ps-xl-11 ps-md-3"
-                          src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" />
+                        <img class="ps-xl-12 ps-md-3 mb-2 mb-xl-3 mb-lg-3"
+                          src="{{$resource.section_five.row3.img}}" />
                       </div>
-                      <div class="col-3 landingpage-points">Ongoing support and
-                        maintenance</div>
+                      <div class="col-xl-3 col-lg-3 col-11 landingpage-points mb-2 mb-xl-3 mb-lg-3 ps-5 ps-xl-3 ps-lg-3">{{$resource.section_five.row3.title1}}</div>
                       <div class="col-1">
-                        <img class="ps-xl-11 ps-md-3"
-                          src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" />
+                        <img class="ps-xl-12 ps-md-3 mb-2 mb-xl-3 mb-lg-3"
+                          src="{{$resource.section_five.row3.img}}" />
                       </div>
-                      <div class="col-3 landingpage-points pb-md-6 pb-xl-0">Cost-effective</div>
+                      <div class="col-xl-3 col-lg-3 col-11 landingpage-points mb-2 mb-xl-3 mb-lg-3 ps-5 ps-xl-3 ps-lg-3">{{$resource.section_five.row3.title2}}</div>
                       <div class="col-1">
-                        <img class="ps-xl-11 ps-md-3"
-                          src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png" />
+                        <img class="ps-xl-12 ps-md-3 mb-2 mb-xl-3 mb-lg-3"
+                          src="{{$resource.section_five.row3.img}}" />
                       </div>
-                      <div class="col-3 landingpage-points pb-md-6 pb-xl-0">Security</div>
+                      <div class="col-xl-3 col-lg-3 col-11 landingpage-points mb-2 mb-xl-3 mb-lg-3 ps-5 ps-xl-3 ps-lg-3">{{$resource.section_five.row3.title3}}</div>
                 </div>
 
                 <!-- <div class="row">
@@ -522,87 +500,83 @@ leverage from the following benefits
     </div> -->
     <div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
         <span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">Get in touch</a></span>
+                data-bs-target="#exampleModal">{{$resource.section_five.btn_get_in_touch}}</a></span>
     </div>
     </div>
     </section>
 
-    <section class="wrapper">
-        <div class="container pt-8 pb-8">
+    <!-- <section class="wrapper">
+        <div class="container pt-8 pb-10">
             <div class="row gy-10">
-                <div class="col-12 col-xl-6 col-lg-6 col-md-5">
-                    <p class="project-unlock mb-6">What our clients says about us</p>
+                <div class="col-12 col-xl-7 col-lg-6 col-md-6">
+                    <p class="project-unlock mb-6">{{$resource.section_six.title}}</p>
                     <div class="landingpage-card-client-says card mb-6">
-                        <div class="card-body">
+                        <div class="card-body-clients">
                             <p class="lead fs-lg mb-2 px-4">
-                                Biggworks gave me option to preserve the equity i
-                                had earned that would not have been feasible
-                                otherwise. without biggworks, my options would
-                                have expired and gone back to my former employer
+                                {{$resource.section_six.description}}
                             </p>
 
                         </div>
                     </div>
                 </div>
                 <div class="col-1 col-xl-1 col-lg-1 col-md-0"></div>
-                <div class="col-10 col-md-6 col-xl-4 col-lg-5 text-right pt-xl-13 pt-md-16 pt-lg-8 pt-4">
-                    <img class="col-10 col-md-12 landingpage-image img-fluid"
-                        src="https://res.cloudinary.com/biggworks/image/upload/v1685362420/smiling-redhead-man-with-laptop-looking-camera-cafe_1_htxnvw.png"
+                <div class="col-10 col-md-5 col-xl-4 col-lg-5 text-right pt-xl-13 pt-md-16 pt-lg-8 pt-4">
+                    <img class="col-12 col-md-12 landingpage-image img-fluid"
+                        src="{{$resource.section_six.img}}"
                         alt="" />
                 </div>
             </div>
             <div class="row">
-                <!-- <div class="col-1 col-xl-1 col-md-1 col-lg-1 ps-md-5">
-                    
-                </div> -->
-                <div class="col-10 col-md-10 col-xl-6 col-lg-6 pt-xl-0 pt-md-0 pt-10">
+              
+                <div class="col-12 col-md-10 col-xl-6 col-lg-6 pt-xl-0 pt-md-0 pt-10">
 
-                    <div class="item pb-12">
-                        <!-- <blockquote class="icon icon-right"> -->
-                            <div class="background-blockquote">
-                            <h3 class=""><img class="pe-3" src="https://res.cloudinary.com/biggworks/image/upload/v1676265189/senior_fcwdlm.png"
-                                alt="" />  <span>senior software engineer</span></h3>
-                            <p class="ps-11_5">San Fracisco, California</p>
+                    <div class="item pb-8">
+                       
+                        <div class="background-blockquote">
+                            <h3 class=""><img class="pe-xl-3 pe-0"
+                                    src="{{$resource.section_six.row.img}}"
+                                    alt="" /> <span>{{$resource.section_six.row.software}}</span></h3>
+                            <p class="ps-xl-11_5 ps-10 ps-md-10">{{$resource.section_six.row.place}}</p>
                         </div>
-                            <div class="blockquote-details ps-20">
+                        <div class="blockquote-details ps-20">
 
-                            </div>
-                        <!-- </blockquote> -->
+                        </div>
                     </div>
 
                 </div>
             </div>
             <div class="d-flex" data-group="page-title-buttons" data-delay="600">
                 <span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">Discover what we can do for you</a></span>
+                        data-bs-target="#exampleModal">{{$resource.section_six.row.btn_discover}}</a></span>
             </div>
 
 
 
         </div>
     </section>
-   
+
+    -->
     
     <section class="wrapper bg-linear-gradient">
         <div class="container pb-10">
-        <div class="row text-left">
-            <div class="col-md-10 col-lg-10 col-xl-12 col-xxl-6 text-left">
+            <div class="row text-left">
+                <div class="col-md-10 col-lg-10 col-xl-12 col-xxl-6 text-left">
 
-                <h4 class="mb-4 pt-6">
-                    How can we help you?
-                </h4>
-                <p class="lead fs-lg mb-6">
-                    Get in touch and let's find out how we can curate our
-                    offerings to match your organization's needs.
-                </p>
-                <div class="d-flex" data-group="page-title-buttons" data-delay="600">
-                    <span><a class="btn btn-primary rounded-0" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">Get in touch</a></span>
+                    <h4 class="mb-4 pt-6">
+                        {{$resource.section_seven.title}}
+                    </h4>
+                    <p class="lead fs-lg mb-6">
+                        {{$resource.section_seven.description}}
+                    </p>
+                    <div class="d-flex" data-group="page-title-buttons" data-delay="600">
+                        <span><a class="btn btn-primary rounded-0" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">{{$resource.section_seven.btn_get_in_touch}}</a></span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
 
 		
 	</div>
@@ -650,6 +624,5 @@ leverage from the following benefits
 
 	<!-- </div> -->
 	<!-- /.content-wrapper -->
-	{{ partial "footer.html" . }} {{ partial "page-progress.html" . }}
 </body>
 {{ end }}

@@ -1,5 +1,5 @@
 {{ $nav := .Site.Data.nav.nav }}
-
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 <footer class="bg-dark text-inverse">
 	<div class="container py-13 py-md-15">
 		<div class="row gy-6 gy-lg-0">
@@ -8,16 +8,15 @@
 					<img class="mb-4"
 						src="https://res.cloudinary.com/biggworks/image/upload/v1677320785/footer_logo_fmwquj.png"
 						alt="BiggWorks Logo" />
-					<p class="mb-4">© 2023 All rights reserved.<br class="d-none d-lg-block" />DWise Techlabs Pvt Ltd.
+					<p class="mb-1">© 2023 All rights reserved.<br class="d-none d-lg-block" />DWise Techlabs Pvt Ltd.
 					</p>
 					<nav class="nav social social-white">
 						<!-- <a href="#"><i class="uil uil-twitter"></i></a> -->
-						<a href="https://www.facebook.com/biggworkshq/" target="_blank"><img src="https://res.cloudinary.com/biggworks/image/upload/v1684926347/Vector_1_enhz60.png"/></a>
-						<!-- <iconify-icon icon="uil:facebook-f"></iconify-icon> -->
+						<a href="https://www.facebook.com/biggworkshq/" target="_blank"><i class="uil uil-facebook"></i></a>
 						<!-- <a href="#"><i class="uil uil-dribbble"></i></a> -->
-						<a href="https://www.instagram.com/biggworks/" target="_blank"><img src="https://res.cloudinary.com/biggworks/image/upload/v1684927009/Vector_2_bcvwfi.png"/></a>
+						<a href="https://www.instagram.com/biggworks/" target="_blank"><i class="uil uil-instagram-alt"></i></a>
 						<!-- <a href="#"><i class="uil uil-youtube"></i></a> -->
-						<a href="https://www.linkedin.com/company/biggworks/" target="_blank"><img src="https://res.cloudinary.com/biggworks/image/upload/v1684926995/Vector_4_vuznry.png"/></a>
+						<a href="https://www.linkedin.com/company/biggworks/" target="_blank"><i class="uil uil-linkedin"></i></a>
 
 
 					</nav>
@@ -26,7 +25,7 @@
 			<div class="col-md-4 col-lg-3">
 				<div class="widget">
 					<h4 class="widget-title text-white mb-3">Get in Touch</h4>
-					<a href="mailto:hello@biggworks.com">hello@biggworks.com</a><br /> +91 8088354074
+					<a href="mailto:hello@biggworks.com">gagan@biggworks.com</a><br /> 
 				</div>
 			</div>
 			<div class="col-md-4 col-lg-3">
@@ -45,7 +44,7 @@
       </div>
 			<div class="col-md-12 col-lg-3">
 				<div class="widget">
-					<p class="mb-5">Subscribe to get latest updates.</p>
+					<p class="mb-0">Subscribe to get latest updates.</p>
 					<div class="newsletter-wrapper">
 						<div id="mc_embed_signup2">
 							<!-- <form
@@ -73,10 +72,13 @@
 									<div class="clear"></div>
 								</div>
 							</form> -->
-							<form method="post" id="" name="mc-embedded-subscribe-form" class="validate dark-fields" novalidate>
+							<form 
+							
+							
+							method="post" id="" name="mc-embedded-subscribe-form" class="validate dark-fields" novalidate>
 								<div id="mc_embed_signup_scroll2">
 								  <div class="mc-field-group input-group form-label-group">
-									<input type="email" value="" name="EMAIL" class="required email form-control" placeholder="Email Address" id="mce-EMAIL2">
+									<input type="email" name="EMAIL" class="required email form-control form-control-radius" placeholder="Email Address" id="mce-EMAIL2">
 									<label for="mce-EMAIL2">Email Address</label>
 									<input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe2" class="btn_btn  btn-light button-fontcolor">
 								  </div>
@@ -93,6 +95,16 @@
 								  <div class="clear"></div>
 								</div>
 							  </form>
+							  <form id="emailsend" class="validate dark-fields">
+								<div class="mc-field-group input-group form-label-group">
+									<input type="email" name="EMAIL" class="required email form-control form-control-radius" placeholder="Email Address" id="mce">
+									<label for="mce-EMAIL2">Email Address</label>
+									<input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe2" class="btn_btn  btn-light button-fontcolor">
+								  </div>
+								  <div id="message" class="mt-2"></div>
+							  
+							  </form>
+							  
 							  
 						</div>
 					</div>
@@ -102,7 +114,7 @@
 	</div>
 </footer>
 <script>
-	const emailField = document.getElementById('mce-EMAIL2');
+	const emailField = document.getElementById('mce');
 const joinButton = document.getElementById('mc-embedded-subscribe2');
 const message = document.getElementById('message');
 
@@ -121,6 +133,49 @@ joinButton.addEventListener('click', function(e) {
 });
 </script>
 <script>
+// 	const firebaseConfig = {
+// apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
+// authDomain: "biggworks-dd979.firebaseapp.com",
+// databaseURL: "https://biggworks-dd979-default-rtdb.asia-southeast1.firebasedatabase.app",
+// projectId: "biggworks-dd979",
+// storageBucket: "biggworks-dd979.appspot.com",
+// messagingSenderId: "160882722753",
+// appId: "1:160882722753:web:f067b273803ff585359140",
+// measurementId: "G-377HKGT4RW"
+// };
+// firebase.initializeApp(firebaseConfig);
+let emailInfo = firebase.database().ref("emailInfo");
+
+
+
+	function doing(event) {
+		event.preventDefault()
+
+		let newContactInfo = emailInfo.push();
+
+		let data = document.getElementById("mce").value
+
+		newContactInfo.set({
+			email : data
+		})
+		console.log("details =====",data);
+
+		// document.getElementById('formContact').reset();
+
+
+	}
+
+
+var data = document.getElementById("emailsend")
+
+		data.addEventListener("submit",doing)
+
+</script>
+
+
+
+
+<!-- <script>
     const firebaseConfig = {
     apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
     authDomain: "biggworks-dd979.firebaseapp.com",
@@ -133,37 +188,36 @@ joinButton.addEventListener('click', function(e) {
     };
     firebase.initializeApp(firebaseConfig);
     
-    let candidateInfo = firebase.database().ref("candidate");
+    let candidateInfo = firebase.database().ref("emailInfo");
     
     var application=document.getElementById("application");
     
     function saveRecordtoDatabase() {
+
+
     console.log("saveRecordtoDatabase");
+
+
     event.preventDefault();
     let newCandidateInfo = candidateInfo.push();
     
     newCandidateInfo.set({
-      name: document.getElementById('form_name').value,
-      email: document.getElementById('form_email').value,
-      phone: document.getElementById('form_phone').value,
-      // position: document.getElementById('name').value
-      surname: document.getElementById('form_lastname').value,
-      message: document.getElementById('form_message').value
+      email: document.getElementById('mce-EMAIL2').value,
      
     });
     }
-    </script>
+    </script> -->
 
 	<script>
-const emailInput = document.getElementById("email-input").value; // Assuming you have an input field with the id "email-input"
+// const emailInput = document.getElementById("email-input").value; // Assuming you have an input field with the id "email-input"
 
-const emailsRef = firebase.database().ref("emails");
-emailsRef.push().set({ email: emailInput })
-  .then(() => {
-    console.log("Email ID saved to Firebase database.");
-  })
-  .catch((error) => {
-    console.error("Error saving email ID:", error);
-  });
+// const emailsRef = firebase.database().ref("emails");
+// emailsRef.push().set({ email: emailInput })
+//   .then(() => {
+//     console.log("Email ID saved to Firebase database.");
+//   })
+//   .catch((error) => {
+//     console.error("Error saving email ID:", error);
+//   });
 
 	</script>

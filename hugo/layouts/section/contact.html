@@ -38,8 +38,8 @@
     <section class="wrapper bg-linear-gradient">
         <div class="container bp-22">
             <!-- <h4 class="pt-10 text-center mb-8">{{$resource.section_two.title}}</h4> -->
-            <div class="row offset-2">
-                <div class="col-9">
+            <div class="row offset-xl-2 offset-md-2 offset-lg-2 offset-0">
+                <div class="col-xl-9 col-md-9 col-lg-9 col-12">
                     <form class="contact-form" method="post" id="formContact" onsubmit="saveContactInfo()">
                         <div class="messages"></div>
                         <div class="controls">
@@ -167,29 +167,29 @@
 
 
 
-<section class="wrapper careers-background">
+<section class="wrapper bg-linear-gradient">
     <div class="container">
         <div class="row mt-4 pt-8">
-            <div class="col-xl-6 col-lg-6 col-md-5 col-12">
+            <div class="col-xl-6 col-lg-5 col-md-5 col-12">
                 
                 <p class="service_ready mb-md-0 mb-6 pt-5">
                   {{$resource.section_five.title}}
                 </p>
                           </div>
-            <div class="col-xl-3 col-lg-3 col-md-1 col-1"></div>
-            <div class="col-lg-1 col-xl-1 col-3 mb-8 col-md-2 ps-4 ps-xl-0">
+            <div class="col-xl-3 col-lg-1 col-md-1 col-1"></div>
+            <div class="col-lg-2 col-xl-1 col-3 mb-8 col-md-2 ps-4 ps-xl-0">
                 <a href="{{$resource.section_five.facebook_link}}" target="_blank">
                 <img
                     src="{{$resource.section_five.facebook_image}}" />
                 </a>
             </div>
-            <div class="col-lg-1 col-xl-1 col-3 col-xs-4 col-md-2 ps-xl-0 ps-4">
+            <div class="col-lg-2 col-xl-1 col-3 col-xs-4 col-md-2 ps-xl-0 ps-4">
                 <a href="{{$resource.section_five.instagram_link}}" target="_blank">
                 <img
                     src="{{$resource.section_five.instagram_image}}" />
                 </a>
             </div>
-            <div class="col-lg-1 col-xl-1 col-3 mb-8 col-md-2 ps-xl-0 ps-4">
+            <div class="col-lg-2 col-xl-1 col-3 mb-8 col-md-2 ps-xl-0 ps-4">
                 <a href="{{$resource.section_five.linkedin_link}}" target="_blank">
                 <img
                     src="{{$resource.section_five.lonkedin_image}}" target="_blank"/>
@@ -306,10 +306,13 @@ measurementId: "G-377HKGT4RW"
 };
 firebase.initializeApp(firebaseConfig);
 let contactInfo = firebase.database().ref("contact");
+
 function saveContactInfo() {
-    console.log("saveContactInfo");
     event.preventDefault();
     let newContactInfo = contactInfo.push();
+
+    console.log("saveContactInfo",contactInfo);
+
 
     newContactInfo.set({
         name: document.getElementById('form_name').value,
@@ -320,6 +323,8 @@ function saveContactInfo() {
     });
     document.getElementById('formContact').reset();
     // sendEmailContact();
+
+
 }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

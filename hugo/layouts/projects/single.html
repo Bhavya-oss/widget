@@ -15,13 +15,13 @@
 
         <section class="wrapper bg-linear-gradient-projects">
             <div class="d-flex align-items-center bg-overlay-400">
-                <div class="container-fluid pb-13 pt-md-8 pb-md-17 pb-xl-22 pb-6 text-center">
-                    <div class="row mb-10">
+                <div class="container-fluid pb-13 pt-8 pt-md-8 pb-md-17 pb-xl-22 pb-6 pb-lg-21 ">
+                    <div class="row mb-8">
                         <div class="col-md-10 col-lg-10 col-xl-10 col-xxl-8 mx-auto mb-xl-13 mb-lg-13 mb-md-13 mb-8" data-group="page-title">
-                            <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5">
+                            <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4 text-center">
                                 {{$resource.section_one.title}}
                             </h2>
-                            <h3 class="display-4 mb-6 lh-sm">
+                            <h3 class="display-4 mb-6 lh-sm text-center">
                                 {{$resource.section_one.subtitle}}
                             </h3>
                             <div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
@@ -32,83 +32,97 @@
 
 
                             <div id="myModal1" class="modal fade" tabindex="-1">
-                              <div class="modal-dialog modal-lg">
+                              <div class="modal-dialog modal-fullscreen modal-lg">
                                 <div class="modal-content">
                                   <!-- <div class="modal-header"> -->
-                                  <h4 class="modal-title text-center pt-6">{{$resource.section_one.modal_title}}
+                                  <h4 class="modal-title  text-center project-unlock pt-16">{{$resource.section_one.modal_title}}
                                   </h4>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                  <p type="button" class="btn-custum" data-bs-dismiss="modal"><i class="uil uil-times"></i></p>
                                   <!-- </div> -->
                                   <div class="modal-body">
                                     <section id="tabs" class="wrapper pt-0 pb-md-4">
                                       <div class="row">
-                                        <div class="col-lg-15">
+                                        <div class="col-3"></div>
+                                        <div class="col-lg-6 col-12">
               
-                                          <div class="tab-content">
+                                          <div class="form_card">
+              
+                                            <div class="card-body">
+              
+                                              <div class="tab-content">
               
               
-                                            <form class="contact-form" method="post" id="formContact"
-                                              onsubmit="saveRecordtoDatabase()">
-                                              <div class="messages"></div>
-                                              <div class="controls">
-                                                <div class="row gx-4">
-                                                  <div class="col-md-6">
-                                                    <div class="form-label-group mb-4">
-                                                      <input id="form_name" type="text" name="name" class="form-control"
-                                                        placeholder="Jane" required="required" data-error="First Name is required.">
-                                                      <label for="form_name">{{$resource.section_one.fname}}</label>
-                                                      <div class="help-block with-errors"></div>
-                                                    </div>
-                                                  </div>
-                                                  <div class="col-md-6">
-                                                    <div class="form-label-group mb-4">
-                                                      <input id="form_lastname" type="text" name="surname" class="form-control"
-                                                        placeholder="Doe" required="required" data-error="Last Name is required.">
-                                                      <label for="form_lastname">{{$resource.section_one.lastname}}</label>
-                                                      <div class="help-block with-errors"></div>
-                                                    </div>
-                                                  </div>
-                                                  <div class="col-md-6">
-                                                    <div class="form-label-group mb-4">
-                                                      <input id="form_email" type="email" name="email" class="form-control"
-                                                        placeholder="jane.doe@example.com" required="required"
-                                                        data-error="Valid email is required.">
-                                                      <label for="form_email">{{$resource.section_one.email}}</label>
-                                                      <div class="help-block with-errors"></div>
-                                                    </div>
-                                                  </div>
-                                                  <div class="col-md-6">
-                                                    <div class="form-label-group mb-4">
-                                                      <input id="form_phone" type="tel" name="phone" class="form-control"
-                                                        placeholder="Your phone number">
-                                                      <label for="form_phone">{{$resource.section_one.phone}}</label>
-                                                      <div class="help-block with-errors"></div>
-                                                    </div>
-                                                  </div>
-                                                  <div class="col-12">
-                                                    <div class="form-label-group mb-4">
-                                                      <textarea id="form_message" name="message" class="form-control"
-                                                        placeholder="Your message" rows="5" required="required"
-                                                        data-error="Message is required."></textarea>
-                                                      <label for="form_message">{{$resource.section_one.message}}</label>
-                                                      <div class="help-block with-errors"></div>
-                                                    </div>
-                                                  </div>
-                                                  <!-- <div class="col-2 col-xl-9 col-lg-9 col-md-7"></div> -->
-                                                  <div class="col-1">
-                                                    <input type="submit" class="btn btn-primary button-widthincrease rounded-0 btn-send mb-3"
-                                                      value="Send message">
+                                                <form class="contact-form" method="post" id="formContact"
+                                                  onsubmit="saveRecordtoDatabase()">
+                                                  <div class="messages"></div>
+                                                  <div class="controls">
+                                                    <div class="row gx-4">
+                                                      <div class="col-md-6">
+                                                        <label class="form-label">First Name*</label>
+                                                        <div class="form-label-group mb-4">
+                                                          <input id="form_name" type="text" name="name" class="form-control"
+                                                            placeholder="Jane" required="required"
+                                                            data-error="First Name is required.">
+                                                          <label for="form_name">{{$resource.section_one.fname}}</label>
+                                                          <div class="help-block with-errors"></div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="col-md-6">
+                                                        <label class="form-label">Last Name*</label>
+                                                        <div class="form-label-group mb-4">
+                                                          <input id="form_lastname" type="text" name="surname" class="form-control"
+                                                            placeholder="Doe" required="required" data-error="Last Name is required.">
+                                                          <label for="form_lastname">{{$resource.section_one.lastname}}</label>
+                                                          <div class="help-block with-errors"></div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="col-md-6">
+                                                        <label class="form-label">Email address*</label>
+                                                        <div class="form-label-group mb-4">
+                                                          <input id="form_email" type="email" name="email" class="form-control"
+                                                            placeholder="jane.doe@example.com" required="required"
+                                                            data-error="Valid email is required.">
+                                                          <label for="form_email">{{$resource.section_one.email}}</label>
+                                                          <div class="help-block with-errors"></div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="col-md-6">
+                                                        <label class="form-label">Phone</label>
+                                                        <div class="form-label-group mb-4">
+                                                          <input id="form_phone" type="number" name="phone" class="form-control"
+                                                            placeholder="Your phone number">
+                                                          <label for="form_phone">{{$resource.section_one.phone}}</label>
+                                                          <div class="help-block with-errors"></div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="col-12">
+                                                        <label class="form-label">Message</label>
+                                                        <div class="form-label-group mb-4">
+                                                          <textarea id="form_message" name="message" class="form-control"
+                                                            placeholder="Your message" rows="5"></textarea>
+                                                          <label for="form_message">{{$resource.section_one.message}}</label>
+                                                          <div class="help-block with-errors"></div>
+                                                        </div>
+                                                      </div>
               
-                                                  </div>
-                                                <!-- </div> -->
+              
+                                                      <!-- <div class="col-2 col-xl-9 col-lg-9 col-md-7"></div> -->
+                                                      <div class="col-1">
+                                                        <input type="submit"
+                                                          class="btn btn-primary button-widthincrease rounded-0 btn-send mb-3"
+                                                          value="Contact us">
+              
+                                                      </div>
+                                                      <!-- </div> -->
+                                                    </div>
+                                                </form>
                                               </div>
-                                            </form>
+                                            </div>
                                           </div>
+              
+              
                                         </div>
                                       </div>
-              
-              
-              
                                     </section>
               
               
@@ -123,7 +137,7 @@
             </div>
         </section>
         <section class="wrapper bg-light">
-            <div class="container pb-14 pb-md-4">
+            <div class="container pb-xl-14 pb-12 pb-lg-14 pb-md-4">
                 <div class="row">
                     <div class="col-12">
                         <article class="mt-n21">
@@ -138,7 +152,7 @@
         </section>
         <section class="wrapper">
             <div class="container px-0 px-xl-12 px-lg-12 px-md-0">
-                <p class="pt-lg-20_5 pt-md-8 pt-md-15 pt-0 px-5 text-justify">{{$resource.section_three.description}}
+                <p class="pt-lg-13 pt-md-8 pt-md-15 pt-0 px-5 text-justify">{{$resource.section_three.description}}
                 </p>
                 <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-0 mt-2 px-4_5">{{$resource.section_three.client}}</h4>
                 
@@ -146,55 +160,55 @@
 
                   <div class="row-container">
                       <img class="ps-5" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png" />
-                      <p class="ms-3">{{$resource.section_three.client1}}</p>
+                      <p class="ms-xl-3">{{$resource.section_three.client1}}</p>
                   </div>
                   
                   {{ if $resource.section_three.client2 }}
                   <div class="row-container">
                     <img class="ps-5" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png" />
-                    <p class="ms-3">{{$resource.section_three.client2}}</p>
+                    <p class="ms-xl-3">{{$resource.section_three.client2}}</p>
                   </div>
                   {{ end }}
                   
                   {{ if $resource.section_three.client3 }}
                   <div class="row-container">
                     <img class="ps-5" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png" />
-                    <p class="ms-3">{{$resource.section_three.client3}}</p>
+                    <p class="ms-xl-3">{{$resource.section_three.client3}}</p>
                   </div>
                   {{ end }}
                   
                   {{ if $resource.section_three.client4 }}
                   <div class="row-container">
                     <img class="ps-5" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png" />
-                    <p class="ms-3">{{$resource.section_three.client4}}</p>
+                    <p class="ms-xl-3">{{$resource.section_three.client4}}</p>
                   </div>
                   {{ end }}
                   
                   {{ if $resource.section_three.client5 }}
                   <div class="row-container">
                     <img class="ps-5" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png" />
-                    <p class="ms-3">{{$resource.section_three.client5}}</p>
+                    <p class="ms-xl-3">{{$resource.section_three.client5}}</p>
                   </div>
                   {{ end }}
                   
                   {{ if $resource.section_three.client6 }}
                   <div class="row-container">
                     <img class="ps-5" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png" />
-                    <p class="ms-3">{{$resource.section_three.client6}}</p>
+                    <p class="ms-xl-3">{{$resource.section_three.client6}}</p>
                   </div>
                   {{ end }}
                   
                   {{ if $resource.section_three.client7 }}
                   <div class="row-container">
                     <img class="ps-5" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png" />
-                    <p class="p ms-3">{{$resource.section_three.client7}}</p>
+                    <p class="p ms-xl-3">{{$resource.section_three.client7}}</p>
                   </div>
                   {{ end }}
                   
                   {{ if $resource.section_three.client8 }}
                   <div class="row-container">
                     <img class="ps-5" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png" />
-                    <p class="ms-3 ">{{$resource.section_three.client8}}</p>
+                    <p class="ms-xl-3 ">{{$resource.section_three.client8}}</p>
                   </div>
                   {{ end }}
                   
@@ -232,8 +246,8 @@
                 
 
                 <div class="row g-0 mb-10">
-                    <div class="col-1 col-lg-3 col-md-2 col-xl-2"></div>
-                    <div class="col-lg-9 col-md-9 col-xl-9 col-10 pt-8">
+                    <div class="col-lg-3 col-md-2 col-xl-2"></div>
+                    <div class="col-lg-9 col-md-9 col-xl-9 col-12 pt-8">
 
                         <img class="mobile-robust-tracking col-12 col-xl-12 col-lg-8 img-fluid"
                             src="{{$resource.section_three.image}}" alt="" />
@@ -252,51 +266,51 @@
               
                 <div class="row mt-4">
                   
-                    <div class="col-lg-1 col-xl-1 col-xs-4 col-6 col-sm-4 mb-8 mobile-text-center col-md-4 pe-14"><img
+                    <div class="col-lg-2 col-sm-4 col-xl-1 col-xs-4 col-4 col-sm-4 mb-8 col-md-2 pe-xl-14"><img
                             src="{{$resource.section_four.hardware.hardwareimage1}}" />
                     </div>
-                    <div class="col-lg-1 col-xl-1 col-xs-4  col-6 col-sm-4 mb-8 col-md-4 mx-3"><img
+                    <div class="col-lg-2 col-xl-1 col-xs-4 col-4 col-sm-4 mb-8 col-md-2 mx-xl-3"><img
                             src="{{$resource.section_four.hardware.hardwareimage2}}" />
                     </div>
                     {{ if $resource.section_four.hardware.hardwareimage3}}
-                    <div class="col-lg-1 col-xl-1 col-6 col-xs-4 mb-8 mobile-text-center col-md-4 mx-3"><img
+                    <div class="col-lg-2 col-xl-1 col-3 col-xs-4 mb-8 col-md-2 mx-xl-3"><img
                             src="{{$resource.section_four.hardware.hardwareimage3}}" />
                     </div>
                     {{ end }}
                     {{ if $resource.section_four.hardware.hardwareimage4}}
-                    <div class="col-lg-1 col-xl-1 col-6 mb-8 col-md-4 mx-3 mobile-text-center"><img
+                    <div class="col-lg-2 col-xl-1 col-4 mb-8 col-md-2 mx-xl-3"><img
                             src="{{$resource.section_four.hardware.hardwareimage4}}" />
                     </div>
                     {{ end }}
                     {{ if $resource.section_four.hardware.hardwareimage5}}
-                    <div class="col-lg-1 col-xl-1 col-6 col-xs-4 mb-8 mobile-text-center col-md-4 mx-3"><img
+                    <div class="col-lg-2 col-xl-1 col-4 col-xs-4 mb-8 col-md-2 mx-xl-3"><img
                             src="{{$resource.section_four.hardware.hardwareimage5}}" />
                     </div>
                     {{ end }}
                     {{ if $resource.section_four.hardware.hardwareimage6}}
-                    <div class="col-lg-1 col-xl-1 col-6 mb-8 col-md-4 mx-3"><img
+                    <div class="col-lg-2 col-xl-1 col-4 mb-8 col-md-2 mx-xl-3"><img
                             src="{{$resource.section_four.hardware.hardwareimage6}}"/>
                     </div>
                     {{ end }}
                     {{ if $resource.section_four.hardware.hardwareimage7}}
-                    <div class="col-lg-1 col-xl-1 col-6 col-md-4 mb-8 mobile-text-center col-md-4 mx-3"><img
+                    <div class="col-lg-2 col-xl-1 col-4  mb-8 col-md-2 mx-xl-3 pe-xl-22"><img
                             src="{{$resource.section_four.hardware.hardwareimage7}}" />
                     </div>
                     {{ end }}
 
-                    <div class="col-3"></div>
+                    <!-- <div class="col-xl-3 col-0 col-lg-3 col-sm-0"></div> -->
                     {{ if $resource.section_four.hardware.hardwareimage8}}
-                    <div class="col-lg-1 col-xl-1 col-6 mb-6 col-md-4 pe-14"><img
+                    <div class="col-lg-2 col-xl-1 col-4 mb-6 col-md-2 pe-xl-14"><img
                         src="{{$resource.section_four.hardware.hardwareimage8}}"/>
                     </div>
                     {{end }}
                     {{ if $resource.section_four.hardware.hardwareimage9}}
-                     <div class="col-lg-1 col-xl-1 col-6 col-md-4 mb-6 mobile-text-center col-md-4 mx-3"><img
+                     <div class="col-lg-2 col-xl-1 col-4  mb-6 col-md-2 mx-xl-3"><img
                         src="{{$resource.section_four.hardware.hardwareimage9}}" />
                      </div>
                      {{ end }}
                      {{ if $resource.section_four.hardware.hardwareimage10}}
-                     <div class="col-lg-1 col-xl-1 col-6 col-md-4 mb-6 mobile-text-center col-md-4 mx-3"><img
+                     <div class="col-lg-2 col-xl-1 col-4 col-md-4 mb-6 col-md-2 mx-xl-3"><img
                         src="{{$resource.section_four.hardware.hardwareimage10}}" />
                      </div>
                      {{ end }}
@@ -306,10 +320,10 @@
                 {{ if $resource.section_four.cloudserver }}
                 <h4 class="mt-4 mb-7 fw-semibold fw-semibold">{{$resource.section_four.cloudserver.cloudserverheading}}</h4>
                 <div class="row mt-4">
-                    <div class="col-6 col-lg-1 col-xl-1 mb-6 mobile-text-center col-md-4 pe-14"><img
+                    <div class="col-4 col-lg-2 col-xl-1 mb-6 col-md-2 pe-xl-14"><img
                             src="{{$resource.section_four.cloudserver.cloudserverimage1}}" />
                     </div>
-                    <div class="col-6 col-lg-2 mb-6 col-md-4 mx-3"><img src="{{$resource.section_four.cloudserver.cloudserverimage2}}" />
+                    <div class="col-4 col-lg-2 col-xl-1 mb-6 col-md-2 mx-xl-3"><img src="{{$resource.section_four.cloudserver.cloudserverimage2}}" />
                     </div>
 
                 </div>
@@ -320,33 +334,53 @@
                 <h4 class="mb-7 mt-4 fw-semibold fw-semibold">{{$resource.section_four.mobileapplications.mobileapplicationsheading}}</h4>
                 
                 <div class="row mt-4">
-                    <div class="col-6 col-lg-1 col-xl-1 mb-6 mobile-text-center col-md-4 pe-14"><img
+                  {{ if $resource.section_four.mobileapplications.mobileapplicationsimage1}}
+
+                    <div class="col-sm-4 col-4 col-lg-2 col-xl-1 mb-6 col-md-2 pe-xl-14"><img
                             src="{{$resource.section_four.mobileapplications.mobileapplicationsimage1}}" />
                     </div>
-                    <div class="col-6 col-lg-1 col-xl-1 mb-6 col-md-4 mx-3"><img
+                    {{ end }}
+                    {{ if $resource.section_four.mobileapplications.mobileapplicationsimage2}}
+
+                    <div class="col-4 col-lg-2 col-xl-1 mb-6 col-md-2 mx-xl-3"><img
                             src="{{$resource.section_four.mobileapplications.mobileapplicationsimage2}}" />
                     </div>
-                    <div class="col-6 col-lg-1 col-xl-1 mb-6 mobile-text-center col-md-4 mx-3"><img
+                    {{ end }}
+                    {{ if $resource.section_four.mobileapplications.mobileapplicationsimage3}}
+
+                    <div class="col-4 col-lg-2 col-xl-1 mb-6 col-md-2 mx-xl-3"><img
                         src="{{$resource.section_four.mobileapplications.mobileapplicationsimage3}}" />
                 </div>
-                <div class="col-6 col-lg-1 col-xl-1 mb-6 col-md-4 mx-3"><img
+                {{ end }}
+                {{ if $resource.section_four.mobileapplications.mobileapplicationsimage4}}
+
+                <div class="col-4 col-lg-2 col-xl-1 mb-6 col-md-2 mx-xl-3"><img
                         src="{{$resource.section_four.mobileapplications.mobileapplicationsimage4}}" />
                 </div>
-
+{{ end }}
                 </div>
                 {{ end }}
                 {{ if $resource.section_four.webapplications }}
                 <h4 class="mb-6 mt-4 fw-semibold fw-semibold">{{$resource.section_four.webapplications.webapplicationsheading}}</h4>
                 <div class="row mt-4">
-                    <div class="col-lg-1 col-xl-1 col-xs-4 col-6 col-sm-4 mb-6 pl-10 mobile-text-center col-md-4 pe-14"><img
+                  {{ if $resource.section_four.webapplications.webapplicationsimage1 }}
+
+                    <div class="col-lg-2 col-xl-1 col-xs-4 col-4 col-sm-4 mb-6 pl-10 col-md-2 pe-xl-14"><img
                         src="{{$resource.section_four.webapplications.webapplicationsimage1}}" />
                 </div>
-                <div class="col-lg-1 col-xl-1 col-xs-4  col-6 col-sm-4 mb-6 col-md-4 mx-3"><img
+                {{ end }}
+                {{ if $resource.section_four.webapplications.webapplicationsimage2 }}
+
+                <div class="col-lg-2 col-xl-1 col-xs-4 col-4 col-sm-4 mb-6 col-md-2 mx-xl-3"><img
                         src="{{$resource.section_four.webapplications.webapplicationsimage2}}" />
                 </div>
-                <div class="col-lg-1 col-xl-1 col-6 col-xs-4 mb-6 mobile-text-center col-md-4 mx-3"><img
+                {{ end }}
+                {{ if $resource.section_four.webapplications.webapplicationsimage3 }}
+
+                <div class="col-lg-2 col-xl-1 col-4 col-xs-4 mb-6 mobile-text-center col-md-2 mx-xl-3"><img
                         src="{{$resource.section_four.webapplications.webapplicationsimage3}}" />
                 </div>
+                {{ end }}
                 </div>
 
                 {{ end }}
@@ -364,14 +398,14 @@
 
                     <div class="row-container">
                       <img class="" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png"/>
-                      <p class="ms-3">{{$resource.section_five.point1}}</p>
+                      <p class="ms-xl-3">{{$resource.section_five.point1}}</p>
       
                     </div>
                     {{ if $resource.section_five.point2 }}
 
                     <div class="row-container">
                       <img class="" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png"/>
-                      <p class="ms-3">{{$resource.section_five.point2}}</p>
+                      <p class="ms-xl-3">{{$resource.section_five.point2}}</p>
       
                     </div>
                     {{ end }}
@@ -380,7 +414,7 @@
 
                     <div class="row-container">
                       <img class="" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png"/>
-                      <p class="ms-3">{{$resource.section_five.point3}}</p>
+                      <p class="ms-xl-3">{{$resource.section_five.point3}}</p>
       
                     </div>
                     {{ end }}
@@ -389,7 +423,7 @@
 
                     <div class="row-container">
                       <img class="" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png"/>
-                      <p class="ms-3">{{$resource.section_five.point4}}</p>
+                      <p class="ms-xl-3">{{$resource.section_five.point4}}</p>
       
                     </div>
                     {{ end }}
@@ -398,7 +432,7 @@
 
                     <div class="row-container">
                       <img class="" src="https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png"/>
-                      <p class="ms-3">{{$resource.section_five.point5}}</p>
+                      <p class="ms-xl-3">{{$resource.section_five.point5}}</p>
       
                     </div>
                     {{ end }}
@@ -426,7 +460,7 @@
 
                     <div class="col-5 col-md-1 col-xl-1"></div>
                     <div class="col-md-5 col-lg-3 col-12 col-xl-3 col-4 pt-2 pt-md-12">
-                        <img class="mb-4 img-fluid text-center ps-13" src="{{$resource.section_six.image}}" alt="" />
+                        <img class="mb-4 img-fluid text-center ps-xl-13 ps-12" src="{{$resource.section_six.image}}" alt="" />
                     </div>
 
                 </div>
@@ -465,27 +499,30 @@
         </section>
         <section>
 
-            <div class="container py-10 px-3 px-xl-14 px-lg-14 px-md-0">
+            <div class="container py-5 px-3 px-xl-14 px-lg-14 px-md-0">
                 <div class="row gx-md-6 gy-3 gy-md-0">
-                    <div class="col-md-6 col-lg-8 align-self-center text-center text-md-start navigation">
-                        {{ if $resource.section_seven.prev_project}}
-                        <a class="pe-4" href="{{ $resource.section_seven.prev_link }}">
-                            <button type="button"
-                                class="btn btn-outline-primary rounded-0 mt-8 mb-8">{{$resource.section_seven.prev_project}}</button>
-                        </a>
-                        {{ end }}
-                        {{ if $resource.section_seven.next_project}}
-                        <a href="{{ $resource.section_seven.next_link }}">
-                            <button type="button"
-                                class="btn btn-outline-primary rounded-0 mt-8 mb-8">{{$resource.section_seven.next_project}}</button>
-                        </a>
-                        {{ end }}
+                    <div class="col-md-5 col-lg-8 align-self-center text-center text-md-start navigation">
+                      {{ if $resource.section_seven.prev_project}}
+                      <a class="pe-4" href="{{ $resource.section_seven.prev_link }}">
+                          <button type="button"
+                              class="btn btn-outline-primary rounded-0 mt-8 mb-8">{{$resource.section_seven.prev_project}}</button>
+                      </a>
+                      {{ end }}
                     </div>
-                    <aside class="col-md-3 col-lg-4 sidebar text-center text-md-end">
-
-                        <button type="button"
-                            class="btn btn-primary btn-lg rounded-0 mt-8 mb-8 ms-20">{{$resource.section_seven.btn_share}}</button>
-
+                    <aside class="col-md-6 col-lg-4 sidebar text-center text-md-end">
+                      <!-- {{ if $resource.section_seven.prev_project}}
+                      <a class="pe-4" href="{{ $resource.section_seven.prev_link }}">
+                          <button type="button"
+                              class="btn btn-outline-primary rounded-0 mt-8 mb-8">{{$resource.section_seven.prev_project}}</button>
+                      </a>
+                      {{ end }} -->
+                      {{ if $resource.section_seven.next_project}}
+                      <a href="{{ $resource.section_seven.next_link }}">
+                          <button type="button"
+                              class="btn btn-outline-primary rounded-0 mt-8 mb-8">{{$resource.section_seven.next_project}}</button>
+                      </a>
+                      {{ end }}
+                      
 
 
                     </aside>
@@ -504,37 +541,70 @@
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
 
     <script>
-    const firebaseConfig = {
-    apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
-    authDomain: "biggworks-dd979.firebaseapp.com",
-    databaseURL: "https://biggworks-dd979-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "biggworks-dd979",
-    storageBucket: "biggworks-dd979.appspot.com",
-    messagingSenderId: "160882722753",
-    appId: "1:160882722753:web:f067b273803ff585359140",
-    measurementId: "G-377HKGT4RW"
-    };
-    firebase.initializeApp(firebaseConfig);
-    
-    let candidateInfo = firebase.database().ref("candidate");
-    
-    var application=document.getElementById("application");
-    
-    function saveRecordtoDatabase() {
-    console.log("saveRecordtoDatabase");
+      const firebaseConfig = {
+        apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
+        authDomain: "biggworks-dd979.firebaseapp.com",
+        databaseURL: "https://biggworks-dd979-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "biggworks-dd979",
+        storageBucket: "biggworks-dd979.appspot.com",
+        messagingSenderId: "160882722753",
+        appId: "1:160882722753:web:f067b273803ff585359140",
+        measurementId: "G-377HKGT4RW"
+      };
+      firebase.initializeApp(firebaseConfig);
+  
+      let candidateInfo = firebase.database().ref("candidate");
+  
+      var application = document.getElementById("application");
+  
+      function saveRecordtoDatabase() {
     event.preventDefault();
-    let newCandidateInfo = candidateInfo.push();
-    
-    newCandidateInfo.set({
-      name: document.getElementById('form_name').value,
-      email: document.getElementById('form_email').value,
-      phone: document.getElementById('form_phone').value,
-      // position: document.getElementById('name').value
-      surname: document.getElementById('form_lastname').value,
-      message: document.getElementById('form_message').value
-     
-    });
+  
+    var firstName = document.getElementById('form_name').value;
+    var lastName = document.getElementById('form_lastname').value;
+    var email = document.getElementById('form_email').value;
+    var phone = document.getElementById('form_phone').value;
+  
+    var errorContainer = document.querySelector('.messages');
+    errorContainer.innerHTML = '';
+  
+    if (firstName.trim() === '') {
+      displayError('form_name', 'First Name is required.');
     }
+  
+    if (lastName.trim() === '') {
+      displayError('form_lastname', 'Last Name is required.');
+    }
+  
+    if (email.trim() === '') {
+      displayError('form_email', 'Email address is required.');
+    }
+  
+    // ... Perform validation for other fields
+  
+    if (errorContainer.innerHTML === '') {
+      let newCandidateInfo = candidateInfo.push();
+  
+      newCandidateInfo.set({
+        name: firstName,
+        surname: lastName,
+        email: email,
+        phone: phone,
+        message: document.getElementById('form_message').value
+      });
+  
+      // Reset the form after submission
+      application.reset();
+  
+      var successContainer = document.querySelector('.messages');
+      successContainer.innerHTML = '<div class="alert alert-success">Record saved successfully!</div>';
+    }
+  }
+  
+  function displayError(fieldId, errorMessage) {
+    var errorContainer = document.getElementById(fieldId + '_error');
+    errorContainer.innerHTML = '<div class="error-message">' + errorMessage + '</div>';
+  }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
