@@ -25643,7 +25643,7 @@ fieldset:disabled .btn.btn-circle {
 }
 
 .btn-light {
-  color: #fff;
+  /* color: #fff; */
   background-color: #fefefe;
   border-color: #fefefe;
 }
@@ -25656,7 +25656,7 @@ fieldset:disabled .btn.btn-circle {
 
 .btn-check:focus + .btn-light,
 .btn-light:focus {
-  color: #fff;
+  /* color: #fff; */
   background-color: #fefefe;
   border-color: #fefefe;
 }
@@ -25666,7 +25666,7 @@ fieldset:disabled .btn.btn-circle {
 .btn-light:active,
 .btn-light.active,
 .show > .btn-light.dropdown-toggle {
-  color: #fff;
+  /* color: #fff; */
   background-color: #fefefe;
   border-color: #dedede;
 }
@@ -27840,8 +27840,8 @@ fieldset:disabled .btn.btn-circle {
 
 @media (max-width: 991.98px) {
   .navbar .navbar-brand {
-    padding-top: 1.2rem;
-    padding-bottom: 1.2rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.5rem;
   }
   .navbar.fancy .navbar-collapse-wrapper {
     background: none !important;
@@ -28038,6 +28038,7 @@ button.hamburger {
   height: 22px;
   padding: 0;
   margin-left: 4px;
+  margin-top: 30px;
 }
 
 button.hamburger:before,
@@ -36249,6 +36250,7 @@ border-radius: 30px;
   background-position-x: right;
   background-image: cover;
   background-origin: content-box;
+  
 }
 
 /* .service-card {
@@ -36273,7 +36275,7 @@ border-radius: 30px;
     justify-content: center;
 }
 }
-@media (min-width: 768px) and (max-width: 1620px){
+@media (min-width: 768px) and (max-width: 1200px){
   .service-text-large-screen {
     text-align: center;
     justify-content: center;
@@ -37231,7 +37233,7 @@ button-fontcolor:visited {
   100% {transform: translateX(-100%);}
 }
 .slider::before, .slider::after {
-  height: 100px;
+  height: 0px;
   width: 200px;
   position: absolute;
   content: "";
@@ -37717,9 +37719,25 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-top: 5px;
 }
 
+#timesIcon {
+  font-size: 24px; /* Adjust the font size as desired */
+}
 
 
+@media (max-width: 767px) {
+    .bg-overlay-400 {
+      background-position: center;
+    }
+  }
 
+  header#top .header-logo {
+    display: block;
+    width: 12rem;
+    height: 2rem;
+    border: 0;
+}
 
-
-
+header#top .logo {
+  font-size: 0;
+  line-height: 0;
+}
