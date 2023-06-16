@@ -12,15 +12,15 @@
     <section class="wrapper bg-white">
 
       <div
-        class="d-flex align-items-center bg-overlay-400 px-xl-21 px-lg-14 px-md-0 service_background_image pb-16 pb-md-22 pb-xxl-13">
-        <div class="container pt-md-0 pt-xl-1">
-          <div class="row gy-10">
-            <div class="col-xl-6 col-lg-12">
+      class="d-flex align-items-center bg-overlay-400 px-xl-10 px-xxl-20 px-lg-14 px-md-0 service_background_image pb-16 pb-xl-0 pb-md-22 pb-xxl-15">
+      <div class="container pt-md-0 pt-xl-1">
+        <div class="row gy-10">
+          <div class="col-xl-5 col-lg-12 col-xxl-6">
 
-              <h2
-                class="fs-16 fw-normal ls-3x text-uppercase mb-5 mt-14 mt-md-12 mb-md-0 mt-xl-18 mb-lg-5 mb-md-8 service-text service-text-large-screen">
-                {{$resource.section_one.title}}
-              </h2>
+            <h2
+              class="fs-16 fw-normal ls-3x text-uppercase mb-5 mt-14 mt-md-12 mb-md-0 mt-xl-15 mt-xxl-18 mb-lg-5 mb-md-8 service-text service-text-large-screen">
+              {{$resource.section_one.title}}
+            </h2>
 
               <h1 class="display-1 mb-4 mb-lg-5 mb-xl-5 service-text service-text-large-screen">
                 {{$resource.section_one.subtitle}}
@@ -37,15 +37,15 @@
                 <div class="modal-dialog modal-fullscreen modal-lg">
                   <div class="modal-content">
                     <!-- <div class="modal-header"> -->
-                    <h4 class="modal-title  text-center project-unlock pt-16">{{$resource.section_one.modal_title}}
+                    <h4 class="modal-title  text-center project-unlock pt-xl-10 pt-md-10 pt-13">{{$resource.section_one.modal_title}}
                     </h4>
-                    <p type="button" class="btn-custum" data-bs-dismiss="modal"><i class="uil uil-times"></i></p>
+                    <p type="button" class="btn-custum" data-bs-dismiss="modal" aria-label="Close"><i class="uil uil-times" id="timesIcon"></i></p>
                     <!-- </div> -->
                     <div class="modal-body">
                       <section id="tabs" class="wrapper pt-0 pb-md-4">
                         <div class="row">
-                          <div class="col-3"></div>
-                          <div class="col-lg-6 col-12">
+                          <div class="col-2"></div>
+                          <div class="col-lg-8 col-12">
 
                             <div class="form_card">
 
@@ -54,7 +54,7 @@
                                 <div class="tab-content">
 
 
-                                  <form class="contact-form" method="post" id="formContact"
+                                  <form class="contact-form" method="post" id="serviceForm"
                                     onsubmit="saveRecordtoDatabase()">
                                     <div class="messages"></div>
                                     <div class="controls">
@@ -89,9 +89,10 @@
                                           </div>
                                         </div>
                                         <div class="col-md-6">
-                                          <label class="form-label">Phone</label>
+                                          <label class="form-label">Phone*</label>
                                           <div class="form-label-group mb-4">
-                                            <input id="form_phone" type="number" name="phone" class="form-control" placeholder="Your phone number">
+                                            <input id="form_phone"  type="tel" name="phone" class="form-control"
+                                            placeholder="Your phone number" minlength="10" maxlength="10" oninput="validatePhoneNumber(this)" required="required">
                                             <label for="form_phone">{{$resource.section_one.phone}}</label>
                                             <div class="help-block with-errors" id="form_phone_error"></div>
                                           </div>
@@ -581,25 +582,7 @@
         <div class="slider  pt-20 pb-20">
           <div class="slide" data-loop="true" data-dots="false" data-autoplay="true" style=" flex-direction: row;">
 
-            <!-- <div class="about-image card" style="width:400px; margin-right: 200px; flex: 0 0 auto">
-              <div class="card-body">
-                <div class="image">
-                  <img class="mb-6" src="https://res.cloudinary.com/biggworks/image/upload/v1686200696/derma_2_rv2prd.png"/>
-                </div>
-    
-                <p class="mb-xl-8 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.dermidia.description}}</p>
-                  <h4 class="mb-1">{{$resource.section_nine.dermidia.author}}</h4>
-                  <p>
-                    {{$resource.section_nine.dermidia.company}}
-                  </p>
-    
-                
-               
-    
-                
-              </div>
-            </div>
-            <div style="margin-right: 100px;"></div> -->
+           
             <div class="card-carousel-slider">
               <div class="card-body" style="display: flex;
               flex-direction: column;">
@@ -607,7 +590,7 @@
                   <img class="mb-6" src="{{$resource.section_nine.dermidia.img}}"/>
                 </div>
     
-                <p class="mb-xl-8 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.dermidia.description}}</p>
+                <p class="mb-xl-10 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.dermidia.description}}</p>
                   <h4 class="mb-1">{{$resource.section_nine.dermidia.author}}</h4>
                   <p>
                     {{$resource.section_nine.dermidia.company}}
@@ -646,10 +629,10 @@
                   <img class="mb-6" src="{{$resource.section_nine.dermidia.img}}"/>
                 </div>
     
-                <p class="mb-xl-8 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.dermidia.description}}</p>
-                  <h4 class="mb-1">{{$resource.section_nine.dermidia.author}}</h4>
+                <p class="mb-xl-10 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.David.description}}</p>
+                  <h4 class="mb-1">{{$resource.section_nine.David.author}}</h4>
                   <p>
-                    {{$resource.section_nine.dermidia.company}}
+                    {{$resource.section_nine.David.company}}
                   </p>
     
                 
@@ -666,10 +649,10 @@
                   <img class="mb-6" src="{{$resource.section_nine.flows.img}}"/>
                 </div>
     
-                <p class="mb-xl-8 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.flows.description}}</p>
-                  <h4 class="mb-1">{{$resource.section_nine.flows.author}}</h4>
+                <p class="mb-xl-8 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.Brad.description}}</p>
+                  <h4 class="mb-1">{{$resource.section_nine.Brad.author}}</h4>
                   <p>
-                    {{$resource.section_nine.flows.company}}
+                    {{$resource.section_nine.Brad.company}}
                   </p>
     
                 
@@ -687,7 +670,7 @@
                   <img class="mb-6" src="{{$resource.section_nine.dermidia.img}}"/>
                 </div>
     
-                <p class="mb-xl-8 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.dermidia.description}}</p>
+                <p class="mb-xl-10 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.dermidia.description}}</p>
                   <h4 class="mb-1">{{$resource.section_nine.dermidia.author}}</h4>
                   <p>
                     {{$resource.section_nine.dermidia.company}}
@@ -705,7 +688,7 @@
               <div class="card-body" style="display: flex;
               flex-direction: column;">
                 <div class="image">
-                  <img class="mb-6" src="{{$resource.section_nine.dermidia.img}}"/>
+                  <img class="mb-6" src="{{$resource.section_nine.flows.img}}"/>
                 </div>
     
                 <p class="mb-xl-8 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.flows.description}}</p>
@@ -726,10 +709,51 @@
               <div class="card-body" style="display: flex;
               flex-direction: column;">
                 <div class="image">
+                  <img class="mb-6" src="{{$resource.section_nine.dermidia.img}}"/>
+                </div>
+    
+                <p class="mb-xl-10 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.David.description}}</p>
+                  <h4 class="mb-1">{{$resource.section_nine.David.author}}</h4>
+                  <p>
+                    {{$resource.section_nine.David.company}}
+                  </p>
+    
+                
+               
+    
+                
+              </div>
+            </div>
+            <div style="margin-right: 70px;"></div>
+            <div class="card-carousel-slider">
+              <div class="card-body" style="display: flex;
+              flex-direction: column;">
+                <div class="image">
                   <img class="mb-6" src="{{$resource.section_nine.flows.img}}"/>
                 </div>
     
-                <p class="mb-xl-8 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.dermidia.description}}</p>
+                <p class="mb-xl-8 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.Brad.description}}</p>
+                  <h4 class="mb-1">{{$resource.section_nine.Brad.author}}</h4>
+                  <p>
+                    {{$resource.section_nine.Brad.company}}
+                  </p>
+    
+                
+               
+    
+                
+              </div>
+            </div>
+
+            <div style="margin-right: 70px;"></div>
+            <div class="card-carousel-slider">
+              <div class="card-body" style="display: flex;
+              flex-direction: column;">
+                <div class="image">
+                  <img class="mb-6" src="{{$resource.section_nine.dermidia.img}}"/>
+                </div>
+    
+                <p class="mb-xl-10 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.dermidia.description}}</p>
                   <h4 class="mb-1">{{$resource.section_nine.dermidia.author}}</h4>
                   <p>
                     {{$resource.section_nine.dermidia.company}}
@@ -746,10 +770,10 @@
               <div class="card-body" style="display: flex;
               flex-direction: column;">
                 <div class="image">
-                  <img class="mb-6" src="{{$resource.section_nine.dermidia.img}}"/>
+                  <img class="mb-6" src="{{$resource.section_nine.flows.img}}"/>
                 </div>
     
-                <p class="mb-xl-8 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.flows.description}}</p>
+                <p class="mb-xl-10 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.flows.description}}</p>
                   <h4 class="mb-1">{{$resource.section_nine.flows.author}}</h4>
                   <p>
                     {{$resource.section_nine.flows.company}}
@@ -768,7 +792,7 @@
               <div class="card-body" style="display: flex;
               flex-direction: column;">
                 <div class="image">
-                  <img class="mb-6" src="{{$resource.section_nine.flows.img}}"/>
+                  <img class="mb-6" src="{{$resource.section_nine.dermidia.img}}"/>
                 </div>
     
                 <p class="mb-xl-8 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.dermidia.description}}</p>
@@ -789,7 +813,7 @@
               <div class="card-body" style="display: flex;
               flex-direction: column;">
                 <div class="image">
-                  <img class="mb-6" src="{{$resource.section_nine.dermidia.img}}"/>
+                  <img class="mb-6" src="{{$resource.section_nine.flows.img}}"/>
                 </div>
     
                 <p class="mb-xl-8 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.flows.description}}</p>
@@ -810,7 +834,7 @@
               <div class="card-body"  style="display: flex;
               flex-direction: column;">
                 <div class="image">
-                  <img class="mb-6" src="{{$resource.section_nine.flows.img}}"/>
+                  <img class="mb-6" src="{{$resource.section_nine.dermidia.img}}"/>
                 </div>
     
                 <p class="mb-xl-8 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.dermidia.description}}</p>
@@ -830,7 +854,7 @@
             <div class="card-carousel-slider">
               <div class="card-body" >
                 <div class="image">
-                  <img class="mb-6" src="{{$resource.section_nine.dermidia.img}}"/>
+                  <img class="mb-6" src="{{$resource.section_nine.flows.img}}"/>
                 </div>
     
                 <p class="mb-xl-8 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.flows.description}}</p>
@@ -980,7 +1004,15 @@
     
   </div>
   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+<script>
+  function validatePhoneNumber(input) {
+    input.value = input.value.replace(/\D/g, ""); // Remove non-numeric characters
 
+    if (input.value.length > 10) {
+      input.value = input.value.slice(0, 10); // Truncate input to 10 digits
+    }
+  }
+</script>
   <script>
     const firebaseConfig = {
       apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
@@ -1008,6 +1040,8 @@
 
   var errorContainer = document.querySelector('.messages');
   errorContainer.innerHTML = '';
+
+  let form = document.getElementById('serviceForm')
 
   if (firstName.trim() === '') {
     displayError('form_name', 'First Name is required.');
@@ -1041,10 +1075,14 @@
     });
 
     // Reset the form after submission
-    application.reset();
+    form.reset();
 
     var successContainer = document.querySelector('.messages');
     successContainer.innerHTML = '<div class="alert alert-success">Record saved successfully!</div>';
+
+    setTimeout(function() {
+  successContainer.innerHTML = '';
+}, 3000);
   }
 }
 

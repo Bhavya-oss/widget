@@ -72,7 +72,7 @@
 									<div class="clear"></div>
 								</div>
 							</form> -->
-							<form 
+							<!-- <form 
 							
 							
 							method="post" id="" name="mc-embedded-subscribe-form" class="validate dark-fields" novalidate>
@@ -94,17 +94,27 @@
 								  </div>
 								  <div class="clear"></div>
 								</div>
-							  </form>
-							  <form id="emailsend" class="validate dark-fields">
+							  </form> -->
+
+							  <!-- <form id="test" method="post" class="validate dark-fields" onsubmit="submitEmail()">
 								<div class="mc-field-group input-group form-label-group">
-									<input type="email" name="EMAIL" class="required email form-control form-control-radius" placeholder="Email Address" id="mce">
+									<input type="email" name="EMAIL" class="required email form-control form-control-radius" placeholder="Email Address" id="footerEmail">
 									<label for="mce-EMAIL2">Email Address</label>
 									<input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe2" class="btn_btn  btn-light button-fontcolor">
+									
 								  </div>
 								  <div id="message" class="mt-2"></div>
-							  
+		
+							  </form> -->
+
+							  <form id="test" method="post" class="validate dark-fields" onsubmit="submitEmail()">
+								<div class="mc-field-group input-group form-label-group">
+								<input type="email" id="footerEmail" name="emails" placeholder="Enter your email" required class="required email form-control form-control-radius" style="padding-top: 0px; padding-bottom: 0px;"/>
+								<input type="submit" value="Join" class="btn_btn  btn-light button-fontcolor"/>
+							  </div>
 							  </form>
-							  
+							  <div id="message" class="mt-2 hidden"></div>
+
 							  
 						</div>
 					</div>
@@ -113,25 +123,22 @@
 		</div>
 	</div>
 </footer>
-<script>
-	const emailField = document.getElementById('mce');
-const joinButton = document.getElementById('mc-embedded-subscribe2');
+<!-- <script>
+	const emailField = document.getElementById('footerEmail');
+const joinButton = document.getElementById('get');
 const message = document.getElementById('message');
 
-// Add event listener to the join button
 joinButton.addEventListener('click', function(e) {
 	e.preventDefault()
-  // Get the email entered by the user
   const email = emailField.value;
 
-  if (email.trim() !== '') { // Check if the email field is not empty
-    // Display the subscribed message
+  if (email.trim() !== '') { 
 	
 	message.style.color = 'blue';
     message.textContent = 'Subscribed';
   }
 });
-</script>
+</script> -->
 <script>
 // 	const firebaseConfig = {
 // apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
@@ -147,28 +154,35 @@ joinButton.addEventListener('click', function(e) {
 let emailInfo = firebase.database().ref("emailInfo");
 
 
-
-	function doing(event) {
+	function submitEmail() {
 		event.preventDefault()
 
 		let newContactInfo = emailInfo.push();
 
-		let data = document.getElementById("mce").value
+		let data = document.getElementById("footerEmail").value
 
 		newContactInfo.set({
 			email : data
 		})
-		console.log("details =====",data);
 
-		// document.getElementById('formContact').reset();
+		let form = document.getElementById("test");
+  form.reset();
 
+   // Display the "joined" message
+   let message = document.getElementById("message");
+   message.style.display = "block";
+  message.textContent = "Joined: " + data;
 
+  // Hide the message after a certain time (optional)
+  setTimeout(function() {
+    message.style.display = "none";
+  }, 3000); // 3 seconds
+		// console.log("function calling =====",data)
+		
 	}
 
 
-var data = document.getElementById("emailsend")
 
-		data.addEventListener("submit",doing)
 
 </script>
 
