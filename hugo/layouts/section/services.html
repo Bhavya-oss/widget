@@ -12,13 +12,13 @@
     <section class="wrapper bg-white">
 
       <div
-      class="d-flex align-items-center bg-overlay-400 px-xl-10 px-xxl-20 px-lg-14 px-md-0 service_background_image pb-16 pb-xl-0 pb-md-22 pb-xxl-15">
+      class="d-flex align-items-center bg-overlay-400 px-xl-10 px-xxl-20 px-lg-14 px-md-0 service_background_image pb-xl-0 pb-md-22 pb-xxl-15">
       <div class="container pt-md-0 pt-xl-1">
         <div class="row gy-10">
           <div class="col-xl-5 col-lg-12 col-xxl-6">
 
             <h2
-              class="fs-16 fw-normal ls-3x text-uppercase mb-5 mt-14 mt-md-12 mb-md-0 mt-xl-15 mt-xxl-18 mb-lg-5 mb-md-8 service-text service-text-large-screen">
+              class="fs-16 fw-normal ls-3x text-uppercase mb-5 mt-7 mt-md-12 mb-md-0 mt-xl-15 mt-xxl-18 mb-lg-5 mb-md-8 service-text service-text-large-screen">
               {{$resource.section_one.title}}
             </h2>
 
@@ -33,6 +33,7 @@
                 <span><a href="#myModal1" class="btn btn-primary rounded-0"
                     data-bs-toggle="modal">{{$resource.section_one.btn_talk_to_us}}</a></span>
               </div>
+              <div class="mt-22 mt-xxl-0 mt-xl-0 mt-md-0"></div>
               <div id="myModal1" class="modal fade" tabindex="-1">
                 <div class="modal-dialog modal-fullscreen modal-lg">
                   <div class="modal-content">
@@ -574,16 +575,19 @@
       </div>
     </section>
      -->
-
-
+     
 
     <section class="wrapper bg-linear-gradient">
       <div class="container pt-6">
-        <div class="slider  pt-20 pb-20">
-          <div class="slide" data-loop="true" data-dots="false" data-autoplay="true" style=" flex-direction: row;">
+        <div class="slider  pt-20 pb-20" style=" width: 100%; 
+       ">
+
+          <div class="slide services-slider-width" data-loop="true" data-dots="false" data-autoplay="true" style=" display:flex; animation: slide 98s linear infinite; 
+          
+          ">
 
            
-            <div class="card-carousel-slider">
+            <div class="card-carousel-slider" style="flex-shrink: 0;">
               <div class="card-body" style="display: flex;
               flex-direction: column;">
                 <div class="image">
@@ -621,7 +625,7 @@
                 
               </div>
             </div>
-            <div style="margin-right: 70px;"></div>
+            <!-- <div style="margin-right: 70px;"></div>
             <div class="card-carousel-slider">
               <div class="card-body" style="display: flex;
               flex-direction: column;">
@@ -640,13 +644,13 @@
     
                 
               </div>
-            </div>
+            </div> -->
             <div style="margin-right: 70px;"></div>
-            <div class="card-carousel-slider">
+            <div class="card-carousel-slider" style="flex-shrink: 0;">
               <div class="card-body" style="display: flex;
-              flex-direction: column;">
+              flex-direction:column;">
                 <div class="image">
-                  <img class="mb-6" src="{{$resource.section_nine.flows.img}}"/>
+                  <img class="mb-6" src="{{$resource.section_nine.Brad.img}}"/>
                 </div>
     
                 <p class="mb-xl-8 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.Brad.description}}</p>
@@ -663,7 +667,7 @@
             </div>
             <div style="margin-right: 70px;"></div>
             
-            <div class="card-carousel-slider">
+            <div class="card-carousel-slider" style="flex-shrink: 0;">
               <div class="card-body" style="display: flex;
               flex-direction: column;">
                 <div class="image">
@@ -704,7 +708,7 @@
               </div>
             </div>
            
-            <div style="margin-right: 70px;"></div>
+            <!-- <div style="margin-right: 70px;"></div>
             <div class="card-carousel-slider">
               <div class="card-body" style="display: flex;
               flex-direction: column;">
@@ -723,13 +727,13 @@
     
                 
               </div>
-            </div>
+            </div> -->
             <div style="margin-right: 70px;"></div>
-            <div class="card-carousel-slider">
+            <div class="card-carousel-slider" style="flex-shrink: 0;">
               <div class="card-body" style="display: flex;
               flex-direction: column;">
                 <div class="image">
-                  <img class="mb-6" src="{{$resource.section_nine.flows.img}}"/>
+                  <img class="mb-6" src="{{$resource.section_nine.Brad.img}}"/>
                 </div>
     
                 <p class="mb-xl-8 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.Brad.description}}</p>
@@ -785,7 +789,7 @@
                 
               </div>
             </div>
-            <div style="margin-right: 70px;"></div>
+            <!-- <div style="margin-right: 70px;"></div>
 
 
             <div class="card-carousel-slider">
@@ -806,20 +810,20 @@
     
                 
               </div>
-            </div>
+            </div> -->
             <div style="margin-right: 70px;"></div>
 
-            <div class="card-carousel-slider">
+            <div class="card-carousel-slider" style="flex-shrink: 0;">
               <div class="card-body" style="display: flex;
               flex-direction: column;">
                 <div class="image">
-                  <img class="mb-6" src="{{$resource.section_nine.flows.img}}"/>
+                  <img class="mb-6" src="{{$resource.section_nine.Brad.img}}"/>
                 </div>
     
-                <p class="mb-xl-8 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.flows.description}}</p>
-                  <h4 class="mb-1">{{$resource.section_nine.flows.author}}</h4>
+                <p class="mb-xl-8 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.Brad.description}}</p>
+                  <h4 class="mb-1">{{$resource.section_nine.Brad.author}}</h4>
                   <p>
-                    {{$resource.section_nine.flows.company}}
+                    {{$resource.section_nine.Brad.company}}
                   </p>
     
                 
@@ -869,6 +873,26 @@
                 
               </div>
             </div>
+            <div style="margin-right: 70px;"></div>
+            <div class="card-carousel-slider" style="flex-shrink: 0;">
+              <div class="card-body" style="display: flex;
+              flex-direction: column;">
+                <div class="image">
+                  <img class="mb-6" src="{{$resource.section_nine.Brad.img}}"/>
+                </div>
+    
+                <p class="mb-xl-8 mb-md-9 mb-lg-9 mb-4 pe-xl-13">{{$resource.section_nine.Brad.description}}</p>
+                  <h4 class="mb-1">{{$resource.section_nine.Brad.author}}</h4>
+                  <p>
+                    {{$resource.section_nine.Brad.company}}
+                  </p>
+    
+                
+               
+    
+                
+              </div>
+            </div>
 
 
 
@@ -902,7 +926,7 @@
               <div class="card career-card-technology">
                 <div class="card-body">
                   <div class="text-center">
-                    <img class="mb-xl-8 pt-xl-4 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
+                    <img class="mb-xl-8 pt-xl-3 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
                       src="{{$resource.section_ten.card1.image}}" alt="" />
                     <p class="lead">{{$resource.section_ten.card1.title}}</p>
                   </div>
@@ -913,11 +937,11 @@
             <div class="col-xl-1 col-lg-1 col-md-1"></div>
             <div class="item col-md-5 col-xl-3 col-lg-3 mb-xl-15 col-12 mb-lg-12 mb-md-12 mb-10">
               <div class="card career-card-technology">
-                <div class="card-body">
+                <div class="card-body" style="padding:2px 0px">
                   <div class="text-center">
-                    <img class="mb-xl-8 pt-xl-3 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
+                    <img class="mb-xl-7 pt-xl-11 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
                       src="{{$resource.section_ten.card2.image}}" alt="" />
-                    <p class="lead">{{$resource.section_ten.card2.title}}</p>
+                    <p class="lead mb-xl-1">{{$resource.section_ten.card2.title}}</p>
                   </div>
                 </div>
               </div>
@@ -929,8 +953,8 @@
                 <div class="card-body">
                   <div class="text-center">
                     <img class="mb-xl-7 pt-xl-4 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
-                      src="{{$resource.section_ten.card3.image}}" alt="" />
-                    <p class="lead">{{$resource.section_ten.card3.title}}</p>
+                      src="{{$resource.section_ten.card5.image}}" alt="" />
+                    <p class="lead">{{$resource.section_ten.card5.title}}</p>
                   </div>
                 </div>
               </div>
@@ -940,11 +964,11 @@
 
             <div class="item col-md-5 col-xl-3 col-lg-3 col-12 mb-xl-4 mb-lg-12 mb-md-4 mb-10">
               <div class="card career-card-technology">
-                <div class="card-body">
+                <div class="card-body" style="padding:0px">
                   <div class="text-center">
-                    <img class="mb-xl-5 pt-xl-3 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
-                      src="{{$resource.section_ten.card4.image}}" alt="" />
-                    <p class="lead">{{$resource.section_ten.card4.title}}</p>
+                    <img class="mb-xl-7 pt-xl-11 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
+                      src="{{$resource.section_ten.card3.image}}" alt="" />
+                    <p class="lead">{{$resource.section_ten.card3.title}}</p>
                   </div>
                 </div>
               </div>
@@ -954,9 +978,9 @@
               <div class="card career-card-technology">
                 <div class="card-body">
                   <div class="text-center">
-                    <img class="mb-xl-8 pt-xl-3 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
-                      src="{{$resource.section_ten.card5.image}}" alt="" />
-                    <p class="lead mb-7">{{$resource.section_ten.card5.title}}</p>
+                    <img class="mb-xl-7 pt-xl-3 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
+                      src="{{$resource.section_ten.card4.image}}" alt="" />
+                    <p class="lead">{{$resource.section_ten.card4.title}}</p>
                   </div>
                 </div>
               </div>
@@ -967,9 +991,9 @@
               <div class="card career-card-technology">
                 <div class="card-body">
                   <div class="text-center">
-                    <img class="mb-xl-9 pt-xl-3 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
+                    <img class="mb-xl-7 pt-xl-3 mb-lg-8 pt-lg-4 mb-md-8 pt-md-4 mb-8 pt-4"
                       src="{{$resource.section_ten.card6.image}}" alt="" />
-                    <p class="lead mb-6">{{$resource.section_ten.card6.title}}</p>
+                    <p class="lead">{{$resource.section_ten.card6.title}}</p>
                   </div>
                 </div>
               </div>
@@ -1090,6 +1114,36 @@ function displayError(fieldId, errorMessage) {
   var errorContainer = document.getElementById(fieldId + '_error');
   errorContainer.innerHTML = '<div class="error-message">' + errorMessage + '</div>';
 }
+  </script>
+  <script>
+    $(document).ready(function() {
+      $('.carousel').slick({
+        dots: true, // Display navigation dots
+        infinite: true, // Enable infinite looping
+        slidesToShow: 1, // Number of slides to show at a time
+        slidesToScroll: 1, // Number of slides to scroll at a time
+        responsive: [
+          {
+            breakpoint: 768, // Mobile breakpoint
+            settings: {
+              slidesToShow: 1, // Number of slides to show on mobile
+              slidesToScroll: 1, // Number of slides to scroll on mobile
+            }
+          }
+        ]
+      });
+    });
+  </script>
+  <script>
+   const slide = document.querySelector('.slide');
+const slider = document.getElementById('degreeSlider');
+slider.addEventListener('input', handleSliderChange);
+
+function handleSliderChange() {
+  const degree = this.value;
+  slide.style.transform = `translateX(-${degree}%)`;
+}
+
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"

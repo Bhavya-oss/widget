@@ -36243,8 +36243,8 @@ border-radius: 30px;
   background-repeat: no-repeat;
   background-position: center;
 } */
- 
-.service_background_image {
+/* @media (min-width: 1280px) and (max-width:1680){
+  .service_background_image {
   background-image: url(https://res.cloudinary.com/biggworks/image/upload/v1686046435/Group_11707_vve5db.png);
   background-repeat: no-repeat;
   background-position-x: right;
@@ -36252,6 +36252,7 @@ border-radius: 30px;
   background-origin: content-box;
   
 }
+} */
 
 /* .service-card {
   box-shadow: 0px 0px 48px 16px rgba(30, 30, 30, 0.05);
@@ -37248,9 +37249,16 @@ button-fontcolor:visited {
 .slider::after {
   right:0;
   top:0;
-  transform: rotateZ(180deg);
+  transform: rotateZ(360deg);
 }
-
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% * 2)); /* Adjust the number of loops */
+  }
+}
 .button-widthincrease {
   width: 200px;
 }
@@ -37719,10 +37727,45 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-top: 5px;
 }
 
-#timesIcon {
+#timesIcon1 {
   font-size: 24px; /* Adjust the font size as desired */
 }
 
+#timesIcon2 {
+  font-size: 24px; /* Adjust the font size as desired */
+}
+
+#timesIcon3 {
+  font-size: 24px; /* Adjust the font size as desired */
+}
+
+#timesIcon4 {
+  font-size: 24px; /* Adjust the font size as desired */
+}
+
+#timesIcon5 {
+  font-size: 24px; /* Adjust the font size as desired */
+}
+
+#timesIcon6 {
+  font-size: 24px; /* Adjust the font size as desired */
+}
+
+#timesIcon7 {
+  font-size: 24px; /* Adjust the font size as desired */
+}
+
+#timesIcon8 {
+  font-size: 24px; /* Adjust the font size as desired */
+}
+
+#timesIcon9 {
+  font-size: 24px; /* Adjust the font size as desired */
+}
+
+#timesIcon10 {
+  font-size: 24px; /* Adjust the font size as desired */
+}
 
 @media (max-width: 767px) {
     .bg-overlay-400 {
@@ -37740,4 +37783,53 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 header#top .logo {
   font-size: 0;
   line-height: 0;
+}
+
+@media screen and (min-width: 768px) {
+ 
+  .mobile-only-services {
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(163, 234, 236, 0.5) 100%);
+   
+  }
+}
+
+@media (max-width: 767px) {
+  .service_background_image {
+    background-image: url(https://res.cloudinary.com/biggworks/image/upload/v1686912514/Group_11801_y1ibae.png);
+    background-repeat: no-repeat;
+    background-position: -100px;
+    background-size: cover;
+    background-origin: content-box;
+  }
+}
+/* } */
+
+
+
+@media (min-width: 768px) and (max-width: 1920px){
+
+.service_background_image {
+  background-image: url(https://res.cloudinary.com/biggworks/image/upload/v1686046435/Group_11707_vve5db.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-image: cover;
+  background-origin: content-box;
+}
+}
+
+@media (max-width: 767px) {
+  .services-slider-width{
+    width: 1500px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1920px){
+  .services-slider-width{
+    width: 2000px;
+  }
+}
+
+
+.modalclose {
+  display: none;
 }
