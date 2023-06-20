@@ -13431,6 +13431,9 @@ mb-3-5 {
   .pb-md-22 {
     padding-bottom: 15rem !important;
   }
+  .pb-md-22_5{
+    padding-bottom: 16rem !important;
+  }
   .pb-md-23 {
     padding-bottom: 17.5rem !important;
   }
@@ -36283,6 +36286,12 @@ border-radius: 30px;
 
   }
 }
+@media only screen and (max-width: 767px) {
+  .service-every-stage{
+    width:150px
+  }
+}
+
 
 .landingpage-card {
   border-radius: 55px;
@@ -37726,6 +37735,9 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 14px;
   margin-top: 5px;
 }
+#timesIcon{
+  font-size: 24px; /* Adjust the font size as desired */
+}
 
 #timesIcon1 {
   font-size: 24px; /* Adjust the font size as desired */
@@ -37806,7 +37818,7 @@ header#top .logo {
 
 
 
-@media (min-width: 768px) and (max-width: 1920px){
+@media (min-width: 900px) and (max-width: 1920px){
 
 .service_background_image {
   background-image: url(https://res.cloudinary.com/biggworks/image/upload/v1686046435/Group_11707_vve5db.png);
@@ -37816,6 +37828,22 @@ header#top .logo {
   background-origin: content-box;
 }
 }
+@media (min-width: 768px) and (max-width: 899px){
+
+  .service_background_image {
+    background-image: url(https://res.cloudinary.com/biggworks/image/upload/v1686046435/Group_11707_vve5db.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-image: cover;
+    background-origin: content-box;
+  }
+  }
+  @media (min-width: 768px) and (max-width: 899px){
+    .service-offset-card{
+      margin-left: 1rem;
+    }
+
+  }
 
 @media (max-width: 767px) {
   .services-slider-width{

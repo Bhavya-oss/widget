@@ -1,5 +1,5 @@
 {{ define "main" }} 
-{{ $resource := getJSON "https://cms.biggworks.com/contact" }}
+{{ $resource := getJSON "http://bw-strapi:1337/contact" }}
 
 <body>
   <div class="content-wrapper contact-page">
@@ -42,8 +42,8 @@
     <section class="wrapper bg-linear-gradient">
         <div class="container bp-22">
             <!-- <h4 class="pt-10 text-center mb-8">{{$resource.section_two.title}}</h4> -->
-            <div class="row offset-xl-2 offset-md-2 offset-lg-2 offset-0">
-                <div class="col-xl-9 col-md-9 col-lg-9 col-12">
+            <div class="row offset-xl-2 offset-md-0 offset-lg-2 offset-0">
+                <div class="col-xl-9 col-md-12 col-lg-9 col-12">
                     <form class="contact-form" method="post" id="formContact" onsubmit="saveContactInfo()">
                         <div class="messages"></div>
                         <div class="controls">
@@ -132,7 +132,7 @@
                     <div class="col-lg-2 col-xs-4 col-6 col-sm-4 mb-8 pl-10 col-md-4"><img
                             src="{{$resource.section_three.location1.image}}" />
                     </div>
-                    <h4 class="text-left mb-5">{{$resource.section_three.location1.location}}</h4>
+                    <h4 class="text-left mb-xl-5 mb-lg-5 mb-5 mb-md-10">{{$resource.section_three.location1.location}}</h4>
                     <p class="mb-0 lh-sm">
                         {{$resource.section_three.location1.address}}
                 </div>
