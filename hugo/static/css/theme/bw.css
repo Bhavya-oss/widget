@@ -29089,7 +29089,13 @@ button.hamburger.animate.active:after {
     top: 0.8rem;
     right: 0.9rem;
 }
-
+.modal-close-icon{
+  position: absolute;
+    /* top: 0.8rem; */
+    right: 1.5rem; 
+    cursor: pointer;
+    font-size: 40px;
+}
 .modal .btn-close {
   position: absolute;
   top: 0.7rem;
@@ -36092,7 +36098,7 @@ footer.bg-dark.angled.upper-start:before {
 }
 
 .home_backgrownd_image {
-  background-image: url(https://res.cloudinary.com/biggworks/image/upload/v1686113819/Group_11733_mvtcgc.png);
+  background-image: url(https://res.cloudinary.com/biggworks/image/upload/q_auto:good,f_auto/v1686113819/Group_11733_mvtcgc.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -37725,11 +37731,24 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-color: transparent;  
   display: flex;
   flex-direction: column;
-   box-shadow: 0 0 0 0.05rem rgba(8, 60, 130, 0.06),
+   box-shadow:rgba(8, 60, 130, 0.06),
     0rem 0rem 1.25rem rgba(30, 34, 40, 0.04);
     max-height: 850px;
 }
 
+@media only screen and (max-width: 767px) {
+
+.card-carousel-slider {
+  width: 380px;
+  margin-right: 100px;
+  flex: 0 0 auto;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 0 0.05rem rgb(8 60 130 / 6%), 0rem 0rem 1.25rem rgb(30 34 40 / 4%);
+  max-height: 850px;
+}
+}
 .join-message {
   color: green;
   font-size: 14px;
@@ -37861,3 +37880,23 @@ header#top .logo {
 .modalclose {
   display: none;
 }
+
+select[multiple] {
+  border: none;
+  outline: none;
+}
+
+.custom-select {
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+}
+
+
+
+
+
+

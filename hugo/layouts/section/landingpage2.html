@@ -1,6 +1,7 @@
 {{ define "main" }}
 {{ $resource := getJSON "http://bw-strapi:1337/landingpage2" }}
 <!-- {{ printf "My data: %s"  $resource}} -->
+<link rel="shortcut icon" href="https://res.cloudinary.com/biggworks/image/upload/v1666248096/favicon_xsthfp.ico" />
 
 <body>
     <div class="content-wrapper">
@@ -36,7 +37,139 @@
               
 
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel"
+                    <div id="exampleModal" class="modal fade" tabindex="-1">
+                        <div class="modal-dialog modal-fullscreen modal-lg">
+                          <div class="modal-content">
+                            <!-- <div class="modal-header"> -->
+                            <h4 class="modal-title  text-center project-unlock pt-xl-10 pt-md-10 pt-13">{{$resource.section_one.modal_title}}
+                            </h4>
+                            <!-- <p type="button" class="btn-custum" data-bs-dismiss="modal"><i class="uil uil-times"></i></p> -->
+                            <p type="button" class="btn-custum" data-bs-dismiss="modal" aria-label="Close"><i class="uil uil-times" id="timesIcon"></i></p>
+                            <!-- </div> -->
+                            <div class="modal-body">
+                              <section id="tabs" class="wrapper pt-0 pb-md-4">
+                                <div class="row">
+                                  <div class="col-2"></div>
+                                  <div class="col-lg-8 col-12">
+        
+                                    <div class="form_card">
+        
+                                      <div class="card-body">
+        
+                                        <div class="tab-content">
+        
+        
+                                          <form class="contact-form" method="post" id="indexForm"
+                                            onsubmit="saveRecordtoDatabase()">
+                                            
+                                            <div class="messages"></div>
+                                            <div class="controls">
+                                              <div class="row gx-4">
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-4">
+
+                                                        <h6 class="mb-3 ">{{$resource.section_one.modal.fullname}} <span class="text-danger">*</span></h6>
+                                                        <input class="form-control lb-lg" type="text" placeholder="Your name"
+                                                            name="name" value="" required="required" data-error="First Name is required." />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-4">
+                                                        <h6 class="mb-3">{{$resource.section_one.modal.emailid}} <span class="text-danger">*</span></h6>
+                                                        <input class="form-control" type="email"
+                                                            placeholder="Your e-mail address" name="email" value="" required="required" data-error="Email is required" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-4">
+                                                        <h6 class="mb-3">{{$resource.section_one.modal.phone_number}} <span class="text-danger">*</span></h6>
+                                                        <input class="form-control" type="text" placeholder="Your Phone Number"
+                                                            name="company" value="" required="required" data-error="Phone number is required"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-4">
+                                                        <h6 class="mb-0">What Roles Are You Hiring</h6>
+                                                        <p>(You can select more than one)</p>
+                                                        <div class="form-select-wrapper ">
+                
+                
+                                                            <div class="form-group">
+                                                                <label for="roles">What Roles Are You Hiring</label>
+                                                                <select name="roles" id="roles" multiple class="form-control">
+                                                                  <option value="frontend-engineers">Front End Engineers</option>
+                                                                  <option value="back-end-engineers">Back End Engineers</option>
+                                                                  <option value="mobile-application-developers">Mobile Application Developers</option>
+                                                                  <option value="embedded-engineers">Embedded Engineers</option>
+                                                                  <option value="ui-ux-designers">UI/UX Designers</option>
+                                                                  <option value="devops-developers">DevOps Developers</option>
+                                                                  <option value="data-scientist-developers">Data Scientist Developers</option>
+                                                                  <option value="automation-engineers">Automation Engineers</option>
+                                                                  <option value="full-stack-developers">Full Stack Developers</option>
+                                                                </select>
+                                                              </div>
+                
+                
+                                                        </div>
+                
+                
+                
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-group mb-4">
+                                                        <h6 class="mb-3">Share Your Hiring Needs</h6>
+                                                        <textarea class="form-control expandable"
+                                                            placeholder="Tell Us About Your Hiring Needs"
+                                                            name="project_description" rows="5"></textarea>
+                                                    </div>
+                                                </div>
+        
+        
+                                                <!-- <div class="col-2 col-xl-9 col-lg-9 col-md-7"></div> -->
+                                                <div class="col-1">
+                                                  <input type="submit"
+                                                    class="btn btn-primary button-widthincrease rounded-0 btn-send mb-3"
+                                                    value="Send">
+        
+                                                </div>
+                                                <!-- </div> -->
+                                              </div>
+                                          </form>
+                                        </div>
+                                      </div>
+                                    </div>
+        
+        
+                                  </div>
+                                </div>
+                              </section>
+        
+        
+                            </div>
+        
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -119,9 +252,8 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
                     </div>
-                    <!-- <div class="col-xl-1"></div> -->
                     <div class="col-12 col-xl-6 col-lg-6 col-md-6 pt-md-14 pt-xl-0">
                         <img class="col-12 col-xl-12 col-lg-12 col-md-12 img-fluid"
                             src="{{$resource.section_one.img}}"
@@ -136,7 +268,6 @@
 
         <section class="wrapper">
             <div class="container">
-                <!-- <div class="row">
                         <div class="col-md-10 col-lg-8 col-xl-12 col-xxl-6 text-center"> -->
 
                 <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
@@ -256,7 +387,8 @@
                         <p class="">{{$resource.section_two.row4.description1}}</p>
                     </div>
 
-                    <div class="col-1"><img class="ps-xl-11 ps-md-4"
+                    <div class="col-1">
+                        <img class="ps-xl-11 ps-md-4"
                             src="{{$resource.section_two.row4.img2}}"
                             alt="" /></div>
                     <div class="col-xl-5 col-11 col-lg-5 col-md-5 ps-4 ps-xl-0_5">
@@ -544,8 +676,8 @@
 							<div class="card about-image">
 								<div class="card-body">
 									
-									<h4 class="mb-4">{{$resource.section_six.grid.card1.title}}</h4>
-									<p class="mb-0">{{$resource.section_six.grid.card1.description}}
+									<h4 class="mb-4">{{$resource.section_six.grid.card2.title}}</h4>
+									<p class="mb-0">{{$resource.section_six.grid.card2.description}}
 									</p>
 
 								</div>
@@ -556,8 +688,8 @@
 							<div class="card about-image">
 								<div class="card-body">
 									
-									<h4 class="mb-4">{{$resource.section_six.grid.card1.title}}</h4>
-									<p class="mb-0"> {{$resource.section_six.grid.card1.description}}</p>
+									<h4 class="mb-4">{{$resource.section_six.grid.card3.title}}</h4>
+									<p class="mb-0"> {{$resource.section_six.grid.card3.description}}</p>
 
 								</div>
 

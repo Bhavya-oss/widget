@@ -1,6 +1,7 @@
 {{ define "main" }}
 {{ $resource := getJSON "http://bw-strapi:1337/landingpage1" }}
 <!-- {{ printf "My data: %s"  $resource}} -->
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
 <body>
 	<div class="content-wrapper">
@@ -17,7 +18,7 @@
                         <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5 pt-xl-15 pt-8 service-text">
 							{{$resource.section_one.title}}                        </h2>
                         <h1 class="display-1 mb-4 service-text">
-							{{$resource.section_one.subtitle}}                        </h1>
+							"{{$resource.section_one.subtitle}}"                        </h1>
                         <p class="lead fs-lg text-left mb-7 service-text">
                             {{$resource.section_one.description}}
                         </p>
@@ -31,14 +32,144 @@
               
 
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel"
+
+
+					<div class="modal fade" id="exampleModal" >
+											<div class="modal-dialog modal-fullscreen modal-lg">
+						  <div class="modal-content">
+							<!-- <div class="modal-header"> -->
+								<p type="button" class="btn-custum" data-bs-dismiss="modal" aria-label="Close"><i class="uil uil-times" id="timesIcon"></i></p>
+							<h4 class="modal-title  text-center project-unlock pt-xl-10 pt-md-10 pt-13">{{$resource.section_one.modal.heading}}
+							</h4>
+							<!-- </div> -->
+							<div class="modal-body">
+							  <section id="tabs" class="wrapper pt-0 pb-md-4">
+								<div class="row">
+								  <div class="col-2"></div>
+								  <div class="col-lg-8 col-12">
+		
+									<div class="form_card">
+		
+									  <div class="card-body">
+		
+										<div class="tab-content">
+		
+		
+										  <form class="contact-form" method="post" id="iotForm"
+											onsubmit="saveRecordtoDatabase()">
+											
+											<div class="messages"></div>
+											<div class="controls">
+											  <div class="row gx-4">
+												<div class="col-md-6">
+													<div class="form-group mb-4">
+
+														<h6 class="mb-3 ">{{$resource.section_one.modal.fullname}}<span class="text-danger">*</span></h6>
+														<input class="form-control lb-lg" type="text" placeholder="Your name"
+															name="name" required="required" data-error="First Name is required."/>
+													</div>
+												</div>
+												<div class="col-md-6">
+												    <div class="form-group mb-4">
+														<h6 class="mb-3">{{$resource.section_one.modal.emailid}}<span class="text-danger">*</span></h6>
+														<input class="form-control" type="email"
+															placeholder="Your e-mail address" name="email" value="" required="required" data-error="Email is required" />
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group mb-4">
+														<h6 class="mb-3">{{$resource.section_one.modal.phone_number}} <span class="text-danger">*</span></h6>
+														<input class="form-control" type="text" placeholder="Your Phone Number"
+															name="company" value="" required="required" data-error="Phone number is required"/>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group mb-4">
+														<h6 class="mb-3">{{$resource.section_one.modal.budget.heading}}</h6>
+														<div class="form-select-wrapper ">
+															<select class="form-select" aria-label="Default select example">
+																<option class="text-muted" value="select-budget" selected>{{$resource.section_one.modal.budget.heading}}</option>
+				
+																<option value="$10-30k">{{$resource.section_one.modal.budget.budget1}}</option>
+																<option value="$30-60k">{{$resource.section_one.modal.budget.budget2}}</option>
+																<option value="$60-100k">{{$resource.section_one.modal.budget.budget3}}</option>
+																<option value="$100k+">{{$resource.section_one.modal.budget.budget4}}</option>
+															</select>
+														</div>
+				
+				
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="form-group mb-4">
+														<h6 class="mb-3">{{$resource.section_one.modal.budget.request}}</h6>
+														<textarea class="form-control expandable"
+															placeholder="Please describe your project"
+															name="project_description" rows="5"></textarea>
+													</div>
+												</div>
+		
+		
+												<!-- <div class="col-2 col-xl-9 col-lg-9 col-md-7"></div> -->
+												<div class="col-1">
+												  <input type="submit"
+													class="btn btn-primary button-widthincrease rounded-0 btn-send mb-3"
+													value="Send">
+		
+												</div>
+												<!-- </div> -->
+											  </div>
+										  </form>
+										</div>
+									  </div>
+									</div>
+		
+		
+								  </div>
+								</div>
+							  </section>
+		
+		
+							</div>
+		
+						  </div>
+						</div>
+					  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog modal-fullscreen modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h4 class="pt-3 px-4" id="exampleModalLabel">{{$resource.section_one.modal.heading}}
                                 </h4>
-								<p type="button" class="btn-custum" data-bs-dismiss="modal"><i class="uil uil-times"></i></p>
+								<p type="button" class="btn-custum" data-bs-dismiss="modal" aria-label="Close"><i class="uil uil-times" id="timesIcon"></i></p>
 
                             </div>
                             <div class="modal-body-landingpage align-items-center">
@@ -93,20 +224,17 @@
                                     </div>
 									<input type="submit" class="btn btn-primary rounded-0 btn-send mb-3"
 									value="Send">
-                                    <!-- <div class="d-flex" data-group="page-title-buttons" data-delay="600">
-                                        <span><a class="btn btn-primary rounded-0 mx-1">Send</a></span>
-                                    </div> -->
+                                   
                                 </form>
                                 
                             </div>
 
                         </div>
                     </div>
-                </div>
+                </div> -->
 
 
                     </div>
-                    <!-- <div class="col-xl-1"></div> -->
                     <div class="col-12 col-xl-6 col-lg-6 col-md-6 pt-md-14 pt-xl-0">
                         <img class="col-12 col-xl-12 col-lg-12 col-md-12 img-fluid"
                             src="{{$resource.section_one.img}}"
@@ -154,7 +282,6 @@
 
 
 				<div class="row">
-					<!-- <div class="col-xl-1 col-lg-1 col-md-1 col-0"></div> -->
 					<div class="col-xl-1 col-md-1 col-lg-1 col-2 ps-md-0 ps-xl-10 ps-lg-10">
 						<img class="" src="{{$resource.section_two.row1.img1}}"
 							alt="" />
@@ -239,7 +366,7 @@
 			<div class="container mb-6 pt-6">
 				<div class="row mt-9">
 					<div class="col-12 col-xl-5 col-lg-5 col-md-12">
-						<h3 class="mb-4">{{$resource.section_three.heading1}}</h3>
+						<!-- <h3 class="mb-4">{{$resource.section_three.heading1}}</h3>
 
 						<div class="row gy-2 mb-10 mb-xl-8 mb-lg-6 mb-md-8">
 							<div class="col-1">
@@ -267,7 +394,7 @@
 							</div>
 							<div class="col-11">{{$resource.section_three.point5}}</div>
 
-						</div>
+						</div> -->
 
 						<!-- <ul class="icon-list bullet-bg bullet-soft-primary">
 							<li><i class="uil uil-check"></i>Access to All Features (Geo-Targeting,
@@ -279,9 +406,9 @@
 								of Our Conversion Experts</li>
 
 						</ul> -->
-						<h3 class="mb-4">{{$resource.section_three.heading2}}</h3>
+						<h3 class="mb-4 pt-xl-18 px-">{{$resource.section_three.heading2}}</h3>
 						<div class="col-md-3"></div>
-						<div class="col-xl-12 col-lg-5 col-12 col-md-8">
+						<div class="col-xl-12 col-lg-5 col-12 col-md-12">
 							<img class="col-12 col-lg-11 col-xl-11 col-md-12 text-center mb-12"
 								src="{{$resource.section_three.img2}}"
 								alt="" />
@@ -670,7 +797,19 @@
 		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
 		crossorigin="anonymous"></script>
 		
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+  var closeButton = document.getElementById("redCloseButton");
+  var modal = document.getElementById("exampleModal");
 
+  closeButton.addEventListener("click", function() {
+  console.log("Close button clicked");
+  modal.style.display = "none";
+});
+});
+
+
+</script>
 	
 </body>
 {{ end }}
