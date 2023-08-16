@@ -1,9 +1,9 @@
 {
   "kind": "singleType",
-  "collectionName": "blog",
+  "collectionName": "works",
   "info": {
-    "name": "blog",
-    "description": "The blog page content"
+    "name": "works",
+    "description": "The works page content"
   },
   "options": {
     "increments": true,

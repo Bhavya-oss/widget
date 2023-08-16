@@ -1,5 +1,6 @@
 
  {{ $nav := .Site.Data.nav.nav }}
+
  <header class="wrapper bg-light">
   <!-- <div class="bg-primary text-white fw-bold fs-15 mb-2">
       <div class="container d-md-flex flex-md-row">
@@ -60,27 +61,37 @@
       </div>
       <ul class="navbar-nav ml-auto">
         
-        <li class="nav-item">
-          <a class="nav-link" href="{{ $nav.navlinks.services.link }}"
-            >{{ $nav.navlinks.services.text }}</a
+        <li class="nav-item dropdown">
+          <a class="nav-link ropdown-toggle" href="{{ $nav.navlinks.services.link }}"
+            >
+            {{ $nav.navlinks.services.text }}
+            </a
           >
+         
+          <ul class="dropdown-menu">
+            <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage1.link }}">IOT Development
+            </a></li>
+            
+            <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage3.link }}">Mobile Apps</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage4.link }}">Web Apps</a></li>
+            <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage2.link }}">Staff Augmentation
+            </a></li>
+          </ul>
+         
+         
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ $nav.navlinks.work.link }}"
-            >{{ $nav.navlinks.work.text }}</a
+          <a class="nav-link" href="{{ $nav.navlinks.works.link }}"
+            >{{ $nav.navlinks.works.text }}</a
           >
          
         </li>
-        <!-- <li class="nav-item">
+         <!-- <li class="nav-item">
           <a class="nav-link" href="{{ $nav.navlinks.blog.link }}"
             >{{ $nav.navlinks.blog.text }}</a
           >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ $nav.navlinks.about.link }}"
-            >{{ $nav.navlinks.about.text }}</a
-          >
         </li> -->
+      
         <li class="nav-item">
           <a class="nav-link" href="{{ $nav.navlinks.careers.link }}"
             >{{ $nav.navlinks.careers.text }}</a
@@ -92,6 +103,7 @@
           >
          
         </li>
+       
       </ul>
     </div>
   </div>

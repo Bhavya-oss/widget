@@ -55,7 +55,24 @@
           }
         },
         "type": "json"
+      },
+      "section_six": {
+        "pluginOptions": {
+          "i18n": {
+            "localized": true
+          }
+        },
+        "type": "json"
+      },
+      "section_seven": {
+        "pluginOptions": {
+          "i18n": {
+            "localized": true
+          }
+        },
+        "type": "json"
       }
+
      
     }
   }

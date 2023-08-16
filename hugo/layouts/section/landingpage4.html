@@ -1,254 +1,355 @@
 {{ define "main" }}
 {{ $resource := getJSON "http://bw-strapi:1337/landingpage4" }}
 <!-- {{ printf "My data: %s"  $resource}} -->
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
 <body>
-	<div class="content-wrapper">
-		<header class="wrapper bg-gray">
-			<!-- /.navbar -->
-		</header>
-		<!-- /header -->
+    <div class="content-wrapper">
+        <header class="wrapper bg-gray">
+            <!-- /.navbar -->
+        </header>
+        <!-- /header -->
 
         <section class="wrapper">
-            <div class="container mt-xl-8 mt-0 mb-xl-12 mb-md-8 mb-12">
-
+            <div class="container mt-xl-6 mt-0 mb-xxl-12 mb-xl-10 mb-md-8 mb-12">
+                <div class="row">
+                    <div class="col-xl-2 col-md-2 col-1 mt-xl-0 mt-md-4">
+                        <a href="/">
+                <img class="img-fluid col-xl-4 col-lg-7 col-md-10" src="https://res.cloudinary.com/biggworks/image/upload/v1691837164/Group_1_2_gp5lya.png" alt=""/>
+            </a>
+            </div>
+            </div>
                 <div class="row">
                     <div class="col-12 col-md-6 col-xl-6 col-lg-6 mb-6">
-                        <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-5 pt-xl-15 pt-8 service-text">
-                            {{$resource.section_one.title}}                                </h2>
-<h1 class="display-1 mb-4 service-text">
-    {{$resource.section_one.subtitle}}     
+                        <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4 pt-xxl-12 pt-8 service-text">
+                            {{$resource.section_one.title}} </h2>
+                        <h1 class="display-1 mb-3 service-text me-xxl-12 ">
+                            {{$resource.section_one.subtitle}}
                         </h1>
-                        <p class="lead fs-lg text-left mb-7 service-text">
+                        <p class="lead fs-lg text-left mb-5 service-text me-xxl-18">
                             {{$resource.section_one.description}}
                         </p>
 
-                    </p>
+                        </p>
 
-                    <div class="d-flex service-text mb-4" data-group="page-title-buttons" data-delay="600">
-                        <span><a href="#exampleModal" class="btn btn-primary rounded-0"
-                            data-bs-toggle="modal">{{$resource.section_one.get_in_touch}}</a></span>
-                      </div>
+                        <div class="d-flex service-text mb-4" data-group="page-title-buttons" data-delay="600">
+                            <span><a href="#landingpage4Modal" class="btn btn-primary rounded-0"
+                                    data-bs-toggle="modal">{{$resource.section_one.get_in_touch}}</a></span>
+                        </div>
 
-                      <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel"
-                      aria-hidden="true">
-                      <div class="modal-dialog">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h4 class="pt-3 px-4" id="exampleModalLabel">{{$resource.section_one.modal.heading}}
-                                  </h4>
-                                  <p type="button" class="btn-custum" data-bs-dismiss="modal"><i class="uil uil-times"></i></p>
-  
-                              </div>
-                              <div class="modal-body-landingpage align-items-center">
-  
-                                  <form id="sub-form" class="gform"
-                                      action="https://script.google.com/macros/s/AKfycbwSUFF8rUFXktl1jBANVMG6wQuBW5bFNIg_HXh1/exec"
-                                      method="POST">
-                                      <div class="form-group mb-4">
-  
-                                          <h6 class="mb-3 ">{{$resource.section_one.modal.fullname}}<span class="text-danger">*</span></h6>
-                                          <input class="form-control lb-lg" type="text" placeholder="Your name"
-                                              name="name" required="required" data-error="First Name is required."/>
-                                      </div>
-                                      <div class="form-group mb-4">
-                                          <h6 class="mb-3">{{$resource.section_one.modal.emailid}}<span class="text-danger">*</span></h6>
-                                          <input class="form-control" type="email"
-                                              placeholder="Your e-mail address" name="email" value="" required="required" data-error="Email is required" />
-                                      </div>
-                                      <div class="form-group mb-4">
-                                          <h6 class="mb-3">{{$resource.section_one.modal.phone_number}} <span class="text-danger">*</span></h6>
-                                          <input class="form-control" type="text" placeholder="Your Phone Number"
-                                              name="company" value="" required="required" data-error="Phone number is required"/>
-                                      </div>
-  
-  
-                                      <div class="form-group mb-4">
-                                          <h6 class="mb-3">{{$resource.section_one.modal.budget.heading}}</h6>
-                                          <div class="form-select-wrapper ">
-                                              <select class="form-select" aria-label="Default select example">
-                                                  <option class="text-muted" value="select-budget" selected>{{$resource.section_one.modal.budget.heading}}</option>
-  
-                                                  <option value="$10-30k">{{$resource.section_one.modal.budget.budget1}}</option>
-                                                  <option value="$30-60k">{{$resource.section_one.modal.budget.budget2}}</option>
-                                                  <option value="$60-100k">{{$resource.section_one.modal.budget.budget3}}</option>
-                                                  <option value="$100k+">{{$resource.section_one.modal.budget.budget4}}</option>
-                                              </select>
-                                          </div>
-  
-  
-                                      </div>
-                                    
-  
-  
-  
-          
-  
-                                      <div class="form-group mb-4">
-                                          <h6 class="mb-3">{{$resource.section_one.modal.budget.request}}</h6>
-                                          <textarea class="form-control expandable"
-                                              placeholder="Please describe your project"
-                                              name="project_description" rows="5"></textarea>
-                                      </div>
-                                      <input type="submit" class="btn btn-primary rounded-0 btn-send mb-3"
-                                      value="Send">
-                                      <!-- <div class="d-flex" data-group="page-title-buttons" data-delay="600">
-                                          <span><a class="btn btn-primary rounded-0 mx-1">Send</a></span>
-                                      </div> -->
-                                  </form>
-                                  
-                              </div>
-  
-                          </div>
-                      </div>
-                  </div>
-					</div>
-					 <div class="col-12 col-xl-6 col-lg-6 col-md-6 pt-md-14 pt-xl-0">
-                        <img class="col-12 col-xl-12 col-lg-12 col-md-12 img-fluid"
-							src="{{$resource.section_one.img}}"
-							alt="" />
-					</div>
-				</div>
+                        <div class="modal fade" id="landingpage4Modal">
+                            <div class="modal-dialog modal-fullscreen modal-lg">
+                                <div class="modal-content">
+                                    <!-- <div class="modal-header"> -->
+                                    <p type="button" class="btn-custum" data-bs-dismiss="modal" aria-label="Close"><i
+                                            class="uil uil-times" id="timesIcon"></i></p>
+                                    <h4 class="modal-title  text-center project-unlock pt-xl-15 pt-md-10 pt-13">
+                                        {{$resource.section_one.modal.heading}}
+                                    </h4>
+                                    <!-- </div> -->
+                                    <div class="modal-body">
+                                        <section id="tabs" class="wrapper pt-0 pb-md-4">
+                                            <div class="row">
+                                                <div class="col-2"></div>
+                                                <div class="col-lg-8 col-12">
 
-			</div>
-		</section>
+                                                    <div class="form_card">
 
-	
+                                                        <div class="card-body">
+
+                                                            <div class="tab-content">
 
 
+                                                                <form class="contact-form" method="post"
+                                                                    id="landingpage4Form"
+                                                                    onsubmit="return saveRecordtoDatabase()">
 
-		<section class="wrapper">
-			<div class="container pt-6">
-				
-				<div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-                    <div class="col-md-10 col-lg-10 col-xl-8 mx-auto text-center">
+                                                                    <div class="messages"></div>
+                                                                    <div class="controls">
+                                                                        <div class="row gx-4">
+                                                                            <div class="col-md-6">
+                                                                                <div class="form-group mb-4">
+
+                                                                                    <h6 class="mb-3 ">
+                                                                                        {{$resource.section_one.modal.fullname}}<span
+                                                                                            class="text-danger">*</span>
+                                                                                    </h6>
+                                                                                    <input class="form-control lb-lg"
+                                                                                        type="text"
+                                                                                        placeholder="Your name"
+                                                                                        name="name" id="form_name"
+                                                                                        required="required"
+                                                                                        data-error="First Name is required." />
+                                                                                    <div class="help-block with-errors">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <div class="form-group mb-4">
+                                                                                    <h6 class="mb-3">
+                                                                                        {{$resource.section_one.modal.emailid}}<span
+                                                                                            class="text-danger">*</span>
+                                                                                    </h6>
+                                                                                    <input class="form-control"
+                                                                                        type="email" id="form_email"
+                                                                                        placeholder="Your e-mail address"
+                                                                                        name="email" value=""
+                                                                                        required="required"
+                                                                                        data-error="Email is required" />
+                                                                                    <div class="help-block with-errors">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <div class="form-group mb-4">
+                                                                                    <h6 class="mb-3">
+                                                                                        {{$resource.section_one.modal.phone_number}}
+                                                                                        <span
+                                                                                            class="text-danger">*</span>
+                                                                                    </h6>
+                                                                                    <input class="form-control"
+                                                                                        type="text"
+                                                                                        placeholder="Your Phone Number"
+                                                                                        id="form_phone" name="phone"
+                                                                                        value="" required="required"
+                                                                                        data-error="Phone number is required"
+                                                                                        minlength="10" maxlength="10"
+                                                                                        oninput="validatePhoneNumber(this)" />
+                                                                                    <div class="help-block with-errors">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6">
+                                                                                <div class="form-group mb-4">
+                                                                                    <h6 class="mb-3">
+                                                                                        {{$resource.section_one.modal.budget.heading}}
+                                                                                    </h6>
+                                                                                    <div class="form-select-wrapper ">
+                                                                                        <select class="form-select"
+                                                                                            aria-label="Default select example"
+                                                                                            id="dropdown_budget"
+                                                                                            name="dropdown_budget"
+                                                                                            placeholder="select-budget">
+                                                                                            <option class="text-muted"
+                                                                                                value="select-budget"
+                                                                                                selected
+                                                                                                style="color: #495c77;">
+                                                                                                {{$resource.section_one.modal.budget.heading}}
+                                                                                            </option>
+
+                                                                                            <option value="$10-30k">
+                                                                                                {{$resource.section_one.modal.budget.budget1}}
+                                                                                            </option>
+                                                                                            <option value="$30-60k">
+                                                                                                {{$resource.section_one.modal.budget.budget2}}
+                                                                                            </option>
+                                                                                            <option value="$60-100k">
+                                                                                                {{$resource.section_one.modal.budget.budget3}}
+                                                                                            </option>
+                                                                                            <option value="$100k+">
+                                                                                                {{$resource.section_one.modal.budget.budget4}}
+                                                                                            </option>
+                                                                                        </select>
+                                                                                    </div>
+
+
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-12">
+                                                                                <div class="form-group mb-4">
+                                                                                    <h6 class="mb-3">
+                                                                                        {{$resource.section_one.modal.budget.request}}
+                                                                                    </h6>
+                                                                                    <textarea
+                                                                                        class="form-control expandable"
+                                                                                        placeholder="Please describe your project"
+                                                                                        name="project_description"
+                                                                                        rows="5" id="form_message"
+                                                                                        name="message"></textarea>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            <!-- <div class="col-2 col-xl-9 col-lg-9 col-md-7"></div> -->
+                                                                            <div class="col-1">
+                                                                                <input type="submit"
+                                                                                    class="btn btn-primary button-widthincrease rounded-0 btn-send mb-3"
+                                                                                    value="Send">
+
+                                                                            </div>
+                                                                            <!-- </div> -->
+                                                                        </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </section>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                    <div class="col-12 col-xl-6 col-lg-6 col-md-6 pt-md-10 pt-xxl-12 pt-lg-6 pt-xl-2">
+                        <img class="col-12 col-xl-12 col-lg-12 col-md-12 img-fluid" src="{{$resource.section_one.img}}"
+                            alt="" />
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+        <section class="wrapper">
+            <div class="container pt-4">
+
+                <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+                    <div class="col-md-12 col-lg-12 col-xl-10 mx-auto text-center">
                         <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
                             {{$resource.section_two.title}}
                         </h2>
-                        <h1 class="display-1 mb-4">
-							{{$resource.section_two.subtitle}}
+                        <h1 class="display-1 mb-9">
+                            {{$resource.section_two.subtitle}}
                         </h1>
                     </div>
                 </div>
-                <div class="col-md-10 col-lg-8 col-xl-9 mx-auto text-center">
+                <!-- <div class="col-md-10 col-lg-8 col-xl-9 mx-auto text-center">
 
-                    <p class="lead fs-lg mb-12">
-						{{$resource.section_two.description}}
+                    <p class="lead fs-lg mb-10">
+                        {{$resource.section_two.description}}
                     </p>
+                </div> -->
+
+                <div class="content">
+
+
+                    <div class="row mb-4 talent-rows">
+                        <div class="col-md-1 col-xl-1 col-lg-1 col-2 ps-md-0 ps-xxl-10 ps-xl-8 ps-lg-6">
+                            <img src="{{$resource.section_two.row1.img1}}" alt="" />
+                        </div>
+                        <div class="col-10 col-xl-5 col-lg-5 col-md-5">
+                            <h4 class="">{{$resource.section_two.row1.heading1}}</h4>
+                            <p class="">{{$resource.section_two.row1.description1}}</p>
+                        </div>
+                        <div class="col-md-1 col-xl-1 col-lg-1 col-2 ps-md-0 ps-xxl-10 ps-xl-8 ps-lg-6">
+                            <img src="{{$resource.section_two.row1.img2}}" alt="" />
+                        </div>
+                        <div class="col-10 col-xl-5 col-lg-5 col-md-5">
+                            <h4>{{$resource.section_two.row1.heading2}}</h4>
+                            <p class="">{{$resource.section_two.row1.description2}}</p>
+                        </div>
+                    </div>
+
+
+                    <div class="row mb-4 talent-rows">
+                        <div class="col-md-1 col-xl-1 col-lg-1 col-2 ps-md-0 ps-xxl-10 ps-xl-8 ps-lg-6">
+                            <img src="{{$resource.section_two.row2.img1}}" alt="" />
+                        </div>
+                        <div class="col-10 col-xl-5 col-lg-5 col-md-5">
+                            <h4 class="">{{$resource.section_two.row2.heading1}}</h4>
+                            <p class="">{{$resource.section_two.row2.description1}}</p>
+                        </div>
+                        <div class="col-md-1 col-xl-1 col-lg-1 col-2 ps-md-0 ps-xxl-10 ps-xl-8 ps-lg-6">
+                            <img src="{{$resource.section_two.row2.img2}}" alt="" />
+                        </div>
+                        <div class="col-10 col-xl-5 col-lg-5 col-md-5">
+                            <h4>{{$resource.section_two.row2.heading2}}</h4>
+                            <p class="">{{$resource.section_two.row2.description2}}</p>
+                        </div>
+
+
+                    </div>
+                    <div class="row mb-4 talent-rows">
+                        <div class="col-md-1 col-xl-1 col-lg-1 col-2 ps-md-0 ps-xxl-10 ps-xl-8 ps-lg-6">
+                            <img src="{{$resource.section_two.row3.img1}}" alt="" />
+                        </div>
+                        <div class="col-10 col-xl-5 col-lg-5 col-md-5">
+                            <h4 class="">{{$resource.section_two.row3.heading1}} </h4>
+                            <p class="">{{$resource.section_two.row3.description1}}</p>
+                        </div>
+                        <div class="col-md-1 col-xl-1 col-lg-1 col-2 ps-md-0 ps-xxl-10 ps-xl-8 ps-lg-6">
+                            <img src="{{$resource.section_two.row3.img2}}" alt="" />
+                        </div>
+                        <div class="col-10 col-xl-5 col-lg-5 col-md-5">
+                            <h4>{{$resource.section_two.row3.heading2}}</h4>
+                            <p class="">{{$resource.section_two.row3.description2}}</p>
+                        </div>
+
+
+                    </div>
+                    <div class="row mb-4 talent-rows">
+                        <div class="col-md-1 col-xl-1 col-lg-1 col-2 ps-md-0 ps-xxl-10 ps-xl-8 ps-lg-6">
+                            <img src="{{$resource.section_two.row4.img1}}" alt="" />
+                        </div>
+                        <div class="col-10 col-xl-5 col-lg-5 col-md-5">
+                            <h4 class="">{{$resource.section_two.row4.heading1}}</h4>
+                            <p class="">{{$resource.section_two.row4.description1}}</p>
+                        </div>
+                        <div class="col-md-1 col-xl-1 col-lg-1 col-2 ps-md-0 ps-xxl-10 ps-xl-8 ps-lg-6">
+                            <img src="{{$resource.section_two.row4.img2}}" alt="" />
+                        </div>
+                        <div class="col-10 col-xl-5 col-lg-5 col-md-5">
+                            <h4>{{$resource.section_two.row4.heading2}} </h4>
+                            <p class="">{{$resource.section_two.row4.description2}}</p>
+                        </div>
+
+
+                    </div>
+
+                    <div class="row mb-4 talent-rows">
+                        <div class="col-md-1 col-xl-1 col-lg-1 col-2 ps-md-0 ps-xxl-10 ps-xl-8 ps-lg-6">
+                            <img src="{{$resource.section_two.row5.img1}}" alt="" />
+                        </div>
+                        <div class="col-10 col-xl-5 col-lg-5 col-md-5">
+                            <h4 class="">{{$resource.section_two.row5.heading1}}</h4>
+                            <p class="">{{$resource.section_two.row5.description1}}</p>
+                        </div>
+                        <div class="col-md-1 col-xl-1 col-lg-1 col-2 ps-md-0 ps-xxl-10 ps-xl-8 ps-lg-6">
+                            <img src="{{$resource.section_two.row5.img2}}" alt="" />
+                        </div>
+                        <div class="col-10 col-xl-5 col-lg-5 col-md-5">
+                            <h4>{{$resource.section_two.row5.heading2}}</h4>
+                            <p class="">{{$resource.section_two.row5.description2}}</p>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="ps-xl-25_5 ps-15 ps-md-21_5 ps-lg-25 align-items-center">
+                        <a href="#" id="read-more"
+                            class="read-more read-more-project text-center pt-0">{{$resource.section_two.view_more}}
+                            <img class="ps-3" src="{{$resource.section_two.view_more_img}}" alt="" /></a>
+                        <a href="#" id="read-less"
+                            class="read-less read-more-project ps-5 d-none">{{$resource.section_two.view_less}}<img
+                                class="ps-3" src="{{$resource.section_two.view_less_img}}" alt="" /></a>
+                    </div>
+
                 </div>
 
-				<div class="content">
-	
-
-				<div class="row mb-4 talent-rows">
-					<div class="col-md-1 col-xl-1 col-lg-1 col-2 ps-md-0 ps-xl-10 ps-lg-10">
-						<img src="{{$resource.section_two.row1.img1}}" alt="" />
-					</div>
-					<div class="col-10 col-xl-5 col-lg-5 col-md-5">
-						<h4 class="">{{$resource.section_two.row1.heading1}}</h4>
-						<p class="">{{$resource.section_two.row1.description1}}</p>
-					</div>
-					<div class="col-md-1 col-xl-1 col-lg-1 col-2 ps-md-0 ps-xl-10 ps-lg-6">
-						<img src="{{$resource.section_two.row1.img2}}" alt="" />
-					</div>
-					<div class="col-10 col-xl-5 col-lg-5 col-md-5">
-						<h4>{{$resource.section_two.row1.heading2}}</h4>
-						<p class="">{{$resource.section_two.row1.description2}}</p>
-					</div>
-				</div>
-
-
-				<div class="row mb-4 talent-rows">
-					<div class="col-md-1 col-xl-1 col-lg-1 col-2 ps-md-0 ps-xl-10 ps-lg-10">
-						<img src="{{$resource.section_two.row2.img1}}" alt="" />
-					</div>
-					<div class="col-10 col-xl-5 col-lg-5 col-md-5">
-						<h4 class="">{{$resource.section_two.row2.heading1}}</h4>
-						<p class="">{{$resource.section_two.row2.description1}}</p>
-					</div>
-					<div class="col-md-1 col-xl-1 col-lg-1 col-2 ps-md-0 ps-xl-10 ps-lg-13">
-						<img src="{{$resource.section_two.row2.img2}}" alt="" />
-					</div>
-					<div class="col-10 col-xl-5 col-lg-5 col-md-5">
-						<h4>{{$resource.section_two.row2.heading2}}</h4>
-						<p class="">{{$resource.section_two.row2.description2}}</p>
-					</div>
-
-
-				</div>
-                <div class="row mb-4 talent-rows">
-					<div class="col-md-1 col-xl-1 col-lg-1 col-2 ps-md-0 ps-xl-10 ps-lg-10">
-						<img src="{{$resource.section_two.row3.img1}}" alt="" />
-					</div>
-					<div class="col-10 col-xl-5 col-lg-5 col-md-5">
-						<h4 class="">{{$resource.section_two.row3.heading1}} </h4>
-						<p class="">{{$resource.section_two.row3.description1}}</p>
-					</div>
-					<div class="col-md-1 col-xl-1 col-lg-1 col-2 ps-md-0 ps-xl-10 ps-lg-13">
-						<img src="{{$resource.section_two.row3.img1}}" alt="" />
-					</div>
-					<div class="col-10 col-xl-5 col-lg-5 col-md-5">
-						<h4>{{$resource.section_two.row3.heading2}}</h4>
-						<p class="">{{$resource.section_two.row3.description2}}</p>
-					</div>
-
-
-				</div>
-                <div class="row mb-4 talent-rows">
-					<div class="col-md-1 col-xl-1 col-lg-1 col-2 ps-md-0 ps-xl-10 ps-lg-10">
-						<img src="{{$resource.section_two.row4.img1}}" alt="" />
-					</div>
-					<div class="col-10 col-xl-5 col-lg-5 col-md-5">
-						<h4 class="">{{$resource.section_two.row4.heading1}}</h4>
-						<p class="">{{$resource.section_two.row4.description1}}</p>
-					</div>
-					<div class="col-md-1 col-xl-1 col-lg-1 col-2 ps-md-0 ps-xl-10 ps-lg-13">
-						<img src="{{$resource.section_two.row4.img2}}" alt="" />
-					</div>
-					<div class="col-10 col-xl-5 col-lg-5 col-md-5">
-						<h4>{{$resource.section_two.row4.heading2}} </h4>
-						<p class="">{{$resource.section_two.row4.description2}}</p>
-					</div>
-
-
-				</div>
-
-                <div class="row mb-4 talent-rows">
-					<div class="col-md-1 col-xl-1 col-lg-1 col-2 ps-md-0 ps-xl-10 ps-lg-10">
-						<img src="{{$resource.section_two.row5.img1}}" alt="" />
-					</div>
-					<div class="col-10 col-xl-5 col-lg-5 col-md-5">
-						<h4 class="">{{$resource.section_two.row5.heading1}}</h4>
-						<p class="">{{$resource.section_two.row5.description1}}</p>
-					</div>
-					<div class="col-md-1 col-xl-1 col-lg-1 col-2 ps-md-0 ps-xl-10 ps-lg-13">
-						<img src="{{$resource.section_two.row5.img2}}" alt="" />
-					</div>
-					<div class="col-10 col-xl-5 col-lg-5 col-md-5">
-						<h4>{{$resource.section_two.row5.heading2}}</h4>
-						<p class="">{{$resource.section_two.row5.description2}}</p>
-					</div>
-
-
-				</div>
-               
-              
-                <div class="ps-xl-25_5 ps-15 ps-md-21_5 align-items-center">
-				<a href="#" id="read-more" class="read-more read-more-project text-center pt-0">{{$resource.section_two.view_more}} <img class="ps-3" src="{{$resource.section_two.view_more_img}}" alt="" /></a>
-				<a href="#" id="read-less" class="read-less read-more-project ps-5 d-none">{{$resource.section_two.view_less}}<img class="ps-3" src="{{$resource.section_two.view_less_img}}" alt="" /></a>
             </div>
 
-</div>
-				
-			</div>
-
-		</section>
+        </section>
 
         <section class="our_process_new">
-            <div class="container container-desktoplandingpage pb-8 align-items-center">
+            <div class="container container-desktoplandingpage pb-5 align-items-center">
 
                 <div class="row gx-lg-8 gx-xl-12 gy-10">
-                    <div class="col-md-10 col-lg-10 col-xl-8 mx-auto text-center">
+                    <div class="col-md-10 col-lg-10 col-xl-12 mx-auto text-center">
                         <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4 mx-auto">
                             {{$resource.section_three.title}}
                         </h2>
@@ -264,59 +365,59 @@
                     </p>
                 </div>
 
-               
+
                 <div class="row pb-6 offset-xl-1 offset-lg-1 offset-0">
                     <ul class="process_step">
                         <li class="step_one">
                             <div class="box_main">
-                            <div class="im_box">
-                                <img src="{{$resource.section_three.step_one.img}}" alt="">
+                                <div class="im_box">
+                                    <img src="{{$resource.section_three.step_one.img}}" alt="">
+                                </div>
+                                <div class="cnt_box">
+                                    <p class="lead fs-lg">{{$resource.section_three.step_one.title}}</p>
+                                </div>
                             </div>
-                            <div class="cnt_box">
-                                <p class="lead fs-lg">{{$resource.section_three.step_one.title}}</p>
-                            </div>
-                        </div>
                         </li>
                         <li class="step_two">
                             <div class="box_main">
-                            <div class="im_box">
-                                <img src="{{$resource.section_three.step_two.img}}" alt="">
+                                <div class="im_box">
+                                    <img src="{{$resource.section_three.step_two.img}}" alt="">
+                                </div>
+                                <div class="cnt_box">
+
+                                    <p class="lead fs-lg">{{$resource.section_three.step_two.title}}</p>
+                                </div>
                             </div>
-                            <div class="cnt_box">
-                               
-                                <p class="lead fs-lg">{{$resource.section_three.step_two.title}}</p>
-                            </div>
-                        </div>
                         </li>
                         <li class="step_three">
                             <div class="box_main">
-                            <div class="im_box">
-                                <img src="{{$resource.section_three.step_three.img}}" alt="">
+                                <div class="im_box">
+                                    <img src="{{$resource.section_three.step_three.img}}" alt="">
+                                </div>
+                                <div class="cnt_box">
+                                    <p class="lead fs-lg ps-5">{{$resource.section_three.step_three.title}}</p>
+                                </div>
                             </div>
-                            <div class="cnt_box">
-                                <p class="lead fs-lg">{{$resource.section_three.step_three.title}}</p>
-                            </div>
-                        </div>
                         </li>
                         <li class="step_four">
                             <div class="box_main">
-                            <div class="im_box">
-                                <img src="{{$resource.section_three.step_four.img}}" alt="">
+                                <div class="im_box">
+                                    <img src="{{$resource.section_three.step_four.img}}" alt="">
+                                </div>
+                                <div class="cnt_box">
+                                    <p class="lead fs-lg">{{$resource.section_three.step_four.title}}</p>
+                                </div>
                             </div>
-                            <div class="cnt_box">
-                                <p class="lead fs-lg">{{$resource.section_three.step_four.title}}</p>
-                            </div>
-                        </div>
                         </li>
                         <li class="step_five">
                             <div class="box_main">
-                            <div class="im_box">
-                                <img src="{{$resource.section_three.step_five.img}}" alt="">
+                                <div class="im_box">
+                                    <img src="{{$resource.section_three.step_five.img}}" alt="">
+                                </div>
+                                <div class="cnt_box">
+                                    <p class="lead fs-lg">{{$resource.section_three.step_five.title}}</p>
+                                </div>
                             </div>
-                            <div class="cnt_box">
-                                <p class="lead fs-lg">{{$resource.section_three.step_five.title}}</p>
-                            </div>
-                        </div>
                         </li>
                     </ul>
                 </div>
@@ -331,102 +432,110 @@
                   >
                 </div> -->
                 <div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
-					<span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
-							data-bs-target="#exampleModal">{{$resource.section_three.btn_get_in_touch}}</a></span>
-				</div>
+                    <span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
+                            data-bs-target="#landingpage4Modal">{{$resource.section_three.btn_get_in_touch}}</a></span>
+                </div>
             </div>
         </section>
-		
-		<section class="wrapper bg-linear-gradient">
-            <div class="container pb-4 pt-6">
-                <p class="project-unlock mb-xl-2 text-center">{{$resource.section_four.title}}</p>
-                <p class="lead fs-lg mb-8 text-center">
+
+        <section class="wrapper bg-linear-gradient">
+            <div class="container pb-7 pt-6">
+                <!-- <p class="project-unlock mb-8 text-center">{{$resource.section_four.sub_title}}</p> -->
+                <!-- <p class="lead fs-lg mb-8 text-center">
                     {{$resource.section_four.sub_title}}
-                </p>
+                </p> -->
+                <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4 text-center ">
+                    {{$resource.section_four.title}}
+                </h2>
+                <p class="project-unlock mb-xl-9 text-center mx-xl-21">{{$resource.section_four.sub_title}}</p>
                 <div class="text-center">
-                    <img class="img-fluid" src="{{$resource.section_four.img}}" alt=""/>
+                    <img class="img-fluid" src="{{$resource.section_four.img}}" alt="" />
                 </div>
             </div>
         </section>
 
         <section class="wrapper">
             <div class="container mt-8 mb-8">
-                
+
                 <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
                     <div class="col-md-10 col-lg-10 col-xl-8 mx-auto text-center">
                         <p class="project-unlock pb-0">
                             {{$resource.section_five.title}}
                         </p>
-                        
 
-                    <p class="lead fs-lg mb-7">
-						{{$resource.section_five.sub_title}}
-                    </p>
-                </div>
 
-                <div class="row">
-                    
-                    <div class="col-1">
-                        <img class="ps-xl-10 ps-md-3 pe-3 mb-4"
-                          src="{{$resource.section_five.row1.img}}" />
-                      </div>
-                      <div class="col-xl-3 col-lg-3 col-md-11 col-11 landingpage-points ps-6 ps-xl-0 mb-6">{{$resource.section_five.row1.point1}}</div>
-                      <div class="col-1">
-                        <img class="ps-xl-10 ps-md-3 mb-4 mb-xl-0"
-                          src="{{$resource.section_five.row1.img}}" />
-                      </div>
-                      <div class="col-xl-3 col-lg-3 col-md-11 col-11 landingpage-points pb-md-3 pb-xl-0 ps-6 ps-xl-0 mb-6">{{$resource.section_five.row1.point2}}</div>
-                      <div class="col-1">
-                        <img class="ps-xl-10 ps-md-3 mb-4"
-                          src="{{$resource.section_five.row1.img}}" />
-                      </div>
-                      <div class="col-xl-3 col-lg-3 col-md-11 col-11 landingpage-points ps-6 ps-xl-0 mb-4">{{$resource.section_five.row1.point3}}</div>
-                </div>
-               
-                <div class="row mb-1">
-                    <div class="col-1 mb-4">
-                        <img class="ps-xl-10 ps-md-3"
-                          src="{{$resource.section_five.row2.img}}" />
-                      </div>
-                      <div class="col-xl-3 col-lg-3 col-md-11 col-11 landingpage-points ps-6 ps-xl-0 mb-4">{{$resource.section_five.row2.point1}}</div>
-                      <div class="col-1">
-                        <img class="ps-xl-10 ps-md-3 mb-4"
-                          src="{{$resource.section_five.row2.img}}" />
-                      </div>
-                      <div class="col-xl-3 col-lg-3 col-md-11 col-11 landingpage-points pb-md-3 pb-xl-0 ps-6 ps-xl-0 mb-4">{{$resource.section_five.row2.point2}}</div>
-                      <div class="col-1">
-                        <img class="ps-xl-10 ps-md-3 mb-4"
-                          src="{{$resource.section_five.row2.img}}" />
-                      </div>
-                      <div class="col-xl-3 col-lg-3 col-md-11 col-11 landingpage-points ps-6 ps-xl-0 mb-4">{{$resource.section_five.row2.point3}}</div>
-                </div>
+                        <p class="lead fs-lg mb-7">
+                            {{$resource.section_five.sub_title}}
+                        </p>
+                    </div>
+</div>
+                    <div class="row">
 
-                <div class="row">
-                    <div class="col-1">
-                        <img class="ps-xl-10 ps-md-3 mb-4"
-                          src="{{$resource.section_five.row3.img}}" />
-                      </div>
-                      <div class="col-xl-3 col-lg-3 col-md-11 col-11 landingpage-points ps-6 ps-xl-0 mb-4">{{$resource.section_five.row3.point1}}</div>
-                      <div class="col-1">
-                        <img class="ps-xl-10 ps-md-3 mb-4"
-                          src="{{$resource.section_five.row3.img}}" />
-                      </div>
-                      <div class="col-xl-3 col-lg-3 col-md-11 col-11 landingpage-points pb-md-6 pb-xl-0 ps-6 ps-xl-0 mb-4">P{{$resource.section_five.row3.point2}}</div>
-                      <div class="col-1">
-                        <img class="ps-xl-10 ps-md-3 mb-4"
-                          src="{{$resource.section_five.row3.img}}" />
-                      </div>
-                      <div class="col-xl-3 col-lg-3 col-md-11 col-11 landingpage-points pb-md-6 pb-xl-0 ps-6 ps-xl-0 mb-4">{{$resource.section_five.row3.point3}}</div>
-                </div>
+                        <div class="col-1">
+                            <img class="ps-xxl-10 ps-xl-6 ps-lg-9 ps-md-5 pe-3 mb-4" src="{{$resource.section_five.row1.img}}" />
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-11 col-11 weblandingpage_points ps-6 ps-xl-0 mb-6">
+                            {{$resource.section_five.row1.point1}}</div>
+                        <div class="col-1">
+                            <img class="ps-xxl-10 ps-xl-6 ps-lg-9 ps-md-5 mb-4 mb-xl-0" src="{{$resource.section_five.row1.img}}" />
+                        </div>
+                        <div
+                            class="col-xl-3 col-lg-3 col-md-11 col-11 weblandingpage_points pb-md-0 pb-xl-0 ps-6 ps-xl-0 mb-6">
+                            {{$resource.section_five.row1.point2}}</div>
+                        <div class="col-1">
+                            <img class="ps-xxl-10 ps-xl-6 ps-lg-9 ps-md-5 mb-4" src="{{$resource.section_five.row1.img}}" />
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-11 col-11 weblandingpage_points ps-6 ps-xl-0 mb-4">
+                            {{$resource.section_five.row1.point3}}</div>
+                    </div>
 
-               
-    <div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
-        <span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">{{$resource.section_five.get_in_touch}}</a></span>
-    </div>
-    </div>
-    </section>
-	<!-- <section class="wrapper">
+                    <div class="row mb-1">
+                        <div class="col-1 mb-4">
+                            <img class="ps-xxl-10 ps-xl-6 ps-lg-9 ps-md-5" src="{{$resource.section_five.row2.img}}" />
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-11 col-11 weblandingpage_points ps-6 ps-xl-0 mb-4">
+                            {{$resource.section_five.row2.point1}}</div>
+                        <div class="col-1">
+                            <img class="ps-xxl-10 ps-xl-6 ps-lg-9 ps-md-5 mb-4" src="{{$resource.section_five.row2.img}}" />
+                        </div>
+                        <div
+                            class="col-xl-3 col-lg-3 col-md-11 col-11 weblandingpage_points  pb-xl-0 ps-6 ps-xl-0 mb-4">
+                            {{$resource.section_five.row2.point2}}</div>
+                        <div class="col-1">
+                            <img class="ps-xxl-10 ps-xl-6 ps-lg-9 ps-md-5 mb-4" src="{{$resource.section_five.row2.img}}" />
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-11 col-11 weblandingpage_points ps-6 ps-xl-0 mb-4">
+                            {{$resource.section_five.row2.point3}}</div>
+                    </div>
+
+                    <div class="row mb-8">
+                        <div class="col-1">
+                            <img class="ps-xxl-10 ps-xl-6 ps-lg-9 ps-md-5 mb-4" src="{{$resource.section_five.row3.img}}" />
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-11 col-11 weblandingpage_points ps-6 ps-xl-0 mb-4">
+                            {{$resource.section_five.row3.point1}}</div>
+                        <div class="col-1">
+                            <img class="ps-xxl-10 ps-xl-6 ps-lg-9 ps-md-5 mb-4" src="{{$resource.section_five.row3.img}}" />
+                        </div>
+                        <div
+                            class="col-xl-3 col-lg-3 col-md-11 col-11 weblandingpage_points  pb-xl-0 ps-6 ps-xl-0 mb-4">
+                            {{$resource.section_five.row3.point2}}</div>
+                        <div class="col-1">
+                            <img class="ps-xxl-10 ps-xl-6 ps-lg-9 ps-md-5 mb-4" src="{{$resource.section_five.row3.img}}" />
+                        </div>
+                        <div
+                            class="col-xl-3 col-lg-3 col-md-11 col-11 weblandingpage_points pb-md-6 pb-xl-0 ps-6 ps-xl-0 mb-4">
+                            {{$resource.section_five.row3.point3}}</div>
+                    </div>
+
+
+                    <div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
+                        <span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
+                                data-bs-target="#landingpage4Modal">{{$resource.section_five.get_in_touch}}</a></span>
+                    </div>
+                </div>
+        </section>
+        <!-- <section class="wrapper">
         <div class="container pt-8 pb-8">
             <div class="row gy-10">
             <div class="col-12 col-xl-7 col-lg-6 col-md-6">
@@ -475,100 +584,124 @@
         </div>
     </section> -->
 
-		
-		
-	<section class="wrapper bg-linear-gradient">
-        <div class="container pb-10">
-        <div class="row text-left">
-            <div class="col-md-10 col-lg-10 col-xl-12 col-xxl-6 text-left">
 
-                <h4 class="mb-4 pt-6">
-                    {{$resource.section_seven.title}}
-                </h4>
-                <p class="lead fs-lg mb-6">
-                    {{$resource.section_seven.description}}
-                </p>
-                <div class="d-flex" data-group="page-title-buttons" data-delay="600">
-                    <span><a class="btn btn-primary rounded-0" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal">{{$resource.section_seven.btn_get_in_touch}}</a></span>
-                </div>
+
+        <section class="wrapper bg-linear-gradient">
+            <div class="container pb-10 text-center">
+                
+
+                        <h4 class="mb-4 pt-6">
+                            {{$resource.section_seven.title}}
+                        </h4>
+                        <p class="lead fs-lg mb-6">
+                            {{$resource.section_seven.description}}
+                        </p>
+                        <div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
+                            <span><a class="btn btn-primary rounded-0" data-bs-toggle="modal"
+                                    data-bs-target="#landingpage4Modal">{{$resource.section_seven.btn_get_in_touch}}</a></span>
+                        </div>
+                    
             </div>
-        </div>
+        </section>
+
+
     </div>
-</section>
-		
-		
-	</div>
-	</div>
+    </div>
 
-	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
 
-	<script>
-		const firebaseConfig = {
-			apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
-			authDomain: "biggworks-dd979.firebaseapp.com",
-			databaseURL: "https://biggworks-dd979-default-rtdb.asia-southeast1.firebasedatabase.app",
-			projectId: "biggworks-dd979",
-			storageBucket: "biggworks-dd979.appspot.com",
-			messagingSenderId: "160882722753",
-			appId: "1:160882722753:web:f067b273803ff585359140",
-			measurementId: "G-377HKGT4RW"
-		};
-		firebase.initializeApp(firebaseConfig);
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
+            authDomain: "biggworks-dd979.firebaseapp.com",
+            databaseURL: "https://biggworks-dd979-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "biggworks-dd979",
+            storageBucket: "biggworks-dd979.appspot.com",
+            messagingSenderId: "160882722753",
+            appId: "1:160882722753:web:f067b273803ff585359140",
+            measurementId: "G-377HKGT4RW"
+        };
+        firebase.initializeApp(firebaseConfig);
 
-		let candidateInfo = firebase.database().ref("candidate");
+        let candidateInfo = firebase.database().ref("candidate");
 
-		var application = document.getElementById("application");
+        var application = document.getElementById("application");
 
-		function saveRecordtoDatabase() {
-			console.log("saveRecordtoDatabase");
-			event.preventDefault();
-			let newCandidateInfo = candidateInfo.push();
+        function saveRecordtoDatabase() {
+            // Get form values
+            var name = document.getElementById('form_name').value;
+            var email = document.getElementById('form_email').value;
+            var phone = document.getElementById('form_phone').value;
+            var budget = document.getElementById('dropdown_budget').value;
+            var description = document.getElementById('form_message').value;
 
-			newCandidateInfo.set({
-				name: document.getElementById('form-name').value,
-				email: document.getElementById('form_email').value,
-				phone: document.getElementById('form_phone').value,
-				position: document.getElementById('form_position').value
+            // Validate required fields
+            if (!name || !email || !phone) {
+                alert("Please fill in all required fields.");
+                return false; // Prevent form submission
+            }
 
-			});
-		}
-	</script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-		crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-		crossorigin="anonymous"></script>
-<script>
-	const rows = document.querySelectorAll('.talent-rows');
-	var hiddenRows = Array.from(rows).slice(3);
+            // Create a new record in Firebase
+            var newRecordRef = candidateInfo.child('records').push();
+            newRecordRef.set({
+                name: name,
+                email: email,
+                phone: phone,
+                budget: budget,
+                description: description
+            });
 
-  const readMoreButton = document.getElementById('read-more');
-  const readLessButton = document.getElementById('read-less');
-  console.log(rows)
-  hiddenRows.forEach(item=>item.classList.add('hidden'))
-if(rows.length<=3){
-	readMoreButton.classList.toggle('d-none');
-}
-  // Show or hide the rows based on the button click
-  function toggleRows  (event)  {
-	event.preventDefault();
-    hiddenRows.forEach(row => {
-      row.classList.toggle('hidden');
-    });
-    readMoreButton.classList.toggle('d-none');
-    readLessButton.classList.toggle('d-none');
-  };
+            // Clear the form after successful submission
+            document.getElementById('landingpage4Form').reset();
 
-  // Add click event listener to the "Read More" button
-  readMoreButton.addEventListener('click', toggleRows);
+            return true; // Allow form submission
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+    <script>
+        const rows = document.querySelectorAll('.talent-rows');
+        var hiddenRows = Array.from(rows).slice(3);
 
-  // Add click event listener to the "Read Less" button
-  readLessButton.addEventListener('click', toggleRows);
+        const readMoreButton = document.getElementById('read-more');
+        const readLessButton = document.getElementById('read-less');
+        console.log(rows)
+        hiddenRows.forEach(item => item.classList.add('hidden'))
+        if (rows.length <= 3) {
+            readMoreButton.classList.toggle('d-none');
+        }
+        // Show or hide the rows based on the button click
+        function toggleRows(event) {
+            event.preventDefault();
+            hiddenRows.forEach(row => {
+                row.classList.toggle('hidden');
+            });
+            readMoreButton.classList.toggle('d-none');
+            readLessButton.classList.toggle('d-none');
+        };
 
-</script>
-	<!-- </div> -->
-	<!-- /.content-wrapper -->
+        // Add click event listener to the "Read More" button
+        readMoreButton.addEventListener('click', toggleRows);
+
+        // Add click event listener to the "Read Less" button
+        readLessButton.addEventListener('click', toggleRows);
+
+    </script>
+    <script>
+        function validatePhoneNumber(input) {
+            input.value = input.value.replace(/\D/g, ""); // Remove non-numeric characters
+
+            if (input.value.length > 10) {
+                input.value = input.value.slice(0, 10); // Truncate input to 10 digits
+            }
+        }
+    </script>
+
+    <!-- </div> -->
+    <!-- /.content-wrapper -->
 </body>
 {{ end }}

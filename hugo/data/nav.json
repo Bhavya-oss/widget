@@ -9,7 +9,7 @@
     "navlinks": {
       "blog": {
         "link": "/blog",
-        "text": "Blog",
+        "text": "Articles",
   
       "blog-post": {
         "link": "/blog-post",
@@ -27,10 +27,35 @@
       "services": {
         "link": "/services",
         "text": "Services"
+       
       },
-      "work": {
-        "link": "/work",
-        "text": "Work"   
+      "landingpage1": {
+       
+            "link": "/landingpage1",
+            "text": "IOT Development"
+         
+      },
+      "landingpage2": {
+       
+        "link": "/landingpage2",
+        "text": "IOT Development"
+     
+  },
+  "landingpage3": {
+       
+    "link": "/landingpage3",
+    "text": "IOT Development"
+ 
+},
+"landingpage4": {
+       
+  "link": "/landingpage4",
+  "text": "IOT Development"
+
+},
+      "works": {
+        "link": "/works",
+        "text": "Works"   
     },
       "contact":
       {
