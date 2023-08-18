@@ -2,6 +2,8 @@
  {{ $nav := .Site.Data.nav.nav }}
 
  <header class="wrapper bg-light">
+
+ 
   <!-- <div class="bg-primary text-white fw-bold fs-15 mb-2">
       <div class="container d-md-flex flex-md-row">
                 <div class="d-flex flex-row align-items-center">
@@ -23,7 +25,7 @@
   class="navbar center-nav transparent navbar-expand-lg ">
   <div class="container flex-lg-row flex-nowrap align-items-center navbar-header-color">
     <div class="navbar-brand w-100">
-      <a href="/">
+      <a href="/" >
         <img class="logo-dark img-fluid col-xl-2 col-md-2 col-3"
         src="https://res.cloudinary.com/biggworks/image/upload/v1684393942/Group_1_1_cy79gl.png"
         alt="" />
@@ -61,12 +63,10 @@
       </div>
       <ul class="navbar-nav ml-auto">
         
-        <li class="nav-item dropdown">
-          <a class="nav-link ropdown-toggle" href="{{ $nav.navlinks.services.link }}"
-            >
+        <li class="nav-item dropdown" >
+          <a class="nav-link ropdown-toggle" href="{{ $nav.navlinks.services.link }}"  >
             {{ $nav.navlinks.services.text }}
-            </a
-          >
+            </a>
          
           <ul class="dropdown-menu">
             <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage1.link }}">IOT Development
@@ -76,9 +76,14 @@
             <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage4.link }}">Web Apps</a></li>
             <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage2.link }}">Staff Augmentation
             </a></li>
-          </ul>
+          </ul>  
          
-         
+          <!-- <ul class="dropdown">
+            <li><a href="#">Germany</a></li>
+            <li><a href="#">Australia</a></li>
+            <li><a href="#">Switzerland</a></li>
+            <li><a href="#">Japan</a></li>
+        </ul> -->
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ $nav.navlinks.works.link }}"

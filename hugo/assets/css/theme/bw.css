@@ -27450,12 +27450,13 @@ fieldset:disabled .btn.btn-circle {
 }
 
 .navbar-nav:not(.sm-collapsible) .nav-link .sub-arrow {
-  display: inline;
+  display:none;
   margin-left: 0.3rem;
   vertical-align: 0.1rem;
   border: 0 !important;
   font-size: 0.25rem;
   color: #0f00fd;
+  visibility: hidden;
 }
 
 .navbar.caret-none .navbar-nav:not(.sm-collapsible) .nav-link .sub-arrow {
@@ -27677,6 +27678,11 @@ fieldset:disabled .btn.btn-circle {
 
 .nav-tabs.nav-tabs-bg .nav-link:first-child {
   margin-left: 0;
+}
+.nav-item-dropdown{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-tabs.nav-tabs-bg .nav-link:last-child {
@@ -37879,7 +37885,7 @@ header#top .logo {
 
 
 
-@media (min-width: 900px) and (max-width: 1920px){
+@media (min-width: 1212px) and (max-width: 1920px){
 
 .service_background_image {
   background-image: url(https://res.cloudinary.com/biggworks/image/upload/v1686046435/Group_11707_vve5db.png);
@@ -37889,7 +37895,7 @@ header#top .logo {
   background-origin: content-box;
 }
 }
-@media (min-width: 768px) and (max-width: 899px){
+@media (min-width: 768px) and (max-width: 1211px){
 
   .service_background_image {
     background-image: url(https://res.cloudinary.com/biggworks/image/upload/v1686046435/Group_11707_vve5db.png);

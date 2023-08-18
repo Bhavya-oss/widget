@@ -1,0 +1,28 @@
+{
+    "routes": [
+      {
+        "method": "GET",
+        "path": "/staff-augmentation",
+        "handler": "staff-augmentation.find",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "PUT",
+        "path": "/staff-augmentation",
+        "handler": "staff-augmentation.update",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "DELETE",
+        "path": "/staff-augmentation",
+        "handler": "staff-augmentation.delete",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+  }

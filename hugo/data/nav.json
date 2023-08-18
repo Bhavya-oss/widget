@@ -31,25 +31,25 @@
       },
       "landingpage1": {
        
-            "link": "/landingpage1",
+            "link": "/iot-development",
             "text": "IOT Development"
          
       },
       "landingpage2": {
        
-        "link": "/landingpage2",
+        "link": "/staff-augmentation",
         "text": "IOT Development"
      
   },
   "landingpage3": {
        
-    "link": "/landingpage3",
+    "link": "/mobile-apps",
     "text": "IOT Development"
  
 },
 "landingpage4": {
        
-  "link": "/landingpage4",
+  "link": "/web-apps",
   "text": "IOT Development"
 
 },

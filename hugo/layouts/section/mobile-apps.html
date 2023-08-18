@@ -1,0 +1,671 @@
+{{ define "main" }}
+{{ $resource := getJSON "http://bw-strapi:1337/mobile-apps" }}
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+<!-- {{ printf "My data: %s"  $resource}} -->
+
+<body>
+	<div class="content-wrapper">
+		<header class="wrapper bg-gray">
+			<!-- /.navbar -->
+		</header>
+		<!-- /header -->
+
+		
+        <section class="wrapper">
+            <div class="container mt-xl-6 mt-0 mb-xxl-12 mb-xl-10 mb-md-8 mb-12">
+                <div class="row">
+                    <div class="col-xl-2 col-md-2 col-1 mt-xl-0 mt-md-4">
+                        <a href="/">
+                <img class="img-fluid col-xl-4 col-lg-7 col-md-10" src="https://res.cloudinary.com/biggworks/image/upload/v1691837164/Group_1_2_gp5lya.png" alt=""/>
+            </a>
+            </div>
+            </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-xl-6 col-lg-6 mb-6">
+                        <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4 pt-xl-12 pt-8 service-text">
+                            {{$resource.section_one.title}}
+                        </h2>
+                        <h1 class="display-1 mb-3 service-text">
+                            {{$resource.section_one.subtitle}}
+                        </h1>
+                        <p class="lead fs-lg text-left mb-5 service-text">
+                            {{$resource.section_one.description}}
+</p>
+
+<div class="d-flex service-text mb-4" data-group="page-title-buttons" data-delay="600">
+    <span><a href="#landingpage3Modal" class="btn btn-primary rounded-0"
+        data-bs-toggle="modal">{{$resource.section_one.get_in_touch}}</a></span>
+  </div>
+
+
+              
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="landingpage3Modal" >
+                        <div class="modal-dialog modal-fullscreen modal-lg">
+      <div class="modal-content">
+        <!-- <div class="modal-header"> -->
+            <p type="button" class="btn-custum" data-bs-dismiss="modal" aria-label="Close"><i class="uil uil-times" id="timesIcon"></i></p>
+        <h4 class="modal-title  text-center project-unlock pt-xl-15 pt-md-10 pt-13">{{$resource.section_one.modal.heading}}
+        </h4>
+        <!-- </div> -->
+        <div class="modal-body">
+          <section id="tabs" class="wrapper pt-0 pb-md-4">
+            <div class="row">
+              <div class="col-2"></div>
+              <div class="col-lg-8 col-12">
+
+                <div class="form_card">
+
+                  <div class="card-body">
+
+                    <div class="tab-content">
+
+
+                      <form class="contact-form" method="post" id="landingpage1Form"
+                      onsubmit="return saveRecordtoDatabase()">
+                        
+                        <div class="messages"></div>
+                        <div class="controls">
+                          <div class="row gx-4">
+                            <div class="col-md-6">
+                                <div class="form-group mb-4">
+
+                                    <h6 class="mb-3 ">{{$resource.section_one.modal.fullname}}<span class="text-danger">*</span></h6>
+                                    <input class="form-control lb-lg" type="text" placeholder="Your name"
+                                        name="name" id="form_name" required="required" data-error="First Name is required."/>
+                                        <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-4">
+                                    <h6 class="mb-3">{{$resource.section_one.modal.emailid}}<span class="text-danger">*</span></h6>
+                                    <input class="form-control" type="email" id="form_email"
+                                        placeholder="Your e-mail address" name="email" value="" required="required" data-error="Email is required" />
+                                        <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-4">
+                                    <h6 class="mb-3">{{$resource.section_one.modal.phone_number}} <span class="text-danger">*</span></h6>
+                                    <input class="form-control" type="text" placeholder="Your Phone Number" id="form_phone"
+                                        name="phone" value="" required="required" data-error="Phone number is required" minlength="10" maxlength="10" oninput="validatePhoneNumber(this)"/>
+                                        <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-4">
+                                    <h6 class="mb-3">{{$resource.section_one.modal.budget.heading}}</h6>
+                                    <div class="form-select-wrapper ">
+                                        <select class="form-select" aria-label="Default select example" id="dropdown_budget" name="dropdown_budget" placeholder="select-budget">
+                                            <option class="text-muted" value="select-budget" selected style="color: #495c77;">{{$resource.section_one.modal.budget.heading}}</option>
+
+                                            <option value="$10-30k">{{$resource.section_one.modal.budget.budget1}}</option>
+                                            <option value="$30-60k">{{$resource.section_one.modal.budget.budget2}}</option>
+                                            <option value="$60-100k">{{$resource.section_one.modal.budget.budget3}}</option>
+                                            <option value="$100k+">{{$resource.section_one.modal.budget.budget4}}</option>
+                                        </select>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group mb-4">
+                                    <h6 class="mb-3">{{$resource.section_one.modal.budget.request}}</h6>
+                                    <textarea class="form-control expandable"
+                                        placeholder="Please describe your project"
+                                        name="project_description" rows="5" id="form_message" name="message"></textarea>
+                                </div>
+                            </div>
+
+
+                            <!-- <div class="col-2 col-xl-9 col-lg-9 col-md-7"></div> -->
+                            <div class="col-1">
+                              <input type="submit"
+                                class="btn btn-primary button-widthincrease rounded-0 btn-send mb-3"
+                                value="Send">
+
+                            </div>
+                            <!-- </div> -->
+                          </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </section>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+                    </div>
+                    <!-- <div class="col-xl-1"></div> -->
+                    <div class="col-12 col-xl-6 col-lg-6 col-md-6 pt-md-10 pt-xxl-6 pt-lg-6 pt-xl-2">
+                        <img class="col-12 col-xl-12 col-lg-12 col-md-12 img-fluid"
+                            src="{{$resource.section_one.img}}"
+                            alt="" />
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="wrapper">
+            <div class="container card-container-landingpage">
+
+                <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+                    <div class="col-md-12 col-lg-12 col-xl-8 mx-auto text-center">
+                        <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4">
+                            {{$resource.section_two.title}} 
+                        </h2>
+                        <h1 class="display-1 mb-4">
+                            {{$resource.section_two.sub_title}}
+                        </h1>
+                    </div>
+                </div>
+                <div class="col-md-10 col-lg-8 col-xl-9 mx-auto text-center">
+
+                    <p class="lead fs-lg mb-12">
+                        {{$resource.section_two.description}}
+                    </p>
+                </div>
+
+
+                <div class="grid mb-4">
+					<div class="row">
+						<div class="item col-md-6 col-xl-4 mb-10">
+							<div class="card about-image">
+								<div class="card-body">
+									
+									<h4 class="mb-4">{{$resource.section_two.grid.card1.title}}</h4>
+                <p class="mb-0">
+                    {{$resource.section_two.grid.card1.sub_title}}
+                </p>
+
+								</div>
+
+							</div>
+						</div>
+						<div class="item col-md-6 col-xl-4 mb-10">
+							<div class="card about-image">
+								<div class="card-body">
+									
+									<h4 class="mb-4">{{$resource.section_two.grid.card2.title}}</h4>
+									<p class="mb-0">{{$resource.section_two.grid.card2.sub_title}}
+									</p>
+
+								</div>
+
+							</div>
+						</div>
+						<div class="item col-md-6 col-xl-4 mb-10">
+							<div class="card about-image">
+								<div class="card-body">
+									
+									<h4 class="mb-4">
+                                        {{$resource.section_two.grid.card3.title1}}</h4>
+									<p class="mb-5"> {{$resource.section_two.grid.card3.sub_title}}</p>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+               
+               
+                
+               
+            </div>
+        </section>
+
+        <section class="our_process_new">
+            <div class="container container-desktoplandingpage pb-7 align-items-center">
+
+                <div class="row gx-lg-8 gx-xl-12 gy-10">
+                    <div class="col-md-10 col-lg-10 col-xl-8 mx-auto text-center">
+                        <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4 mx-auto">
+                            {{$resource.section_three.title}}
+                        </h2>
+                        <h1 class="display-1 mb-4">
+                            {{$resource.section_three.sub_title}}
+                        </h1>
+                    </div>
+                </div>
+                <div class="col-md-10 col-lg-8 col-xl-9 mx-auto text-center">
+
+                    <p class="lead fs-lg mb-12">
+                        {{$resource.section_three.description}}
+                    </p>
+                </div>
+
+               
+                <div class="row pb-6 offset-xl-1 offset-lg-1 offset-0">
+                    <ul class="process_step">
+                        <li class="step_one">
+                            <div class="box_main">
+                            <div class="im_box">
+                                <img src="{{$resource.section_three.step_one.img}}" alt="">
+                            </div>
+                            <div class="cnt_box">
+                                <p class="lead fs-lg">{{$resource.section_three.step_one.title}}</p>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="step_two">
+                            <div class="box_main">
+                            <div class="im_box">
+                                <img src="{{$resource.section_three.step_two.img}}" alt="">
+                            </div>
+                            <div class="cnt_box">
+                               
+                                <p class="lead fs-lg">{{$resource.section_three.step_two.title}}</p>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="step_three">
+                            <div class="box_main">
+                            <div class="im_box">
+                                <img src="{{$resource.section_three.step_three.img}}" alt="">
+                            </div>
+                            <div class="cnt_box">
+                                <p class="lead fs-lg">{{$resource.section_three.step_three.title}}</p>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="step_four">
+                            <div class="box_main">
+                            <div class="im_box">
+                                <img src="{{$resource.section_three.step_four.img}}" alt="">
+                            </div>
+                            <div class="cnt_box">
+                                <p class="lead fs-lg ps-4">{{$resource.section_three.step_four.title}}</p>
+                            </div>
+                        </div>
+                        </li>
+                        <li class="step_five">
+                            <div class="box_main">
+                            <div class="im_box">
+                                <img src="{{$resource.section_three.step_five.img}}" alt="">
+                            </div>
+                            <div class="cnt_box">
+                                <p class="lead fs-lg">{{$resource.section_three.step_five.title}}</p>
+                            </div>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div
+                  class="d-flex justify-content-center"
+                  data-group="page-title-buttons"
+                  data-delay="600">
+                  <span
+                    ><a class="btn btn-primary rounded-0 mx-1"
+                      >Get in touch</a
+                    ></span
+                  >
+                </div> -->
+                <div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
+					<span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
+							data-bs-target="#landingpage3Modal">{{$resource.section_three.btn_get_in_touch}}</a></span>
+				</div>
+            </div>
+        </section>
+
+        <section class="wrapper bg-linear-gradient">
+            <div class="container pb-6">
+                <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4 text-center ">
+                    {{$resource.section_four.title}}
+                </h2>
+                <p class="project-unlock mb-xl-8 text-center mx-xl-22">{{$resource.section_four.sub_title}}</p>
+                
+                <div class="text-center">
+                    <img class="img-fluid" src="{{$resource.section_four.img}}" alt=""/>
+                </div>
+            </div>
+        </section>
+
+       
+
+        <section class="wrapper">
+            <div class="container mt-8 mb-8">
+                
+                <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
+                    <div class="col-md-10 col-lg-10 col-xl-8 mx-auto text-center">
+                        <p class="project-unlock pb-0">
+                            {{$resource.section_five.title}}
+                        </p>
+                        
+
+                    <p class="lead fs-lg mb-6">
+                        {{$resource.section_five.sub_title}}
+                    </p>
+                </div>
+</div>
+                <div class="row mb-x">
+                    <div class="col-1">
+                        <img class="ps-xxl-12 ps-xl-10 ps-lg-6 ps-md-3 mb-2 mb-xl-3 mb-lg-3"
+                          src="{{$resource.section_five.row1.img}}" />
+                      </div>
+                      <div class="col-xl-3 col-lg-3 col-11 landingpage-points mb-2 mb-xl-3 mb-lg-3 ps-5 ps-xl-3 ps-lg-3 weblandingpage_points">{{$resource.section_five.row1.title1}}</div>
+                      <div class="col-1">
+                        <img class="ps-xxl-12 ps-xl-10 ps-lg-6 ps-md-3 mb-2 mb-xl-3 mb-lg-3"
+                          src="{{$resource.section_five.row1.img}}" />
+                      </div>
+                      <div class="col-xl-3 col-lg-3 col-11 landingpage-points mb-2 mb-xl-3 mb-lg-3 ps-5 ps-xl-3 ps-lg-3 weblandingpage_points">{{$resource.section_five.row1.title2}}</div>
+                      <div class="col-1">
+                        <img class="ps-xxl-12 ps-xl-10 ps-lg-6 ps-md-3 mb-2 mb-xl-3 mb-lg-3"
+                          src="{{$resource.section_five.row1.img}}" />
+                      </div>
+                      <div class="col-xl-3 col-lg-3 col-11 landingpage-points mb-2 mb-xl-3 mb-lg-3 ps-5 ps-xl-3 ps-lg-3 weblandingpage_points">{{$resource.section_five.row1.title3}}</div>
+                </div>
+               
+                <div class="row">
+                    <div class="col-1">
+                        <img class="ps-xxl-12 ps-xl-10 ps-lg-6 ps-md-3 mb-2 mb-xl-3 mb-lg-3"
+                          src="{{$resource.section_five.row2.img}}" />
+                      </div>
+                      <div class="col-xxl-3 col-lg-3 col-11 landingpage-points mb-2 mb-xl-3 mb-lg-3 ps-5 ps-xl-3 ps-lg-3 weblandingpage_points">{{$resource.section_five.row2.title1}}</div>
+                      <div class="col-1">
+                        <img class="ps-xxl-12 ps-xl-10 ps-lg-6 ps-md-3 mb-2 mb-xl-3 mb-lg-3"
+                          src="{{$resource.section_five.row2.img}}" />
+                      </div>
+                      <div class="col-xxl-3 col-lg-3 col-11 landingpage-points mb-2 mb-xl-3 mb-lg-3 ps-5 ps-xl-3 ps-lg-3 weblandingpage_points">{{$resource.section_five.row2.title2}}</div>
+                      <div class="col-1">
+                        <img class="ps-xxl-12 ps-xl-10 ps-lg-6 ps-md-3 mb-2 mb-xl-3 mb-lg-3"
+                          src="{{$resource.section_five.row2.img}}" />
+                      </div>
+                      <div class="col-xl-3 col-lg-3 col-11 landingpage-points mb-2 mb-xl-3 mb-lg-3 ps-5 ps-xl-3 ps-lg-3 weblandingpage_points">{{$resource.section_five.row2.title3}}</div>
+                </div>
+
+                <div class="row mb-8">
+                    <div class="col-1">
+                        <img class="ps-xxl-12 ps-xl-10 ps-lg-6 ps-md-3 mb-2 mb-xl-3 mb-lg-3"
+                          src="{{$resource.section_five.row3.img}}" />
+                      </div>
+                      <div class="col-xl-3 col-lg-3 col-11 landingpage-points mb-2 mb-xl-3 mb-lg-3 ps-5 ps-xl-3 ps-lg-3 weblandingpage_points">{{$resource.section_five.row3.title1}}</div>
+                      <div class="col-1">
+                        <img class="ps-xxl-12 ps-xl-10 ps-lg-6 ps-md-3 mb-2 mb-xl-3 mb-lg-3"
+                          src="{{$resource.section_five.row3.img}}" />
+                      </div>
+                      <div class="col-xl-3 col-lg-3 col-11 landingpage-points mb-2 mb-xl-3 mb-lg-3 ps-5 ps-xl-3 ps-lg-3 weblandingpage_points">{{$resource.section_five.row3.title2}}</div>
+                      <div class="col-1">
+                        <img class="ps-xxl-12 ps-xl-10 ps-lg-6 ps-md-3 mb-2 mb-xl-3 mb-lg-3"
+                          src="{{$resource.section_five.row3.img}}" />
+                      </div>
+                      <div class="col-xl-3 col-lg-3 col-11 landingpage-points mb-2 mb-xl-3 mb-lg-3 ps-5 ps-xl-3 ps-lg-3 weblandingpage_points">{{$resource.section_five.row3.title3}}</div>
+                </div>
+
+                <!-- <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-xl-4 col-lg-4 col-12 col-md-12">
+                        <ul class="icon-list bullet-bg bullet-soft-primary">
+                            <h4 class="landingpage-points">
+                                <li><img class="pe-3"
+                                        src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"
+                                        alt="" />Access to the latest technology</li>
+                            </h4>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-12 col-md-12">
+                        <ul class="icon-list bullet-bg bullet-soft-primary">
+                            <h4 class="landingpage-points">
+                                <li class="ps-xl-4"><img class="pe-3"
+                                        src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"
+                                        alt="" /> Expertise</li>
+                            </h4>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-12 col-md-12">
+                        <ul class="icon-list bullet-bg bullet-soft-primary">
+                            <h4 class="landingpage-points">
+                                <li class="ps-xl-13"><img class="pe-3"
+                                        src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"
+                                        alt="" />User-centric design</li>
+                            </h4>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-1"></div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-12">
+                        <ul class="icon-list bullet-bg bullet-soft-primary">
+                            <h4 class="landingpage-points">                                
+                                <li><img class="pe-3"
+                                        src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"
+                                        alt="" />High-quality deliverables</li>
+                            </h4>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-12 col-12">
+                        <ul class="icon-list bullet-bg bullet-soft-primary">
+                            <h4 class="landingpage-points">                               
+                                 <li class="ps-xl-4"><img class="pe-3"
+                                        src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"
+                                        alt="" />Time-saving</li>
+                            </h4>
+                          
+                        </ul>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-12">
+                        <ul class="icon-list bullet-bg bullet-soft-primary">
+                            <h4 class="landingpage-points">                               
+                                 <li class="ps-xl-13"><img class="pe-3"
+                                        src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"
+                                        alt="" />Cross-platform development</li>
+                            </h4>
+                          
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="row mb-8">
+                    <div class="col-1"></div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-12">
+                        <ul class="icon-list bullet-bg bullet-soft-primary">
+                            <h4 class="landingpage-points">                              
+                                  <li><img class="pe-3"
+                                        src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"
+                                        alt="" /> Ongoing support and
+                                        maintenance</li>
+                            </h4>
+                           
+                        </ul>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-2 col-md-12 col-12">
+                        <ul class="icon-list bullet-bg bullet-soft-primary">
+                            <h4 class="landingpage-points">                               
+                                 <li class="ps-xl-4"><img class="pe-3"
+                                        src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"
+                                        alt="" />Cost-effective</li>
+                            </h4>
+                           
+                            <h4>
+                        </ul>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-12">
+                        <ul class="icon-list bullet-bg bullet-soft-primary">
+                            <h4 class="landingpage-points">                              
+                                  <li class="ps-xl-13"><img class="pe-3"
+                                        src="https://res.cloudinary.com/biggworks/image/upload/v1676615834/Group_178_sfyblj.png"
+                                        alt="" /> Security</li>
+                            </h4>
+                          
+                            <h4>
+                        </ul>
+                    </div>
+                </div> -->
+
+               
+
+
+    <!-- <div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
+        <span><a class="btn btn-primary rounded-0 mx-1">Get in touch</a></span>
+    </div> -->
+    <div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
+        <span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
+                data-bs-target="#landingpage3Modal">{{$resource.section_five.btn_get_in_touch}}</a></span>
+    </div>
+    </div>
+    </section>
+
+    <!-- <section class="wrapper">
+        <div class="container pt-8 pb-10">
+            <div class="row gy-10">
+                <div class="col-12 col-xl-7 col-lg-6 col-md-6">
+                    <p class="project-unlock mb-6">{{$resource.section_six.title}}</p>
+                    <div class="landingpage-card-client-says card mb-6">
+                        <div class="card-body-clients">
+                            <p class="lead fs-lg mb-2 px-4">
+                                {{$resource.section_six.description}}
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1 col-xl-1 col-lg-1 col-md-0"></div>
+                <div class="col-10 col-md-5 col-xl-4 col-lg-5 text-right pt-xl-13 pt-md-16 pt-lg-8 pt-4">
+                    <img class="col-12 col-md-12 landingpage-image img-fluid"
+                        src="{{$resource.section_six.img}}"
+                        alt="" />
+                </div>
+            </div>
+            <div class="row">
+              
+                <div class="col-12 col-md-10 col-xl-6 col-lg-6 pt-xl-0 pt-md-0 pt-10">
+
+                    <div class="item pb-8">
+                       
+                        <div class="background-blockquote">
+                            <h3 class=""><img class="pe-xl-3 pe-0"
+                                    src="{{$resource.section_six.row.img}}"
+                                    alt="" /> <span>{{$resource.section_six.row.software}}</span></h3>
+                            <p class="ps-xl-11_5 ps-10 ps-md-10">{{$resource.section_six.row.place}}</p>
+                        </div>
+                        <div class="blockquote-details ps-20">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="d-flex" data-group="page-title-buttons" data-delay="600">
+                <span><a class="btn btn-primary rounded-0 mx-1" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">{{$resource.section_six.row.btn_discover}}</a></span>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    -->
+    
+    <section class="wrapper bg-linear-gradient">
+        <div class="container pb-10 text-center">
+            <!-- <div class="row">
+                <div class="col-md-10 col-lg-10 col-xl-12 col-xxl-6 text-left"> -->
+
+                    <h4 class="mb-4 pt-6">
+                        {{$resource.section_seven.title}}
+                    </h4>
+                    <p class="lead fs-lg mb-6">
+                        {{$resource.section_seven.description}}
+                    </p>
+                    <div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
+                        <span><a class="btn btn-primary rounded-0" data-bs-toggle="modal"
+                                data-bs-target="#landingpage3Modal">{{$resource.section_seven.btn_get_in_touch}}</a></span>
+                    </div>
+                <!-- </div>
+            </div> -->
+        </div>
+    </section>
+
+
+		
+	</div>
+	</div>
+
+	<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+
+	<script>
+		const firebaseConfig = {
+			apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
+			authDomain: "biggworks-dd979.firebaseapp.com",
+			databaseURL: "https://biggworks-dd979-default-rtdb.asia-southeast1.firebasedatabase.app",
+			projectId: "biggworks-dd979",
+			storageBucket: "biggworks-dd979.appspot.com",
+			messagingSenderId: "160882722753",
+			appId: "1:160882722753:web:f067b273803ff585359140",
+			measurementId: "G-377HKGT4RW"
+		};
+		firebase.initializeApp(firebaseConfig);
+
+		let candidateInfo = firebase.database().ref("candidate");
+
+		var application = document.getElementById("application");
+
+		function saveRecordtoDatabase() {
+    // Get form values
+    var name = document.getElementById('form_name').value;
+    var email = document.getElementById('form_email').value;
+    var phone = document.getElementById('form_phone').value;
+    var budget = document.getElementById('dropdown_budget').value;
+    var description = document.getElementById('form_message').value;
+
+    // Validate required fields
+    if (!name || !email || !phone) {
+      alert("Please fill in all required fields.");
+      return false; // Prevent form submission
+    }
+
+    // Create a new record in Firebase
+	var newRecordRef = candidateInfo.child('records').push();
+    newRecordRef.set({
+      name: name,
+      email: email,
+      phone: phone,
+      budget: budget,
+      description: description
+    });
+
+    // Clear the form after successful submission
+    document.getElementById('landingpage3Modal').reset();
+
+    return true; // Allow form submission
+  }
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+		crossorigin="anonymous"></script>
+
+	<!-- </div> -->
+	<!-- /.content-wrapper -->
+</body>
+{{ end }}
