@@ -2,7 +2,19 @@
  {{ $nav := .Site.Data.nav.nav }}
 
  <header class="wrapper bg-light">
-
+  <style>
+    .landingpagesinnavbar ul {
+        list-style: none;
+    }
+    .landingpagesinnavbar ul li {
+        margin: 0; /* Remove any default margins */
+        padding: 0; /* Remove any default padding */
+    }
+    .landingpagesinnavbar ul li a {
+        color: white;
+        text-decoration: none; /* Remove underline from links */
+    }
+</style>
  
   <!-- <div class="bg-primary text-white fw-bold fs-15 mb-2">
       <div class="container d-md-flex flex-md-row">
@@ -78,6 +90,7 @@
             </a></li>
           </ul>  
          
+          
           <!-- <ul class="dropdown">
             <li><a href="#">Germany</a></li>
             <li><a href="#">Australia</a></li>
@@ -85,6 +98,18 @@
             <li><a href="#">Japan</a></li>
         </ul> -->
         </li>
+        <div class="landingpagesinnavbar">
+
+          <ul style="padding-left: 0rem;">
+            <li><a class="dropdown-item"  href="{{ $nav.navlinks.landingpage1.link }}" style="color: #fff; list-style: none; padding-left: 12px;">IOT Development</a></li>
+
+            
+            <li><a class="dropdown-item" href="{{ $nav.navlinks.landingpage3.link }}" style="color: white; list-style: none; padding-left: 12px;">Mobile Apps</a></li>
+            <li><a class="dropdown-item" href="{{ $nav.navlinks.landingpage4.link }}" style="color: white; list-style: none; padding-left: 12px;">Web Apps</a></li>
+            <li><a class="dropdown-item" href="{{ $nav.navlinks.landingpage2.link }}" style="color: white; list-style: none; padding-left: 12px;">Staff Augmentation
+            </a></li>
+          </ul> 
+        </div>
         <li class="nav-item">
           <a class="nav-link" href="{{ $nav.navlinks.works.link }}"
             >{{ $nav.navlinks.works.text }}</a
@@ -95,8 +120,8 @@
           <a class="nav-link" href="{{ $nav.navlinks.blog.link }}"
             >{{ $nav.navlinks.blog.text }}</a
           >
-        </li> -->
-      
+        </li>
+       -->
         <li class="nav-item">
           <a class="nav-link" href="{{ $nav.navlinks.careers.link }}"
             >{{ $nav.navlinks.careers.text }}</a

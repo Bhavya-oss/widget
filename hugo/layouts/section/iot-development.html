@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $resource := getJSON "http://bw-strapi:1337/landingpage1" }}
+{{ $resource := getJSON "http://bw-strapi:1337/iot-development" }}
 <!-- {{ printf "My data: %s"  $resource}} -->
 <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
@@ -71,7 +71,7 @@
 													<div class="form-group mb-4">
 
 														<h6 class="mb-3 ">{{$resource.section_one.modal.fullname}}<span class="text-danger">*</span></h6>
-														<input class="form-control lb-lg" type="text" placeholder="Your name"
+														<input class="form-control lb-lg" type="text" placeholder="Your name"  
 															name="name" id="form-name" required="required" data-error="First Name is required."/>
 															<div class="help-block with-errors"></div>
 													</div>

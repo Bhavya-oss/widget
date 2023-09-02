@@ -34,13 +34,13 @@
                             <div id="myModal1" class="modal fade" tabindex="-1">
                               <div class="modal-dialog modal-fullscreen modal-lg">
                                 <div class="modal-content">
-                                  <!-- <div class="modal-header"> -->
+                                  
                                   <h4 class="modal-title  text-center project-unlock pt-xl-10 pt-md-10 pt-13">{{$resource.section_one.modal_title}}
                                   </h4>
                                   <p type="button" class="btn-custum" data-bs-dismiss="modal" aria-label="Close"><i class="uil uil-times" id="timesIcon"></i></p>
-                                  <!-- </div> -->
+                                
                                   <div class="modal-body">
-                                    <section id="tabs" class="wrapper pt-0 pb-md-4">
+                                    <!-- <section id="tabs" class="wrapper pt-0 pb-md-4">
                                       <div class="row">
                                         <div class="col-2"></div>
                                         <div class="col-lg-8 col-12">
@@ -106,14 +106,14 @@
                                                       </div>
               
               
-                                                      <!-- <div class="col-2 col-xl-9 col-lg-9 col-md-7"></div> -->
+                                                     
                                                       <div class="col-1">
                                                         <input type="submit"
                                                           class="btn btn-primary button-widthincrease rounded-0 btn-send mb-3"
                                                           value="Contact us">
               
                                                       </div>
-                                                      <!-- </div> -->
+                                                     
                                                     </div>
                                                 </form>
                                               </div>
@@ -123,9 +123,9 @@
               
                                         </div>
                                       </div>
-                                    </section>
+                                    </section> -->
               
-              
+              {{partial "contact-form.html" .}}
                                   </div>
               
                                 </div>
@@ -544,12 +544,13 @@
       const firebaseConfig = {
         apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
         authDomain: "biggworks-dd979.firebaseapp.com",
-        databaseURL: "https://biggworks-dd979-default-rtdb.asia-southeast1.firebasedatabase.app",
+        databaseURL:
+          "https://biggworks-dd979-default-rtdb.asia-southeast1.firebasedatabase.app",
         projectId: "biggworks-dd979",
         storageBucket: "biggworks-dd979.appspot.com",
         messagingSenderId: "160882722753",
         appId: "1:160882722753:web:f067b273803ff585359140",
-        measurementId: "G-377HKGT4RW"
+        measurementId: "G-377HKGT4RW",
       };
       firebase.initializeApp(firebaseConfig);
   
@@ -558,60 +559,81 @@
       var application = document.getElementById("application");
   
       function saveRecordtoDatabase() {
-    event.preventDefault();
+        var firstName = document.getElementById("form_name").value;
+        var lastName = document.getElementById("form_lastname").value;
+        var email = document.getElementById("form_email").value;
+        var phone = document.getElementById("form_phone").value;
+        event.preventDefault();
   
-    var firstName = document.getElementById('form_name').value;
-    var lastName = document.getElementById('form_lastname').value;
-    var email = document.getElementById('form_email').value;
-    var phone = document.getElementById('form_phone').value;
+        var errorContainer = document.querySelector(".messages");
+        errorContainer.innerHTML = "";
   
-    var errorContainer = document.querySelector('.messages');
-    errorContainer.innerHTML = '';
+        let form = document.getElementById("indexForm");
   
-    let form = document.getElementById('projectForm')
-
-
-    if (firstName.trim() === '') {
-      displayError('form_name', 'First Name is required.');
-    }
+        if (firstName.trim() === "") {
+          displayError("form_name", "First Name is required.");
+        }
   
-    if (lastName.trim() === '') {
-      displayError('form_lastname', 'Last Name is required.');
-    }
+        if (lastName.trim() === "") {
+          displayError("form_lastname", "Last Name is required.");
+        }
   
-    if (email.trim() === '') {
-      displayError('form_email', 'Email address is required.');
-    }
+        if (email.trim() === "") {
+                  displayError("form_email", "Email address is required.");
+              } else if (!validateEmail(email)) {
+                  displayError("form_email", "Please enter a valid email address.");
+              }
   
-    // ... Perform validation for other fields
+        // ... Perform validation for other fields
+        
+        if (
+          firstName.trim() !== "" &&
+          lastName.trim() !== "" &&
+          validateEmail(email)
+          ) {
+            let newCandidateInfo = candidateInfo.push();
+         
   
-    if (errorContainer.innerHTML === '') {
-      let newCandidateInfo = candidateInfo.push();
+          newCandidateInfo.set({
+            name: firstName,
+            surname: lastName,
+            email: email,
+            phone: phone,
+            message: document.getElementById("form_message").value,
+          });
+          console.log("reset the form", firstName);
   
-      newCandidateInfo.set({
-        name: firstName,
-        surname: lastName,
-        email: email,
-        phone: phone,
-        message: document.getElementById('form_message').value
-      });
+          form.reset();
   
-      // Reset the form after submission
-      form.reset();
+          // Reset the form after submission
   
-      var successContainer = document.querySelector('.messages');
-      successContainer.innerHTML = '<div class="alert alert-success">Record saved successfully!</div>';
-
-      setTimeout(function() {
-  successContainer.innerHTML = '';
-}, 3000);
-    }
-  }
+          var successContainer = document.querySelector(".messages");
+          successContainer.innerHTML =
+            '<div class="alert alert-success">Record saved successfully!</div>';
   
-  function displayError(fieldId, errorMessage) {
-    var errorContainer = document.getElementById(fieldId + '_error');
-    errorContainer.innerHTML = '<div class="error-message">' + errorMessage + '</div>';
-  }
+          setTimeout(function () {
+            successContainer.innerHTML = "";
+          }, 3000);
+        }
+      }
+  
+      function handleFormFieldChange(e, fieldName) {
+        var inputValue = e.value;
+  
+        if (inputValue.trim() !== "") {
+          displayError(fieldName, "");
+        }
+      }
+  
+      function displayError(fieldId, errorMessage) {
+        var errorContainer = document.getElementById(fieldId + "_error");
+        errorContainer.innerHTML = errorMessage;
+      }
+  
+      function validateEmail(email) {
+              const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+              return pattern.test(email);
+          }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"

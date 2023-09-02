@@ -1,5 +1,7 @@
 {{ define "main" }}
 {{ $resource := getJSON "http://bw-strapi:1337/blog" }}
+<!-- {{ printf "%#v" $resource }} -->
+
 <body>
     <div class="content-wrapper">
       <header class="wrapper bg-gray">
@@ -20,555 +22,407 @@
           </div>
         </div>
       </section>
+
+
       <section class="wrapper bg-light">
-        <div class="container-fluid pt-9 pt-md-11 pb-14 pb-md-16">
-          <div class="projects-overflow mt-md-10 mb-10 mb-lg-15">
-            <div class="col-xl-10 mx-auto">
-              <div class="grid grid-view projects-tiles show-more" data-showstart="5" data-showafter="5">
-  
-  
-                <div class="project light-gallery-wrapper">
-                  <div class="row g-6 isotope">
-                    <div class="project item">
-                      <div class="row">
-                        <figure class="col-lg-8 col-xl-8 rounded"> 
-                          <img class="col-12 col-md-12" src={{$resource.section_two.asset_tracking.image}} alt="" /></figure>
-                        <div class="project-details d-flex justify-content-center flex-column" 
-                        style="right: 12%; bottom: 22%;">
-                          <div  class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
-                            <div class="card-body">
-                              <div class="post-header">
-                                <h4 class="mb-3">{{$resource.section_two.asset_tracking.title}}</h4>
-                              </div>
-                              <div class="post-content">
-                                <p>{{$resource.section_two.asset_tracking.description}}</p>
-                                <a href="/projects/biggworks-project-asset-tracking-solution/"
-                                  class="more hover link-primary">{{$resource.section_two.asset_tracking.see_project}} <img class="ps-2" src="https://res.cloudinary.com/biggworks/image/upload/v1684996473/Vector_5_yl7o1f.png"/></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                    </div>
-                    
-                  </div>
-                  
-                </div>
-                
-                <div class="project light-gallery-wrapper">
-                  <div class="row g-6 isotope">
-                    <div class="project item">
-                      <div class="row">
-                        <figure class="col-lg-7 offset-lg-5 col-xl-8 col-md-12 offset-xl-4 rounded"> <img class="col-12 col-md-12"
-                            src="{{$resource.section_two.underwater_communcations.image}}"
-                            alt="" /></figure>
-                        <div class="project-details d-flex justify-content-center flex-column ms-lg-n150 ms-xl-0"
-                          style="left: 12%; bottom: 20%;">
-                          <div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
-                            <div class="card-body">
-                              <div class="post-header">
-                                <h4 class="mb-3">{{$resource.section_two.underwater_communcations.title}}</h4>
-                              </div>
-          
-                              <div class="post-content">
-                                <p>{{$resource.section_two.underwater_communcations.description}}</p>
-                                <a href="/projects/biggworks-project-underwater-communication-system/"
-                                  class="more hover link-primary">{{$resource.section_two.underwater_communcations.see_project}}<img class="ps-2" src="https://res.cloudinary.com/biggworks/image/upload/v1684996473/Vector_5_yl7o1f.png"/></a>
-                              </div>
-          
-                            </div>
-          
-                          </div>
-          
-                        </div>
-          
-                      </div>
-          
-                    </div>	
-                    
-                  </div>
-                </div>
-                <div class="project light-gallery-wrapper">
-                  <div class="row g-6 isotope">
-                    <div class="project item">
-                      <div class="row">
-                        <figure class="col-lg-8 col-xl-8 rounded"> 
-                          <img class="col-12 col-md-12" src={{$resource.section_two.smart_lights.image}}
-                          alt="" /></figure>
-                        <div class="project-details d-flex justify-content-center flex-column" 
-                        style="right: 12%; bottom: 22%;">
-                          <div  class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
-                            <div class="card-body">
-                              <div class="post-header">
-                                <h4 class="mb-3">{{$resource.section_two.smart_lights.title}}</h4>
-                              </div>
-                              <div class="post-content">
-                                <p>{{$resource.section_two.smart_lights.description}}</p>
-                                <a href="/projects/biggworks-project-smart-lights/"
-                                  class="more hover link-primary">{{$resource.section_two.smart_lights.see_project}}<img class="ps-2" src="https://res.cloudinary.com/biggworks/image/upload/v1684996473/Vector_5_yl7o1f.png"/></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                    </div>
-                    
-                  </div>
-                  
-                </div>
-                <div class="project light-gallery-wrapper">
-                  <div class="row g-6 isotope">
-                    <div class="project item">
-                      <div class="row">
-                        <figure class="col-lg-7 offset-lg-5 col-xl-8 col-md-12 offset-xl-4 rounded"> <img class="col-12 col-md-12"
-                            src="{{$resource.section_two.dryskin_monitoring.image}}"
-                            alt="" /></figure>
-                        <div class="project-details d-flex justify-content-center flex-column ms-lg-n150 ms-xl-0"
-                          style="left: 12%; bottom: 22%;">
-                          <div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
-                            <div class="card-body">
-                              <div class="post-header"Measurement>
-                                <h4 class="mb-3">{{$resource.section_two.dryskin_monitoring.title}}</h4>
-                              </div>
-                              <div class="post-content">
-                                <p>{{$resource.section_two.dryskin_monitoring.description}}</p>
-                                <a href="/projects/biggworks-project-dry-skin-index-measurement/"
-                                  class="more hover link-primary">{{$resource.section_two.dryskin_monitoring.see_project}}<img class="ps-2" src="https://res.cloudinary.com/biggworks/image/upload/v1684996473/Vector_5_yl7o1f.png"/></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>	
-                    
-                  </div>
-                </div>
-                <div class="project light-gallery-wrapper">
-                  <div class="row g-6 isotope">
-                    <div class="project item">
-                      <div class="row">
-                        <figure class="col-lg-8 col-xl-8 rounded"> 
-                          <img class="col-12 col-md-12" src="{{$resource.section_two.automatic_batch.image}}" alt="" /></figure>
-                        <div class="project-details d-flex justify-content-center flex-column" 
-                        style="right: 12%; bottom: 21%;">
-                          <div  class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
-                            <div class="card-body">
-                              <div class="post-header">
-                                <h4 class="mb-3">{{$resource.section_two.automatic_batch.title}}</h4>
-                              </div>
-                              <div class="post-content">
-                                <p>{{$resource.section_two.automatic_batch.description}}</p>
-                                <a href="/projects/biggworks-project-automatic-batch-controller/"
-                                  class="more hover link-primary">{{$resource.section_two.automatic_batch.see_project}}<img class="ps-2" src="https://res.cloudinary.com/biggworks/image/upload/v1684996473/Vector_5_yl7o1f.png"/></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                    </div>
-                    
-                  </div>
-                  
-                </div>
-                
-                <div class="project light-gallery-wrapper">
-                  <div class="row g-6 isotope">
-                    <div class="project item">
-                      <div class="row">
-                        <figure class="col-lg-7 offset-lg-5 col-xl-8 col-md-12 offset-xl-4 rounded"> <img class="col-12 col-md-12"
-                            src="{{$resource.section_two.core_body_temp.image}}"
-                            alt="" /></figure>
-                        <div class="project-details d-flex justify-content-center flex-column ms-lg-n150 ms-xl-0"
-                          style="left: 12%; bottom: 15%;">
-                          <div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
-                            <div class="card-body">
-                              <div class="post-header">
-                                <h4 class="mb-3">{{$resource.section_two.core_body_temp.title}}</h4>
-                              </div>
-          
-                              <div class="post-content">
-                                <p>{{$resource.section_two.core_body_temp.description}}</p>
-                                <a href="/projects/biggworks-project-core-temp-body-sensor/" class="more hover link-primary">{{$resource.section_two.core_body_temp.see_project}}<img class="ps-2" src="https://res.cloudinary.com/biggworks/image/upload/v1684996473/Vector_5_yl7o1f.png"/></a>
-                              </div>
-          
-                            </div>
-                            
-                          </div>
-                          
-          
-                        </div>
-          
-                      </div>
-          
-                    </div>
-                    
-                  </div>
-                </div>
-                
-                <div class="project light-gallery-wrapper">
-                  <div class="row g-6 isotope">
-                    <div class="project item">
-                      <div class="row">
-                        <figure class="col-lg-8 col-xl-8 rounded"> 
-                          <img class="col-12 col-md-12" src="{{$resource.section_two.geofence_alert.image}}" alt="" /></figure>
-                        <div class="project-details d-flex justify-content-center flex-column" 
-                        style="right: 12%; bottom: 22%;">
-                          <div  class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
-                            <div class="card-body">
-                              <div class="post-header">
-                                <h4 class="mb-3">{{$resource.section_two.geofence_alert.title}}</h4>
-                              </div>
-                              <div class="post-content">
-                                <p>{{$resource.section_two.geofence_alert.description}}</p>
-                                <a href="/projects/biggworks-project-geofence-alert-system/"
-                                  class="more hover link-primary">{{$resource.section_two.geofence_alert.see_project}}<img class="ps-2" src="https://res.cloudinary.com/biggworks/image/upload/v1684996473/Vector_5_yl7o1f.png"/></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                    </div>
-                    
-                  </div>
-                  
-                </div>
-  
-                
-                <div class="project light-gallery-wrapper">
-                  <div class="row g-6 isotope">
-                    <div class="project item">
-                      <div class="row">
-                        <figure class="col-lg-7 offset-lg-5 col-xl-8 col-md-12 offset-xl-4 rounded"> <img class="col-12 col-md-12"
-                            src="{{$resource.section_two.longrange_bluetooth.image}}"
-                            alt="" /></figure>
-                        <div class="project-details d-flex justify-content-center flex-column ms-lg-n150 ms-xl-0"
-                          style="left: 12%; bottom: 18%;">
-                          <div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
-                            <div class="card-body">
-                              <div class="post-header">
-                                <h4 class="mb-3">{{$resource.section_two.longrange_bluetooth.title}}</h4>
-                              </div>
-          
-                              <div class="post-content">
-                                <p>{{$resource.section_two.longrange_bluetooth.description}}</p>
-                                <a href="/projects/biggworks-project-bluetooth-audio-device/" class="more hover link-primary">{{$resource.section_two.longrange_bluetooth.see_project}}<img class="ps-2" src="https://res.cloudinary.com/biggworks/image/upload/v1684996473/Vector_5_yl7o1f.png"/></a>
-                              </div>
-          
-                            </div>
-                            
-                          </div>
-                          
-          
-                        </div>
-          
-                      </div>
-          
-                    </div>
-                    
-                  </div>
-                </div>
-              
-  
-                <div class="project light-gallery-wrapper">
-                  <div class="row g-6 isotope">
-                    <div class="project item">
-                      <div class="row">
-                        <figure class="col-lg-8 col-xl-8 rounded"> 
-                          <img class="col-12 col-md-12" src="{{$resource.section_two.aerodynamic_performance.image}}" alt="" /></figure>
-                        <div class="project-details d-flex justify-content-center flex-column" 
-                        style="right: 12%; bottom: 15%;">
-                          <div  class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
-                            <div class="card-body">
-                              <div class="post-header">
-                                <h4 class="mb-3">{{$resource.section_two.aerodynamic_performance.title}}</h4>
-                              </div>
-                              <div class="post-content">
-                                <p>{{$resource.section_two.aerodynamic_performance.description}}</p>
-                                <a href="/projects/biggworks-project-aerodynamic-performance-measurement/"
-                                  class="more hover link-primary">{{$resource.section_two.aerodynamic_performance.see_project}}<img class="ps-2" src="https://res.cloudinary.com/biggworks/image/upload/v1684996473/Vector_5_yl7o1f.png"/></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                    </div>
-                    
-                  </div>
-                  
-                </div>
-  
-                <div class="project light-gallery-wrapper">
-                  <div class="row g-6 isotope">
-                    <div class="project item">
-                      <div class="row">
-                        <figure class="col-lg-7 offset-lg-5 col-xl-8 col-md-12 offset-xl-4 rounded"> <img class="col-12 col-md-12"
-                            src="{{$resource.section_two.subcentimeter_accurate.image}}"
-                            alt="" /></figure>
-                        <div class="project-details d-flex justify-content-center flex-column ms-lg-n150 ms-xl-0"
-                          style="left: 12%; bottom: 18%;">
-                          <div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
-                            <div class="card-body">
-                              <div class="post-header">
-                                <h4 class="mb-3">{{$resource.section_two.subcentimeter_accurate.title}}</h4>
-                              </div>
-          
-                              <div class="post-content">
-                                <p>{{$resource.section_two.subcentimeter_accurate.description}}</p>
-                                <a href="/projects/biggworks-project-cm-accurate-positioning-system/" class="more hover link-primary">{{$resource.section_two.longrange_bluetooth.see_project}}<img class="ps-2" src="https://res.cloudinary.com/biggworks/image/upload/v1684996473/Vector_5_yl7o1f.png"/></a>
-                              </div>
-          
-                            </div>
-                            
-                          </div>
-                          
-          
-                        </div>
-          
-                      </div>
-          
-                    </div>
-                    
-                  </div>
-                </div>
-              
-                <div class="project light-gallery-wrapper">
-                  <div class="row g-6 isotope">
-                    <div class="project item">
-                      <div class="row">
-                        <figure class="col-lg-8 col-xl-8 rounded"> 
-                          <img class="col-12 col-md-12" src="{{$resource.section_two.depth_temp.image}}" alt="" /></figure>
-                        <div class="project-details d-flex justify-content-center flex-column" 
-                        style="right: 12%; bottom: 19%;">
-                          <div  class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
-                            <div class="card-body">
-                              <div class="post-header">
-                                <h4 class="mb-3">{{$resource.section_two.depth_temp.title}}</h4>
-                              </div>
-                              <div class="post-content">
-                                <p>{{$resource.section_two.depth_temp.description}}</p>
-                                <a href="/projects/biggworks-project-depth-and-temperature-monitoring/"
-                                  class="more hover link-primary">{{$resource.section_two.depth_temp.see_project}}<img class="ps-2" src="https://res.cloudinary.com/biggworks/image/upload/v1684996473/Vector_5_yl7o1f.png"/></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                    </div>
-                    
-                  </div>
-                  
-                </div>
-                
-                <div class="project light-gallery-wrapper">
-                  <div class="row g-6 isotope">
-                    <div class="project item">
-                      <div class="row">
-                        <figure class="col-lg-7 offset-lg-5 col-xl-8 col-md-12 offset-xl-4 rounded"> <img class="col-12 col-md-12"
-                            src="{{$resource.section_two.biometric_authentication.image}}"
-                            alt="" /></figure>
-                        <div class="project-details d-flex justify-content-center flex-column ms-lg-n150 ms-xl-0"
-                          style="left: 12%; bottom: 18%;">
-                          <div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
-                            <div class="card-body">
-                              <div class="post-header">
-                                <h4 class="mb-3">{{$resource.section_two.biometric_authentication.title}}</h4>
-                              </div>
-          
-                              <div class="post-content">
-                                <p>{{$resource.section_two.biometric_authentication.description}}</p>
-                                <a href="/projects/biggworks-project-biometric-authentication-device/" class="more hover link-primary">{{$resource.section_two.biometric_authentication.see_project}}<img class="ps-2" src="https://res.cloudinary.com/biggworks/image/upload/v1684996473/Vector_5_yl7o1f.png"/></a>
-                              </div>
-          
-                            </div>
-                            
-                          </div>
-                          
-          
-                        </div>
-          
-                      </div>
-          
-                    </div>
-                    
-                  </div>
-                </div>
-                
-                <div class="project light-gallery-wrapper">
-                  <div class="row g-6 isotope">
-                    <div class="project item">
-                      <div class="row">
-                        <figure class="col-lg-8 col-xl-8 rounded"> 
-                          <img class="col-12 col-md-12" src="{{$resource.section_two.ecg_mobile_application.image}}" alt="" /></figure>
-                        <div class="project-details d-flex justify-content-center flex-column" 
-                        style="right: 12%; bottom: 22%;">
-                          <div  class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
-                            <div class="card-body">
-                              <div class="post-header">
-                                <h4 class="mb-3">{{$resource.section_two.ecg_mobile_application.title}}</h4>
-                              </div>
-                              <div class="post-content">
-                                <p>{{$resource.section_two.ecg_mobile_application.description}}</p>
-                                <a href="/projects/biggworks-project-ecg-mobile-application"
-                                  class="more hover link-primary">{{$resource.section_two.ecg_mobile_application.see_project}}<img class="ps-2" src="https://res.cloudinary.com/biggworks/image/upload/v1684996473/Vector_5_yl7o1f.png"/></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                    </div>
-                    
-                  </div>
-                  
-                </div>
-                
-                <div class="project light-gallery-wrapper">
-                  <div class="row g-6 isotope">
-                    <div class="project item">
-                      <div class="row">
-                        <figure class="col-lg-7 offset-lg-5 col-xl-8 col-md-12 offset-xl-4 rounded"> <img class="col-12 col-md-12"
-                            src="{{$resource.section_two.gearin_gearout.image}}"
-                            alt="" /></figure>
-                        <div class="project-details d-flex justify-content-center flex-column ms-lg-n150 ms-xl-0"
-                          style="left: 12%; bottom: 18%;">
-                          <div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
-                            <div class="card-body">
-                              <div class="post-header">
-                                <h4 class="mb-3">{{$resource.section_two.gearin_gearout.title}}</h4>
-                              </div>
-          
-                              <div class="post-content">
-                                <p>{{$resource.section_two.gearin_gearout.description}}</p>
-                                <a href="/projects/biggworks-project-gear-in-gear-out-beacons/" class="more hover link-primary">{{$resource.section_two.gearin_gearout.see_project}}<img class="ps-2" src="https://res.cloudinary.com/biggworks/image/upload/v1684996473/Vector_5_yl7o1f.png"/></a>
-                              </div>
-          
-                            </div>
-                            
-                          </div>
-                          
-          
-                        </div>
-          
-                      </div>
-          
-                    </div>
-                    
-                  </div>
-                </div>
-                
-                <div class="project light-gallery-wrapper">
-                  <div class="row g-6 isotope">
-                    <div class="project item">
-                      <div class="row">
-                        <figure class="col-lg-8 col-xl-8 rounded"> 
-                          <img class="col-12 col-md-12" src="{{$resource.section_two.energy_assettracking.image}}" alt="" /></figure>
-                        <div class="project-details d-flex justify-content-center flex-column" 
-                        style="right: 12%; bottom: 22%;">
-                          <div  class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
-                            <div class="card-body">
-                              <div class="post-header">
-                                <h4 class="mb-3">{{$resource.section_two.energy_assettracking.title}}</h4>
-                              </div>
-                              <div class="post-content">
-                                <p>{{$resource.section_two.energy_assettracking.description}}</p>
-                                <a href="/projects/biggworks-project-energy-asset-tracking-beacon/"
-                                  class="more hover link-primary">{{$resource.section_two.energy_assettracking.see_project}}<img class="ps-2" src="https://res.cloudinary.com/biggworks/image/upload/v1684996473/Vector_5_yl7o1f.png"/></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                    </div>
-                    
-                  </div>
-                  
-                </div>
-  
-                
-  
-                <div class="project light-gallery-wrapper">
-                  <div class="row g-6 isotope">
-                    <div class="project item">
-                      <div class="row">
-                        <figure class="col-lg-7 offset-lg-5 col-xl-8 col-md-12 offset-xl-4 rounded"> <img class="col-12 col-md-12"
-                            src="{{$resource.section_two.race_timing.image}}"
-                            alt="" /></figure>
-                        <div class="project-details d-flex justify-content-center flex-column ms-lg-n150 ms-xl-0"
-                          style="left: 12%; bottom: 22%;">
-                          <div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
-                            <div class="card-body">
-                              <div class="post-header">
-                                <h4 class="mb-3">{{$resource.section_two.race_timing.title}}</h4>
-                              </div>
-          
-                              <div class="post-content">
-                                <p>{{$resource.section_two.race_timing.description}}</p>
-                                <a href="/projects/biggworks-project-race-timing-system/" class="more hover link-primary">{{$resource.section_two.race_timing.see_project}}<img class="ps-2" src="https://res.cloudinary.com/biggworks/image/upload/v1684996473/Vector_5_yl7o1f.png"/></a>
-                              </div>
-          
-                            </div>
-                            
-                          </div>
-                          
-          
-                        </div>
-          
-                      </div>
-          
-                    </div>
-                    
-                  </div>
-                </div>
-                
-  
-                
-  
-              
-                
-                <div class="project light-gallery-wrapper">
-                  <div class="row g-6 isotope">
-                    <div class="project item">
-                      <div class="row">
-                        <figure class="col-lg-8 col-xl-8 rounded"> <img class="col-12 col-md-12"
-                            src="{{$resource.section_two.lignlight_device.image}}"
-                            alt="" /></figure>
-                        <div class="project-details d-flex justify-content-center flex-column"
-                          style="right:12%; bottom: 20%;">
-                          <div class="card shadow" data-rellax-xs-speed="0" data-rellax-mobile-speed="0">
-                            <div class="card-body">
-                              <div class="post-header">
-                                <h4 class="mb-3">{{$resource.section_two.lignlight_device.title}}</h4>
-                              </div>
-          
-                              <div class="post-content">
-                                <p>{{$resource.section_two.lignlight_device.description}}</p>
-                                <a href="/projects/biggworks-project-lignlight-device/"
-                                  class="more hover link-primary">{{$resource.section_two.lignlight_device.see_project}} <img class="ps-2" src="https://res.cloudinary.com/biggworks/image/upload/v1684996473/Vector_5_yl7o1f.png"/></a>
-                              </div>
-          
-                            </div>
-          
-                          </div>
-          
-                        </div>
-          
-                      </div>
-          
-                    </div>
-                    
-                  </div>
-                </div>
+          <div class="container pt-10 pb-11">
+            <div class="row gy-12 gx-12 mx-auto mb-10">
+              <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3" data-group="page-title">
+               <div class="card">
+                <div class="articles_card_body">
+                  <img class="img-fluid" src="https://res.cloudinary.com/biggworks/image/upload/v1692171689/1691401179501_wbt26s.jpg" alt=""/>
+                      <h6 class="mb-11 mt-4">Unraveling the hype around USB C connectors
+                      </h6>
+                <div
+                class="d-flex justify-content-center"
+                data-group="page-title-buttons"
+                data-delay="600"
+              >
+                <span
+                  ><a
+                    href="{{$resource.section_one.link}}"
+                    class="btn btn-primary rounded-0 mx-1"
+                    data-bs-toggle="modal"
+                    >Read Post</a
+                  ></span
+                >
+              </div>              </div>
               </div>
+              </div>
+
+              <!-- <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3" data-group="page-title">
+                <div class="card">
+                 <div class="articles_card_body">
+                   <img class="img-fluid" src="https://res.cloudinary.com/biggworks/image/upload/v1692171689/1691401179501_wbt26s.jpg" alt=""/>
+                       <h6 class="mb-11 mt-4">Unraveling the hype around USB C connectors
+                       </h6>
+                 <div
+                 class="d-flex justify-content-center"
+                 data-group="page-title-buttons"
+                 data-delay="600"
+               >
+                 <span
+                   ><a
+                     href="mobile-apps.html"
+                     class="btn btn-primary rounded-0 mx-1"
+                     data-bs-toggle="modal"
+                     >Read Post</a
+                   ></span
+                 >
+               </div>              </div>
+               </div>
+               </div>
+
+
+               <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3">
+                <div class="card">
+                 <div class="articles_card_body">
+                   <img class="img-fluid" src="https://res.cloudinary.com/biggworks/image/upload/v1692171689/1691401179501_wbt26s.jpg" alt=""/>
+                       <h6 class="mb-11 mt-4">Unraveling the hype around USB C connectors
+                       </h6>
+                 <div
+                 class="d-flex justify-content-center"
+                 data-group="page-title-buttons"
+                 data-delay="600"
+               >
+                 <span
+                   ><a
+                     href="services.html"
+                     class="btn btn-primary rounded-0 mx-1"
+                     data-bs-toggle="modal"
+                     >Read Post</a
+                   ></span
+                 >
+               </div>              </div>
+               </div>
+               </div>
+
+
+               <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3" data-group="page-title">
+                <div class="card">
+                 <div class="articles_card_body">
+                   <img class="img-fluid" src="https://res.cloudinary.com/biggworks/image/upload/v1692171689/1691401179501_wbt26s.jpg" alt=""/>
+                       <h6 class="mb-11 mt-4">Unraveling the hype around USB C connectors
+                       </h6>
+                 <div
+                 class="d-flex justify-content-center"
+                 data-group="page-title-buttons"
+                 data-delay="600"
+               >
+                 <span
+                   ><a
+                     href="#myModal1"
+                     class="btn btn-primary rounded-0 mx-1"
+                     data-bs-toggle="modal"
+                     >Read Post</a
+                   ></span
+                 >
+               </div>              </div>
+               </div>
+               </div>
+              
+            </div>
+
+            <div class="row gy-12 gx-12 mx-auto mb-10">
+              <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3" data-group="page-title">
+               <div class="card">
+                <div class="articles_card_body">
+                  <img class="img-fluid" src="https://res.cloudinary.com/biggworks/image/upload/v1692171689/1691401179501_wbt26s.jpg" alt=""/>
+                      <h6 class="mb-11 mt-4">Unraveling the hype around USB C connectors
+                      </h6>
+                <div
+                class="d-flex justify-content-center"
+                data-group="page-title-buttons"
+                data-delay="600"
+              >
+                <span
+                  ><a
+                    href="#myModal1"
+                    class="btn btn-primary rounded-0 mx-1"
+                    data-bs-toggle="modal"
+                    >Read Post</a
+                  ></span
+                >
+              </div>              </div>
+              </div>
+              </div>
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3" data-group="page-title">
+                <div class="card">
+                 <div class="articles_card_body">
+                   <img class="img-fluid" src="https://res.cloudinary.com/biggworks/image/upload/v1692171689/1691401179501_wbt26s.jpg" alt=""/>
+                       <h6 class="mb-11 mt-4">Unraveling the hype around USB C connectors
+                       </h6>
+                 <div
+                 class="d-flex justify-content-center"
+                 data-group="page-title-buttons"
+                 data-delay="600"
+               >
+                 <span
+                   ><a
+                     href="#myModal1"
+                     class="btn btn-primary rounded-0 mx-1"
+                     data-bs-toggle="modal"
+                     >Read Post</a
+                   ></span
+                 >
+               </div>              </div>
+               </div>
+               </div>
+
+
+               <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3" data-group="page-title">
+                <div class="card">
+                 <div class="articles_card_body">
+                   <img class="img-fluid" src="https://res.cloudinary.com/biggworks/image/upload/v1692171689/1691401179501_wbt26s.jpg" alt=""/>
+                       <h6 class="mb-11 mt-4">Unraveling the hype around USB C connectors
+                       </h6>
+                 <div
+                 class="d-flex justify-content-center"
+                 data-group="page-title-buttons"
+                 data-delay="600"
+               >
+                 <span
+                   ><a
+                     href="#myModal1"
+                     class="btn btn-primary rounded-0 mx-1"
+                     data-bs-toggle="modal"
+                     >Read Post</a
+                   ></span
+                 >
+               </div>              </div>
+               </div>
+               </div>
+
+
+               <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3" data-group="page-title">
+                <div class="card">
+                 <div class="articles_card_body">
+                   <img class="img-fluid" src="https://res.cloudinary.com/biggworks/image/upload/v1692171689/1691401179501_wbt26s.jpg" alt=""/>
+                       <h6 class="mb-11 mt-4">Unraveling the hype around USB C connectors
+                       </h6>
+                 <div
+                 class="d-flex justify-content-center"
+                 data-group="page-title-buttons"
+                 data-delay="600"
+               >
+                 <span
+                   ><a
+                     href="#myModal1"
+                     class="btn btn-primary rounded-0 mx-1"
+                     data-bs-toggle="modal"
+                     >Read Post</a
+                   ></span
+                 >
+               </div>              </div>
+               </div>
+               </div>
+              
+            </div>
+
+
+            <div class="row gy-12 gx-12 mx-auto mb-10">
+              <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3" data-group="page-title">
+               <div class="card">
+                <div class="articles_card_body">
+                  <img class="img-fluid" src="https://res.cloudinary.com/biggworks/image/upload/v1692171689/1691401179501_wbt26s.jpg" alt=""/>
+                      <h6 class="mb-11 mt-4">Unraveling the hype around USB C connectors
+                      </h6>
+                <div
+                class="d-flex justify-content-center"
+                data-group="page-title-buttons"
+                data-delay="600"
+              >
+                <span
+                  ><a
+                    href="#myModal1"
+                    class="btn btn-primary rounded-0 mx-1"
+                    data-bs-toggle="modal"
+                    >Read Post</a
+                  ></span
+                >
+              </div>              </div>
+              </div>
+              </div>
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3" data-group="page-title">
+                <div class="card">
+                 <div class="articles_card_body">
+                   <img class="img-fluid" src="https://res.cloudinary.com/biggworks/image/upload/v1692171689/1691401179501_wbt26s.jpg" alt=""/>
+                       <h6 class="mb-11 mt-4">Unraveling the hype around USB C connectors
+                       </h6>
+                 <div
+                 class="d-flex justify-content-center"
+                 data-group="page-title-buttons"
+                 data-delay="600"
+               >
+                 <span
+                   ><a
+                     href="#myModal1"
+                     class="btn btn-primary rounded-0 mx-1"
+                     data-bs-toggle="modal"
+                     >Read Post</a
+                   ></span
+                 >
+               </div>              </div>
+               </div>
+               </div>
+
+
+               <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3" data-group="page-title">
+                <div class="card">
+                 <div class="articles_card_body">
+                   <img class="img-fluid" src="https://res.cloudinary.com/biggworks/image/upload/v1692171689/1691401179501_wbt26s.jpg" alt=""/>
+                       <h6 class="mb-11 mt-4">Unraveling the hype around USB C connectors
+                       </h6>
+                 <div
+                 class="d-flex justify-content-center"
+                 data-group="page-title-buttons"
+                 data-delay="600"
+               >
+                 <span
+                   ><a
+                     href="#myModal1"
+                     class="btn btn-primary rounded-0 mx-1"
+                     data-bs-toggle="modal"
+                     >Read Post</a
+                   ></span
+                 >
+               </div>              </div>
+               </div>
+               </div>
+
+
+               <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3" data-group="page-title">
+                <div class="card">
+                 <div class="articles_card_body">
+                   <img class="img-fluid" src="https://res.cloudinary.com/biggworks/image/upload/v1692171689/1691401179501_wbt26s.jpg" alt=""/>
+                       <h6 class="mb-11 mt-4">Unraveling the hype around USB C connectors
+                       </h6>
+                 <div
+                 class="d-flex justify-content-center"
+                 data-group="page-title-buttons"
+                 data-delay="600"
+               >
+                 <span
+                   ><a
+                     href="#myModal1"
+                     class="btn btn-primary rounded-0 mx-1"
+                     data-bs-toggle="modal"
+                     >Read Post</a
+                   ></span
+                 >
+               </div>              </div>
+               </div>
+               </div>
+              
+            </div>
+
+
+            <div class="row gy-12 gx-12 mx-auto mb-10">
+              <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3" data-group="page-title">
+               <div class="card">
+                <div class="articles_card_body">
+                  <img class="img-fluid" src="https://res.cloudinary.com/biggworks/image/upload/v1692171689/1691401179501_wbt26s.jpg" alt=""/>
+                      <h6 class="mb-11 mt-4">Unraveling the hype around USB C connectors
+                      </h6>
+                <div
+                class="d-flex justify-content-center"
+                data-group="page-title-buttons"
+                data-delay="600"
+              >
+                <span
+                  ><a
+                    href="#myModal1"
+                    class="btn btn-primary rounded-0 mx-1"
+                    data-bs-toggle="modal"
+                    >Read Post</a
+                  ></span
+                >
+              </div>              </div>
+              </div>
+              </div>
+
+              <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3" data-group="page-title">
+                <div class="card">
+                 <div class="articles_card_body">
+                   <img class="img-fluid" src="https://res.cloudinary.com/biggworks/image/upload/v1692171689/1691401179501_wbt26s.jpg" alt=""/>
+                       <h6 class="mb-11 mt-4">Unraveling the hype around USB C connectors
+                       </h6>
+                 <div
+                 class="d-flex justify-content-center"
+                 data-group="page-title-buttons"
+                 data-delay="600"
+               >
+                 <span
+                   ><a
+                     href="#myModal1"
+                     class="btn btn-primary rounded-0 mx-1"
+                     data-bs-toggle="modal"
+                     >Read Post</a
+                   ></span
+                 >
+               </div>              </div>
+               </div>
+               </div>
+
+
+               <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3" data-group="page-title">
+                <div class="card">
+                 <div class="articles_card_body">
+                   <img class="img-fluid" src="https://res.cloudinary.com/biggworks/image/upload/v1692171689/1691401179501_wbt26s.jpg" alt=""/>
+                       <h6 class="mb-11 mt-4">Unraveling the hype around USB C connectors
+                       </h6>
+                 <div
+                 class="d-flex justify-content-center"
+                 data-group="page-title-buttons"
+                 data-delay="600"
+               >
+                 <span
+                   ><a
+                     href="#myModal1"
+                     class="btn btn-primary rounded-0 mx-1"
+                     data-bs-toggle="modal"
+                     >Read Post</a
+                   ></span
+                 >
+               </div>              </div>
+               </div>
+               </div>
+
+
+               <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3" data-group="page-title">
+                <div class="card">
+                 <div class="articles_card_body">
+                   <img class="img-fluid" src="https://res.cloudinary.com/biggworks/image/upload/v1692171689/1691401179501_wbt26s.jpg" alt=""/>
+                       <h6 class="mb-11 mt-4">Unraveling the hype around USB C connectors
+                       </h6>
+                 <div
+                 class="d-flex justify-content-center"
+                 data-group="page-title-buttons"
+                 data-delay="600"
+               >
+                 <span
+                   ><a
+                     href="#myModal1"
+                     class="btn btn-primary rounded-0 mx-1"
+                     data-bs-toggle="modal"
+                     >Read Post</a
+                   ></span
+                 >
+               </div>              </div>
+               </div>
+               </div> -->
+              
+            </div>
           </div>
-        </div>
       </section>
+
+
+
+
+      
+     
 
 
     </div>

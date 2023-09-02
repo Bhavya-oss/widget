@@ -4866,6 +4866,10 @@ textarea.form-control.is-invalid {
   flex: 1 1 auto;
   padding: 2rem 2rem;
 }
+.articles_card_body{
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+}
 
 .card-title {
   margin-bottom: 0.5rem;
@@ -37994,4 +37998,114 @@ select[multiple] {
   /* right: -8px; */
   cursor: pointer;
   font-size: 22px;
+}
+
+
+
+@media screen and (max-width: 991px) {
+ 
+  .landingpagesinnavbar {
+display: block;
+   
+  }
+}
+
+.humburgertextcolor{
+  color:"white"
+
+}
+
+@media (min-width: 992px){
+  .landingpagesinnavbar{
+    display: none;
+  }
+
+}
+
+.errormessage {
+  color: red;
+}
+
+.footer_backgroundcolor{
+  background-color: #21254C;
+}
+
+@media (max-width:1200px){
+  main {
+    max-width: 65%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+}
+
+@media (min-width:1200px){
+  
+
+main {
+  max-width: 40%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+}
+
+
+@media (max-width:900px){
+  main {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+}
+
+.pdf-carousel {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.pdf-slides { 
+  display: flex;
+  scroll-snap-type: x mandatory;
+  gap: 2px; /* Adjust as needed */
+}
+
+.pdf-slide {
+  /* width: 100%; */
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  border: 1px solid #ccc;
+}
+
+.pdf-nav-button {
+  /* position: absolute; */
+
+  /* top: 36%; */
+  transform: translateY(-100%);
+  z-index: 2;
+}
+
+#prev-pdf {
+  position: relative;
+  left:25px;
+  
+}
+
+#next-pdf {
+  position: relative;
+  right: 54px;
+}
+
+.circle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+    border: 2px solid #000000; /* Circle border color */
+  font-size: 20px; /* Adjust the font size as needed */
+  cursor: pointer;
+  background-color: transparent;
 }

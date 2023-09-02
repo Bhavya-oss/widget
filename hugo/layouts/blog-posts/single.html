@@ -1,0 +1,245 @@
+
+
+
+
+{{ define "main" }} {{ $resource := getJSON .Params.source }}
+
+<!-- {{ printf "My data: %s"  $resource}} -->
+
+
+<body>
+    <div class="content-wrapper">
+      <header class="wrapper bg-gray">
+        {{ partial "nav.html" . }}
+        <!-- /.navbar -->
+      </header>
+  
+      <main>
+        <section>
+          <div>
+            {{ $myLink := "https://res.cloudinary.com/biggworks/image/upload/v1693466550/DSI_sense_vlvrb3_kwbfeg.pdf" }}
+
+            {{ .Content}}
+           
+           
+          </div>
+          <!-- <h2>PDF Carousel</h2> -->
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+            "
+          >
+            <div style="width: 2%">
+              <button id="prev-pdf" class="pdf-nav-button circle-button">
+                &#9664;
+              </button>
+            </div>
+            <div class="pdf-carousel" style="width: 96%">
+              <div class="pdf-slides"></div>
+              <!-- Add more pdf-slide divs for additional pages -->
+            </div>
+            <div style="width: 2%">
+              <button id="next-pdf" class="pdf-nav-button circle-button">
+                &#9654;
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+  
+      <!-- <section class="wrapper bg-white">
+  
+          <div class="container mt-xl-15 mt-md-8 mt-10 mt-lg-12 pb-xl-0">
+              <div class="row mb-12">
+                  <div class="col-12 col-md-12 col-xl-12 col-xxl-12 col-lg-12 mb-6" >
+                      
+                  
+                      <img class="img-fluid" 
+                          src="https://res.cloudinary.com/biggworks/image/upload/v1692171689/1691401179501_wbt26s.jpg"
+                          alt="" />
+                  </div>
+  
+              
+              </div>
+              <p>An IOT Smart Use Case Transforming Industries </p>
+  
+  
+              <div>
+                  <p>IoT offers numerous benefits in a factory setting, optimising operations, improving safety, and increasing overall efficiency. Here are some ways IoT can help in a factory use case:</p>
+              </div>
+  
+              <div>
+                  <p>Predictive Maintenance: IoT sensors can monitor equipment and machinery in real-time, detecting anomalies and signs of wear. This data allows for predictive maintenance, where maintenance activities are scheduled before a breakdown occurs, reducing downtime and preventing costly disruptions.
+                  </p>
+              </div>
+  
+              <div>
+                  <p>Inventory Management: IoT-enabled RFID tags or sensors can track inventory levels and monitor the movement of materials and finished goods. This ensures accurate stock levels, reduces inventory holding costs, and enables just-in-time manufacturing.</p>
+              </div>
+  
+              <div>
+                  <p>
+  
+  Condition Monitoring: IoT sensors can measure environmental conditions, such as temperature, humidity, and air quality, ensuring optimal conditions for production processes and product quality.
+                  </p>
+              </div>
+              <div>
+                  <p>Asset Tracking: IoT devices can track the location of tools, equipment, and vehicles within the factory, preventing loss and improving asset utilization.
+                  </p>
+              </div>
+              <div>
+                  <p>Quality Control: IoT sensors can collect data during the production process, enabling real-time quality control. If any product fails to meet quality standards, it can be identified and removed from the production line immediately.</p>
+              </div>
+  
+              <div>
+  <p>
+  Worker Safety: Wearable IoT devices, such as smart helmets or vests, can monitor worker movements, vital signs, and exposure to hazardous conditions. This helps enhance worker safety and enables quick response in case of emergencies.
+  </p>           
+  </div>
+  <div>
+      <p>
+          Energy Efficiency: IoT can optimize energy usage in the factory by monitoring energy consumption and automating processes to reduce waste and improve efficiency.
+      </p>
+  </div>
+  
+  <div>
+      <p>Process Automation: IoT devices can automate repetitive tasks and processes, freeing up human resources for more complex and value-added activities.
+      </p>
+  </div>
+  
+  <div>
+      <p>Real-Time Data Analytics: IoT generates a massive amount of data. With real-time data analytics, factory managers can gain valuable insights, identify bottlenecks, and make data-driven decisions for process optimization.</p>
+  </div>
+  
+  
+  <div>
+      <p>Supply Chain Visibility: IoT can provide end-to-end visibility into the supply chain, allowing manufacturers to track raw materials and finished goods at every stage, ensuring timely delivery and reducing lead times.</p>
+  </div>
+  
+  <div>
+      <p>
+          By implementing IoT solutions, businesses can achieve higher productivity, reduced operational costs, improved product quality, and enhanced worker safety. IoT's ability to provide real-time data and automation opens up new possibilities for optimizing manufacturing processes and achieving greater efficiency in the factory environment.
+      </p>
+  </div>
+          </div>
+  
+  
+  
+      </section> -->
+    </div>
+    <!-- /.content-wrapper -->
+  
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <script>
+      const pdfCarousel = document.querySelector(".pdf-carousel");
+      const pdfSlidesContainer = document.querySelector(".pdf-slides");
+      const prevPdfButton = document.getElementById("prev-pdf");
+      const nextPdfButton = document.getElementById("next-pdf");
+  
+      let currentPdfPage = 1;
+      let pdfDoc = null;
+  
+      
+      async function renderPdfPage(pageNumber, canvasElement) {
+        const pdfPage = await pdfDoc.getPage(pageNumber);
+  
+        // Get the viewport with a scale based on the viewport width
+        const viewport = pdfPage.getViewport({
+          scale:
+            pdfCarousel.offsetWidth / pdfPage.getViewport({ scale: 1 }).width,
+        });
+  
+        const canvasContext = canvasElement.getContext("2d");
+        canvasElement.height = viewport.height;
+        canvasElement.width = viewport.width;
+  
+        const renderContext = {
+          canvasContext,
+          viewport,
+        };
+        await pdfPage.render(renderContext).promise;
+      }
+  
+      async function initializePdfCarousel() {
+
+
+
+
+        
+        const pdfPath =
+          "{{.Params.pdf_path}}"; // Replace with the actual path
+
+          console.log("pdfPath",pdfPath)
+        pdfDoc = await pdfjsLib.getDocument(pdfPath).promise;
+        const totalPdfPages = pdfDoc.numPages;
+  
+        for (let i = 1; i <= totalPdfPages; i++) {
+          const pdfSlide = document.createElement("div");
+          pdfSlide.className = "pdf-slide";
+          const canvas = document.createElement("canvas");
+          pdfSlide.appendChild(canvas);
+          pdfSlidesContainer.appendChild(pdfSlide);
+  
+          renderPdfPage(i, canvas);
+        }
+      }
+  
+      function updateButtonVisibility() {
+        console.log("currentPdfPagecurrentPdfPagepage");
+        prevPdfButton.style.display = currentPdfPage === 1 ? "none" : "block";
+        nextPdfButton.style.display =
+          currentPdfPage === pdfSlidesContainer.childElementCount
+            ? "none"
+            : "block";
+      }
+  
+      prevPdfButton.style.display = "none";
+  
+      prevPdfButton.addEventListener("click", () => {
+        if (currentPdfPage > 1) {
+          console.log("currentPdfPagecurrentPdfPage", currentPdfPage);
+          currentPdfPage--;
+          pdfCarousel.scrollTo({
+            left:
+              pdfCarousel.scrollLeft -
+              pdfSlidesContainer.firstElementChild.clientWidth,
+            behavior: "smooth",
+          });
+          updateButtonVisibility();
+        }
+      });
+  
+      nextPdfButton.addEventListener("click", () => {
+        const totalPdfPages = pdfDoc.numPages;
+        console.log("currentPdfPagecurrentPdfPage", currentPdfPage);
+  
+        if (currentPdfPage < totalPdfPages) {
+          currentPdfPage++;
+          pdfCarousel.scrollTo({
+            left:
+              pdfCarousel.scrollLeft +
+              pdfSlidesContainer.firstElementChild.clientWidth,
+            behavior: "smooth",
+          });
+          updateButtonVisibility();
+        }
+      });
+  
+      initializePdfCarousel();
+    </script>
+    {{ partial "footer.html" . }} {{ partial "page-progress.html" . }}
+  </body>
+{{ end }}

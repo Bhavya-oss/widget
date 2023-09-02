@@ -1,6 +1,9 @@
 {{ $nav := .Site.Data.nav.nav }}
 <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-<footer class="bg-dark text-inverse">
+<!-- <footer class="bg-dark text-inverse"> -->
+	<!-- <footer class="bg-dark text-inverse"> -->
+		<footer class="footer_backgroundcolor text-inverse">
+
 	<div class="container py-13 py-md-15">
 		<div class="row gy-6 gy-lg-0">
 			<div class="col-md-4 col-lg-3 col-xl-3">
@@ -172,7 +175,7 @@ let emailInfo = firebase.database().ref("emailInfo");
    // Display the "joined" message
    let message = document.getElementById("message");
    message.style.display = "block";
-  message.textContent = "Joined: " + data;
+  message.textContent = "Subscribed to Biggworks: " + data;
 
   // Hide the message after a certain time (optional)
   setTimeout(function() {

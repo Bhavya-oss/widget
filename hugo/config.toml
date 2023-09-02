@@ -6,6 +6,8 @@
 
 ignoreErrors = ["error-remote-getjson"]
 
+[permalinks]
+blog = "/blog/:year/:month/:title/"
 
 [caches]
   [caches.getjson]
