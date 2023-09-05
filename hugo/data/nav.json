@@ -7,8 +7,8 @@
       "alt": "Biggworks Logo"
     },
     "navlinks": {
-      "blog": {
-        "link": "/blog",
+      "articles": {
+        "link": "/articles",
         "text": "Articles",
   
       "blog-post": {

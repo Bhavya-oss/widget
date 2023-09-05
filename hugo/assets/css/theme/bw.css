@@ -38032,9 +38032,9 @@ display: block;
 
 @media (max-width:1200px){
   main {
-    max-width: 65%;
+    /* max-width: 65%; */
     margin: 0 auto;
-    padding: 2rem;
+    /* padding: 2rem; */
   }
 }
 
@@ -38042,18 +38042,18 @@ display: block;
   
 
 main {
-  max-width: 40%;
+  /* max-width: 45%; */
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
 }
 }
 
 
 @media (max-width:900px){
   main {
-    max-width: 100%;
+    /* max-width: 100%; */
     margin: 0 auto;
-    padding: 2rem;
+    /* padding: 2rem; */
   }
 }
 
@@ -38104,8 +38104,11 @@ main {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-    border: 2px solid #000000; /* Circle border color */
-  font-size: 20px; /* Adjust the font size as needed */
+    border: 2px solid #000000;
+  font-size: 20px; 
   cursor: pointer;
   background-color: transparent;
 }
+
+
+
