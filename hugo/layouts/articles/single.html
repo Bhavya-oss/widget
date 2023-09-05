@@ -1,6 +1,6 @@
 {{ define "main" }} 
 
-
+{{ $resource := getJSON .Params.source }}
 <body>
   <div class="content-wrapper">
     <header class="wrapper bg-gray">
