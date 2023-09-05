@@ -1,0 +1,28 @@
+{
+    "routes": [
+      {
+        "method": "GET",
+        "path": "/make-the-right-choice",
+        "handler": "make-the-right-choice.find",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "PUT",
+        "path": "/make-the-right-choice",
+        "handler": "make-the-right-choice.update",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "DELETE",
+        "path": "/make-the-right-choice",
+        "handler": "make-the-right-choice.delete",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+  }
