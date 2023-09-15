@@ -1,0 +1,28 @@
+{
+    "routes": [
+      {
+        "method": "GET",
+        "path": "/iot-development",
+        "handler": "iot-development.find",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "PUT",
+        "path": "/iot-development",
+        "handler": "iot-development.update",
+        "config": {
+          "policies": []
+        }
+      },
+      {
+        "method": "DELETE",
+        "path": "/iot-development",
+        "handler": "iot-development.delete",
+        "config": {
+          "policies": []
+        }
+      }
+    ]
+  }
