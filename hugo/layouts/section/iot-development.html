@@ -1,12 +1,12 @@
 {{ define "main" }}
-{{ $resource := getJSON "https://cms.biggworks.com/iot-development" }}
+{{ $resource := getJSON "http://bw-strapi:1337/iot-development" }}
 <!-- {{ printf "My data: %s"  $resource}} -->
 <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
 <body>
 	<div class="content-wrapper">
 		<header class="wrapper bg-gray">
-			<!-- {{ partial "nav.html" . }} -->
+			{{ partial "nav.html" . }}
 			<!-- /.navbar -->
 		</header>
 		
@@ -14,9 +14,9 @@
             <div class="container mt-xl-6 mt-0 mb-xxl-12 mb-xl-10 mb-md-8 mb-12">
 				<div class="row">
                     <div class="col-xl-2 col-md-2 col-5 mt-xl-0 mt-md-4 mt-6">
-                        <a href="/">
+                        <!-- <a href="/">
                 <img class="img-fluid col-xl-4 col-lg-7 col-md-10 col-4" src="https://res.cloudinary.com/biggworks/image/upload/v1691837164/Group_1_2_gp5lya.png" alt=""/>
-            </a>
+            </a> -->
             </div>
             </div>
                 <div class="row">
