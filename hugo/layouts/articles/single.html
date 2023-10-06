@@ -1,27 +1,25 @@
-{{ define "main" }} 
-
-{{ $resource := getJSON .Params.source }}
+{{ define "main" }} {{ $resource := getJSON .Params.source }}
 <body>
-  <div class="content-wrapper">
+  <div class="content-wrapper" >
     <header class="wrapper bg-gray">
       {{ partial "nav.html" . }}
       <!-- /.navbar -->
-     
     </header>
 
-    <main>
+    
 
-      
+      <!-- <main>
       <section>
-        
-          <div style="overflow: hidden">
-            <iframe
-              src="{{.Params.pdf_path}}"
-              style="width: 100%; height: 1300px;"
-            ></iframe>
-          </div>
-        <!-- <h2>PDF Carousel</h2> -->
-        <!-- <div
+        <div >
+          <iframe
+            src="{{.Params.pdf_path}}"
+            style="width: 100%; height: 1300px; overflow: hidden;"
+          ></iframe>
+        </div>
+
+
+        <h2>PDF Carousel</h2>
+        <div
             style="
               display: flex;
               justify-content: center;
@@ -43,11 +41,11 @@
                 &#9654;
               </button>
             </div>
-          </div> -->
+          </div>
       </section>
     </main>
 
-    <!-- <section class="wrapper bg-white">
+    <section class="wrapper bg-white">
   
           <div class="container mt-xl-15 mt-md-8 mt-10 mt-lg-12 pb-xl-0">
               <div class="row mb-12">
@@ -128,7 +126,1439 @@
       </section> -->
   </div>
   <!-- /.content-wrapper -->
+  <section class="wrappert">
+    <div class="d-flex align-items-center bg-overlay-400">
+        <div class="container-fluid pt-8 pt-md-8">
+            <div class="row mb-8">
+                <div class="col-md-10 col-lg-10 col-xl-10 col-xxl-6 mx-auto" data-group="page-title">
+                    <!-- <h2 class="fs-16 fw-normal ls-3x text-uppercase mb-4 text-center">
+                        {{$resource.section_one.title}}
+                    </h2> -->
+                    <h3 class="display-4 mb-6 lh-sm text-center">
+                      {{ .Params.main_title }}
+                    </h3>
+                    <img class="img-fluid" src="{{ .Params.image }}" alt=""/>
 
+
+
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ if .Params.section_one_description }}
+
+<section class="wrapper">
+  <div class="container px-xl-12 px-lg-12">
+      
+      <p class="pt-lg-5 pt-xl-5 pt-md-5 pt-md-5 pt-0  text-justify">{{.Params.section_one_description }}
+      </p>
+      
+      {{ if .Params.section_two_title }}
+
+      <h4 class="mt-lg-10 mt-md-0 mt-2 mb-5">{{ .Params.section_two_title }}</h4>
+      <p class="text-justify">{{.Params.section_two_description }}
+      </p>
+{{end}}
+  </div>
+</section>
+{{end}}
+
+{{ if .Params.section_three_title }}
+
+<section class="wrapper">
+  <div class="container px-3 px-xl-14 px-lg-14 px-md-0">
+      <div class="col-12">
+        {{ if .Params.section_three_title_python  }}
+
+        <h4 class="mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_three_title_python }}</h4>
+{{end}}
+          <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_three_title }}</h4>
+
+
+          <div class="content">
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+           <div>
+            <!-- <p class="h6">{{.Params.section_three_subtitle_one }}</p> -->
+            
+            <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_three_subtitle_one }}</span>{{.Params.section_three_subtitle_one_description }}</p>
+           </div>
+
+          </div>
+          {{ if .Params.section_three_subtitle_two  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+
+            <div>
+              <!-- <p class="h6">{{.Params.section_three_subtitle_one }}</p> -->
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_three_subtitle_two }}</span>{{.Params.section_three_subtitle_two_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_three_subtitle_three  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              <!-- <p class="h6">{{.Params.section_three_subtitle_one }}</p> -->
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_three_subtitle_three }}</span>{{.Params.section_three_subtitle_three_description }}</p>
+             </div>
+
+          
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_three_subtitle_four  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              <!-- <p class="h6">{{.Params.section_three_subtitle_one }}</p> -->
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_three_subtitle_four }}</span>{{.Params.section_three_subtitle_four_description }}</p>
+             </div>
+          
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_three_subtitle_five  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              <!-- <p class="h6">{{.Params.section_three_subtitle_one }}</p> -->
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_three_subtitle_five }}</span>{{.Params.section_three_subtitle_five_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+          {{ if .Params.section_three_subtitle_six  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              <!-- <p class="h6">{{.Params.section_three_subtitle_one }}</p> -->
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_three_subtitle_six }}</span>{{.Params.section_three_subtitle_six_description }}</p>
+             </div>
+            
+
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_three_subtitle_seven  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              <!-- <p class="h6">{{.Params.section_three_subtitle_one }}</p> -->
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_three_subtitle_seven }}</span>{{.Params.section_three_subtitle_seven_description }}</p>
+             </div>
+           
+
+          </div>
+          {{ end }}
+         
+          {{ if .Params.section_three_subtitle_eight  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              <!-- <p class="h6">{{.Params.section_three_subtitle_one }}</p> -->
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_three_subtitle_eight }}</span>{{.Params.section_three_subtitle_eight_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+          </div>
+
+          
+
+         
+      </div>
+  </div>
+
+
+</section>
+{{end}}
+
+
+{{ if .Params.section_four_main_title}}
+
+<section class="wrapper">
+  <div class="container px-3 px-xl-14 px-lg-14 px-md-0">
+      <div class="col-12">
+          <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_four_main_title }}</h4>
+          {{ if .Params.section_four_title  }}
+
+          <p class="text-justify">{{.Params.section_four_title }}
+          </p>
+          {{ end }}
+
+          <div class="content">
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_four_subtitle_one }}</span>{{.Params.section_four_subtitle_one_description }}</p>
+             </div>
+            
+          </div>
+          {{ if .Params.section_four_subtitle_two  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_four_subtitle_two }}</span>{{.Params.section_four_subtitle_two_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_four_subtitle_three  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_four_subtitle_three }}</span>{{.Params.section_four_subtitle_three_description }}</p>
+             </div>
+           
+
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_four_subtitle_four  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_four_subtitle_four }}</span>{{.Params.section_four_subtitle_four_description }}</p>
+             </div>
+           
+
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_four_subtitle_five  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_four_subtitle_five }}</span>{{.Params.section_four_subtitle_five_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+          {{ if .Params.section_four_subtitle_six  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_four_subtitle_six }}</span>{{.Params.section_four_subtitle_six_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_four_subtitle_seven  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_four_subtitle_seven }}</span>{{.Params.section_four_subtitle_seven_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+         
+          {{ if .Params.section_four_subtitle_eight }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_four_subtitle_eight }}</span>{{.Params.section_four_subtitle_eight_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_four_subtitle_nine  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_four_subtitle_nine }}</span>{{.Params.section_four_subtitle_nine_description }}</p>
+             </div>
+           
+
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_four_subtitle_ten  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_four_subtitle_ten }}</span>{{.Params.section_four_subtitle_ten_description }}</p>
+             </div>
+           
+
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_four_subtitle_eleven  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_four_subtitle_eleven }}</span>{{.Params.section_four_subtitle_eleven_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+          {{ if .Params.section_four_subtitle_twelve  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_four_subtitle_twelve }}</span>{{.Params.section_four_subtitle_twelve_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_four_subtitle_thirteen  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_four_subtitle_thirteen }}</span>{{.Params.section_four_subtitle_thirteen_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+          {{ if .Params.section_four_subtitle_fourteen  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_four_subtitle_fourteen }}</span>{{.Params.section_four_subtitle_fourteen_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_four_subtitle_fifteen  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_four_subtitle_fifteen }}</span>{{.Params.section_four_subtitle_fifteen_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+          </div>
+
+          
+
+         
+      </div>
+  </div>
+
+
+</section>
+{{end}}
+
+{{ if .Params.section_five_main_title }}
+
+<section class="wrapper">
+  <div class="container px-3 px-xl-14 px-lg-14 px-md-0">
+      <div class="col-12">
+
+        {{ if .Params.section_five_main_title_javascript  }}
+
+        <h4 class="mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_five_main_title_javascript }}</h4>
+{{end}}
+          <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_five_main_title }}</h4>
+          {{ if .Params.section_five_title  }}
+
+          <p class="text-justify">{{.Params.section_five_title }}
+          </p>
+{{end}}
+          <div class="content">
+
+            {{ if .Params.section_five_heading_one  }}
+
+          <p class="h6">{{.Params.section_five_heading_one }}
+          </p>
+          {{ end }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_five_subtitle_one }}</span>{{.Params.section_five_subtitle_one_description }}</p>
+             </div>
+           
+
+          </div>
+          {{ if .Params.section_five_subtitleOne  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_five_subtitleOne }}</span>{{.Params.section_five_subtitleOne_description }}</p>
+             </div>
+           
+
+          </div>
+          {{ end }}
+          {{ if .Params.section_five_heading_two  }}
+
+          <p class="h6">{{.Params.section_five_heading_two }}
+          </p>
+          {{ end }}
+
+          {{ if .Params.section_five_subtitle_two  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_five_subtitle_two }}</span>{{.Params.section_five_subtitle_two_description }}</p>
+             </div>
+            
+
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_five_subtitleTwo  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_five_subtitleTwo }}</span>{{.Params.section_five_subtitleTwo_description }}</p>
+             </div>
+            
+
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_five_heading_three  }}
+
+          <p class="h6">{{.Params.section_five_heading_three }}
+          </p>
+          {{ end }}
+
+          {{ if .Params.section_five_subtitle_three  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_five_subtitle_three }}</span>{{.Params.section_five_subtitle_three_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_five_subtitleThree  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_five_subtitleThree }}</span>{{.Params.section_five_subtitleThree_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_five_heading_four  }}
+
+          <p class="h6">{{.Params.section_five_heading_four }}
+          </p>
+          {{ end }}
+
+          {{ if .Params.section_five_subtitle_four  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_five_subtitle_four }}</span>{{.Params.section_five_subtitle_four_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+          {{ if .Params.section_five_subtitleFour  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_five_subtitleFour }}</span>{{.Params.section_five_subtitleFour_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_five_heading_five  }}
+
+          <p class="h6">{{.Params.section_five_heading_five }}
+          </p>
+          {{ end }}
+
+
+          {{ if .Params.section_five_subtitle_five  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_five_subtitle_five }}</span>{{.Params.section_five_subtitle_five_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_five_subtitleFive  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_five_subtitleFive }}</span>{{.Params.section_five_subtitleFive_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_five_heading_six  }}
+
+          <p class="h6">{{.Params.section_five_heading_six }}
+          </p>
+          {{ end }}
+
+          {{ if .Params.section_five_subtitle_six  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_five_subtitle_six }}</span>{{.Params.section_five_subtitle_six_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+          {{ if .Params.section_five_subtitleSix  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_five_subtitleSix }}</span>{{.Params.section_five_subtitleSix_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_five_heading_seven  }}
+
+          <p class="h6">{{.Params.section_five_heading_seven }}
+          </p>
+          {{ end }}
+
+
+          {{ if .Params.section_five_subtitle_seven  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_five_subtitle_seven }}</span>{{.Params.section_five_subtitle_seven_description }}</p>
+             </div>
+          
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_five_subtitleSeven  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_five_subtitleSeven }}</span>{{.Params.section_five_subtitleSeven_description }}</p>
+             </div>
+          
+          </div>
+          {{ end }}
+         
+          </div>
+
+          
+
+         
+      </div>
+  </div>
+
+
+</section>
+
+{{end}}
+
+
+{{ if .Params.section_six_main_title }}
+
+<section class="wrapper">
+  <div class="container px-3 px-xl-14 px-lg-14 px-md-0">
+      <div class="col-12">
+          <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_six_main_title }}</h4>
+          {{ if .Params.section_six_title  }}
+
+          <p class="text-justify">{{.Params.section_six_title }}
+          </p>
+{{end}}
+          <div class="content">
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_six_subtitle_one }}</span>{{.Params.section_six_subtitle_one_description }}</p>
+             </div>
+
+          </div>
+          {{ if .Params.section_six_subtitle_two  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_six_subtitle_two }}</span>{{.Params.section_six_subtitle_two_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_six_subtitle_three  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_six_subtitle_three }}</span>{{.Params.section_six_subtitle_three_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_six_subtitle_four  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_six_subtitle_four }}</span>{{.Params.section_six_subtitle_four_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_six_subtitle_five  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_six_subtitle_five }}</span>{{.Params.section_six_subtitle_five_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+          {{ if .Params.section_six_subtitle_six  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_six_subtitle_six }}</span>{{.Params.section_six_subtitle_six_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_six_subtitle_seven  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_six_subtitle_seven }}</span>{{.Params.section_six_subtitle_seven_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+         
+          </div>
+
+          
+
+         
+      </div>
+  </div>
+
+
+</section>
+{{end}}
+
+
+{{ if.Params.section_seven_main_title  }}
+
+<section class="wrapper">
+  <div class="container px-3 px-xl-14 px-lg-14 px-md-0">
+      <div class="col-12">
+
+        {{ if .Params.section_seven_main_title_php  }}
+
+        <h4 class="mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_seven_main_title_php }}</h4>
+{{end}}
+
+          <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_seven_main_title }}</h4>
+          {{ if .Params.section_seven_title  }}
+
+          <p class="text-justify">{{.Params.section_seven_title }}
+          </p>
+{{end}}
+          <div class="content">
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_seven_subtitle_one }}</span>{{.Params.section_seven_subtitle_one_description }}</p>
+             </div>
+           
+
+          </div>
+          {{ if .Params.section_seven_subtitle_two  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_seven_subtitle_two }}</span>{{.Params.section_seven_subtitle_two_description }}</p>
+             </div>
+           
+
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_seven_subtitle_three  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_seven_subtitle_three }}</span>{{.Params.section_seven_subtitle_three_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_seven_subtitle_four  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_seven_subtitle_four }}</span>{{.Params.section_seven_subtitle_four_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_seven_subtitle_five  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_seven_subtitle_five }}</span>{{.Params.section_five_subtitle_five_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+          {{ if .Params.section_seven_subtitle_six  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_seven_subtitle_six }}</span>{{.Params.section_seven_subtitle_six_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_seven_subtitle_seven  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_seven_subtitle_seven }}</span>{{.Params.section_seven_subtitle_seven_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+         
+          </div>
+
+          
+
+         
+      </div>
+  </div>
+
+
+</section>
+
+{{end}}
+
+{{ if.Params.section_eight_main_title  }}
+
+<section class="wrapper">
+  <div class="container px-3 px-xl-14 px-lg-14 px-md-0">
+      <div class="col-12">
+          <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_eight_main_title }}</h4>
+          {{ if .Params.section_eight_title  }}
+
+          <p class="text-justify">{{.Params.section_eight_title }}
+          </p>
+{{end}}
+          <div class="content">
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_eight_subtitle_one }}</span>{{.Params.section_eight_subtitle_one_description }}</p>
+             </div>
+           
+          </div>
+          {{ if .Params.section_eight_subtitle_two  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_eight_subtitle_two }}</span>{{.Params.section_eight_subtitle_two_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_eight_subtitle_three  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_eight_subtitle_three }}</span>{{.Params.section_eight_subtitle_three_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_eight_subtitle_four  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_eight_subtitle_four }}</span>{{.Params.section_eight_subtitle_four_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_eight_subtitle_five  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_eight_subtitle_five }}</span>{{.Params.section_eight_subtitle_five_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+          {{ if .Params.section_eight_subtitle_six  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_eight_subtitle_six }}</span>{{.Params.section_eight_subtitle_six_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_eight_subtitle_seven  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_eight_subtitle_seven }}</span>{{.Params.section_eight_subtitle_seven_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+         
+          </div>
+
+          
+
+         
+      </div>
+  </div>
+
+
+</section>
+
+{{end}}
+
+{{ if.Params.section_nine_main_title  }}
+
+<section class="wrapper">
+  <div class="container px-3 px-xl-14 px-lg-14 px-md-0">
+      <div class="col-12">
+        {{ if .Params.section_nine_main_title_java  }}
+
+        <h4 class="mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_nine_main_title_java }}</h4>
+{{end}}
+
+          <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_nine_main_title }}</h4>
+          {{ if .Params.section_nine_title  }}
+
+          <p class="text-justify">{{.Params.section_nine_title }}
+          </p>
+{{end}}
+          <div class="content">
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_nine_subtitle_one }}</span>{{.Params.section_nine_subtitle_one_description }}</p>
+             </div>
+           
+          </div>
+          {{ if .Params.section_nine_subtitle_two  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_nine_subtitle_two }}</span>{{.Params.section_nine_subtitle_two_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_nine_subtitle_three  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_nine_subtitle_three }}</span>{{.Params.section_nine_subtitle_three_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_nine_subtitle_four  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_nine_subtitle_four }}</span>{{.Params.section_nine_subtitle_four_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_nine_subtitle_five  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_nine_subtitle_five }}</span>{{.Params.section_nine_subtitle_five_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+          {{ if .Params.section_nine_subtitle_six  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_nine_subtitle_six }}</span>{{.Params.section_nine_subtitle_six_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_nine_subtitle_seven  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_nine_subtitle_seven }}</span>{{.Params.section_nine_subtitle_seven_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+         
+          </div>
+
+          
+
+         
+      </div>
+  </div>
+
+
+</section>
+
+{{end}}
+
+{{ if.Params.section_fifteen_main_title  }}
+
+<section class="wrapper">
+  <div class="container px-3 px-xl-14 px-lg-14 px-md-0">
+      <div class="col-12">
+          <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_fifteen_main_title }}</h4>
+          {{ if .Params.section_fifteen_title  }}
+
+          <p class="text-justify">{{.Params.section_fifteen_title }}
+          </p>
+{{end}}
+          <div class="content">
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_fifteen_subtitle_one }}</span>{{.Params.section_fifteen_subtitle_one_description }}</p>
+             </div>
+           
+          </div>
+          {{ if .Params.section_fifteen_subtitle_two  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_fifteen_subtitle_two }}</span>{{.Params.section_fifteen_subtitle_two_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_fifteen_subtitle_three  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_fifteen_subtitle_three }}</span>{{.Params.section_fifteen_subtitle_three_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_fifteen_subtitle_four  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_fifteen_subtitle_four }}</span>{{.Params.section_fifteen_subtitle_four_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_fifteen_subtitle_five  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_fifteen_subtitle_five }}</span>{{.Params.section_fifteen_subtitle_five_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+          {{ if .Params.section_fifteen_subtitle_six  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_fifteen_subtitle_six }}</span>{{.Params.section_fifteen_subtitle_six_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_fifteen_subtitle_seven  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_fifteen_subtitle_seven }}</span>{{.Params.section_fifteen_subtitle_seven_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+         
+          </div>
+
+          
+
+         
+      </div>
+  </div>
+
+
+</section>
+
+{{end}}
+
+{{ if.Params.section_sixteen_main_title  }}
+
+<section class="wrapper">
+  <div class="container px-3 px-xl-14 px-lg-14 px-md-0">
+      <div class="col-12">
+        {{ if .Params.section_sixteen_main_title_java  }}
+
+        <h4 class="mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_sixteen_main_title_java }}</h4>
+{{end}}
+          <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_sixteen_main_title }}</h4>
+          {{ if .Params.section_sixteen_title  }}
+
+          <p class="text-justify">{{.Params.section_sixteen_title }}
+          </p>
+{{end}}
+          <div class="content">
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_sixteen_subtitle_one }}</span>{{.Params.section_sixteen_subtitle_one_description }}</p>
+             </div>
+           
+          </div>
+          {{ if .Params.section_sixteen_subtitle_two  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_sixteen_subtitle_two }}</span>{{.Params.section_sixteen_subtitle_two_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_sixteen_subtitle_three  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_sixteen_subtitle_three }}</span>{{.Params.section_sixteen_subtitle_three_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_sixteen_subtitle_four  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_sixteen_subtitle_four }}</span>{{.Params.section_sixteen_subtitle_four_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_sixteen_subtitle_five  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_sixteen_subtitle_five }}</span>{{.Params.section_sixteen_subtitle_five_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+          {{ if .Params.section_sixteen_subtitle_six  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_sixteen_subtitle_six }}</span>{{.Params.section_sixteen_subtitle_six_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_sixteen_subtitle_seven  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_sixteen_subtitle_seven }}</span>{{.Params.section_sixteen_subtitle_seven_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+         
+          </div>
+
+          
+
+         
+      </div>
+  </div>
+
+
+</section>
+
+{{end}}
+
+{{ if.Params.section_seventeen_main_title  }}
+
+<section class="wrapper">
+  <div class="container px-3 px-xl-14 px-lg-14 px-md-0">
+      <div class="col-12">
+          <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_seventeen_main_title }}</h4>
+          {{ if .Params.section_seventeen_title  }}
+
+          <p class="text-justify">{{.Params.section_seventeen_title }}
+          </p>
+{{end}}
+          <div class="content">
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_seventeen_subtitle_one }}</span>{{.Params.section_seventeen_subtitle_one_description }}</p>
+             </div>
+           
+          </div>
+          {{ if .Params.section_seventeen_subtitle_two  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_seventeen_subtitle_two }}</span>{{.Params.section_seventeen_subtitle_two_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_seventeen_subtitle_three  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_seventeen_subtitle_three }}</span>{{.Params.section_seventeen_subtitle_three_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_seventeen_subtitle_four  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_seventeen_subtitle_four }}</span>{{.Params.section_seventeen_subtitle_four_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_seventeen_subtitle_five  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_seventeen_subtitle_five }}</span>{{.Params.section_seventeen_subtitle_five_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+          {{ if .Params.section_seventeen_subtitle_six  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_seventeen_subtitle_six }}</span>{{.Params.section_seventeen_subtitle_six_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+
+          {{ if .Params.section_seventeen_subtitle_seven  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_seventeen_subtitle_seven }}</span>{{.Params.section_seventeen_subtitle_seven_description }}</p>
+             </div>
+           
+          </div>
+          {{ end }}
+         
+          </div>
+
+          
+
+         
+      </div>
+  </div>
+
+
+</section>
+
+{{end}}
+
+
+{{ if .Params.section_ten_title }}
+
+<section class="wrapper">
+  <div class="container px-3 px-xl-14 px-lg-14 px-md-0 pb-10">
+      <div class="col-12">
+          <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_ten_title}}</h4>
+
+          <p>{{.Params.section_ten_description}}</p>
+         
+         
+      </div>
+  </div>
+
+
+</section>
+{{end}}
+
+{{ if .Params.section_eleven_title }}
+
+<section class="wrapper">
+  <div class="container px-3 px-xl-14 px-lg-14 px-md-0 pb-10">
+      <div class="col-12">
+          <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_eleven_title}}</h4>
+
+          <p>{{.Params.section_eleven_description}}</p>
+         
+         
+      </div>
+  </div>
+
+
+</section>
+{{end}}
+
+{{ if .Params.section_twelve_title }}
+
+<section class="wrapper">
+  <div class="container px-3 px-xl-14 px-lg-14 px-md-0 pb-10">
+      <div class="col-12">
+          <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_twelve_title}}</h4>
+
+          <p>{{.Params.section_twelve_description}}</p>
+         
+         
+      </div>
+  </div>
+
+
+</section>
+{{end}}
+
+{{ if .Params.section_thirteen_title }}
+
+<section class="wrapper">
+  <div class="container px-3 px-xl-14 px-lg-14 px-md-0 pb-10">
+      <div class="col-12">
+          <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_thirteen_title}}</h4>
+
+          <p>{{.Params.section_thirteen_description}}</p>
+         
+         
+      </div>
+  </div>
+
+
+</section>
+{{end}}
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
@@ -139,8 +1569,8 @@
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous"
   ></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
-  <script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script> -->
+  <!-- <script>
     const pdfCarousel = document.querySelector(".pdf-carousel");
     const pdfSlidesContainer = document.querySelector(".pdf-slides");
     const prevPdfButton = document.getElementById("prev-pdf");
@@ -229,7 +1659,8 @@
     });
 
     initializePdfCarousel();
-  </script>
+  </script> -->
+  
   {{ partial "footer.html" . }} {{ partial "page-progress.html" . }}
 </body>
 {{ end }}
