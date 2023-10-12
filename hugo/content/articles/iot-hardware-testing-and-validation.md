@@ -5,7 +5,7 @@ draft: false
 
 
 link: iot-hardware-testing-and-validation
-main_title: " IoT Hardware Testing and Validation: Best Practices"
+main_title: "IoT Hardware Testing and Validation: Best Practices"
 
 section_one_description: "Testing and validation are critical phases in the development of Internet of Things (IoT) hardware. Robust testing ensures that IoT devices perform reliably in real-world scenarios."
 

@@ -13,7 +13,7 @@ section_one_description: "The synergy between blockchain and the Internet of Thi
 points_img: "https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png"
 
 
-section_three_main_title: "How Blockchain Enhances IoT Security:"
+section_three_title: "How Blockchain Enhances IoT Security:"
 section_three_subtitle_one: "Data Integrity:"
 section_three_subtitle_one_description: "Blockchain ensures data integrity by creating a tamper-resistant and unchangeable record of transactions.
 IoT devices can record data directly onto the blockchain, making it impossible to alter or manipulate."

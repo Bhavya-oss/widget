@@ -283,6 +283,30 @@
             
           </div>
           {{ end }}
+          {{ if .Params.section_three_subtitle_nine  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              <!-- <p class="h6">{{.Params.section_three_subtitle_one }}</p> -->
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_three_subtitle_nine }}</span>{{.Params.section_three_subtitle_nine_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
+          {{ if .Params.section_three_subtitle_ten  }}
+
+          <div class="row-container">
+            <img class="" src="{{.Params.points_img }}"/>
+            <div>
+              <!-- <p class="h6">{{.Params.section_three_subtitle_one }}</p> -->
+              
+              <p class="ms-xl-1"><span class="h6 me-1">{{.Params.section_three_subtitle_ten }}</span>{{.Params.section_three_subtitle_ten_description }}</p>
+             </div>
+            
+          </div>
+          {{ end }}
           </div>
 
           
@@ -1177,6 +1201,12 @@
 <section class="wrapper">
   <div class="container px-3 px-xl-14 px-lg-14 px-md-0">
       <div class="col-12">
+
+        {{ if .Params.section_fifteen_main_title_react }}
+
+        <h4 class="mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_fifteen_main_title_react }}</h4>
+{{end}}
+
           <h4 class="mb-6 mt-xl-6 mt-lg-6 mt-md-6 mt-2">{{.Params.section_fifteen_main_title }}</h4>
           {{ if .Params.section_fifteen_title  }}
 

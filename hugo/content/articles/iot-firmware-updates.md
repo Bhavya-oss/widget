@@ -3,7 +3,7 @@ title: "Iot Firmware Updates"
 date: 2023-10-06T14:49:52+05:30
 draft: false
 link: iot-firmware-updates
-main_title: "oT Firmware Updates: Ensuring Device Security and Performance"
+main_title: "IoT Firmware Updates: Ensuring Device Security and Performance"
 
 section_one_description: "Firmware updates are a vital aspect of managing Internet of Things (IoT) devices. They not only enhance device performance but also play a critical role in maintaining security. Here's why firmware updates are essential and best practices for ensuring they're carried out smoothly."
 
@@ -13,7 +13,7 @@ points_img: "https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group
 
 
 
-section_three_main_title: "The Importance of Firmware Updates:"
+section_three_title: "The Importance of Firmware Updates:"
 section_three_subtitle_one: "Security Enhancements:"
 section_three_subtitle_one_description: "Cyber threats evolve continually. Firmware updates often include patches for known vulnerabilities, helping to keep devices secure. Timely updates mitigate the risk of data breaches, unauthorized access, and malware attacks."
 section_three_subtitle_two: "Bug Fixes and Performance Improvements:"

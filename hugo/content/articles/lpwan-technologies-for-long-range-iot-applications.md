@@ -14,7 +14,7 @@ section_two_description: "LPWAN refers to a group of wireless communication tech
 points_img: "https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png"
 
 
-section_three_main_title: "The prominent LPWAN technologies:"
+section_three_title: "The prominent LPWAN technologies:"
 section_three_subtitle_one: "LoRaWAN (Long Range Wide Area Network):"
 section_three_subtitle_one_description: "LoRaWAN is an open-standard LPWAN technology known for its exceptional range, reaching up to 10 kilometers in urban areas.
 It operates in unlicensed spectrum bands, reducing operational costs.

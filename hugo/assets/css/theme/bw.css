@@ -38138,3 +38138,32 @@ margin-right: 22px;
   justify-content: center;
   align-items: center;
 }
+
+.project-logos{
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logos-allign{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo-width{
+  width: 52px;
+  height: auto;
+}
+
+.logo-width-oled{
+  width: 28px;
+  height: 40px;
+}
+
+/* .logo-width{
+  width: 28px;
+  height: 40px;
+} */

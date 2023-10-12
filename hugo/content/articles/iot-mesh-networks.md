@@ -14,7 +14,7 @@ section_two_description: "IoT mesh networks are a type of wireless network in wh
 points_img: "https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group_11544_lwrsg0.png"
 
 
-section_three_main_title: "This approach brings several advantages:"
+section_three_title: "This approach brings several advantages:"
 section_three_subtitle_one: "Resilience:"
 section_three_subtitle_one_description: "Mesh networks are resilient to single-point failures. If one node goes offline, data can still find alternative routes to its destination.
 This redundancy is crucial for critical applications like smart cities and industrial IoT."

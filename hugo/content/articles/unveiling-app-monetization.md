@@ -16,8 +16,8 @@ points_img: "https://res.cloudinary.com/biggworks/image/upload/v1684838348/Group
 section_three_title: "Benefits:"
 section_three_subtitle_one: "User Attraction:"
 section_three_subtitle_one_description: "A free entry point attracts a wide user base."
-section__three_subtitle_two: "Low Barrier:"
-section__three_subtitle_two_description: "Users can explore the app before committing financially."
+section_three_subtitle_two: "Low Barrier:"
+section_three_subtitle_two_description: "Users can explore the app before committing financially."
 section_three_subtitle_three: "Monetization Potential:"
 section_three_subtitle_three_description: "A fraction of users opting for premium features can generate substantial revenue."
 
