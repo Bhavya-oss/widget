@@ -2,6 +2,9 @@
 title: "Selecting the Perfect Tech Stack"
 date: 2023-09-05T10:46:52+05:30
 draft: false
+
+link: selecting-the-perfect-tech-stack
+
 pdf_path: https://res.cloudinary.com/biggworks/image/upload/v1693890078/Biggworks%20PDF%20of%20Blogs/Selecting_the_Perfect_Tech_Stack_1_pkqoto.pdf#toolbar=0
 image: https://res.cloudinary.com/biggworks/image/upload/v1693890078/Biggworks%20PDF%20of%20Blogs/Selecting_the_Perfect_Tech_Stack_1_pkqoto.png
 # subtitle: "Navigating frontend frameworks"
@@ -71,6 +74,8 @@ section_seven_subtitle_two_description: "Be open to adopting new technologies or
 section_thirteen_title: "Conclusion"
 section_thirteen_description: "Choosing the right tech stack for your web app involves careful consideration of project needs, compatibility, scalability, and developer expertise. By meticulously evaluating each component of the stack, you set a strong foundation for a successful web app that meets user expectations, performance benchmarks, and business goals." 
 
-link: selecting-the-perfect-tech-stack
+
+section_nineteen: "#WebDevelopment #WebApps #WebDesign #FrontEnd #BackEnd #Programming #Coding #SoftwareEngineering #UIUX #FullStack #JavaScript #HTML #CSS #ReactJS #NodeJS #PHP #Python #WebDeveloper #MERN #MEAN"
+
 ---
 
