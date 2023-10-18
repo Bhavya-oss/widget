@@ -1,7 +1,19 @@
 {{ define "main" }}
 {{ $resource := getJSON "http://bw-strapi:1337/careers" }}
 <!-- {{ printf "My data: %s"  $resource}} -->
-
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ with .Title }}{{ . }}: {{ end }}</title>
+	<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+	<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+	<meta property="og:title" content="{{ with .Title }}{{ . }}: {{ end }}">
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://res.cloudinary.com/biggworks/image/upload/q_auto,f_auto/	v1685766589/Group_11676_gqh0fh.png" />
+	<meta property="og:url" content="https://biggworks.com/careers/" />
+	<meta name="twitter:card" content="summary" />
+  </head>
 <body>
 	<div class="content-wrapper">
 		<header class="wrapper bg-gray">

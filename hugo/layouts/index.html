@@ -1,17 +1,35 @@
-{{ define "main" }} {{ $nav := .Site.Data.nav.nav }} {{ $resource := getJSON
+{{ define "main" }} {{ $nav := .Site.Data.nav.nav }} 
+{{ $resource := getJSON
 "http://bw-strapi:1337/index" }}
+
+<!-- {{ $resource := getJSON "https://cms.biggworks.com/index" }} -->
+
+
 <link
   rel="shortcut icon"
   href="https://res.cloudinary.com/biggworks/image/upload/v1666248096/favicon_xsthfp.ico"
 />
 
 <!-- {{ printf "My data: %s"  $resource.section_two }} -->
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ with .Title }}{{ . }}: {{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+  <meta property="og:title" content="{{ with .Title }}{{ . }}: {{ end }}">
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://res.cloudinary.com/biggworks/image/upload/v1697456694/index/hero_image_1_qxbshm.png" />
+  <meta property="og:url" content="https://biggworks.com/" />
+  <meta name="twitter:card" content="summary" />
+</head>
 <body>
   <div class="content-wrapper">
     <header class="wrapper bg-soft-primary">
       {{ partial "nav.html" . }}
       <!-- /.navbar -->
+      
     </header>
     <section class="wrapper bg-white">
       <div
@@ -236,85 +254,85 @@
             data-autoplay="true"
           >
             <div class="item px-5">
-              <img class="grayscale_effect" src="{{$resource.image_carousel.havells}}" alt="" />
+              <img class="grayscale_effect" src="{{$resource.image_carousel.havells}}" alt="Biggworks havells logo" />
             </div>
             <div class="item px-5">
-              <img class="grayscale_effect" src="{{$resource.image_carousel.aritha}}" alt="" />
+              <img class="grayscale_effect" src="{{$resource.image_carousel.aritha}}" alt="Biggworks Aritha logo" />
             </div>
             <div class="item px-5">
-              <img class="grayscale_effect" src="{{$resource.image_carousel.ck1}}" alt="" />
+              <img class="grayscale_effect" src="{{$resource.image_carousel.ck1}}" alt="Biggworks Career kraft logo" />
             </div>
             <div class="item px-5">
-              <img class="grayscale_effect" src="{{$resource.image_carousel.interdid}}" alt="" />
+              <img class="grayscale_effect" src="{{$resource.image_carousel.interdid}}" alt="Biggworks Interdid logo" />
             </div>
 
             <div class="item px-5">
-              <img class="grayscale_effect" src="{{$resource.image_carousel.hold_it_write}}" alt="" />
+              <img class="grayscale_effect" src="{{$resource.image_carousel.hold_it_write}}" alt="Biggworks Hold it write logo" />
             </div>
             <div class="item px-5">
-              <img class="grayscale_effect" src="{{$resource.image_carousel.flows}}" alt="" />
+              <img class="grayscale_effect" src="{{$resource.image_carousel.flows}}" alt="Biggworks Flows logo" />
             </div>
             <div class="item px-5">
-              <img class="grayscale_effect" src="{{$resource.image_carousel.assured}}" alt="" />
+              <img class="grayscale_effect" src="{{$resource.image_carousel.assured}}" alt="Biggworks Assured automation logo" />
             </div>
             <div class="item px-5">
-              <img class="grayscale_effect" src="{{$resource.image_carousel.xard}}" alt="" />
+              <img class="grayscale_effect" src="{{$resource.image_carousel.xard}}" alt="Biggworks xard logo" />
             </div>
             <div class="item px-5">
-              <img class="grayscale_effect" src="{{$resource.image_carousel.banix}}" alt="" />
+              <img class="grayscale_effect" src="{{$resource.image_carousel.banix}}" alt="biggworks Banix logo" />
             </div>
             <div class="item px-5">
-              <img class="grayscale_effect" src="{{$resource.image_carousel.hq}}" alt="" />
+              <img class="grayscale_effect" src="{{$resource.image_carousel.hq}}" alt="biggworks Wireless temparature sensing" />
             </div>
             <div class="item px-5">
-              <img class="grayscale_effect" src="{{$resource.image_carousel.succor}}" alt="" />
+              <img class="grayscale_effect" src="{{$resource.image_carousel.succor}}" alt="biggworks succerfish" />
             </div>
             <div class="item px-1">
               <img
                 class="col-xl-10 grayscale_effect"
                 src="{{$resource.image_carousel.cognitive}}"
-                alt=""
+                alt="Biggworks cognitive"
               />
             </div>
             <div class="item px-5">
-              <img class="grayscale_effect"src="{{$resource.image_carousel.mediat}}" alt="" />
+              <img class="grayscale_effect"src="{{$resource.image_carousel.mediat}}" alt="Biggworks Mediat" />
             </div>
             <div class="item px-5">
-              <img class="grayscale_effect" src="{{$resource.image_carousel.kemsys}}" alt="" />
+              <img class="grayscale_effect" src="{{$resource.image_carousel.kemsys}}" alt="Biggworks Kemsys" />
             </div>
             <div class="item px-5">
-              <img class="grayscale_effect" src="{{$resource.image_carousel.kalibre}}" alt="" />
+              <img class="grayscale_effect" src="{{$resource.image_carousel.kalibre}}" alt="Biggworks kalibre" />
             </div>
             <div class="item px-5">
-              <img class="grayscale_effect" src="{{$resource.image_carousel.justghar}}" alt="" />
+              <img class="grayscale_effect" src="{{$resource.image_carousel.justghar}}" alt="Biggworks Justghar" />
             </div>
             <div class="item px-5">
-              <img class="grayscale_effect" src="{{$resource.image_carousel.sure}}" alt="" />
+              <img class="grayscale_effect" src="{{$resource.image_carousel.sure}}" alt="Biggworks Sureprop" />
             </div>
             <div class="item px-5">
               <div class="row">
                 <img
                   class="col-md-12"
                   src="{{$resource.image_carousel.vithamas}}"
-                  alt=""
+                  alt="Biggworks Vithamas logo"
                 />
               </div>
             </div>
 
             <div class="item px-5">
-              <img class="grayscale_effect" src="{{$resource.image_carousel.chirp}}" alt="" />
+              <img class="grayscale_effect" src="{{$resource.image_carousel.chirp}}" alt="Biggworks Chrip Sound" />
             </div>
 
             <div class="item px-5">
-              <img class="grayscale_effect" src="{{$resource.image_carousel.appadvice}}" alt="" />
+              <img class="grayscale_effect" src="{{$resource.image_carousel.appadvice}}" alt="Biggworks AppAdvice logo" />
             </div>
 
             <div class="item px-5">
-              <img class="grayscale_effect" src="{{$resource.image_carousel.ismart}}" alt="" />
+              <img class="grayscale_effect" src="{{$resource.image_carousel.ismart}}" alt="Biggworks Ismart" />
             </div>
 
             <div class="item px-5">
-              <img class="grayscale_effect" src="{{$resource.image_carousel.sewj}}" alt="" />
+              <img class="grayscale_effect" src="{{$resource.image_carousel.sewj}}" alt="Biggworks sew logo" />
             </div>
           </div>
         </div>
@@ -695,7 +713,7 @@
           <div class="col-lg-7 col-xl-7 col-md-12 col-sm-5">
             <img
               class="why_choose_image w-auto img-fluid"
-              src="{{$resource.section_four.image}}"
+              src="{{$resource.section_four.image}}" alt="Why Choose Biggworks"
             />
           </div>
         </div>

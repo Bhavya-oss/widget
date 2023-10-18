@@ -18,3 +18,5 @@ blog = "/blog/:year/:month/:title/"
   disableCSS = false
   disableJS = false
 
+[params]
+  description = "Your default site description"
