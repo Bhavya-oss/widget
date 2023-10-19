@@ -38,6 +38,8 @@ services:
       - strapi
     ports:
       - "1313:1313"
+    environment:                   # Add this section
+      - HUGO_LIVERELOAD=disable
     volumes:
       - "./hugo:/src"
 
