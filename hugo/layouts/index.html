@@ -5,10 +5,10 @@
 {{ $resource := getJSON "https://cms.biggworks.com/index" }}
 
 
-<link
+<!-- <link
   rel="shortcut icon"
   href="https://res.cloudinary.com/biggworks/image/upload/v1666248096/favicon_xsthfp.ico"
-/>
+/> -->
 
 <!-- {{ printf "My data: %s"  $resource.section_two }} -->
 <head>
@@ -84,8 +84,7 @@
                       data-bs-dismiss="modal"
                       aria-label="Close"
                     >
-                      <i class="uil uil-times" id="timesIcon"></i>
-                    </p>
+                    <i class="bi bi-x-lg"></i>                    </p>
                     <div class="modal-body">
                       <!-- <section id="tabs" class="wrapper pt-0 pb-md-4">
                         <div class="row">
