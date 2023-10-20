@@ -20,6 +20,17 @@
 <script src="{{ $os.RelPermalink }}"></script>
 
 
+  <!-- Google tag (gtag.js) -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHVPDCWVDB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SHVPDCWVDB');
+</script>
+
 
 <!-- {{ $scripts := slice "/js/scripts.js" "/js/plugins.js" }} 
 {{ $concatenated := slice }}

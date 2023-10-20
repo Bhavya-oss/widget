@@ -9,7 +9,7 @@
 			<div class="col-md-4 col-lg-3 col-xl-3">
 				<div class="widget">
 					<img class="mb-4"
-						src="https://res.cloudinary.com/biggworks/image/upload/v1696927992/logo/Group_123_adpwdl.svg"
+						src="https://res.cloudinary.com/biggworks/image/upload/v1696927992/logo/biggworks_logo2.svg"
 						alt="BiggWorks Logo" />
 					<p class="mb-1">© 2023 All rights reserved.<br class="d-none d-lg-block" />SmartHeads Innovations Pvt Ltd
 					</p>
@@ -51,66 +51,7 @@
 					<p class="mb-0">Subscribe to get latest updates.</p>
 					<div class="newsletter-wrapper">
 						<div id="mc_embed_signup2">
-							<!-- <form
-								
-								method="post" id="" name="mc-embedded-subscribe-form"
-								class="validate dark-fields" target="_blank" novalidate>
-								<div id="mc_embed_signup_scroll2">
-									<div class="mc-field-group input-group form-label-group">
-										<input type="email" value="" name="EMAIL" class="required email form-control"
-											placeholder="Email Address" id="mce-EMAIL2">
-										<label for="mce-EMAIL2">Email Address</label>
-										<input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe2"
-											class="btn_btn  btn-light button-fontcolor">
-									</div>
-									
-									<div id="message" class="mt-2"></div>
-
-									<div id="mce-responses2" class="clear">
-										<div class="response" id="mce-error-response2" style="display:none"></div>
-										<div class="response" id="mce-success-response2" style="display:none"></div>
-									</div>
-									<div style="position: absolute; left: -5000px;" aria-hidden="true"><input
-											type="text" name="b_ddc180777a163e0f9f66ee014_4b1bcfa0bc" tabindex="-1"
-											value=""></div>
-									<div class="clear"></div>
-								</div>
-							</form> -->
-							<!-- <form 
 							
-							
-							method="post" id="" name="mc-embedded-subscribe-form" class="validate dark-fields" novalidate>
-								<div id="mc_embed_signup_scroll2">
-								  <div class="mc-field-group input-group form-label-group">
-									<input type="email" name="EMAIL" class="required email form-control form-control-radius" placeholder="Email Address" id="mce-EMAIL2">
-									<label for="mce-EMAIL2">Email Address</label>
-									<input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe2" class="btn_btn  btn-light button-fontcolor">
-								  </div>
-							  
-								  <div id="message" class="mt-2"></div>
-							  
-								  <div id="mce-responses2" class="clear">
-									<div class="response" id="mce-error-response2" style="display:none"></div>
-									<div class="response" id="mce-success-response2" style="display:none"></div>
-								  </div>
-								  <div style="position: absolute; left: -5000px;" aria-hidden="true">
-									<input type="text" name="b_ddc180777a163e0f9f66ee014_4b1bcfa0bc" tabindex="-1" value="">
-								  </div>
-								  <div class="clear"></div>
-								</div>
-							  </form> -->
-
-							  <!-- <form id="test" method="post" class="validate dark-fields" onsubmit="submitEmail()">
-								<div class="mc-field-group input-group form-label-group">
-									<input type="email" name="EMAIL" class="required email form-control form-control-radius" placeholder="Email Address" id="footerEmail">
-									<label for="mce-EMAIL2">Email Address</label>
-									<input type="submit" value="Join" name="subscribe" id="mc-embedded-subscribe2" class="btn_btn  btn-light button-fontcolor">
-									
-								  </div>
-								  <div id="message" class="mt-2"></div>
-		
-							  </form> -->
-
 							  <form id="test" method="post" class="validate dark-fields" onsubmit="submitEmail()">
 								<div class="mc-field-group input-group form-label-group">
 								<input type="email" id="footerEmail" name="emails" placeholder="Enter your email" required class="required email form-control form-control-radius" style="padding-top: 0px; padding-bottom: 0px;"/>
@@ -127,34 +68,9 @@
 		</div>
 	</div>
 </footer>
-<!-- <script>
-	const emailField = document.getElementById('footerEmail');
-const joinButton = document.getElementById('get');
-const message = document.getElementById('message');
 
-joinButton.addEventListener('click', function(e) {
-	e.preventDefault()
-  const email = emailField.value;
-
-  if (email.trim() !== '') { 
-	
-	message.style.color = 'blue';
-    message.textContent = 'Subscribed';
-  }
-});
-</script> -->
 <script>
-// 	const firebaseConfig = {
-// apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
-// authDomain: "biggworks-dd979.firebaseapp.com",
-// databaseURL: "https://biggworks-dd979-default-rtdb.asia-southeast1.firebasedatabase.app",
-// projectId: "biggworks-dd979",
-// storageBucket: "biggworks-dd979.appspot.com",
-// messagingSenderId: "160882722753",
-// appId: "1:160882722753:web:f067b273803ff585359140",
-// measurementId: "G-377HKGT4RW"
-// };
-// firebase.initializeApp(firebaseConfig);
+
 let emailInfo = firebase.database().ref("emailInfo");
 
 
@@ -193,49 +109,9 @@ let emailInfo = firebase.database().ref("emailInfo");
 
 
 
-<!-- <script>
-    const firebaseConfig = {
-    apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
-    authDomain: "biggworks-dd979.firebaseapp.com",
-    databaseURL: "https://biggworks-dd979-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "biggworks-dd979",
-    storageBucket: "biggworks-dd979.appspot.com",
-    messagingSenderId: "160882722753",
-    appId: "1:160882722753:web:f067b273803ff585359140",
-    measurementId: "G-377HKGT4RW"
-    };
-    firebase.initializeApp(firebaseConfig);
-    
-    let candidateInfo = firebase.database().ref("emailInfo");
-    
-    var application=document.getElementById("application");
-    
-    function saveRecordtoDatabase() {
 
-
-    console.log("saveRecordtoDatabase");
-
-
-    event.preventDefault();
-    let newCandidateInfo = candidateInfo.push();
-    
-    newCandidateInfo.set({
-      email: document.getElementById('mce-EMAIL2').value,
-     
-    });
-    }
-    </script> -->
 
 	<script>
-// const emailInput = document.getElementById("email-input").value; // Assuming you have an input field with the id "email-input"
 
-// const emailsRef = firebase.database().ref("emails");
-// emailsRef.push().set({ email: emailInput })
-//   .then(() => {
-//     console.log("Email ID saved to Firebase database.");
-//   })
-//   .catch((error) => {
-//     console.error("Error saving email ID:", error);
-//   });
 
 	</script>

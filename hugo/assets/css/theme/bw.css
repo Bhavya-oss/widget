@@ -29621,7 +29621,7 @@ button.hamburger.animate.active:after {
   height: 0.9rem;
 }
 
-@font-face {
+/* @font-face {
   font-family: "Unicons";
   src: url("../../fonts/unicons/Unicons.eot?muc7dc");
   src: url("../../fonts/unicons/Unicons.eot?muc7dc#iefix")
@@ -29645,7 +29645,7 @@ button.hamburger.animate.active:after {
   font-weight: normal;
   font-style: normal;
   font-display: block;
-}
+} */
 
 [class^="uil-"],
 [class*=" uil-"],
@@ -37290,7 +37290,7 @@ button-fontcolor:visited {
 }
 .slider::before, .slider::after {
   height: 0px;
-  width: 200px;
+  width: 6000px;
   position: absolute;
   content: "";
   background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%);
@@ -38180,3 +38180,53 @@ margin-right: 22px;
 }
 
 
+.slider-slider {
+  /* background: white; */
+  /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125); */
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.slider-slider::before,
+.slider-slider::after {
+  /* background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); */
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 1000px;
+  z-index: 2;
+}
+
+.slider-slider::after {
+  right: 0;
+  top: 0;
+  transform: rotate(180deg);
+}
+
+.slider-slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slide-track {
+  animation: slide-scroll 12s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+
+.slide-slide {
+  height: 100px;
+  width: 250px;
+}
+
+@keyframes slide-scroll  {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
