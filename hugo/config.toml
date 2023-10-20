@@ -3,6 +3,8 @@
   title = "Biggworks"
   relativeURLS = true
   enableRobotsTXT = true
+  disableHugoGeneratorInject = true
+  disableLiveReload = true
 
 ignoreErrors = ["error-remote-getjson"]
 
@@ -21,5 +23,4 @@ blog = "/blog/:year/:month/:title/"
 [params]
   description = "Your default site description"
 
-[server]
-disableLiveReload = true
+
