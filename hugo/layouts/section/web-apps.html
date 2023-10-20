@@ -1,7 +1,6 @@
 {{ define "main" }}
 {{ $resource := getJSON "http://bw-strapi:1337/web-apps" }}
 <!-- {{ printf "My data: %s"  $resource}} -->
-<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
 <body>
     <div class="content-wrapper">
@@ -43,8 +42,7 @@
                             <div class="modal-dialog modal-fullscreen modal-lg">
                                 <div class="modal-content">
                                     <!-- <div class="modal-header"> -->
-                                    <p type="button" class="btn-custum" data-bs-dismiss="modal" aria-label="Close"><i
-                                            class="uil uil-times" id="timesIcon"></i></p>
+                                    <p type="button" class="btn-custum" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></p>
                                     <h4 class="modal-title  text-center project-unlock pt-xl-15 pt-md-10 pt-13">
                                         {{$resource.section_one.modal.heading}}
                                     </h4>

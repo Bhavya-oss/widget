@@ -1,8 +1,6 @@
 {{ define "main" }}
 {{ $resource := getJSON "http://bw-strapi:1337/staff-augmentation" }}
 <!-- {{ printf "My data: %s"  $resource}} -->
-<link rel="shortcut icon" href="https://res.cloudinary.com/biggworks/image/upload/v1666248096/favicon_xsthfp.ico" />
-<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
 
 <body>
@@ -53,7 +51,7 @@
                             <h4 class="modal-title  text-center project-unlock pt-xl-15 pt-md-10 pt-13">{{$resource.section_one.modal_title}}
                             </h4>
                             <!-- <p type="button" class="btn-custum" data-bs-dismiss="modal"><i class="uil uil-times"></i></p> -->
-                            <p type="button" class="btn-custum" data-bs-dismiss="modal" aria-label="Close"><i class="uil uil-times" id="timesIcon"></i></p>
+                            <p type="button" class="btn-custum" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></p>
                             <!-- </div> -->
                             <div class="modal-body">
                               <section id="tabs" class="wrapper pt-0 pb-md-4">
