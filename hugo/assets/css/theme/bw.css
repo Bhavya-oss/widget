@@ -38230,3 +38230,12 @@ margin-right: 22px;
     transform: translateX(calc(-250px * 7));
   }
 }
+
+.why-choose-biggworks-icon{
+  font-size: 18px;
+  color: #0F00FD;
+  padding: 1px 2.2px;
+  background: #FFF;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
