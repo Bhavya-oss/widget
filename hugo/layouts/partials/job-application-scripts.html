@@ -1,0 +1,667 @@
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.103.0.min.js"></script>
+	<script src="https://cdn.sendgrid.com/6.4.0/sendgrid.min.js"></script>
+
+
+	<script>
+
+		// firebase configaretion
+		const firebaseConfig = {
+			apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
+			authDomain: "biggworks-dd979.firebaseapp.com",
+			databaseURL: "https://biggworks-dd979-default-rtdb.asia-southeast1.firebasedatabase.app",
+			projectId: "biggworks-dd979",
+			storageBucket: "biggworks-dd979.appspot.com",
+			messagingSenderId: "160882722753",
+			appId: "1:160882722753:web:f067b273803ff585359140",
+			measurementId: "G-377HKGT4RW"
+		};
+
+		firebase.initializeApp(firebaseConfig);
+
+		let candidateInfo = firebase.database().ref("candidate");
+
+		var application = document.getElementById("application");
+
+		// file store 
+		const AWS = window.AWS;
+		const config = {
+			bucketName: "brain-merit-storage",
+			dirName: "candidate/resume",
+			region: "ap-south-1",
+			accessKeyId: "AKIAUVKVZUGMQTHFZICM",
+			secretAccessKey: "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",
+		};
+
+
+		// Create an instance of the S3 service
+		const s3 = new AWS.S3({
+			region: config.region,
+			accessKeyId: config.accessKeyId,
+			secretAccessKey: config.secretAccessKey,
+		});
+
+		//kalibre backend end point
+		const baseUrl = "https://dev.kalibre.ai/candidates/";
+
+		//send data to backend
+		const sendToKalibreBackend = async (data) => {
+			const response = await fetch(baseUrl, {
+				method: 'POST',
+				headers: {
+					'Authorization': "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Iis5MTgxMDUzMjAwMDgiLCJpYXQiOjE2NzU5NDE1MzMsImV4cCI6MTY4ODAzNzUzMywicm9sZSI6bnVsbCwicGVybWlzc2lvbnMiOltdLCJzdWIiOiJydTEiLCJ1c2VyX2lkIjoxLCJvcmlnX2lhdCI6MTY3NTk0MTUzM30.SJrWJH2tUbvLySC5QMGJBa_zF2-TDYqsz7J0vmIVJaa6jOGPlwZQbgJo5838h0jUatUjowpLVPXXkgD0UDTUhycluk8LADUzDPWfNmPeuac7ZkCS34hhh58dvcJI95NFC7innAqXl-VzTwchnl2d5n29BEU39t4SJbL1XYYdx5QHhVXpWo2x7kQjwlUF_p7yQDFrrSYHiWrdlXKDm9gxj5LbqtoRSTGOtTTzt7o8lGsA5AtBWslrL_1LI0xxA5EkUzNoTY6wbyEfOnDEQUGWL_9LtEo0bq2njEMCl2YNwddVChN1jp3CFnDherIByguH9PbrhWJr9BCW4mye0VbJ4dEDx7zHOf9KEOdNcGys62zUvhsb_6jydp3r6LqUXLhNHr-Lb0mXyxKBg-uKSrjaBkzyuydurLtxyeL31Z49MACbITD10WnyUFldlp0yrshmPN7v4P4gmmtmahRXbnA6GTXWJqBE90H77zKMQQO2a1wDfI5eoekuBnYF8LiozXvQGbtFD5itcaagY_KdgSCdZPITDr84I8Sn6RMS1Fi98LYW34eOuhMZPEi5_9x3G74YzmiTvnxmdlvi0ujyDnfF3Wak32ODBAiL8PKWbmx03-v2eNyZus6HB-9f8flDTwcFwv0SOQtSwIb1rUGia2YtFVaQ16j4V_nYGFZcidkQkUU", // Add 'Bearer' before the token
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(data), // Convert the data to JSON string
+			});
+
+			// Handle the response
+			if (response.ok) {
+				// Request successful
+				const result = await response.json();
+				console.log("sucessfully sended to backen", result);
+			} else {
+				// Request failed
+				console.error('Error:', response.status, response.statusText);
+			}
+		};
+
+
+		//Talent Acquisition Superstar (Technical Recruiter) form submit
+		function technicalRecruterFormSubmit() {
+
+			event.preventDefault();
+
+			const formType = document.querySelector('#technical_recruiter');
+			const resumeInput = document.querySelector('#customFile1');
+
+			const data = {
+				first_name: document.querySelector('#firstName1').value,
+				last_name: document.querySelector('#lastName1').value,
+				email: document.querySelector('#email1').value,
+				mobile: document.querySelector('#phone1').value,
+				current_ctc: document.querySelector('#current1').value,
+				expected_ctc: document.querySelector('#expected1').value,
+				file: resumeInput.files[0],
+				preferred_roles: ["Talent Acquisition Superstar |(Technical Recruiter)"]
+			}
+
+
+			console.log("calling technicalRecruterFormSubmit.....", data)
+
+			formSubmit(data, formType)
+
+		}
+
+		function digitalWordsmithFormSubmit() {
+
+			event.preventDefault();
+
+			const formType = document.querySelector('#digital_wordsmith');
+			const resumeInput = document.querySelector('#customFile2');
+
+			const data = {
+				first_name: document.querySelector('#firstName2').value,
+				last_name: document.querySelector('#lastName2').value,
+				email: document.querySelector('#email2').value,
+				mobile: document.querySelector('#phone2').value,
+				current_ctc: document.querySelector('#current2').value,
+				expected_ctc: document.querySelector('#expected2').value,
+				file: resumeInput.files[0],
+				preferred_roles: ["Digital Wordsmith |(Content/Social Media Marketer)"]
+			}
+
+
+			console.log("calling digitalWordsmithFormSubmit.....", data)
+
+			formSubmit(data, formType)
+
+		}
+
+		//Talent Acquisition Superstar (Technical Recruiter) form submit
+		function mobiledeveloperFormSubmit() {
+
+			event.preventDefault();
+
+			const formType = document.querySelector('#mobile_developer');
+			const resumeInput = document.querySelector('#customFile3');
+
+			const data = {
+				first_name: document.querySelector('#firstName3').value,
+				last_name: document.querySelector('#lastName3').value,
+				email: document.querySelector('#email3').value,
+				mobile: document.querySelector('#phone3').value,
+				current_ctc: document.querySelector('#current3').value,
+				expected_ctc: document.querySelector('#expected3').value,
+				file: resumeInput.files[0],
+				preferred_roles: ["Mobile Developer |(Flutter)"]
+			}
+
+
+			console.log("calling mobiledeveloperFormSubmit.....", data)
+
+			formSubmit(data, formType)
+
+		}
+
+		function frontenddeveloperFormSubmit() {
+
+			event.preventDefault();
+
+			const formType = document.querySelector('#frontend_developer');
+			const resumeInput = document.querySelector('#customFile4');
+
+			const data = {
+				first_name: document.querySelector('#firstName4').value,
+				last_name: document.querySelector('#lastName4').value,
+				email: document.querySelector('#email4').value,
+				mobile: document.querySelector('#phone4').value,
+				current_ctc: document.querySelector('#current4').value,
+				expected_ctc: document.querySelector('#expected4').value,
+				file: resumeInput.files[0],
+				preferred_roles: ["Frontend Developer|(HTML, CSS, and JavaScript)"]
+			}
+
+
+			console.log("calling frontenddeveloperFormSubmit.....", data)
+
+			formSubmit(data, formType)
+
+		}
+
+		function backenddeveloperFormSubmit() {
+
+event.preventDefault();
+
+const formType = document.querySelector('#backend_developer');
+const resumeInput = document.querySelector('#customFile5');
+
+const data = {
+	first_name: document.querySelector('#firstName5').value,
+	last_name: document.querySelector('#lastName5').value,
+	email: document.querySelector('#email5').value,
+	mobile: document.querySelector('#phone5').value,
+	current_ctc: document.querySelector('#current5').value,
+	expected_ctc: document.querySelector('#expected5').value,
+	file: resumeInput.files[0],
+	preferred_roles: ["Frontend Developer|(HTML, CSS, and JavaScript)"]
+}
+
+
+console.log("calling frontenddeveloperFormSubmit.....", data)
+
+formSubmit(data, formType)
+
+}
+
+		// send to firebase database
+		function sendToFireBase(data) {
+			event.preventDefault();
+			let newCandidateInfo = candidateInfo.push();
+			newCandidateInfo.set(data)
+			// console.log("information about form =====", data)
+
+		}
+
+		async function formSubmit(data, formType) {
+
+			event.preventDefault();
+
+			console.log("calling function... ====", data);
+
+
+			let fileName = data.file?.name
+			const resumePath = `${config.dirName}/${fileName}`;
+			if(fileName){
+
+				const params = {
+					Bucket: config.bucketName,
+					Key: resumePath,
+					Body: data.file,
+				};
+	
+				try {
+	
+					const response = await s3.upload(params).promise();
+	
+					data.resume = response.Location
+	
+					sendToFireBase(data)
+					data.source = "Biggworks"
+					sendToKalibreBackend(data)
+					sendMail(data)
+					formType.reset();
+				} catch (error) {
+					console.error('Error uploading resume:', error);
+				}
+			}
+
+
+		}
+
+
+
+
+		//sendgrid email configaretion 
+		function sendMail(data) {
+			console.log("email information ====", data);
+
+			const sgData = {
+          personalizations: [
+            {
+              to: [{ email: "manoj98gopal@gmail.com" }],
+              dynamic_template_data: data
+            }
+          ],
+          from: { email: "manoj98achar@gmail.com" },
+          template_id: "d-75e73687ad8c4c87b1b1ab862d5a14b7 "
+        };
+
+		const sgKey = "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";
+      const request = {
+        method: "POST",
+        url: "https://api.sendgrid.com/v3/mail/send",
+        headers: {
+          "Authorization": "Bearer " + sgKey,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(sgData)
+      };
+
+	  fetch(request.url, request)
+        .then(response => {
+          if (response.ok) {
+            console.log("Email sent successfully!");
+            // You can redirect the user to a thank-you page or display a success message here
+          } else {
+            console.error("Error sending email:", response);
+            // Handle the error and display an error message to the user
+          }
+        })
+        .catch(error => {
+          console.error("Error sending email:", error);
+          // Handle the error and display an error message to the user
+        });
+
+
+
+		}
+
+	</script>
+<script>
+	 function validatePhoneNumber(input) {
+    input.value = input.value.replace(/\D/g, ""); // Remove non-numeric characters
+
+    if (input.value.length > 10) {
+      input.value = input.value.slice(0, 10); // Truncate input to 10 digits
+    }
+  }
+</script>
+	<script>
+		function displayFileName(input) {
+			if (input.files && input.files[0]) {
+				var fileName = input.files[0].name;
+				var resumeNameElement = document.getElementById("resumeName");
+				if (resumeNameElement) {
+					resumeNameElement.textContent = fileName;
+				}
+			} else {
+				var resumeNameElement = document.getElementById("resumeName");
+				if (resumeNameElement) {
+					resumeNameElement.textContent = "";
+				}
+			}
+		}
+
+
+	</script>
+
+<script>
+	
+
+
+</script>
+	<!-- const form1 = document.querySelector('#formMymodal1');
+	const form2 = document.querySelector('#formMymodal2');
+	const form3 = document.querySelector('#formMymodal3');
+	const form4 = document.querySelector('#formMymodal4');
+	const form5 = document.querySelector('#demo');
+
+
+
+	form1.addEventListener("submit", formSubmit)
+
+	form2.addEventListener("submit", formSubmit)
+	form3.addEventListener("submit", formSubmit)
+	form4.addEventListener("submit", formSubmit)
+	form5.addEventListener("submit", formSubmit) -->
+
+
+	<!-- function saveRecordtoDatabase() {
+	console.log("saveRecordtoDatabase");
+	let newCandidateInfo = candidateInfo.push();
+
+	newCandidateInfo.set({
+	first_name: document.getElementById('firstName').value,
+	last_name: document.getElementById('lastName').value,
+	mobile: document.getElementById('phone').value,
+	current_ctc: document.getElementById('current').value,
+
+	email: document.getElementById('email').value,
+	expected_ctc: document.getElementById('expected').value,
+	resume: document.getElementById('resume').value
+
+
+	});
+	} -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+		crossorigin="anonymous"></script> -->
+	<script>
+		var fileInput = document.getElementById('customFile');
+		fileInput.addEventListener('change', function () {
+			var files = this.files;
+			if (files.length > 0) {
+				var fileName = files[0].name;
+				console.log('File selected: ' + fileName);
+				// Perform further actions here, such as displaying the file name or submitting the form
+			} else {
+				console.log('No file selected.');
+				// Handle the case where no file is selected
+			}
+		});
+
+
+	</script>
+	<script>
+
+// const elements = document.querySelectorAll(".see-all-jobs");
+
+// // Define the click event handler function
+// function handleClick(event) {
+//   // Iterate through the modal IDs
+// for (let i = 1; i <= 5; i++) {
+//   // Get the modal element
+//   const modal = document.getElementById("myModal" + i);
+// console.log(modal,'modal')
+//   // Add the data-bs-dismiss attribute
+//   modal.dataset.bsDismiss = "modal";
+
+//   // Add the aria-label attribute
+//   modal.setAttribute("aria-label", "Close");
+// }
+
+// }
+
+// // Attach the click event handler to each element
+// elements.forEach(function(element) {
+//   element.addEventListener("click", handleClick);
+// });
+
+// 		var scrollToSectionBtn = document.getElementById('seeAllJobs');
+
+// 		// Get the section to scroll to
+// 		var scrollToSection = document.getElementById('comeBackToJobs');
+
+// 		// Open the modal when the open button is clicked
+// 		// openModalBtn.addEventListener('click', function () {
+// 		// 	modal.style.display = 'block';
+// 		// });
+
+// 		// Scroll to the section when the button inside the modal is clicked
+// 		scrollToSectionBtn.addEventListener('click', function () {
+// // Add the data-bs-dismiss attribute
+// scrollToSection.dataset.bsDismiss = "modal";
+
+// // Add the aria-label attribute	
+// scrollToSection.setAttribute("aria-label", "Close");	
+// 		// scrollToSection.scrollIntoView({ behavior: 'smooth' });
+		// });
+	</script>
+	<script>
+		  // when we click on apply now first modal will be opened
+		  document.getElementById("openFirstModal1").addEventListener("click", function () {
+          $("#1firstModal").fadeIn();
+        });
+		// when we click on see job details second modal will be opened
+		document.getElementById("openSecondModal1").addEventListener("click", function () {
+			$("#secondModal").fadeIn();
+        //   $("#1firstModal").fadeOut();
+        });
+				// when we click on see all jobs both modals will be closed
+
+		document.getElementById("closeModals1").addEventListener("click", function () {
+          $("#1firstModal").fadeOut();
+		  $("#secondModal").fadeOut();
+        });
+				// when we click on apply second modal will be closed and first modal will be opened
+
+		document.getElementById("goback1").addEventListener("click", function () {
+			$("#secondModal").fadeOut();
+          $("#1firstModal").fadeIn();
+        });
+				// when we click on iam interested second modal will be closed and first modal will be opened
+
+		document.getElementById("returnback1").addEventListener("click", function () {
+			$("#secondModal").fadeOut();
+          $("#1firstModal").fadeIn();
+        });
+
+		// this is close x mark for 1st modal
+		document.getElementById("timesIcon1").addEventListener("click", function () {
+    $("#1firstModal").fadeOut();
+});
+
+		//  close x mark for 2nd modal
+
+		document.getElementById("timesIcon2").addEventListener("click", function () {
+			$("#secondModal").fadeOut();
+          $("#1firstModal").fadeOut();
+        });
+
+      
+    
+
+	</script>
+
+<script>
+	// when we click on apply now first modal will be opened
+	document.getElementById("openFirstModal2").addEventListener("click", function () {
+	$("#2firstModal").fadeIn();
+  });
+  // when we click on see job details second modal will be opened
+  document.getElementById("openSecondModal2").addEventListener("click", function () {
+	  $("#2secondModal").fadeIn();
+  });
+		  // when we click on see all jobs both modals will be closed
+
+  document.getElementById("closeModals2").addEventListener("click", function () {
+	$("#2firstModal").fadeOut();
+	$("#2secondModal").fadeOut();
+  });
+		  // when we click on apply second modal will be closed and first modal will be opened
+
+  document.getElementById("goback2").addEventListener("click", function () {
+	  $("#2secondModal").fadeOut();
+	$("#2firstModal").fadeIn();
+  });
+		  // when we click on iam interested second modal will be closed and first modal will be opened
+
+  document.getElementById("returnback2").addEventListener("click", function () {
+	  $("#2secondModal").fadeOut();
+	$("#2firstModal").fadeIn();
+  });
+
+  // this is close x mark for 1st modal
+  document.getElementById("timesIcon3").addEventListener("click", function () {
+$("#2firstModal").fadeOut();
+});
+
+  //  close x mark for 2nd modal
+
+  document.getElementById("timesIcon4").addEventListener("click", function () {
+	  $("#2secondModal").fadeOut();
+	$("#2firstModal").fadeOut();
+  });
+
+
+
+
+</script>
+
+<script>
+	// when we click on apply now first modal will be opened
+	document.getElementById("openFirstModal3").addEventListener("click", function () {
+	$("#3firstModal").fadeIn();
+  });
+  // when we click on see job details second modal will be opened
+  document.getElementById("openSecondModal3").addEventListener("click", function () {
+	  $("#3secondModal").fadeIn();
+  });
+		  // when we click on see all jobs both modals will be closed
+
+  document.getElementById("closeModals3").addEventListener("click", function () {
+	$("#3firstModal").fadeOut();
+	$("#3secondModal").fadeOut();
+  });
+		  // when we click on apply second modal will be closed and first modal will be opened
+
+  document.getElementById("goback3").addEventListener("click", function () {
+	  $("#3secondModal").fadeOut();
+	$("#3firstModal").fadeIn();
+  });
+		  // when we click on iam interested second modal will be closed and first modal will be opened
+
+  document.getElementById("returnback3").addEventListener("click", function () {
+	  $("#3secondModal").fadeOut();
+	$("#3firstModal").fadeIn();
+  });
+
+  // this is close x mark for 1st modal
+  document.getElementById("timesIcon5").addEventListener("click", function () {
+$("#3firstModal").fadeOut();
+});
+
+  //  close x mark for 2nd modal
+
+  document.getElementById("timesIcon6").addEventListener("click", function () {
+	  $("#3secondModal").fadeOut();
+	$("#3firstModal").fadeOut();
+  });
+
+
+
+
+</script>
+	
+<script>
+	// when we click on apply now first modal will be opened
+	document.getElementById("openFirstModal4").addEventListener("click", function () {
+	$("#4firstModal").fadeIn();
+  });
+  // when we click on see job details second modal will be opened
+  document.getElementById("openSecondModal4").addEventListener("click", function () {
+	  $("#4secondModal").fadeIn();
+  });
+		  // when we click on see all jobs both modals will be closed
+
+  document.getElementById("closeModals4").addEventListener("click", function () {
+	$("#4firstModal").fadeOut();
+	$("#4secondModal").fadeOut();
+  });
+		  // when we click on apply second modal will be closed and first modal will be opened
+
+  document.getElementById("goback4").addEventListener("click", function () {
+	  $("#4secondModal").fadeOut();
+	$("#4firstModal").fadeIn();
+  });
+		  // when we click on iam interested second modal will be closed and first modal will be opened
+
+  document.getElementById("returnback4").addEventListener("click", function () {
+	  $("#4secondModal").fadeOut();
+	$("#4firstModal").fadeIn();
+  });
+
+  // this is close x mark for 1st modal
+  document.getElementById("timesIcon7").addEventListener("click", function () {
+$("#4firstModal").fadeOut();
+});
+
+  //  close x mark for 2nd modal
+
+  document.getElementById("timesIcon8").addEventListener("click", function () {
+	  $("#4secondModal").fadeOut();
+	$("#4firstModal").fadeOut();
+  });
+
+
+
+
+</script>
+
+<script>
+	// when we click on apply now first modal will be opened
+	document.getElementById("openFirstModal5").addEventListener("click", function () {
+	$("#5firstModal").fadeIn();
+  });
+  // when we click on see job details second modal will be opened
+  document.getElementById("openSecondModal5").addEventListener("click", function () {
+	  $("#5secondModal").fadeIn();
+  //   $("#1firstModal").fadeOut();
+  });
+		  // when we click on see all jobs both modals will be closed
+
+  document.getElementById("closeModals5").addEventListener("click", function () {
+	$("#5firstModal").fadeOut();
+	$("#5secondModal").fadeOut();
+  });
+		  // when we click on apply second modal will be closed and first modal will be opened
+
+  document.getElementById("goback5").addEventListener("click", function () {
+	  $("#5secondModal").fadeOut();
+	$("#5firstModal").fadeIn();
+  });
+		  // when we click on iam interested second modal will be closed and first modal will be opened
+
+  document.getElementById("returnback5").addEventListener("click", function () {
+	  $("#5secondModal").fadeOut();
+	$("#5firstModal").fadeIn();
+  });
+
+  // this is close x mark for 1st modal
+  document.getElementById("timesIcon9").addEventListener("click", function () {
+$("#5firstModal").fadeOut();
+});
+
+  //  close x mark for 2nd modal
+
+  document.getElementById("timesIcon10").addEventListener("click", function () {
+	  $("#5secondModal").fadeOut();
+	$("#5firstModal").fadeOut();
+  });
+
+
+
+
+</script>

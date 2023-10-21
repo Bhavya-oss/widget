@@ -70,42 +70,7 @@
 	</div>
 </footer>
 
-<script>
 
-let emailInfo = firebase.database().ref("emailInfo");
-
-
-	function submitEmail() {
-		event.preventDefault()
-
-		let newContactInfo = emailInfo.push();
-
-		let data = document.getElementById("footerEmail").value
-
-		newContactInfo.set({
-			email : data
-		})
-
-		let form = document.getElementById("test");
-  form.reset();
-
-   // Display the "joined" message
-   let message = document.getElementById("message");
-   message.style.display = "block";
-  message.textContent = "Subscribed to Biggworks: " + data;
-
-  // Hide the message after a certain time (optional)
-  setTimeout(function() {
-    message.style.display = "none";
-  }, 3000); // 3 seconds
-		// console.log("function calling =====",data)
-		
-	}
-
-
-
-
-</script>
 
 
 
