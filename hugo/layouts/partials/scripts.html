@@ -16,6 +16,8 @@
 {{ $plugins := resources.Get "/js/plugins.js" | resources.Minify }}
 <script src="{{ $plugins.RelPermalink }}"></script> -->
 
+<script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+
 {{ $os := slice (resources.Get "/js/scripts.js") (resources.Get "/js/plugins.js") | resources.Concat "js/all.js" | resources.Minify }}
 <script src="{{ $os.RelPermalink }}"></script>
 
