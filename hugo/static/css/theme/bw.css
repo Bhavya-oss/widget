@@ -1,4 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@900&display=swap);
+
+.counter-wrapper .counter,
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6,
+.post-title {
+  font-family: "Source Serif Pro";
+  font-weight: 400 !important;
+  word-spacing: normal !important;
+  letter-spacing: normal !important;
+}
 
 :root {
   --bs-blue: #3f78e0;
