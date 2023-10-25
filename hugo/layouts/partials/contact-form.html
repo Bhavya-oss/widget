@@ -10,6 +10,7 @@
                 method="post"
                 id="indexForm"
                 onsubmit="saveRecordtoDatabase()"
+                novalidate
               >
                 <div class="messages"></div>
                 <div class="controls">
@@ -28,9 +29,9 @@
                           required="required"
                           onchange="handleFormFieldChange(this,'form_name')"
                         />
-                        <label for="form_name"
+                        <!-- <label for="form_name"
                           ></label
-                        >
+                        > -->
                         <div class="errormessage"
                           id="form_name_error"
                         ></div>
@@ -52,7 +53,7 @@
 
                         />
                         
-                        <div class="errormessage mt-5"
+                        <div class="errormessage"
                         id="form_lastname_error"
                         ></div>
                       </div>
@@ -72,9 +73,9 @@
                           onchange="handleFormFieldChange(this,'form_email')"
 
                         />
-                        <label for="form_email"
+                        <!-- <label for="form_email"
                           ></label
-                        >
+                        > -->
                         <div class="errormessage"
                           id="form_email_error"
                         ></div>
