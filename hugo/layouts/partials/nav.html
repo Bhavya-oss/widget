@@ -77,7 +77,8 @@
       </div>
       <ul class="navbar-nav ml-auto">
         
-        <li class="nav-item dropdown" >
+
+        <!-- <li class="nav-item dropdown" >
           <a class="nav-link ropdown-toggle" href="{{ $nav.navlinks.services.link }}"  >
             {{ $nav.navlinks.services.text }}
             </a>
@@ -89,6 +90,25 @@
             <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage3.link }}">Mobile App Development</a></li>
             <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage4.link }}">Web Development</a></li>
             <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage2.link }}">Staff Augmentation
+            </a></li>
+          </ul>  
+         
+          
+         
+        </li> -->
+
+        <li class="nav-item dropdown-nav" >
+          <a class="nav-link dropbtn-nav" href="{{ $nav.navlinks.services.link }}"  >
+            {{ $nav.navlinks.services.text }}
+            </a>
+         
+          <ul class="dropdown-content-nav">
+            <li class="nav-item" style="list-style-type: none;"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage1.link }}">IOT Development
+            </a></li>
+            
+            <li class="nav-item" style="list-style-type: none;"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage3.link }}">Mobile App Development</a></li>
+            <li class="nav-item" style="list-style-type: none;"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage4.link }}">Web Development</a></li>
+            <li class="nav-item" style="list-style-type: none;"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage2.link }}">Staff Augmentation
             </a></li>
           </ul>  
          
