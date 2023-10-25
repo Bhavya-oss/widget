@@ -7,140 +7,9 @@
 <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" async></script>
-
-
-
-
-  <script>
-    function validatePhoneNumber(input) {
-      input.value = input.value.replace(/\D/g, ""); // Remove non-numeric characters
-
-      if (input.value.length > 10) {
-        input.value = input.value.slice(0, 10); // Truncate input to 10 digits
-      }
-    }
-  </script>
-
-
-  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js" async></script>
-  
-
-  <script>
-    const firebaseConfig = {
-      apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
-      authDomain: "biggworks-dd979.firebaseapp.com",
-      databaseURL:
-        "https://biggworks-dd979-default-rtdb.asia-southeast1.firebasedatabase.app",
-      projectId: "biggworks-dd979",
-      storageBucket: "biggworks-dd979.appspot.com",
-      messagingSenderId: "160882722753",
-      appId: "1:160882722753:web:f067b273803ff585359140",
-      measurementId: "G-377HKGT4RW",
-    };
-    firebase.initializeApp(firebaseConfig);
-
-    let candidateInfo = firebase.database().ref("candidate");
-
-    var application = document.getElementById("application");
-
-    function saveRecordtoDatabase() {
-      var firstName = document.getElementById("form_name").value;
-      var lastName = document.getElementById("form_lastname").value;
-      var email = document.getElementById("form_email").value;
-      var phone = document.getElementById("form_phone").value;
-      event.preventDefault();
-
-      var errorContainer = document.querySelector(".messages");
-      errorContainer.innerHTML = "";
-
-      let form = document.getElementById("indexForm");
-
-      if (firstName.trim() === "") {
-        displayError("form_name", "First Name is required.");
-      }
-
-      if (lastName.trim() === "") {
-        displayError("form_lastname", "Last Name is required.");
-      }
-
-      if (email.trim() === "") {
-                displayError("form_email", "Email address is required.");
-            } else if (!validateEmail(email)) {
-                displayError("form_email", "Please enter a valid email address.");
-            }
-
-      // ... Perform validation for other fields
-      
-      if (
-        firstName.trim() !== "" &&
-        lastName.trim() !== "" &&
-        validateEmail(email)
-        ) {
-          let newCandidateInfo = candidateInfo.push();
-       
-
-        newCandidateInfo.set({
-          name: firstName,
-          surname: lastName,
-          email: email,
-          phone: phone,
-          message: document.getElementById("form_message").value,
-        });
-        console.log("reset the form", firstName);
-
-        form.reset();
-
-        // Reset the form after submission
-
-        var successContainer = document.querySelector(".messages");
-        successContainer.innerHTML =
-          '<div class="alert alert-success">Record saved successfully!</div>';
-
-        setTimeout(function () {
-          successContainer.innerHTML = "";
-        }, 3000);
-      }
-    }
-
-    function handleFormFieldChange(e, fieldName) {
-      var inputValue = e.value;
-
-      if (inputValue.trim() !== "") {
-        displayError(fieldName, "");
-      }
-    }
-
-    function displayError(fieldId, errorMessage) {
-      var errorContainer = document.getElementById(fieldId + "_error");
-      errorContainer.innerHTML = errorMessage;
-    }
-
-    function validateEmail(email) {
-            const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-            return pattern.test(email);
-        }
-  </script>
-<script>
-  function validatePhoneNumber(input) {
-    input.value = input.value.replace(/\D/g, ""); // Remove non-numeric characters
-
-    if (input.value.length > 10) {
-      input.value = input.value.slice(0, 10); // Truncate input to 10 digits
-    }
-  }
-</script>
-<script>
-  function validatePhoneNumber(input) {
-    input.value = input.value.replace(/\D/g, ""); // Remove non-numeric characters
-
-    if (input.value.length > 10) {
-      input.value = input.value.slice(0, 10); // Truncate input to 10 digits
-    }
-  }
-</script>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
 <!-- {{ $scripts := resources.Get "/js/scripts.js" | resources.Minify }}
 <script src="{{ $scripts.RelPermalink }}"></script>
 
@@ -149,47 +18,119 @@
 
 <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
 
-<!-- {{ $os := slice (resources.Get "/js/scripts.js") (resources.Get "/js/plugins.js") | resources.Concat "js/all.js" | resources.Minify }}
-<script src="{{ $os.RelPermalink }}"></script> -->
+{{ $os := slice (resources.Get "/js/scripts.js") (resources.Get "/js/plugins.js") | resources.Concat "js/all.js" | resources.Minify }}
+<script src="{{ $os.RelPermalink }}"></script>
+
+
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
 
 <script>
+  function validatePhoneNumber(input) {
+    input.value = input.value.replace(/\D/g, ""); // Remove non-numeric characters
 
-  let emailInfo = firebase.database().ref("emailInfo");
-  
-  
-    function submitEmail() {
-      event.preventDefault()
-  
-      let newContactInfo = emailInfo.push();
-  
-      let data = document.getElementById("footerEmail").value
-  
-      newContactInfo.set({
-        email : data
-      })
-  
-      let form = document.getElementById("test");
-    form.reset();
-  
-     // Display the "joined" message
-     let message = document.getElementById("message");
-     message.style.display = "block";
-    message.textContent = "Subscribed to Biggworks: " + data;
-  
-    // Hide the message after a certain time (optional)
-    setTimeout(function() {
-      message.style.display = "none";
-    }, 3000); // 3 seconds
-      // console.log("function calling =====",data)
-      
+    if (input.value.length > 10) {
+      input.value = input.value.slice(0, 10); // Truncate input to 10 digits
     }
-  
-  
-  
-  
-  </script>
-  
-  
+  }
+</script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyAVkhv2ZG_gB9yl113rVsrHAjQEnejhsm0",
+    authDomain: "biggworks-dd979.firebaseapp.com",
+    databaseURL:
+      "https://biggworks-dd979-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "biggworks-dd979",
+    storageBucket: "biggworks-dd979.appspot.com",
+    messagingSenderId: "160882722753",
+    appId: "1:160882722753:web:f067b273803ff585359140",
+    measurementId: "G-377HKGT4RW",
+  };
+  firebase.initializeApp(firebaseConfig);
+
+  let candidateInfo = firebase.database().ref("candidate");
+
+  var application = document.getElementById("application");
+
+  function saveRecordtoDatabase() {
+    var firstName = document.getElementById("form_name").value;
+    var lastName = document.getElementById("form_lastname").value;
+    var email = document.getElementById("form_email").value;
+    var phone = document.getElementById("form_phone").value;
+    event.preventDefault();
+
+    var errorContainer = document.querySelector(".messages");
+    errorContainer.innerHTML = "";
+
+    let form = document.getElementById("indexForm");
+
+    if (firstName.trim() === "") {
+      displayError("form_name", "First Name is required.");
+    }
+
+    if (lastName.trim() === "") {
+      displayError("form_lastname", "Last Name is required.");
+    }
+
+    if (email.trim() === "") {
+              displayError("form_email", "Email address is required.");
+          } else if (!validateEmail(email)) {
+              displayError("form_email", "Please enter a valid email address.");
+          }
+
+    // ... Perform validation for other fields
+    
+    if (
+      firstName.trim() !== "" &&
+      lastName.trim() !== "" &&
+      validateEmail(email)
+      ) {
+        let newCandidateInfo = candidateInfo.push();
+     
+
+      newCandidateInfo.set({
+        name: firstName,
+        surname: lastName,
+        email: email,
+        phone: phone,
+        message: document.getElementById("form_message").value,
+      });
+      console.log("reset the form", firstName);
+
+      form.reset();
+
+      // Reset the form after submission
+
+      var successContainer = document.querySelector(".messages");
+      successContainer.innerHTML =
+        '<div class="alert alert-success">Record saved successfully!</div>';
+
+      setTimeout(function () {
+        successContainer.innerHTML = "";
+      }, 3000);
+    }
+  }
+
+  function handleFormFieldChange(e, fieldName) {
+    var inputValue = e.value;
+
+    if (inputValue.trim() !== "") {
+      displayError(fieldName, "");
+    }
+  }
+
+  function displayError(fieldId, errorMessage) {
+    var errorContainer = document.getElementById(fieldId + "_error");
+    errorContainer.innerHTML = errorMessage;
+  }
+
+  function validateEmail(email) {
+          const pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+          return pattern.test(email);
+      }
+</script>
+
+
   <!-- Google tag (gtag.js) -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHVPDCWVDB"></script>
