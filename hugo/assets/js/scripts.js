@@ -22,7 +22,7 @@ $(document).ready(function() {
 				$language_sticky_dropdown.removeClass('show');
 			}
 		};
-		var banner = new Headhesive('.navbar', options);
+		/* var banner = new Headhesive('.navbar', options); */
 	}
 	$(function() {
 		$('.navbar .navbar-nav:not(.navbar-nav-other)').bind({
