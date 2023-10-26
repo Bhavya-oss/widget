@@ -38,15 +38,131 @@
   <div class="container-fluid flex-lg-row flex-nowrap align-items-center navbar-header-color" style="padding: 0% 5% 0% 5%;">
     <div class="navbar-brand w-100">
       <a href="/" >
-        <img class="logo-dark img-fluid col-xl-2 col-md-3 col-3"
+        <img class="logo-dark img-fluid col-xxl-1 col-xl-2 col-lg-2 col-md-2 col-3"
         src="https://res.cloudinary.com/biggworks/image/upload/v1697800312/logo/Biggworks-logo.svg"
         alt="" />
-    <img class="logo-light img-fluid col-xl-2 col-md-3 col-3"
+    <img class="logo-light img-fluid col-xxl-1 col-xl-2 col-lg-2 col-md-2 col-3"
         src="https://res.cloudinary.com/biggworks/image/upload/v1697800312/logo/Biggworks-logo.svg"
         alt="" />
       </a>
     </div>
-    <div class="navbar-other w-100 d-flex ms-auto">
+
+
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end navbar-collapse" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="background: black; width: 80%;">
+      <button type="button" class="btn-close float-end" data-bs-dismiss="offcanvas" aria-label="Close" style="color: #fff; margin-right: 20px;">
+        <span class="iconify-inline" data-icon="la:times" style="font-size: 28px; color: #FFFFFF;"></span>
+      </button>
+
+      <div class="offcanvas-header" style="padding-left: 4%;">
+        <a href="/"
+        >
+        <img
+          src="https://res.cloudinary.com/biggworks/image/upload/v1696927992/logo/biggworks_logo2.svg"
+          alt=""
+      />
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav ml-auto">
+        
+
+          <!-- <li class="nav-item dropdown" >
+            <a class="nav-link ropdown-toggle" href="{{ $nav.navlinks.services.link }}"  >
+              {{ $nav.navlinks.services.text }}
+              </a>
+           
+            <ul class="dropdown-menu">
+              <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage1.link }}">IOT Development
+              </a></li>
+              
+              <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage3.link }}">Mobile App Development</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage4.link }}">Web Development</a></li>
+              <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage2.link }}">Staff Augmentation
+              </a></li>
+            </ul>  
+           
+            
+           
+          </li> -->
+  
+          <li class="nav-item dropdown-nav" >
+            <a class="nav-link dropbtn-nav" href="{{ $nav.navlinks.services.link }}"  >
+              {{ $nav.navlinks.services.text }}
+              </a>
+           
+            <ul class="dropdown-content-nav">
+              <li class="nav-item" style="list-style-type: none;"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage1.link }}">IOT Development
+              </a></li>
+              
+              <li class="nav-item" style="list-style-type: none;"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage3.link }}">Mobile App Development</a></li>
+              <li class="nav-item" style="list-style-type: none;"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage4.link }}">Web Development</a></li>
+              <li class="nav-item" style="list-style-type: none;"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage2.link }}">Staff Augmentation
+              </a></li>
+            </ul>  
+           
+            
+            <!-- <ul class="dropdown">
+              <li><a href="#">Germany</a></li>
+              <li><a href="#">Australia</a></li>
+              <li><a href="#">Switzerland</a></li>
+              <li><a href="#">Japan</a></li>
+          </ul> -->
+          </li>
+          <div class="landingpagesinnavbar">
+  
+            <ul style="padding-left: 0rem;">
+              <li><a class="dropdown-item"  href="{{ $nav.navlinks.landingpage1.link }}" style="color: #fff; list-style: none; padding-left: 12px;">IOT Development</a></li>
+  
+              
+              <li><a class="dropdown-item" href="{{ $nav.navlinks.landingpage3.link }}" style="color: white; list-style: none; padding-left: 12px;">Mobile App Development</a></li>
+              <li><a class="dropdown-item" href="{{ $nav.navlinks.landingpage4.link }}" style="color: white; list-style: none; padding-left: 12px;">Web Development</a></li>
+              <li><a class="dropdown-item" href="{{ $nav.navlinks.landingpage2.link }}" style="color: white; list-style: none; padding-left: 12px;">Staff Augmentation
+              </a></li>
+            </ul> 
+          </div>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ $nav.navlinks.works.link }}"
+              >{{ $nav.navlinks.works.text }}</a
+            >
+           
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="{{ $nav.navlinks.articles.link }}"
+              >{{ $nav.navlinks.articles.text }}</a
+            >
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="{{ $nav.navlinks.careers.link }}"
+              >{{ $nav.navlinks.careers.text }}</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ $nav.navlinks.contact.link }}"
+              >{{ $nav.navlinks.contact.text }}</a
+            >
+           
+          </li>
+         
+        </ul>
+       
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="navbar-other w-100 d-flex ms-auto">
       <ul
         class="navbar-nav flex-row align-items-center ms-auto"
         data-sm-skip="true">
@@ -61,6 +177,7 @@
         </li>
       </ul>
     </div>
+    
     <div class="navbar-collapse offcanvas-nav align">
       <div class="offcanvas-header d-lg-none d-xl-none">
         <a href="/"
@@ -70,32 +187,12 @@
             alt=""
         />
       </a>
-        <!-- <button
-          type="button"
-          class="btn-custum btn-close-white offcanvas-close offcanvas-nav-close" style="border-color: black;"
-          aria-label="Close"><i class="uil uil-times" id="timesIcon"></i></button> -->
+       
       </div>
       <ul class="navbar-nav ml-auto">
         
 
-        <!-- <li class="nav-item dropdown" >
-          <a class="nav-link ropdown-toggle" href="{{ $nav.navlinks.services.link }}"  >
-            {{ $nav.navlinks.services.text }}
-            </a>
-         
-          <ul class="dropdown-menu">
-            <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage1.link }}">IOT Development
-            </a></li>
-            
-            <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage3.link }}">Mobile App Development</a></li>
-            <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage4.link }}">Web Development</a></li>
-            <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage2.link }}">Staff Augmentation
-            </a></li>
-          </ul>  
-         
-          
-         
-        </li> -->
+       
 
         <li class="nav-item dropdown-nav" >
           <a class="nav-link dropbtn-nav" href="{{ $nav.navlinks.services.link }}"  >
@@ -113,12 +210,7 @@
           </ul>  
          
           
-          <!-- <ul class="dropdown">
-            <li><a href="#">Germany</a></li>
-            <li><a href="#">Australia</a></li>
-            <li><a href="#">Switzerland</a></li>
-            <li><a href="#">Japan</a></li>
-        </ul> -->
+         
         </li>
         <div class="landingpagesinnavbar">
 
@@ -157,7 +249,7 @@
         </li>
        
       </ul>
-    </div>
+    </div> -->
   </div>
 </nav>
 </div>

@@ -39,16 +39,12 @@
  * Released under the MIT license:
  * http://www.opensource.org/licenses/MIT
  */
-(function(factory){if(typeof define==='function'&&define.amd){define(['jquery','smartmenus'],factory)}else if(typeof module==='object'&&typeof module.exports==='object'){module.exports=factory(require('jquery'))}else{factory(jQuery)}}(function($){$.extend($.SmartMenus.Bootstrap={},{keydownFix:!1,init:function(){var $navbars=$('ul.navbar-nav:not([data-sm-skip])');$navbars.each(function(){var $this=$(this),obj=$this.data('smartmenus');if(!obj){var skipBehavior=$this.is('[data-sm-skip-collapsible-behavior]'),rightAligned=$this.hasClass('ml-auto')||$this.prevAll('.mr-auto').length>0;$this.smartmenus({subMenusSubOffsetX:-8,subMenusSubOffsetY:0,subIndicators:!skipBehavior,collapsibleShowFunction:null,collapsibleHideFunction:null,rightToLeftSubMenus:rightAligned,bottomToTopSubMenus:$this.closest('.fixed-bottom').length>0,bootstrapHighlightClasses:''}).on({'show.smapi':function(e,menu){var $menu=$(menu),$scrollArrows=$menu.dataSM('scroll-arrows');if($scrollArrows){$scrollArrows.css('background-color',$menu.css('background-color'))}
-$menu.parent().addClass('show');if(obj.opts.keepHighlighted&&$menu.dataSM('level')>2){$menu.prevAll('a').addClass(obj.opts.bootstrapHighlightClasses)}},'hide.smapi':function(e,menu){var $menu=$(menu);$menu.parent().removeClass('show');if(obj.opts.keepHighlighted&&$menu.dataSM('level')>2){$menu.prevAll('a').removeClass(obj.opts.bootstrapHighlightClasses)}}});obj=$this.data('smartmenus');function onInit(){$this.find('a.current').each(function(){var $this=$(this);($this.hasClass('dropdown-item')?$this:$this.parent()).addClass('active')});$this.find('a.has-submenu').each(function(){var $this=$(this);if($this.is('[data-toggle="dropdown"]')){$this.dataSM('bs-data-toggle-dropdown',!0).removeAttr('data-toggle')}
-if(!skipBehavior&&$this.hasClass('dropdown-toggle')){$this.dataSM('bs-dropdown-toggle',!0).removeClass('dropdown-toggle')}})}
-onInit();function onBeforeDestroy(){$this.find('a.current').each(function(){var $this=$(this);($this.hasClass('active')?$this:$this.parent()).removeClass('active')});$this.find('a.has-submenu').each(function(){var $this=$(this);if($this.dataSM('bs-dropdown-toggle')){$this.addClass('dropdown-toggle').removeDataSM('bs-dropdown-toggle')}
-if($this.dataSM('bs-data-toggle-dropdown')){$this.attr('data-toggle','dropdown').removeDataSM('bs-data-toggle-dropdown')}})}
-obj.refresh=function(){$.SmartMenus.prototype.refresh.call(this);onInit();detectCollapsible(!0)};obj.destroy=function(refresh){onBeforeDestroy();$.SmartMenus.prototype.destroy.call(this,refresh)};if(skipBehavior){obj.opts.collapsibleBehavior='toggle'}
-var winW;function detectCollapsible(force){var newW=obj.getViewportWidth();if(newW!=winW||force){if(obj.isCollapsible()){$this.addClass('sm-collapsible')}else{$this.removeClass('sm-collapsible')}
-winW=newW}}
-detectCollapsible();$(window).on('resize.smartmenus'+obj.rootId,detectCollapsible)}});if($navbars.length&&!$.SmartMenus.Bootstrap.keydownFix){$(document).off('keydown.bs.dropdown.data-api','.dropdown-menu');if($.fn.dropdown&&$.fn.dropdown.Constructor&&typeof $.fn.dropdown.Constructor._dataApiKeydownHandler=='function'){$(document).on('keydown.bs.dropdown.data-api','.dropdown-menu.show',$.fn.dropdown.Constructor._dataApiKeydownHandler)}
-$.SmartMenus.Bootstrap.keydownFix=!0}}});$($.SmartMenus.Bootstrap.init);return $}))
+
+
+
+
+
+
 /*-----------------------------------------------------------------------------------*/
 /*	02. STICKY HEADER
 /*-----------------------------------------------------------------------------------*/
@@ -58,7 +54,18 @@ $.SmartMenus.Bootstrap.keydownFix=!0}}});$($.SmartMenus.Bootstrap.init);return $
  * Url: http://markgoodyear.com/labs/headhesive
  * License: MIT
  */
-!function(t,e){"function"==typeof define&&define.amd?define([],function(){return e()}):"object"==typeof exports?module.exports=e():t.Headhesive=e()}(this,function(){"use strict";var t=function(e,s){for(var o in s)s.hasOwnProperty(o)&&(e[o]="object"==typeof s[o]?t(e[o],s[o]):s[o]);return e},e=function(t,e){var s,o,i,n=Date.now||function(){return(new Date).getTime()},l=null,c=0,r=function(){c=n(),l=null,i=t.apply(s,o),s=o=null};return function(){var f=n(),h=e-(f-c);return s=this,o=arguments,0>=h?(clearTimeout(l),l=null,c=f,i=t.apply(s,o),s=o=null):l||(l=setTimeout(r,h)),i}},s=function(){return void 0!==window.pageYOffset?window.pageYOffset:(document.documentElement||document.body.parentNode||document.body).scrollTop},o=function(t,e){for(var s=0,o=t.offsetHeight;t;)s+=t.offsetTop,t=t.offsetParent;return"bottom"===e&&(s+=o),s},i=function(e,s){"querySelector"in document&&"addEventListener"in window&&(this.visible=!1,this.options={offset:300,offsetSide:"top",classes:{clone:"headhesive",stick:"headhesive--stick",unstick:"headhesive--unstick"},throttle:250,onInit:function(){},onStick:function(){},onUnstick:function(){},onDestroy:function(){}},this.elem="string"==typeof e?document.querySelector(e):e,this.options=t(this.options,s),this.init())};return i.prototype={constructor:i,init:function(){if(this.clonedElem=this.elem.cloneNode(!0),this.clonedElem.className+=" "+this.options.classes.clone,document.body.insertBefore(this.clonedElem,document.body.firstChild),"number"==typeof this.options.offset)this.scrollOffset=this.options.offset;else{if("string"!=typeof this.options.offset)throw new Error("Invalid offset: "+this.options.offset);this._setScrollOffset()}this._throttleUpdate=e(this.update.bind(this),this.options.throttle),this._throttleScrollOffset=e(this._setScrollOffset.bind(this),this.options.throttle),window.addEventListener("scroll",this._throttleUpdate,!1),window.addEventListener("resize",this._throttleScrollOffset,!1),this.options.onInit.call(this)},_setScrollOffset:function(){"string"==typeof this.options.offset&&(this.scrollOffset=o(document.querySelector(this.options.offset),this.options.offsetSide))},destroy:function(){document.body.removeChild(this.clonedElem),window.removeEventListener("scroll",this._throttleUpdate),window.removeEventListener("resize",this._throttleScrollOffset),this.options.onDestroy.call(this)},stick:function(){this.visible||(this.clonedElem.className=this.clonedElem.className.replace(new RegExp("(^|\\s)*"+this.options.classes.unstick+"(\\s|$)*","g"),""),this.clonedElem.className+=" "+this.options.classes.stick,this.visible=!0,this.options.onStick.call(this))},unstick:function(){this.visible&&(this.clonedElem.className=this.clonedElem.className.replace(new RegExp("(^|\\s)*"+this.options.classes.stick+"(\\s|$)*","g"),""),this.clonedElem.className+=" "+this.options.classes.unstick,this.visible=!1,this.options.onUnstick.call(this))},update:function(){s()>this.scrollOffset?this.stick():this.unstick()}},i});
+
+
+
+
+
+
+
+
+
+
+
+
 /*-----------------------------------------------------------------------------------*/
 /*	03. PICTUREFILL
 /*-----------------------------------------------------------------------------------*/
@@ -79,7 +86,7 @@ $.SmartMenus.Bootstrap.keydownFix=!0}}});$($.SmartMenus.Bootstrap.init);return $
  * http://mdd.mit-license.org
  *
  */
- !function(a){a.fn.hmbrgr=function(b){function g(b){a(b).css({width:c.width,height:c.height}).html("<span /><span /><span />").find("span").css({position:"absolute",width:"100%",height:c.barHeight,"border-radius":c.barRadius,"background-color":c.barColor,"transition-duration":c.speed+"ms"}),h(b),a.isFunction(c.onInit)&&c.onInit.call(this)}function h(b){a(b).data("clickable",!0).find("span").eq(0).css({top:d}),a(b).find("span").eq(1).css({top:e}),a(b).find("span").eq(2).css({top:f})}function i(b){a(b).on("click",function(c){c.preventDefault(),a(this).data("clickable")&&(a(this).data("clickable",!1),a(b).toggleClass("cross"),a(b).hasClass("cross")?j(b):k(b))})}function j(b){a(b).find("span").css({top:e}),setTimeout(function(){a(b).addClass(c.animation).data("clickable",!0),a.isFunction(c.onOpen)&&c.onOpen.call(this)},c.speed)}function k(b){a(b).removeClass(c.animation),setTimeout(function(){h(b),a.isFunction(c.onClose)&&c.onClose.call(this)},c.speed)}var c=a.extend({width:60,height:50,speed:200,barHeight:8,barRadius:0,barColor:"#ffffff",animation:"expand",onInit:null,onOpen:null,onClose:null},b),d=0,e=c.height/2-c.barHeight/2,f=c.height-c.barHeight;return this.each(function(){g(this),i(this)})}}(jQuery);
+ 
 /*-----------------------------------------------------------------------------------*/
 /*	05. SVG INJECT
 /*-----------------------------------------------------------------------------------*/

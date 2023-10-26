@@ -49,6 +49,37 @@ var winW;function detectCollapsible(force){var newW=obj.getViewportWidth();if(ne
 winW=newW}}
 detectCollapsible();$(window).on('resize.smartmenus'+obj.rootId,detectCollapsible)}});if($navbars.length&&!$.SmartMenus.Bootstrap.keydownFix){$(document).off('keydown.bs.dropdown.data-api','.dropdown-menu');if($.fn.dropdown&&$.fn.dropdown.Constructor&&typeof $.fn.dropdown.Constructor._dataApiKeydownHandler=='function'){$(document).on('keydown.bs.dropdown.data-api','.dropdown-menu.show',$.fn.dropdown.Constructor._dataApiKeydownHandler)}
 $.SmartMenus.Bootstrap.keydownFix=!0}}});$($.SmartMenus.Bootstrap.init);return $}))
+/*-----------------------------------------------------------------------------------*/
+/*	02. STICKY HEADER
+/*-----------------------------------------------------------------------------------*/
+/*!
+ * Headhesive.js v1.2.3 - An on-demand sticky header
+ * Author: Copyright (c) Mark Goodyear <@markgdyr> <http://markgoodyear.com>
+ * Url: http://markgoodyear.com/labs/headhesive
+ * License: MIT
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*-----------------------------------------------------------------------------------*/
 /*	03. PICTUREFILL
@@ -70,7 +101,7 @@ $.SmartMenus.Bootstrap.keydownFix=!0}}});$($.SmartMenus.Bootstrap.init);return $
  * http://mdd.mit-license.org
  *
  */
- !function(a){a.fn.hmbrgr=function(b){function g(b){a(b).css({width:c.width,height:c.height}).html("<span /><span /><span />").find("span").css({position:"absolute",width:"100%",height:c.barHeight,"border-radius":c.barRadius,"background-color":c.barColor,"transition-duration":c.speed+"ms"}),h(b),a.isFunction(c.onInit)&&c.onInit.call(this)}function h(b){a(b).data("clickable",!0).find("span").eq(0).css({top:d}),a(b).find("span").eq(1).css({top:e}),a(b).find("span").eq(2).css({top:f})}function i(b){a(b).on("click",function(c){c.preventDefault(),a(this).data("clickable")&&(a(this).data("clickable",!1),a(b).toggleClass("cross"),a(b).hasClass("cross")?j(b):k(b))})}function j(b){a(b).find("span").css({top:e}),setTimeout(function(){a(b).addClass(c.animation).data("clickable",!0),a.isFunction(c.onOpen)&&c.onOpen.call(this)},c.speed)}function k(b){a(b).removeClass(c.animation),setTimeout(function(){h(b),a.isFunction(c.onClose)&&c.onClose.call(this)},c.speed)}var c=a.extend({width:60,height:50,speed:200,barHeight:8,barRadius:0,barColor:"#ffffff",animation:"expand",onInit:null,onOpen:null,onClose:null},b),d=0,e=c.height/2-c.barHeight/2,f=c.height-c.barHeight;return this.each(function(){g(this),i(this)})}}(jQuery);
+ 
 /*-----------------------------------------------------------------------------------*/
 /*	05. SVG INJECT
 /*-----------------------------------------------------------------------------------*/

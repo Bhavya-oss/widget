@@ -22,7 +22,7 @@ $(document).ready(function() {
 				$language_sticky_dropdown.removeClass('show');
 			}
 		};
-		var banner = new Headhesive('.navbar', options);
+		/* var banner = new Headhesive('.navbar', options); */
 	}
 	$(function() {
 		$('.navbar .navbar-nav:not(.navbar-nav-other)').bind({
@@ -40,52 +40,12 @@ $(document).ready(function() {
 	/*-----------------------------------------------------------------------------------*/
 	/*	HEADER BUTTONS
 	/*-----------------------------------------------------------------------------------*/
-	var $header_hamburger = $('.hamburger.animate');
-	var $language_select = $('.language-select .dropdown-menu');
-	var $header_cart = $('.cart-dropdown .dropdown-menu');
-	var $navbar_offcanvas = $('.offcanvas-nav');
-	var $navbar_offcanvas_toggle = $('[data-toggle="offcanvas-nav"]');
-	var $navbar_offcanvas_close = $('.offcanvas-nav-close');
-	var $info_offcanvas = $('.offcanvas-info');
-	var $info_offcanvas_close = $('.offcanvas-info-close');
-	var $info_offcanvas_toggle = $('[data-toggle="offcanvas-info"]');
-	$header_hamburger.on("click", function() {
-		$header_hamburger.toggleClass("active");
-	});
-	$navbar_offcanvas_toggle.on("click", function(e) {
-		e.stopPropagation();
-		$navbar_offcanvas.toggleClass('open');
-	});
-	$navbar_offcanvas.on("click", function(e) {
-		e.stopPropagation();
-	});
-	$header_cart.on('click', function(e) {
-		e.stopPropagation();
-	});
-	$navbar_offcanvas_close.on("click", function(e) {
-		$navbar_offcanvas.removeClass('open');
-		$header_hamburger.removeClass('active');
-	});
-	$info_offcanvas_toggle.on("click", function(e) {
-		e.stopPropagation();
-		$info_offcanvas.toggleClass('open');
-	});
-	$info_offcanvas.on("click", function(e) {
-		e.stopPropagation();
-	});
-	$(document).on('click', function() {
-		$navbar_offcanvas.removeClass('open');
-		/*$language_select.collapse('hide');*/
-		$info_offcanvas.removeClass('open');
-		$header_hamburger.removeClass('active');
-	});
-	$info_offcanvas_close.on("click", function(e) {
-		$info_offcanvas.removeClass('open');
-	});
-	$('.onepage .navbar li a.scroll').on('click', function() {
-		$navbar_offcanvas.removeClass('open');
-		$header_hamburger.removeClass('active');
-	});
+	
+
+
+
+
+	
 	/*-----------------------------------------------------------------------------------*/
 	/*	ONEPAGE HEADER OFFSET
 	/*-----------------------------------------------------------------------------------*/
