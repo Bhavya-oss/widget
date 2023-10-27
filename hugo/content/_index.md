@@ -1,8 +1,8 @@
 ---
-title: "Biggworks: Evolving Your Big Ideas into Digital Reality"
+title: "BiggWorks - Product Engineering & Digital Acceleration Company"
 date: 2021-09-13T13:13:55+05:30
 draft: false
-description: "At Biggworks, we help top companies create exceptional digital products and solutions. Our services encompass product engineering, team extension, and UI/UX design. Let us turn your ideas into perfectly crafted digital reality."
+description: "BiggWorks is a leading Product Engineering and Software Development Company that works with global brands to design, build, ship and scale the IoT, Web and Mobile Apps."
 
 ---
 

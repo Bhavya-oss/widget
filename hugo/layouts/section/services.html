@@ -3,20 +3,7 @@
 {{ $resource := getJSON "https://cms.biggworks.com/services" }}
 
 <!-- {{ printf "My data: %s"  $resource}} -->
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ with .Title }}{{ . }}: {{ end }}</title>
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
-  <meta property="og:title" content="{{ with .Title }}{{ . }}: {{ end }}">
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://res.cloudinary.com/biggworks/image/upload/v1686046435/Group_11707_vve5db.png" />
-  <meta property="og:url" content="https://biggworks.com/services/" />
-  <meta name="twitter:card" content="summary" />
 
-</head>
 <body>
   <div class="content-wrapper">
     <header class="wrapper bg-gray">
