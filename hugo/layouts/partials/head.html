@@ -12,7 +12,7 @@
     name="robots"
     content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
   />
-  <link rel="canonical" href="https://www.biggworks.com/" />
+  <link rel="canonical" href="{{ .Params.link }}" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="website" />
   <meta
@@ -23,13 +23,15 @@
     property="og:description"
     content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}"
   />
-  <meta property="og:url" content="https://www.biggworks.com/" />
+  <meta property="og:url" content="{{ .Params.link }}" />
   <meta
     property="og:site_name"
     content="{{ with .Title }}{{ . }} {{ end }}"
   />
-  <meta property="og:image" content="logo-path" />
- 
+  <meta property="og:image" content="https://res.cloudinary.com/biggworks/image/upload/v1697800312/logo/Biggworks-logo.svg" />
+  <link rel="profile" href="https://gmpg.org/xfn/11">
+  <!-- <link rel="preload" href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@900&display=swap" as="font" type="font/woff2" crossorigin="anonymous"> -->
+
   <link
     rel="shortcut icon"
     href="https://res.cloudinary.com/biggworks/image/upload/v1697793760/logo/biggworks-favicon.ico"
