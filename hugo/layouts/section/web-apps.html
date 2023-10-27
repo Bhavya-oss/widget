@@ -1,5 +1,8 @@
 {{ define "main" }}
 {{ $resource := getJSON "http://bw-strapi:1337/web-apps" }}
+
+{{ $resource := getJSON "https://cms.biggworks.com/web-apps" }}
+
 <!-- {{ printf "My data: %s"  $resource}} -->
 
 <body>
@@ -14,7 +17,7 @@
         <section class="wrapper">
             <div class="container mt-xl-6 mt-0 mb-xxl-12 mb-xl-10 mb-md-8 mb-12">
                 <div class="row">
-                    <div class="col-xl-2 col-md-2 col-1 mt-xl-0 mt-md-4">
+                    <div class="col-xl-2 col-md-2 col-5 mt-xl-15 mt-md-15 mt-12">
                         <!-- <a href="/">
                 <img class="img-fluid col-xl-4 col-lg-7 col-md-10" src="https://res.cloudinary.com/biggworks/image/upload/v1691837164/Group_1_2_gp5lya.png" alt=""/>
             </a> -->
