@@ -467,7 +467,7 @@
 					<div class="modal-content">
 						<div class="modal-header">
 
-							<p type="button"  id="timesIcon1"class="btn-custum" data-bs-dismiss="modal" aria-label="Close">
+							<p type="button"  id="timesIcon1" class="btn-custum" data-bs-dismiss="modal" aria-label="Close">
 								<span class="iconify-inline" data-icon="la:times" style="font-size: 28px;"></span>
 
 							</p>
@@ -648,7 +648,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 
-						<p type="button" class="btn-custum" data-bs-dismiss="modal" aria-label="Close">
+						<p type="button" id="timesIcon2"  class="btn-custum" data-bs-dismiss="modal" aria-label="Close">
 							<span class="iconify-inline" data-icon="la:times" style="font-size: 28px;"></span>
 
 						</p>
@@ -787,7 +787,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 
-						<p type="button" class="btn-custum" data-bs-dismiss="modal" aria-label="Close">
+						<p type="button" id="timesIcon3" class="btn-custum" data-bs-dismiss="modal" aria-label="Close">
 							<span class="iconify-inline" data-icon="la:times" style="font-size: 28px;"></span>
 
 						</p>
@@ -952,7 +952,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 
-						<p type="button" class="btn-custum" data-bs-dismiss="modal" aria-label="Close">
+						<p type="button" id="timesIcon4" class="btn-custum" data-bs-dismiss="modal" aria-label="Close">
 							<span class="iconify-inline" data-icon="la:times" style="font-size: 28px;"></span>
 
 						</p>
@@ -1073,7 +1073,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 
-						<p type="button" class="btn-custum" data-bs-dismiss="modal" aria-label="Close">
+						<p type="button" id="timesIcon5" class="btn-custum" data-bs-dismiss="modal" aria-label="Close">
 							<span class="iconify-inline" data-icon="la:times" style="font-size: 28px;"></span>
 
 						</p>
@@ -1238,7 +1238,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 
-						<p type="button" class="btn-custum" data-bs-dismiss="modal" aria-label="Close">
+						<p type="button" id="timesIcon6" class="btn-custum" data-bs-dismiss="modal" aria-label="Close">
 							<span class="iconify-inline" data-icon="la:times" style="font-size: 28px;"></span>
 
 						</p>
@@ -1416,7 +1416,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 
-						<p type="button" class="btn-custum" data-bs-dismiss="modal" aria-label="Close">
+						<p type="button" id="timesIcon7" class="btn-custum" data-bs-dismiss="modal" aria-label="Close">
 							<span class="iconify-inline" data-icon="la:times" style="font-size: 28px;"></span>
 
 						</p>
@@ -1581,7 +1581,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 
-						<p type="button" class="btn-custum" data-bs-dismiss="modal" aria-label="Close">
+						<p type="button" id="timesIcon8" class="btn-custum" data-bs-dismiss="modal" aria-label="Close">
 							<span class="iconify-inline" data-icon="la:times" style="font-size: 28px;"></span>
 
 						</p>
@@ -1738,7 +1738,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 
-						<p type="button" class="btn-custum" data-bs-dismiss="modal" aria-label="Close">
+						<p type="button" id="timesIcon9" class="btn-custum" data-bs-dismiss="modal" aria-label="Close">
 							<span class="iconify-inline" data-icon="la:times" style="font-size: 28px;"></span>
 
 						</p>
@@ -1903,7 +1903,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 
-						<p type="button" class="btn-custum" data-bs-dismiss="modal" aria-label="Close">
+						<p type="button" id="timesIcon10" class="btn-custum" data-bs-dismiss="modal" aria-label="Close">
 							<span class="iconify-inline" data-icon="la:times" style="font-size: 28px;"></span>
 
 						</p>
@@ -2940,232 +2940,83 @@ formSubmit(data, formType)
 // 		// scrollToSection.scrollIntoView({ behavior: 'smooth' });
 		// });
 	</script>
-	<script>
-		  // when we click on apply now first modal will be opened
-		  document.getElementById("openFirstModal1").addEventListener("click", function () {
-          $("#1firstModal").fadeIn();
-        });
-		// when we click on see job details second modal will be opened
-		document.getElementById("openSecondModal1").addEventListener("click", function () {
-			$("#secondModal").fadeIn();
-        //   $("#1firstModal").fadeOut();
-        });
-				// when we click on see all jobs both modals will be closed
 
-		document.getElementById("closeModals1").addEventListener("click", function () {
-          $("#1firstModal").fadeOut();
-		  $("#secondModal").fadeOut();
-        });
-				// when we click on apply second modal will be closed and first modal will be opened
 
-		document.getElementById("goback1").addEventListener("click", function () {
-			$("#secondModal").fadeOut();
-          $("#1firstModal").fadeIn();
-        });
-				// when we click on iam interested second modal will be closed and first modal will be opened
-
-		document.getElementById("returnback1").addEventListener("click", function () {
-			$("#secondModal").fadeOut();
-          $("#1firstModal").fadeIn();
-        });
-
-		// this is close x mark for 1st modal
-		document.getElementById("timesIcon1").addEventListener("click", function () {
-    $("#1firstModal").fadeOut();
-});
-
-		//  close x mark for 2nd modal
-
-		document.getElementById("timesIcon2").addEventListener("click", function () {
-			$("#secondModal").fadeOut();
-          $("#1firstModal").fadeOut();
-        });
-
-      
-    
-
-	</script>
 
 <script>
-	// when we click on apply now first modal will be opened
-	document.getElementById("openFirstModal2").addEventListener("click", function () {
-	$("#2firstModal").fadeIn();
-  });
-  // when we click on see job details second modal will be opened
-  document.getElementById("openSecondModal2").addEventListener("click", function () {
-	  $("#2secondModal").fadeIn();
-  });
-		  // when we click on see all jobs both modals will be closed
-
-  document.getElementById("closeModals2").addEventListener("click", function () {
-	$("#2firstModal").fadeOut();
-	$("#2secondModal").fadeOut();
-  });
-		  // when we click on apply second modal will be closed and first modal will be opened
-
-  document.getElementById("goback2").addEventListener("click", function () {
-	  $("#2secondModal").fadeOut();
-	$("#2firstModal").fadeIn();
-  });
-		  // when we click on iam interested second modal will be closed and first modal will be opened
-
-  document.getElementById("returnback2").addEventListener("click", function () {
-	  $("#2secondModal").fadeOut();
-	$("#2firstModal").fadeIn();
-  });
-
-  // this is close x mark for 1st modal
-  document.getElementById("timesIcon3").addEventListener("click", function () {
-$("#2firstModal").fadeOut();
-});
-
-  //  close x mark for 2nd modal
-
-  document.getElementById("timesIcon4").addEventListener("click", function () {
-	  $("#2secondModal").fadeOut();
-	$("#2firstModal").fadeOut();
-  });
+	function modalHandlers(applyButtonId,modalId,jobDetailId,secondModalId,seeAllJobsId,innerApplyId,interestedId,closeModalOneId,closeModalTwoId){
+		const applyButton =document.getElementById(applyButtonId)
+		const modal =document.getElementById(modalId)
+		const secondModal=document.getElementById(secondModalId)
+		const jobDetailsModal=document.getElementById(jobDetailId)
+		const seeAllJobs=document.getElementById(seeAllJobsId)
+		const innerApply=document.getElementById(innerApplyId)
+		const interested=document.getElementById(interestedId)
+		const firstModalClose=document.getElementById(closeModalOneId)
+		const secondModalClose=document.getElementById(closeModalTwoId)
 
 
 
 
-</script>
-
-<script>
-	// when we click on apply now first modal will be opened
-	document.getElementById("openFirstModal3").addEventListener("click", function () {
-	$("#3firstModal").fadeIn();
-  });
-  // when we click on see job details second modal will be opened
-  document.getElementById("openSecondModal3").addEventListener("click", function () {
-	  $("#3secondModal").fadeIn();
-  });
-		  // when we click on see all jobs both modals will be closed
-
-  document.getElementById("closeModals3").addEventListener("click", function () {
-	$("#3firstModal").fadeOut();
-	$("#3secondModal").fadeOut();
-  });
-		  // when we click on apply second modal will be closed and first modal will be opened
-
-  document.getElementById("goback3").addEventListener("click", function () {
-	  $("#3secondModal").fadeOut();
-	$("#3firstModal").fadeIn();
-  });
-		  // when we click on iam interested second modal will be closed and first modal will be opened
-
-  document.getElementById("returnback3").addEventListener("click", function () {
-	  $("#3secondModal").fadeOut();
-	$("#3firstModal").fadeIn();
-  });
-
-  // this is close x mark for 1st modal
-  document.getElementById("timesIcon5").addEventListener("click", function () {
-$("#3firstModal").fadeOut();
-});
-
-  //  close x mark for 2nd modal
-
-  document.getElementById("timesIcon6").addEventListener("click", function () {
-	  $("#3secondModal").fadeOut();
-	$("#3firstModal").fadeOut();
-  });
 
 
+		if (applyButton) {
+			applyButton.addEventListener("click", function () {
+				modal.style.display = "block";
+        	});
+    	}
+		if(jobDetailsModal){
+			jobDetailsModal.addEventListener("click", function () {
+				modal.style.display = "none";
+				secondModal.style.display='block'
+        	});
+		}
+		if(seeAllJobs){
+			seeAllJobs.addEventListener('click',function(){
+				modal.style.display = "none";
+				secondModal.style.display='none'
+			})
+		}
+		if(innerApply){
+			innerApply.addEventListener('click',function(){
+				secondModal.style.display='none'
+				modal.style.display = "block";
+			})
+		}
+		if(interested){
+			interested.addEventListener('click',function(){
+				secondModal.style.display='none'
+				modal.style.display = "block";
+			})
+		}
+		if(firstModalClose){
+			firstModalClose.addEventListener('click',function(){
+				modal.style.display = "none";
+
+			})
+		}
+		if(secondModalClose){
+			secondModalClose.addEventListener('click',function(){
+				secondModal.style.display = "none";
+				modal.style.display='block'
+
+			})
+		}
 
 
-</script>
+
 	
-<script>
-	// when we click on apply now first modal will be opened
-	document.getElementById("openFirstModal4").addEventListener("click", function () {
-	$("#4firstModal").fadeIn();
-  });
-  // when we click on see job details second modal will be opened
-  document.getElementById("openSecondModal4").addEventListener("click", function () {
-	  $("#4secondModal").fadeIn();
-  });
-		  // when we click on see all jobs both modals will be closed
-
-  document.getElementById("closeModals4").addEventListener("click", function () {
-	$("#4firstModal").fadeOut();
-	$("#4secondModal").fadeOut();
-  });
-		  // when we click on apply second modal will be closed and first modal will be opened
-
-  document.getElementById("goback4").addEventListener("click", function () {
-	  $("#4secondModal").fadeOut();
-	$("#4firstModal").fadeIn();
-  });
-		  // when we click on iam interested second modal will be closed and first modal will be opened
-
-  document.getElementById("returnback4").addEventListener("click", function () {
-	  $("#4secondModal").fadeOut();
-	$("#4firstModal").fadeIn();
-  });
-
-  // this is close x mark for 1st modal
-  document.getElementById("timesIcon7").addEventListener("click", function () {
-$("#4firstModal").fadeOut();
-});
-
-  //  close x mark for 2nd modal
-
-  document.getElementById("timesIcon8").addEventListener("click", function () {
-	  $("#4secondModal").fadeOut();
-	$("#4firstModal").fadeOut();
-  });
-
-
+	}
+modalHandlers('openFirstModal1','1firstModal','openSecondModal1','secondModal','closeModals1','goback1','returnback1','timesIcon1','timesIcon2')
+modalHandlers('openFirstModal2','2firstModal','openSecondModal2','2secondModal','closeModals2','goback2','returnback2','timesIcon3','timesIcon4')
+modalHandlers('openFirstModal3','3firstModal','openSecondModal3','3secondModal','closeModals3','goback3','returnback3','timesIcon5','timesIcon6')
+modalHandlers('openFirstModal4','4firstModal','openSecondModal4','4secondModal','closeModals4','goback4','returnback4','timesIcon7','timesIcon8')
+modalHandlers('openFirstModal5','5firstModal','openSecondModal5','5secondModal','closeModals5','goback5','returnback5','timesIcon9','timesIcon10')
 
 
 </script>
 
-<script>
-	// when we click on apply now first modal will be opened
-	document.getElementById("openFirstModal5").addEventListener("click", function () {
-	$("#5firstModal").fadeIn();
-  });
-  // when we click on see job details second modal will be opened
-  document.getElementById("openSecondModal5").addEventListener("click", function () {
-	  $("#5secondModal").fadeIn();
-  //   $("#1firstModal").fadeOut();
-  });
-		  // when we click on see all jobs both modals will be closed
 
-  document.getElementById("closeModals5").addEventListener("click", function () {
-	$("#5firstModal").fadeOut();
-	$("#5secondModal").fadeOut();
-  });
-		  // when we click on apply second modal will be closed and first modal will be opened
-
-  document.getElementById("goback5").addEventListener("click", function () {
-	  $("#5secondModal").fadeOut();
-	$("#5firstModal").fadeIn();
-  });
-		  // when we click on iam interested second modal will be closed and first modal will be opened
-
-  document.getElementById("returnback5").addEventListener("click", function () {
-	  $("#5secondModal").fadeOut();
-	$("#5firstModal").fadeIn();
-  });
-
-  // this is close x mark for 1st modal
-  document.getElementById("timesIcon9").addEventListener("click", function () {
-$("#5firstModal").fadeOut();
-});
-
-  //  close x mark for 2nd modal
-
-  document.getElementById("timesIcon10").addEventListener("click", function () {
-	  $("#5secondModal").fadeOut();
-	$("#5firstModal").fadeOut();
-  });
-
-
-
-
-</script>
 	<!-- </div> -->
 	<!-- /.content-wrapper -->
 	{{ partial "footer.html" . }} {{ partial "page-progress.html" . }}

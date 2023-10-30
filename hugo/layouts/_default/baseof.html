@@ -9,22 +9,17 @@
         height="0"
         width="0"
         style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
+      ></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div id="content">{{- block "main" . }} {{- end }}</div>
 
+    {{- if not (or (eq .Type "iot-development") (eq .Type "mobile-apps") (eq .Type "web-apps") (eq .Type "staff-augmentation")) }} 
+      {{ partial "footer.html" . }}
+    {{- end }}
+
     <!-- {{ partial "job-application-scripts.html" . }}  -->
-    {{ partial "scripts.html" .}}
-
-    {{ partial "footer.html" . }} {{ partial "page-progress.html" . }}
-
-
+    {{ partial "page-progress.html" . }}
+    {{ partial "scripts.html" . }}
   </body>
 </html>
-
-<style>
-  .body{
-    overflow-x: hidden;
-  }
-</style>

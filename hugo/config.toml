@@ -24,4 +24,6 @@ blog = "/blog/:year/:month/:title/"
 [params]
   description = "Your default site description"
 
+enableSitemap = true
+
 
