@@ -13,9 +13,13 @@
   },
   "author": "BiggWorks",
   "homepage": "https://github.com/BiggWorks/BiggWorks-web/blob/main/README.md",
-  "dependencies": {
-  },
   "devDependencies": {
-    "hugo-extended": "^0.92.2"
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.1",
+    "hugo-extended": "^0.92.2",
+    "postcss-import": "^15.1.0",
+    "postcss-nested": "^6.0.1",
+    "postcss-preset-env": "^9.2.0"
   }
 }

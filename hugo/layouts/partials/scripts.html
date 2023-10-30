@@ -30,7 +30,6 @@
 
 
 
-<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
 {{ $js := resources.Get "js/custom-scripts.js" | resources.Minify | resources.Fingerprint }}
 <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 <!-- <script src="/js/custom-scripts.js"></script> -->
