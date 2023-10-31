@@ -14,25 +14,17 @@
         color: white;
         text-decoration: none; /* Remove underline from links */
     }
+
+
+    @media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{   }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
 </style>
  
-  <!-- <div class="bg-primary text-white fw-bold fs-15 mb-2">
-      <div class="container d-md-flex flex-md-row">
-                <div class="d-flex flex-row align-items-center">
-              <div class="icon text-white fs-22 mt-1 me-2"> <i class="uil uil-location-pin-alt"></i></div>
-              <address class="mb-0">Bengaluru, Mysuru, New York, Singapore</address>
-          </div>
-          <div class="d-flex flex-row align-items-center me-6 ms-auto">
-              <div class="icon text-white fs-22 mt-1 me-2"> <i class="uil uil-phone-volume"></i></div>
-              <p class="mb-0">+91 8088354074</p>
-          </div>
-          <div class="d-flex flex-row align-items-center">
-              <div class="icon text-white fs-22 mt-1 me-2"> <i class="uil uil-message"></i></div>
-              <p class="mb-0"><a href="mailto:sandbox@email.com" class="link-white hover">hello@biggworks.com</a></p>
-          </div>
-      </div>
-      /.container
-  </div> -->
+ 
   <nav
   class="navbar center-nav transparent navbar-expand-lg fixed-top">
   <div class="container-fluid flex-lg-row flex-nowrap align-items-center navbar-header-color" style="padding: 0% 5% 0% 5%;">
@@ -40,10 +32,10 @@
       <a href="/" >
         <img class="logo-dark img-fluid col-xxl-1 col-xl-2 col-lg-2 col-md-1 col-sm-1"
         src="https://res.cloudinary.com/biggworks/image/upload/v1697800312/logo/Biggworks-logo.svg"
-        alt="" />
+        alt="BiggWorks Logo Nav" />
     <img class="logo-light img-fluid col-xxl-1 col-xl-2 col-lg-2 col-md-1 col-sm-1"
         src="https://res.cloudinary.com/biggworks/image/upload/v1697800312/logo/Biggworks-logo.svg"
-        alt="" />
+        alt="Biggworks Logo" />
       </a>
     </div>
 
@@ -70,26 +62,9 @@
         <ul class="navbar-nav ml-auto">
         
 
-          <!-- <li class="nav-item dropdown" >
-            <a class="nav-link ropdown-toggle" href="{{ $nav.navlinks.services.link }}"  >
-              {{ $nav.navlinks.services.text }}
-              </a>
-           
-            <ul class="dropdown-menu">
-              <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage1.link }}">IOT Development
-              </a></li>
-              
-              <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage3.link }}">Mobile App Development</a></li>
-              <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage4.link }}">Web Development</a></li>
-              <li class="nav-item"><a class="dropdown-item" href="{{ $nav.navlinks.landingpage2.link }}">Staff Augmentation
-              </a></li>
-            </ul>  
-           
-            
-           
-          </li> -->
+         
   
-          <li class="nav-item dropdown-nav" >
+          <!-- <li class="nav-item dropdown-nav" >
             <a class="nav-link dropbtn-nav" href="{{ $nav.navlinks.services.link }}"  >
               {{ $nav.navlinks.services.text }}
               </a>
@@ -105,14 +80,14 @@
             </ul>  
            
             
-            <!-- <ul class="dropdown">
+            <ul class="dropdown">
               <li><a href="#">Germany</a></li>
               <li><a href="#">Australia</a></li>
               <li><a href="#">Switzerland</a></li>
               <li><a href="#">Japan</a></li>
-          </ul> -->
-          </li>
-          <div class="landingpagesinnavbar">
+          </ul>
+          </li> -->
+          <!-- <div class="landingpagesinnavbar">
   
             <ul style="padding-left: 0rem;">
               <li><a class="dropdown-item"  href="{{ $nav.navlinks.landingpage1.link }}" style="color: #fff; list-style: none; padding-left: 12px;">IOT Development</a></li>
@@ -123,7 +98,21 @@
               <li><a class="dropdown-item" href="{{ $nav.navlinks.landingpage2.link }}" style="color: white; list-style: none; padding-left: 12px;">Team Extension
               </a></li>
             </ul> 
+          </div> -->
+          <li class="nav-item dropdown">
+            <div style="display: flex;">
+            <a style="padding-right: 0px;" class="nav-link" href="{{ $nav.navlinks.services.link }}">
+                {{ $nav.navlinks.services.text }}
+            </a>
+            <a class="nav-link dropdown-toggle ps-3" href="#" data-bs-toggle="dropdown"></a>
           </div>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{ $nav.navlinks.landingpage1.link }}">IOT Development</a></li>
+                <li><a class="dropdown-item" href="{{ $nav.navlinks.landingpage3.link }}">Mobile App Development</a></li>
+                <li><a class="dropdown-item" href="{{ $nav.navlinks.landingpage4.link }}">Web Development</a></li>
+                <li><a class="dropdown-item" href="{{ $nav.navlinks.landingpage2.link }}">Team Extension</a></li>
+            </ul>
+        </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ $nav.navlinks.works.link }}"
               >{{ $nav.navlinks.works.text }}</a

@@ -11,7 +11,7 @@
 <script
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-  crossorigin="anonymous"
+  crossorigin="anonymous" async
 ></script>
 <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js" async></script>
 <!-- {{ $scripts := resources.Get "/js/scripts.js" | resources.Minify }}
@@ -20,7 +20,7 @@
 {{ $plugins := resources.Get "/js/plugins.js" | resources.Minify }}
 <script src="{{ $plugins.RelPermalink }}"></script> -->
 
-<script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+<script src="https://code.iconify.design/3/3.1.1/iconify.min.js" async></script>
 
 <!-- {{ $os := slice (resources.Get "/js/scripts.js") (resources.Get "/js/plugins.js") | resources.Concat "js/all.js" | resources.Minify }}
 <script src="{{ $os.RelPermalink }}"></script> -->
@@ -30,9 +30,9 @@
 
 
 
-{{ $js := resources.Get "js/custom-scripts.js" | resources.Minify | resources.Fingerprint }}
-<script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
-<!-- <script src="/js/custom-scripts.js"></script> -->
+<!-- {{ $js := resources.Get "js/custom-scripts.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script> -->
+<script src="/js/custom-scripts.js"></script>
 <!-- Google tag (gtag.js) -->
 
 <script
