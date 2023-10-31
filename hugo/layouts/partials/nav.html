@@ -100,12 +100,14 @@
             </ul> 
           </div> -->
           <li class="nav-item dropdown">
-            <div style="display: flex;">
-            <a style="padding-right: 0px;" class="nav-link" href="{{ $nav.navlinks.services.link }}">
+
+            
+            <!-- <div > -->
+            <a class="nav-link" href="{{ $nav.navlinks.services.link }}">
                 {{ $nav.navlinks.services.text }}
             </a>
-            <a class="nav-link dropdown-toggle ps-3" href="#" data-bs-toggle="dropdown"></a>
-          </div>
+            <a class="nav-link dropdown-toggle ps-3 d-lg-none" href="#" data-bs-toggle="dropdown"></a>
+          <!-- </div> -->
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="{{ $nav.navlinks.landingpage1.link }}">IOT Development</a></li>
                 <li><a class="dropdown-item" href="{{ $nav.navlinks.landingpage3.link }}">Mobile App Development</a></li>
