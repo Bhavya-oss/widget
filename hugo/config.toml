@@ -1,9 +1,10 @@
-  BaseURL = "https://Biggworks.in"
+  BaseURL = "https://Biggworks.com"
   languageCode = "en-us"
   title = "Biggworks"
   relativeURLS = true
   enableRobotsTXT = true
   disableHugoGeneratorInject = true
+  disableLiveReload = true
 
 ignoreErrors = ["error-remote-getjson"]
 
