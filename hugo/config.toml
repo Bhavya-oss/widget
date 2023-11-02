@@ -1,7 +1,6 @@
   BaseURL = "https://Biggworks.com"
   languageCode = "en-us"
   title = "Biggworks"
-  disableLiveReload = true
   relativeURLS = true
   enableRobotsTXT = true
   disableHugoGeneratorInject = true
@@ -24,6 +23,6 @@ blog = "/blog/:year/:month/:title/"
 [params]
   description = "Your default site description"
 
-  enableSitemap = true
+enableSitemap = true
 
 
