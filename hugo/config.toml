@@ -4,7 +4,7 @@
   relativeURLS = true
   enableRobotsTXT = true
   disableHugoGeneratorInject = true
-  disableLiveReload = fals
+  disableLiveReload = false
 
 ignoreErrors = ["error-remote-getjson"]
 
