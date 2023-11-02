@@ -33,7 +33,7 @@ services:
     image: klakegg/hugo:0.101.0
     restart: always
     #network_mode: bridge
-    command: server
+    command: server --disableLiveReload
     depends_on:
       - strapi
     ports:
