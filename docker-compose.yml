@@ -31,9 +31,9 @@ services:
   hugo:
     container_name: bw-hugo
     image: klakegg/hugo:0.101.0
-    restart: always
+    # restart: always
     #network_mode: bridge
-    command: server
+    command: server --noHTTPCache
     depends_on:
       - strapi
     ports:
