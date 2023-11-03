@@ -83,7 +83,7 @@ function saveRecordtoDatabase() {
 }
 
 function handleFormFieldChange(e, fieldName) {
-  var inputValue = e.value;
+  const inputValue = e.value;
 
   if (inputValue.trim() !== "") {
     displayError(fieldName, "");
@@ -195,6 +195,33 @@ if (email.trim() === "") {
 }
 
 
+const rows = document.querySelectorAll('.talent-rows');
+var hiddenRows = Array.from(rows).slice(3);
+
+const readMoreButton = document.getElementById('read-more');
+const readLessButton = document.getElementById('read-less');
+console.log(rows)
+hiddenRows.forEach(item => item.classList.add('hidden'))
+if (rows.length <= 3) {
+    readMoreButton.classList.toggle('d-none');
+}
+// Show or hide the rows based on the button click
+function toggleRows(event) {
+    event.preventDefault();
+    hiddenRows.forEach(row => {
+        row.classList.toggle('hidden');
+    });
+    readMoreButton.classList.toggle('d-none');
+    readLessButton.classList.toggle('d-none');
+};
+
+// Add click event listener to the "Read More" button
+readMoreButton.addEventListener('click', toggleRows);
+
+// Add click event listener to the "Read Less" button
+readLessButton.addEventListener('click', toggleRows);
+
+
 
 let emailInfo = firebase.database().ref("emailInfo");
 
@@ -240,6 +267,26 @@ function submitEmail() {
   }
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+  var h6Elements = document.querySelectorAll('.truncate-h6');
+  var pElements = document.querySelectorAll('.truncate-p');
+
+  h6Elements.forEach(function (h6Element) {
+      var text = h6Element.textContent;
+
+      if (text.length > 66) {
+          h6Element.textContent = text.slice(0, 66) + '...';
+      }
+  });
+
+  pElements.forEach(function (pElement) {
+      var pText = pElement.textContent;
+
+      if (pText.length > 33) {
+          pElement.textContent = pText.slice(0, 33) + '...';
+      }
+  });
+});
 
 
 

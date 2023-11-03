@@ -195,31 +195,31 @@ if (email.trim() === "") {
 }
 
 
-const rows = document.querySelectorAll('.talent-rows');
-var hiddenRows = Array.from(rows).slice(3);
+// const rows = document.querySelectorAll('.talent-rows');
+// var hiddenRows = Array.from(rows).slice(3);
 
-const readMoreButton = document.getElementById('read-more');
-const readLessButton = document.getElementById('read-less');
-console.log(rows)
-hiddenRows.forEach(item => item.classList.add('hidden'))
-if (rows.length <= 3) {
-    readMoreButton.classList.toggle('d-none');
-}
-// Show or hide the rows based on the button click
-function toggleRows(event) {
-    event.preventDefault();
-    hiddenRows.forEach(row => {
-        row.classList.toggle('hidden');
-    });
-    readMoreButton.classList.toggle('d-none');
-    readLessButton.classList.toggle('d-none');
-};
+// const readMoreButton = document.getElementById('read-more');
+// const readLessButton = document.getElementById('read-less');
+// console.log(rows)
+// hiddenRows.forEach(item => item.classList.add('hidden'))
+// if (rows.length <= 3) {
+//     readMoreButton.classList.toggle('d-none');
+// }
+// // Show or hide the rows based on the button click
+// function toggleRows(event) {
+//     event.preventDefault();
+//     hiddenRows.forEach(row => {
+//         row.classList.toggle('hidden');
+//     });
+//     readMoreButton.classList.toggle('d-none');
+//     readLessButton.classList.toggle('d-none');
+// };
 
-// Add click event listener to the "Read More" button
-readMoreButton.addEventListener('click', toggleRows);
+// // Add click event listener to the "Read More" button
+// readMoreButton.addEventListener('click', toggleRows);
 
-// Add click event listener to the "Read Less" button
-readLessButton.addEventListener('click', toggleRows);
+// // Add click event listener to the "Read Less" button
+// readLessButton.addEventListener('click', toggleRows);
 
 
 
@@ -266,6 +266,7 @@ function submitEmail() {
     errorContainer.innerHTML = ""; // Clear error messages
   }
 }
+
 
 
 

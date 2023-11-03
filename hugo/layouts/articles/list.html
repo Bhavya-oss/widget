@@ -35,23 +35,43 @@
     </div>
   </section>
 
-  <section class="wrapper bg-light">
+  <section class="wrapper bg-light d-xl-block d-lg-block d-md-block d-sm-block d-none">
     <div class="container pt-10 pb-11">
       <div class="row gy-12 gx-12 mx-auto mb-10">
         {{ $firstPage := true }}
         {{ range where .Site.Pages "Section" "articles" }}
             {{ if not $firstPage }}
-                <div class="col-12 col-md-4 col-lg-3 col-xl-3 col-xxl-3" data-group="page-title">
-                    <div class="card">
+                <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 mb-10" data-group="page-title">
+                    <div>
                         <div class="articles_card_body">
-                            <img class="img-fluid" src="{{ .Params.image }}" alt="image there"/>
-                            <h6 class="mb-11 mt-4">{{ .Params.subtitle }}</h6>
-                            <div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
-                                <span><a href="{{ .Params.link }}" class="btn btn-primary rounded-0 mx-1">Read Post</a></span>
+                          <div class="d-flex">
+                            <div style="width: 300px;">
+                            <img class="img-fluid" style="width: 100%; height: auto;" src="{{ .Params.image }}" alt="image there"/>
+                          </div>
+                            <div style="margin-left: 20px; width: 700px;">
+                                                          <h6 class="mb-2 truncate-h6">{{ .Params.main_title }} </h6>
+                                                          <p style="margin-bottom: 8px;" class="truncate-h6" >{{ .Params.section_one_description }} </p>
+                                                          <div class="d-flex justify-content-end align-items-end mt-10">
+
+                                                            <a href="{{ .Params.link }}" class="more hover link-primary">
+                                                                Read Post
+                                                                <span class="iconify-inline" data-icon="zondicons:arrow-right" style="font-size: 28px; padding-top: 10px;"></span>
+                                                            </a>
+                                                        </div>
                             </div>
+
+                            
+                          </div>
+                          
+
+                            <!-- <h6 class="mb-11 mt-4">{{ .Params.subtitle }}</h6> -->
+                            <!-- <div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
+                                <span><a href="{{ .Params.link }}" class="btn btn-primary rounded-0 mx-1">Read Post</a></span>
+                            </div> -->
                         </div>
                     </div>
                 </div>
+                
             {{ else }}
                 {{ $firstPage = false }} <!-- Set $firstPage to false after the first page -->
             {{ end }}
@@ -60,6 +80,76 @@
 </div>
 </div>
 </section>
+
+
+<section class="wrapper bg-light d-md-none">
+  <div class="pt-10 pb-11">
+    <div class="row gy-12 gx-12 mx-auto mb-10">
+      {{ $firstPage := true }}
+      {{ range where .Site.Pages "Section" "articles" }}
+          {{ if not $firstPage }}
+              <div class="col-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 mb-2" data-group="page-title">
+                  <div>
+                      <div class="articles_card_body">
+                        <div class="d-flex">
+                          <div style="width: 300px;">
+                          <img class="img-fluid" style="width: 100%; height: auto;" src="{{ .Params.image }}" alt="image there"/>
+                        </div>
+                          <div style="margin-left: 20px; width: 700px;">
+                                                        <h6 class="mb-0 truncate-p">{{ .Params.main_title }}</h6>
+                                                        <p style="margin-bottom: 0px;" class="truncate-p" >{{ .Params.section_one_description }}</p>
+                                                        <div class="d-flex justify-content-end align-items-end">
+
+                                                          <a href="{{ .Params.link }}" class="more hover link-primary">
+                                                             
+                                                              <span class="iconify-inline" data-icon="zondicons:arrow-right" ></span>
+                                                          </a>
+                                                      </div>
+                          </div>
+
+                          
+                        </div>
+                        
+
+                          <!-- <h6 class="mb-11 mt-4">{{ .Params.subtitle }}</h6> -->
+                          <!-- <div class="d-flex justify-content-center" data-group="page-title-buttons" data-delay="600">
+                              <span><a href="{{ .Params.link }}" class="btn btn-primary rounded-0 mx-1">Read Post</a></span>
+                          </div> -->
+                      </div>
+                  </div>
+              </div>
+              
+          {{ else }}
+              {{ $firstPage = false }} <!-- Set $firstPage to false after the first page -->
+          {{ end }}
+      {{ end }}
+
 </div>
+</div>
+</section>
+</div>
+<script>
+
+ document.addEventListener('DOMContentLoaded', function () {
+    var h6Elements = document.querySelectorAll('.truncate-h6');
+    var pElements = document.querySelectorAll('.truncate-p');
+
+    h6Elements.forEach(function (h6Element) {
+        var text = h6Element.textContent;
+
+        if (text.length > 66) {
+            h6Element.textContent = text.slice(0, 66) + '...';
+        }
+    });
+
+    pElements.forEach(function (pElement) {
+        var pText = pElement.textContent;
+
+        if (pText.length > 33) {
+            pElement.textContent = pText.slice(0, 33) + '...';
+        }
+    });
+});
+</script>
 </body>
 {{ end }}
