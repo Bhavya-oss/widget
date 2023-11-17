@@ -5,6 +5,7 @@ draft: false
 
 link: multi-layer-pcbs-vs-single-layer
 main_title: "Multi-Layer PCBs vs. Single-Layer: Pros and Cons for IoT"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "The design of a printed circuit board (PCB) is a pivotal decision in the development of Internet of Things (IoT) devices. When it comes to PCBs, one key choice is between multi-layer and single-layer configurations. Each option has its own set of advantages and drawbacks, and understanding these can significantly impact the performance, cost, and complexity of your IoT device."
 

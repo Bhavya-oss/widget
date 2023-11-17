@@ -4,6 +4,7 @@ date: 2023-09-08T17:36:35+05:30
 draft: false
 link: choosing-the-right-server-technology
 main_title: "Choosing the Right Server Technology: Apache, Nginx, or Microsoft IIS"
+image: https://res.cloudinary.com/biggworks/image/upload/v1699619963/Posts/Choosing_the_Right_Server_Technology__Apache__Nginx__or_Microsoft_IIS_v3a7vb.png
 
 section_one_description: "Selecting the appropriate server technology is a crucial step in web development. This article delves into the merits of three popular options: Apache, Nginx, and Microsoft IIS. By understanding their unique features, you can make an informed decision that aligns with your application's requirements."
 

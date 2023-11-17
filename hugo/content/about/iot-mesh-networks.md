@@ -5,6 +5,7 @@ draft: false
 
 link: iot-mesh-networks
 main_title: "IoT Mesh Networks: Building Resilient and Scalable Connectivity"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "IoT devices are becoming increasingly prevalent, and their connectivity needs continue to evolve. One solution gaining traction is IoT mesh networks. These networks offer resilient and scalable connectivity, making them ideal for large-scale IoT deployments."
 

@@ -6,6 +6,7 @@ draft: false
 
 link: the-evolution-of-wireless-technologies-in-iot
 main_title: "The Evolution of Wireless Technologies in IoT: From 2G to 5G"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "The Internet of Things (IoT) has undergone a remarkable transformation over the years, driven in part by advancements in wireless technologies. From the early days of 2G to the cutting-edge 5G networks, the evolution of wireless technologies has played a pivotal role in shaping the IoT landscape."
 

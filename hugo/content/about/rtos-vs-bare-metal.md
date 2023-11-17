@@ -5,6 +5,7 @@ draft: false
 
 link: rtos-vs-bare-metal
 main_title: "RTOS vs. Bare Metal: Choosing the Right Approach for IoT Firmware"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "When it comes to developing firmware for Internet of Things (IoT) devices, one of the fundamental decisions you'll face is whether to use a Real-Time Operating System (RTOS) or adopt a Bare Metal approach. Both have their merits and are suitable for different IoT applications. Let's explore the pros and cons to help you make an informed choice."
 

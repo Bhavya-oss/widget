@@ -6,6 +6,7 @@ draft: false
 
 link: material-design-vs-human-interface-guidelines
 main_title: "Material Design vs. Human Interface Guidelines"
+image: https://res.cloudinary.com/biggworks/image/upload/v1699619962/Posts/Exploring_App_Design_Trends__Material_Design_vs._Human_Interface_Guidelines_1_aqom9i.png
 
 section_one_description: "In the vibrant landscape of app design, two prominent trends, Material Design and Human Interface Guidelines (HIG), stand out for shaping the visual and interactive aspects of mobile and web applications. This article dives into the distinctive features of Material Design and HIG, unraveling their philosophies and helping designers navigate their creative journey."
 section_two_title: "Material Design: Google's Unified Aesthetic"

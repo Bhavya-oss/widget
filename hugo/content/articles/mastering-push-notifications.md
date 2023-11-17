@@ -3,7 +3,7 @@ title: "Mastering Push Notifications"
 date: 2023-09-07T20:14:13+05:30
 draft: false
 pdf_path: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/iOS_vs._Android_Navigating_the_App_Development_Landscape_xxe5vn.pdf#toolbar=0
-image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/iOS_vs._Android_Navigating_the_App_Development_Landscape_xxe5vn.png
+image: https://res.cloudinary.com/biggworks/image/upload/v1699619962/Posts/Mastering_Push_Notifications__Techniques_to_Engage_Mobile_App_Users_neuez4.png
 link: mastering-push-notifications
 # subtitle: "Navigating frontend frameworks"
 

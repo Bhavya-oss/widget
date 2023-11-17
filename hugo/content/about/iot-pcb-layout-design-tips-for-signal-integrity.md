@@ -5,6 +5,7 @@ draft: false
 
 link: iot-pcb-layout-design-tips-for-signal-integrity
 main_title: "IoT PCB Layout Design Tips for Signal Integrity"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "The success of an Internet of Things (IoT) device often depends on the integrity of signals on its printed circuit board (PCB). Signal integrity issues can lead to data corruption, reduced performance, or even device failure."
 

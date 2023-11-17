@@ -5,6 +5,7 @@ draft: false
 
 link: debugging-iot-firmware
 main_title: "Debugging IoT Firmware: Strategies for a Smooth Development Process"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "Developing firmware for Internet of Things (IoT) devices can be challenging due to the complexity of hardware interactions and remote deployment. Effective debugging is crucial to ensure a smooth development process. "
 

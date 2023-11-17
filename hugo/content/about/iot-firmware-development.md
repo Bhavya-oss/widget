@@ -5,6 +5,7 @@ draft: false
 
 link: iot-firmware-development
 main_title: "IoT Firmware Development: Best Practices and Pitfalls to Avoid"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "In the world of IoT (Internet of Things), firmware serves as the bridge between hardware and software, enabling IoT devices to function seamlessly. Developing firmware for IoT devices can be a complex endeavor, but following best practices while avoiding common pitfalls can streamline the process and lead to a more successful product."
 

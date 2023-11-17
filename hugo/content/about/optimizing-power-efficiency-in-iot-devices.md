@@ -5,6 +5,7 @@ draft: false
 
 link: optimizing-power-efficiency-in-iot-devices
 main_title: "Optimizing Power Efficiency in IoT Devices: Hardware Strategies"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "Power efficiency is a critical consideration in the development of Internet of Things (IoT) devices, especially those running on battery power. Prolonging battery life not only improves user experience but also reduces maintenance costs. Hardware optimization plays a pivotal role in achieving power-efficient IoT devices."
 

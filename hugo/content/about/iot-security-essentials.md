@@ -5,6 +5,7 @@ draft: false
 
 link: iot-security-essentials
 main_title: "IoT Security Essentials: Protecting Data and Devices"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "The rapid proliferation of Internet of Things (IoT) devices has brought convenience and efficiency to our lives, but it has also raised significant security concerns. Protecting IoT data and devices is paramount to ensure privacy, prevent breaches, and maintain the integrity of connected systems. Here are some IoT security essentials to safeguard your data and devices."
 

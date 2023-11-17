@@ -4,6 +4,7 @@ date: 2023-09-08T18:18:42+05:30
 draft: false
 link: fostering-web-app-success
 main_title: "Fostering Web App Success through User-Centric Design: Embracing UI/UX Trends and Best Practices"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "In the realm of web app development, the key to success lies in placing users at the center of the design process. This article delves into the significance of user-centric design, exploring evolving UI/UX trends and best practices that empower developers to create web apps that resonate with users and drive engagement."
 

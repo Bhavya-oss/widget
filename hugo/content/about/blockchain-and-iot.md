@@ -5,6 +5,7 @@ draft: false
 
 link: blockchain-and-iot
 main_title: "Blockchain and IoT: Enhancing Security and Trust"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "The synergy between blockchain and the Internet of Things (IoT) holds immense potential for enhancing security, transparency, and trust in connected devices and data. Blockchain technology, known for its decentralized and immutable ledger, addresses many of the security challenges faced by IoT ecosystems."
 

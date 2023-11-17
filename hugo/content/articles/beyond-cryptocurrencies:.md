@@ -6,6 +6,7 @@ draft: false
 
 link: beyond-cryptocurrencies
 main_title: "Beyond Cryptocurrencies: Exploring Blockchain's Role in Mobile App Development"
+image: https://res.cloudinary.com/biggworks/image/upload/v1699619963/Posts/Beyond_Cryptocurrencies__Exploring_Blockchain_s_Role_in_Mobile_App_Development_mndfsu.png
 
 section_one_description: "Blockchain technology, initially synonymous with cryptocurrencies, has transcended its origins to revolutionize various industries, including mobile app development. This article delves into the transformative potential of blockchain beyond cryptocurrencies, highlighting its applications, benefits, and the impact it brings to mobile app development."
 section_two_title: "Evolving Beyond Cryptocurrencies"

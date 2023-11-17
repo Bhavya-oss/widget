@@ -5,6 +5,7 @@ draft: false
 
 link: advanced-pcb-design-techniques-for-miniaturized-iot-devices
 main_title: "Advanced PCB Design Techniques for Miniaturized IoT Devices"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "Designing PCBs for miniaturized Internet of Things (IoT) devices presents unique challenges. These devices demand compact, efficient, and reliable PCB layouts to function optimally."
 

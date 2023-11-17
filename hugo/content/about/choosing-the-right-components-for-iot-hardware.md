@@ -6,6 +6,7 @@ draft: false
 
 link: choosing-the-right-components-for-iot-hardware
 main_title: "Choosing the Right Components for IoT Hardware: A Guide"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "The success of an Internet of Things (IoT) hardware project hinges on selecting the right components. Whether you're designing a smart device for healthcare, agriculture, or industrial automation, making informed component choices is essential."
 

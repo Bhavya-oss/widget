@@ -5,6 +5,7 @@ draft: false
 
 link: comparing-iot-connectivity-protocols
 main_title: "Comparing IoT Connectivity Protocols: Wi-Fi, Bluetooth, and More"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "Choosing the right connectivity protocol is a crucial decision in Internet of Things (IoT) device development. Each protocol offers distinct advantages and suits specific use cases. Let's compare some popular IoT connectivity protocols to help you make an informed choice."
 

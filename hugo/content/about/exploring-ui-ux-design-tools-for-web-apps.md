@@ -5,6 +5,7 @@ draft: false
 
 link: exploring-ui-ux-design-tools-for-web-apps
 main_title: "Exploring UI/UX Design Tools for Web Apps: Advantages and Considerations"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "When it comes to crafting visually appealing and user-friendly web apps, the choice of UI/UX design tools plays a pivotal role. This article delves into the best tools available, highlighting their advantages and potential drawbacks to help developers make informed decisions and elevate their design process."
 

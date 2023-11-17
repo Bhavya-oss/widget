@@ -5,6 +5,7 @@ draft: false
 
 link: deciding-between-relational-and-nosql-databases
 main_title: "Deciding Between Relational and NoSQL Databases: Matching Your Data's Needs"
+image: https://res.cloudinary.com/biggworks/image/upload/v1699619963/Posts/Deciding_Between_Relational_and_NoSQL_Databases__Matching_Your_Data_s_Needs_c7s2v2.png
 
 section_one_description: "Choosing the right database type is a pivotal decision in web development. This article explores the merits of relational databases (MySQL, PostgreSQL) and NoSQL databases (MongoDB, Firebase), guiding you to select the optimal database solution that aligns with your data's characteristics."
 

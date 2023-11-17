@@ -271,6 +271,30 @@ function submitEmail() {
 
 
 
+document.addEventListener('DOMContentLoaded', function () {
+   var h6Elements = document.querySelectorAll('.truncate-h6');
+   var pElements = document.querySelectorAll('.truncate-p');
+
+   h6Elements.forEach(function (h6Element) {
+       var text = h6Element.textContent;
+
+       if (text.length > 66) {
+           h6Element.textContent = text.slice(0, 66) + '...';
+       }
+   });
+
+   pElements.forEach(function (pElement) {
+       var pText = pElement.textContent;
+
+       if (pText.length > 33) {
+           pElement.textContent = pText.slice(0, 33) + '...';
+       }
+   });
+});
+
+
+
+
   function openModal(modalId) {
 var modal = document.getElementById(modalId);
 modal.style.display = "block";

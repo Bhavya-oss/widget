@@ -4,6 +4,7 @@ date: 2023-10-05T15:44:27+05:30
 draft: false
 link: essential-steps-in-iot-hardware-design
 main_title: "Essential Steps in IoT Hardware Design: From Concept to Prototype"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "In the fast-paced world of IoT (Internet of Things), hardware design plays a pivotal role in bringing innovative ideas to life. Whether you're a seasoned IoT developer or a startup with a groundbreaking concept, the journey from idea to a working prototype is a critical one. To help you navigate this path successfully."
 

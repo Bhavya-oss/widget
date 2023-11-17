@@ -6,6 +6,7 @@ draft: false
 
 link: comparing-top-react-ui-libraries
 main_title: "Comparing Top React UI Libraries: Material Design, Ant Design, and React Bootstrap"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "In the realm of modern web development, React UI libraries are pivotal in crafting efficient and visually appealing user interfaces. This article presents a comprehensive comparison of three prominent options: Material Design, Ant Design, and React Bootstrap. By understanding their features and strengths, developers can make informed choices that elevate their projects to new levels of design and functionality."
 

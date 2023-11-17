@@ -4,6 +4,7 @@ date: 2023-09-08T16:48:47+05:30
 draft: false
 link: navigating-backend-frameworks
 main_title: "Navigating Backend Frameworks: Django, Node.js, Ruby on Rails, or Spring Boot?"
+image: https://res.cloudinary.com/biggworks/image/upload/v1699619963/Posts/Navigating_Backend_Frameworks__Django__Node.js__Ruby_on_Rails__or_Spring_Boot_wcohsh.png
 
 section_one_description: "Selecting the ideal backend framework is a pivotal decision in web development. This article delves into the advantages and disadvantages of four prominent options: Django, Node.js, Ruby on Rails, and Spring Boot. By understanding their unique features, developers can make informed decisions that align with their project's goals."
 

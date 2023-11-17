@@ -4,6 +4,7 @@ date: 2023-10-05T16:16:33+05:30
 draft: false
 link: pcb-design-for-iot
 main_title: "PCB Design for IoT: Key Considerations and Challenges"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "The success of an IoT (Internet of Things) device often hinges on the quality of its Printed Circuit Board (PCB) design. PCBs serve as the backbone of IoT hardware, connecting various components and enabling seamless functionality. To help you navigate the intricate world of PCB design for IoT."
 

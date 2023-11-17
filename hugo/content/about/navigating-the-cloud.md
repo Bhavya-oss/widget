@@ -5,6 +5,7 @@ draft: false
 
 link: navigating-the-cloud
 main_title: "Navigating the Cloud: Choosing Between AWS, Azure, and Google Cloud"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "In the realm of cloud computing, selecting the right provider is a pivotal decision that can impact the efficiency, scalability, and success of your projects. This article offers a concise comparison of three major contenders: Amazon Web Services (AWS), Microsoft Azure, and Google Cloud. By understanding their offerings and strengths, you can make an informed choice that aligns with your business goals and technical needs."
 

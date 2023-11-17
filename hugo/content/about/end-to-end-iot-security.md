@@ -6,6 +6,7 @@ draft: false
 
 link: end-to-end-iot-security
 main_title: "End-to-End IoT Security: A Comprehensive Approach"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "The proliferation of Internet of Things (IoT) devices has brought convenience and innovation to countless industries. However, it has also raised significant security concerns. Securing IoT devices and ecosystems from end to end is paramount to protect data, privacy, and critical infrastructure. Here's a comprehensive approach to ensure robust IoT security."
 

@@ -7,6 +7,7 @@ draft: false
 
 link: iot-security-compliance
 main_title: "IoT Security Compliance: Navigating Regulations and Standards"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "The Internet of Things (IoT) has brought immense innovation, but it has also raised significant security concerns. To address these concerns, various regulations and standards have emerged. Navigating the landscape of IoT security compliance is essential for ensuring the protection of data and devices in IoT ecosystems."
 

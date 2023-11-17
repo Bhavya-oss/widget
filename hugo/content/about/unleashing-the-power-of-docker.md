@@ -4,6 +4,7 @@ date: 2023-10-05T14:27:15+05:30
 draft: false
 link: unleashing-the-power-of-docker
 main_title: "Unleashing the Power of Docker: Transforming Modern Web Product Development"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "In the fast-paced world of modern web product development, Docker has emerged as a revolutionary technology that redefines how applications are developed, deployed, and managed. This article dives into the essence of Docker and highlights its critical role in enhancing efficiency, scalability, and consistency, ultimately shaping the success of web product development in contemporary times."
 

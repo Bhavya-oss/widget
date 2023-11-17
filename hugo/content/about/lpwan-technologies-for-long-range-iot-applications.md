@@ -5,6 +5,7 @@ draft: false
 
 link: lpwan-technologies-for-long-range-iot-applications
 main_title: "LPWAN Technologies for Long-Range IoT Applications"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "Long-Range, Low-Power Wide Area Network (LPWAN) technologies have emerged as a game-changer for Internet of Things (IoT) applications that require extended coverage and minimal power consumption. These technologies offer the ability to connect IoT devices over vast distances, making them ideal for various use cases. Let's explore LPWAN technologies and their applications."
 

@@ -4,6 +4,7 @@ date: 2023-10-10T19:15:28+05:30
 draft: false
 link: frontend-frameworks
 main_title: "Frontend Frameworks: React, Angular, or Vue?"
+image: https://res.cloudinary.com/biggworks/image/upload/v1693890077/Biggworks%20PDF%20of%20Blogs/native___cross_platform_development_h2ddzm.png
 
 section_one_description: "Selecting the right frontend framework is a pivotal decision in web development. This article dissects the advantages and disadvantages of three popular choices: React, Angular, and Vue. By understanding the unique features of each, you can make an informed choice that aligns with your project's goals."
 
