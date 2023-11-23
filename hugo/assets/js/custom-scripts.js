@@ -277,9 +277,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
    h6Elements.forEach(function (h6Element) {
        var text = h6Element.textContent;
-
        if (text.length > 66) {
            h6Element.textContent = text.slice(0, 66) + '...';
+           console.log("h6Element.textContent",  h6Element.textContent)
+
        }
    });
 

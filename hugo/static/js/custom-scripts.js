@@ -280,6 +280,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
        if (text.length > 66) {
            h6Element.textContent = text.slice(0, 66) + '...';
+           console.log("h6Element.textContent  h6Element.textContent",  h6Element.textContent)
        }
    });
 
