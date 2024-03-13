@@ -67,9 +67,33 @@
 			</div>
 		</div>
 	</div>
+	<div id="my-widget">
+
 </footer>
 
+<script>
+    window.onload = function(){
+      // access the container element
+      const widgetContainer = document.getElementById('my-widget');
+      // create an iframe element
+      const iframe =  document.createElement('iframe');
 
+      // set the source of the iframe to your Next.js build link
+      iframe.src = "http://localhost:3000/";
+      // set attributes for styling or other options if needed
+      iframe.setAttribute('width', '45%');
+      iframe.setAttribute('height', '760vh');
+      iframe.style.position = 'fixed';
+      iframe.style.right = 0;
+      iframe.style.bottom = 0;
+    //   iframe.style.marginBottom = '20px';
+      iframe.style.backgroundColor = 'transparent'; // Set background to transparent
+      // insert the iframe before the footer element 
+      const footerElement = document.querySelector('footer');
+      console.log("footerElement", footerElement);
+      widgetContainer.appendChild(iframe);
+    }
+  </script>
 
 
 
